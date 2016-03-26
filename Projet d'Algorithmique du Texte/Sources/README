@@ -1,0 +1,19 @@
+// Pour la compilation et la génération des exécutables :
+$user: make
+
+// Pour la génération d'un fichier de mots aleatoires :
+$user : ./genere-mots nombre_mots taille_min_mots taille_max_mot nombre_alphabet > nom_fichier
+ 
+// Pour la génération d'un fichier de texte aleatoire :
+$user : ./genere-mots taille_texte nombre_alphabet > nom_fichier
+
+// Pour l'exécution de l'algorithme AHC matrice :
+$user : ./ac-matrice fichier_mots fichier_texte
+
+// Pour l'exécution de l'algorithme AHC liste :
+$user : ./ac-liste fichier_mots fichier_texte
+
+// Pour l'exécution de l'algorithme AHC mixte :
+$user : ./ac-mixte fichier_mots fichier_texte
+
+// REMARQUE pour tester l'algorithme vous pouvez utiliser les fichiers "mots" et "texte" fournis avec le projet pour vérifier l'exemple de TP.
