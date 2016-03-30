@@ -1,0 +1,62 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+    <camelContext id="routesXML" xmlns="http://camel.apache.org/schema/spring">
+        <route>
+	        <from uri="direct:consumer-1"/>
+	        <to uri="log:affiche-1-log"/>
+    	</route>
+
+        <route>
+            <from uri="direct:consumer-2"/>
+            <to uri="file:message"/>
+        </route>
+
+        <route>
+            <from uri="direct:consumer-all"/>
+            <choice>
+                <when>
+                    <simple>${header.hearderEntete} == 'écrire'</simple>
+                    <to uri="direct:consumer-2"/>
+                </when>
+                <otherwise>
+                    <to uri="direct:consumer-1"/>
+                </otherwise>
+            </choice>
+        </route>
+
+        <route>
+            <from uri="direct:CityManager"/>
+            <setHeader headerName="CamelHttpMethod">
+                <constant>GET</constant>
+            </setHeader>
+            <setHeader headerName="CamelHttpQuery">
+                <simple>ville=${header.ville}</simple>
+            </setHeader>
+            <to uri="http://127.0.0.1:8084"/>
+            <log message="response received: ${body}"/>
+        </route>
+
+        <route>
+            <from uri="direct:Geonames"/>
+            <setHeader headerName="CamelHttpMethod">
+                <constant>GET</constant>
+            </setHeader>
+            <setHeader headerName="CamelHttpQuery">
+                <simple>q=${header.villeName}&amp;username=m1gil</simple>
+            </setHeader>
+            <to uri="http://api.geonames.org/search"/>
+            <log message="response received: ${body}"/>
+        </route>
+
+        <route>
+            <from uri="direct:m1gil"/>
+            <to uri="jgroups:m1gil"/>
+            <log message="le mot-clé est : ${body}"/>
+        </route>
+    </camelContext >
+ 
+</beans>
