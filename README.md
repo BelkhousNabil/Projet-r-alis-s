@@ -25,6 +25,8 @@ Dans ce dossier vous trouverez tous les projets que j'ai réalisés.
 
   12- Projet de réalisation d'application Web EPI (JEE,XML,TomCat,Camel)
   
+  12- Projet de réalisation d'application Web PASS (JEE,XML,TomCat,Spring, Hibernate)
+  
   13- Projet de réalisation d'une API de Réglage et de Sauvegarde de projet (Java)
   
   14- Projet de réalisation de jeux avec les Méthodes RAD (WinDev,WebDev,AppDev)
