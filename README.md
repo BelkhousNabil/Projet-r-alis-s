@@ -35,5 +35,4 @@ Dans ce dossier vous trouverez tous les projets que j'ai réalisés.
   
   16- Application Web pour la gestion des STB(Mave,Java,Spring Web MVC,JPA/Hibernate + MySQL,Heroku,XML,REST)
   
-  17- Projet de jeu de batons -Apprentissage automatique- (Python)
-  
+  17- Projet de jeu de batons -Apprentissage automatique- (Python)     
