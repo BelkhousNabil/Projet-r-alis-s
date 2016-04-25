@@ -5,7 +5,7 @@ Dans ce dossier vous trouverez tous les projets que j'ai réalisés.
   
   2-  Projet de réalisation d'un site web pour un réstaurent(PHP,MySql,HTML,CSS,JS,AJAX)  
   
-  3-  Application Web Spring MVC qui peut être utilisé comme un point de départ pour construire une application Spring MVC (JEE,Servlet,Spring Security,JS,CSS,HTML)
+  3-  Application Web Spring MVC qui peut être utilisé comme un point de départ pour construire une application Spring MVC (Maven,JEE,Servlet,Spring Security,JS,CSS,HTML)
   
   4-  Application Web Standard - Project Skeleton (Spring Web MVC, Spring Security, JPA/Hibernate + MySQL, Thymeleaf, Bootstrap, Gradle)
   
@@ -17,19 +17,23 @@ Dans ce dossier vous trouverez tous les projets que j'ai réalisés.
   
   8-  Projet de réalisation d'une Base de données intélligente de préscriptions Médicales (SQL,PL-SQL,Oracle g10)
   
-  9-  Projet de réalisation d'un éditeur de diagramme UML avec le Reverse Eingeennering (Java,Antlr,PlantUML)
+  9-  Projet de réalisation d'un éditeur de diagramme UML avec le Reverse Eingeennering (Maven,Java,Antlr,PlantUML)
   
-  10- Projet de réalisation d'application Web REST (JEE,XML)
+  10- Projet de réalisation d'application Web REST (Maven,JEE,XML)
   
-  11- Projet de réalisation d'application Web SOAP (JEE,XML,TomCat)
+  11- Projet de réalisation d'application Web SOAP (Maven,JEE,XML,TomCat)
 
-  12- Projet de réalisation d'application Web EPI (JEE,XML,TomCat,Camel)
+  12- Projet de réalisation d'application Web EPI (Maven,JEE,XML,TomCat,Camel)
   
-  12- Projet de réalisation d'application Web PASS (JEE,XML,TomCat,Spring, Hibernate)
+  12- Projet de réalisation d'application Web PASS (Maven,JEE,XML,TomCat,Spring,Hibernate)
   
   13- Projet de réalisation d'une API de Réglage et de Sauvegarde de projet (Java)
   
   14- Projet de réalisation de jeux avec les Méthodes RAD (WinDev,WebDev,AppDev)
   
   15- Projet de d'implementation de solution pour la fouille de données Algorithme CLOSE (Java)
+  
+  16- Application Web pour la gestion des STB(Mave,Java,Spring Web MVC,JPA/Hibernate + MySQL,Heroku,XML,REST)
+  
+  17- Projet de jeu de batons -Apprentissage automatique- (Python)
   
