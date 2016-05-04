@@ -33,6 +33,6 @@ Dans ce dossier vous trouverez tous les projets que j'ai réalisés.
   
   15- Projet de d'implementation de solution pour la fouille de données Algorithme CLOSE (Java)
   
-  16- Application Web pour la gestion des STB(Mave,Java,Spring Web MVC,JPA/Hibernate + MySQL,Heroku,XML,REST)
+  16- Application Web pour la gestion des STB(Maven,Java,Spring Web MVC,JPA/Hibernate + MySQL,OpenShift,XML,REST)
   
   17- Projet de jeu de batons -Apprentissage automatique- (Python)     
