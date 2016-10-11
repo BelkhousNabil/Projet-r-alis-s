@@ -2,17 +2,17 @@
 Dans ce dossier vous trouverez tous les projets que j'ai réalisés.
 
 
-	1- Projet de réalisation API de parametrege et de savegarde de projet JAVA (Langages et outils: Java)
+	1- Projet de réalisation d'une API de parametrege et de savegarde de projet JAVA (Langages et outils: Java)
 
 	2- Projet d'apprentissage Automatique:
 		2.1- Projet de jeu de batons -Réseaux de neurones- (Langage: Python)  
-		2.2- Projet d'implemetation complète de l'algorithme K-means avec les indices DB et CH (Langages et outils: Java)
+		2.2- Projet d'implemetation de l'algorithme K-means avec les indices DB et CH (Langages et outils: Java)
 
 	3- Projet de Bases de données:
 		3.1- Projet de réalisation d'une Base de données intélligente de préscriptions Médicales (Langages et outils: SQL,PL-SQL,Oracle g10)
 
 	4- Projet de Compilation:
-		4.1- Projet de réalisation d'une extention Bibtex pour li'usage de Latex (Langages et outils: Flex, Bison, C)
+		4.1- Projet de réalisation d'une extention Bibtex pour l'usage de Latex (Langages et outils: Flex, Bison, C)
 
 	5- Projet de Développement RAD:
 		5.1- Projet de réalisation du jeux Trivial poursuite avec les Méthodes RAD (Langages et outils: WinDev,WebDev,AppDev)
@@ -20,13 +20,13 @@ Dans ce dossier vous trouverez tous les projets que j'ai réalisés.
 	6- Projet de Plateforme de simulation de Réseaux de Capteurs Sans fil (Langages et outils: Java, TCL/TK)
 
 	7- Projet de traitement de texte:
-		7.1- Projet de réalisation d'une application qui reprend la recherche de séquences avec l'algorithme Aho Corasick (Langages et outils: C)
+		7.1- Projet de réalisation d'une application qui recherche des séquences avec l'algorithme Aho Corasick (Langages et outils: C)
 
 	8- Projet de UML Reverse Engineering (Langages et outils: Maven, Java, PlantUML, Antl)
 
 	9- Projet Web: 
 		9.1- Projet de réalisation d'un application web de Quiz en ligne (Langages et outils: PHP,MySql,HTML,CSS,JS,AJAX) 
-		9.2- Projet de réalisation d'application Web pour la gestion des STB(Langages et outils: Maven,Java,Spring Web MVC,JPA/Hibernate + MySQL,OpenShift,XML,REST)
+		9.2- Projet de réalisation d'application Web pour la gestion des STB(Langages et outils: Maven,Java EE,Spring Web MVC,JPA/Hibernate + MySQL,OpenShift,XML,REST)
 		9.3- Projet de réalisation d'une Application web pour la gestion de flux pour ENGIE (Langages et outils: PHP,MySql,HTML,CSS,JS,AJAX, Bootstrap, JQuery)
 		9.4- Projet de réalisation d'une Plateforme de démarrage pour les projets JEE (base_spring_mvc_web_application)
 
