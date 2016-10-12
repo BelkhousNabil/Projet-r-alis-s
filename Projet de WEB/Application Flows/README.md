@@ -1,0 +1,1 @@
+This project has as aim to create a web application that allows to make the stream of the information more usable
