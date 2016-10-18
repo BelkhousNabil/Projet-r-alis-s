@@ -38,6 +38,7 @@ Dans ce dossier vous trouverez tous les projets que j'ai réalisés.
 		11.2- Projet de réalisation d'application Web SOAP pour géolocalisation (Maven,JEE,XML,TomCat)
 		11.3- Projet de réalisation d'application Web EPI pour géolocalisation (Maven,JEE,XML,TomCat,Camel)
 		11.4- Projet de réalisation d'application Web PASS pour géolocalisation (Maven,JEE,XML,TomCat,Spring,Hibernate)
+	12- Projet de creation d'un grand corpus avec la technique du Web Scraping - Python
 
 	
 
