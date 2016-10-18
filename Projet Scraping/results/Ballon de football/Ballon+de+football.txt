@@ -1,0 +1,4520 @@
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MobiHeaderMenuTitle
+MobiNavigationClose
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mes favoris
+
+
+
+
+
+
+
+
+
+
+
+
+Mon compte
+
+
+
+
+
+
+
+
+Bonjour, comment allez vous ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mon magasin
+
+
+
+
+
+Trouver votre magasin
+
+
+
+
+
+
+
+
+
+
+Nous contacter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0
+Mon Panier
+
+
+
+
+
+Mon Panier
+
+
+
+Votre panier est vide !Sélectionnez des produits pour continuer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sports
+
+
+
+
+
+
+
+
+
+Fitness, Musculation
+
+
+
+
+::								Fitness, Musculation
+
+
+
+
+
+
+
+
+
+
+Vélos, cyclisme
+
+
+
+
+::								Vélos, cyclisme
+
+
+
+
+
+
+
+
+
+
+Randonnée
+
+
+
+
+::								Randonnée
+
+
+
+
+
+
+
+
+
+
+Camping
+
+
+
+
+::								Camping
+
+
+
+
+
+
+
+
+
+
+Football
+
+
+
+
+::								Football
+
+
+
+
+
+
+
+
+
+
+Basket-Ball
+
+
+
+
+::								Basket-Ball
+
+
+
+
+
+
+
+
+
+
+Rugby, Handball, Volley...
+
+
+
+
+::								Rugby, Handball, Volley...
+
+
+
+
+
+
+
+
+
+
+Tennis, Tennis de table, ...
+
+
+
+
+::								Tennis, Tennis de table, ...
+
+
+
+
+
+
+
+
+
+
+Badminton, Squash, Padel
+
+
+
+
+::								Badminton, Squash, Padel
+
+
+
+
+
+
+
+
+
+
+Running, Trail, Athlétisme
+
+
+
+
+::								Running, Trail, Athlétisme
+
+
+
+
+
+
+
+
+
+
+
+
+Ski, Snowboard
+
+
+
+
+::								Ski, Snowboard
+
+
+
+
+
+
+
+
+
+
+Ski de fond
+
+
+
+
+::								Ski de fond
+
+
+
+
+
+
+
+
+
+
+Marche sportive, nordique
+
+
+
+
+::								Marche sportive, nordique
+
+
+
+
+
+
+
+
+
+
+Danse, Yoga, Gymnastique
+
+
+
+
+::								Danse, Yoga, Gymnastique
+
+
+
+
+
+
+
+
+
+
+Sports de combat
+
+
+
+
+::								Sports de combat
+
+
+
+
+
+
+
+
+
+
+Natation, Aquagym, ...
+
+
+
+
+::								Natation, Aquagym, ...
+
+
+
+
+
+
+
+
+
+
+Trottinette, skate, roller...
+
+
+
+
+::								Trottinette, skate, roller...
+
+
+
+
+
+
+
+
+
+
+Sports de glace
+
+
+
+
+::								Sports de glace
+
+
+
+
+
+
+
+
+
+
+Golf
+
+
+
+
+::								Golf
+
+
+
+
+
+
+
+
+
+
+Escalade, Alpinisme
+
+
+
+
+::								Escalade, Alpinisme
+
+
+
+
+
+
+
+
+
+
+
+
+Equitation
+
+
+
+
+::								Equitation
+
+
+
+
+
+
+
+
+
+
+Pêche
+
+
+
+
+::								Pêche
+
+
+
+
+
+
+
+
+
+
+Chasse
+
+
+
+
+::								Chasse
+
+
+
+
+
+
+
+
+
+
+Surf, Bodyboard, Wakeboard
+
+
+
+
+::								Surf, Bodyboard, Wakeboard
+
+
+
+
+
+
+
+
+
+
+Kayak, Stand up paddle (SUP)
+
+
+
+
+::								Kayak, Stand up paddle (SUP)
+
+
+
+
+
+
+
+
+
+
+Bateau, dériveur, catamaran
+
+
+
+
+::								Bateau, dériveur, catamaran
+
+
+
+
+
+
+
+
+
+
+Plongée, Snorkeling
+
+
+
+
+::								Plongée, Snorkeling
+
+
+
+
+
+
+
+
+
+
+Sports de vent
+
+
+
+
+::								Sports de vent
+
+
+
+
+
+
+
+
+
+
+Arc, Pétanque, Fléchettes
+
+
+
+
+::								Arc, Pétanque, Fléchettes
+
+
+
+
+
+
+
+
+
+
+Accessoires multisports
+
+
+
+
+::								Accessoires multisports
+
+
+
+
+
+
+
+
+
+
+
+
+​	
+						
+
+Tous les sports de A à Z
+
+
+
+
+
+
+
+
+
+
+Accessoires
+
+
+
+
+
+
+
+
+
+Montres, GPS, Podomètres
+
+
+
+
+Montres, GPS, Podomètres
+
+
+
+
+
+
+
+
+
+
+Caméras, Sons
+
+
+
+
+Caméras, Sons
+
+
+
+
+
+
+
+
+
+
+Objets connectés
+
+
+
+
+Objets connectés
+
+
+
+
+
+
+
+
+
+
+Bagagerie du sportif
+
+
+
+
+Bagagerie du sportif
+
+
+
+
+
+
+
+
+
+
+Lunettes de sport et jumelles
+
+
+
+
+Lunettes de sport et jumelles
+
+
+
+
+
+
+
+
+
+
+
+
+Nutrition et Hydratation
+
+
+
+
+Nutrition et Hydratation
+
+
+
+
+
+
+
+
+
+
+Protéines et compléments
+
+
+
+
+Protéines et compléments
+
+
+
+
+
+
+
+
+
+
+Soin du sportif
+
+
+
+
+Soin du sportif
+
+
+
+
+
+
+
+
+
+
+Lampes et chargeurs
+
+
+
+
+Lampes et chargeurs
+
+
+
+
+
+
+
+
+
+
+Coupes, médailles
+
+
+
+
+Coupes, médailles
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Femme
+
+
+
+
+
+
+
+
+
+Vêtements
+
+
+
+
+Vêtements
+
+
+
+
+
+
+
+
+
+
+Maillots de bain
+
+
+
+
+Maillots de bain
+
+
+
+
+
+
+
+
+
+
+Chaussures
+
+
+
+
+Chaussures
+
+
+
+
+
+
+
+
+
+
+Grandes Tailles
+
+
+
+
+Grandes Tailles
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Enfant
+
+
+
+
+
+
+
+
+
+Chaussures
+
+
+
+
+Chaussures
+
+
+
+
+
+
+
+
+
+
+Vêtements
+
+
+
+
+Vêtements
+
+
+
+
+
+
+
+
+
+
+Les maillots de bain
+
+
+
+
+Les maillots de bain
+
+
+
+
+
+
+
+
+
+
+Bébé
+
+
+
+
+Bébé
+
+
+
+
+
+
+
+
+
+
+​
+
+
+
+
+
+
+
+
+Homme
+
+
+
+
+
+
+
+
+
+Vêtements
+
+
+
+
+Vêtements
+
+
+
+
+
+
+
+
+
+
+Maillots de bain
+
+
+
+
+Maillots de bain
+
+
+
+
+
+
+
+
+
+
+Chaussures
+
+
+
+
+Chaussures
+
+
+
+
+
+
+
+
+
+
+Grandes Tailles
+
+
+
+
+Grandes Tailles
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nos bons plans
+
+
+NOS CONSEILS SPORTIFS
+
+
+Nos services et location de ski
+
+
+
+
+
+
+
+
+
+Atelier - réparation, entretien, personnalisation
+
+
+
+
+Atelier - réparation, entretien, personnalisation
+
+
+
+
+
+
+
+
+
+
+Carte Cadeau
+
+
+
+
+Carte Cadeau
+
+
+
+
+
+
+
+
+
+
+Assurances Sports
+
+
+
+
+Assurances Sports
+
+
+
+
+
+
+
+
+
+
+Financement
+
+
+
+
+Financement
+
+
+
+
+
+
+
+
+
+
+Achat et vente d'occasion
+
+
+
+
+Achat et vente d'occasion
+
+
+
+
+
+
+
+
+
+
+
+
+Location de ski
+
+
+
+
+Location de ski
+
+
+
+
+
+
+
+
+
+
+Carte de fidélité Decathlon
+
+
+
+
+Carte de fidélité Decathlon
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Information
+Fermer
+
+
+
+
+
+
+
+Désolé, il y a une erreur.
+Fermer
+
+
+
+
+
+
+
+
+
+
+
+
+Football
+
+10843_704169
+
+
+
+
+
+
+Chaussures
+
+
+Terrain sec (herbe et synthétique)
+
+
+Terrain dur (stabilisé, goudron)
+
+
+Terrain gras (herbe mouillée)
+
+
+Futsal (parquet, gymnase)
+
+
+Nouvelles collections
+
+
+Accessoires chaussures
+
+
+
+
+Habillement
+
+
+Sous-vêtements
+
+
+Maillots
+
+
+Shorts
+
+
+Chaussettes
+
+
+Training (pantalon, veste...)
+
+
+Gardien de but
+
+
+Accessoires (gants, bonnet...)
+
+
+Boutique femme
+
+
+
+
+Buts et ballons
+
+
+Buts et mini-buts
+
+
+Ballons
+
+
+Accessoires buts et ballons
+
+
+
+
+Accessoires joueurs et clubs
+
+
+Sacs de foot
+
+
+Protège-tibias, chevillères
+
+
+Gardien de but
+
+
+Accessoires joueurs, clubs
+
+
+Mon équipement 100% personnalisé
+
+
+
+
+Supporter clubs
+
+
+PSG
+
+
+OM
+
+
+Real Madrid
+
+
+FC Barcelone
+
+
+Clubs anglais
+
+
+Clubs italiens
+
+
+Clubs allemands
+
+
+Autres clubs français
+
+
+Autres clubs espagnols
+
+
+
+
+Supporter Pays
+
+
+France
+
+
+Portugal
+
+
+Belgique
+
+
+Italie
+
+
+Espagne
+
+
+Allemagne
+
+
+Pologne
+
+
+Angleterre
+
+
+Autres pays
+
+
+
+
+
+
+
+
+
+Buts et ballons
+
+10843_704169_704182
+
+
+
+
+
+
+Buts et ballons
+
+
+Buts et mini-buts
+
+
+Ballons
+
+
+Accessoires buts et ballons
+
+
+
+
+
+
+
+
+Ballons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			82
+		
+		 	articles 
+		pour
+		
+					Ballons de foot et foot en salle
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Comment choisir ?
+son ballon de foot
+
+
+
+
+Ballons loisir
+Ballons entraînement - match
+Ballons futsal - five
+x
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON FOOTBALL SUNNY 300 TAILLE 1 BLEU CLAIR  NOIR
+
+
+			À partir de
+	
+ 
+
+1,99 €			
+		
+
+
+
+
+
+
+
+						PLUS D’INFOS
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+ADIDAS
+BALLON FOOTBALL EN SALLE EURO 16 SALA BLANC
+
+
+			À partir de
+	
+
+19,99 €			
+
+				-10 %
+			
+
+
+17,99 €			
+		
+
+
+
+
+
+
+
+
+
+
+						PLUS D’INFOS
+					
+
+
+
+
+
+
+
+BALLON FOOTBALL COUPE DE FRANCE STRIKE ROSE/JAUNE
+NIKE
+
+Note des utilisateurs :
+
+
+
+
+
+
+
+
+
+
+			À partir de
+	
+ 
+
+24,99 €			
+		
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON FOOTBALL HARDGROUND TAILLE 5 NOIR VERT ROSE
+
+
+			À partir de
+	
+ 
+
+9,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON DE FOOTBALL FRANCE TAILLE 5
+
+
+			À partir de
+	
+ 
+
+6,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON FOOTBALL FOAM 300 TAILLE 4 ROUGE BLEU
+
+
+			À partir de
+	
+ 
+
+4,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+ADIDAS
+BALLON FOOTBALL  EURO 16 TOP GLIDER BLANC
+
+
+			À partir de
+	
+ 
+
+19,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+​
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON FOOTBALL MOUSSE WIZZY TAILLE 4 ORANGE NOIR
+
+
+			À partir de
+	
+ 
+
+7,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+ADIDAS
+BALLON DE FOOTBALL DE LA LIGUE 1 POUR LA SAISON 2016-2017
+
+
+			À partir de
+	
+
+24,99 €			
+
+				-20 %
+			
+
+
+19,99 €			
+		
+
+
+
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+NIKE
+BALLON FOOTBALL FC BARCELONE BLEU ROUGE
+
+
+			À partir de
+	
+ 
+
+24,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON DE FOOTBALL EN FEUTRINE KIPSTA
+
+
+			À partir de
+	
+ 
+
+14,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON DE FOOTBALL FUTSAL 500 HYBRIDE TAILLE 63CM BLANC
+
+
+			À partir de
+	
+ 
+
+14,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+NIKE
+BALLON FOOTBALL PITCH JAUNE
+
+
+			À partir de
+	
+ 
+
+14,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON FUTSAL 300 HYBRIDE TAILLE 58CM ROUGE BLEU
+
+
+			À partir de
+	
+ 
+
+9,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON FOOTBALL F500 HYBRIDE TAILLE 5 BLANC
+
+
+			À partir de
+	
+ 
+
+14,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+NIKE
+BALLON FOOTBALL ATLETICO BLANC ROUGE
+
+
+			À partir de
+	
+ 
+
+24,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON FOOTBALL F100 HYBRIDE TAILLE 3(ENFANT DE MOINS DE 8 ANS) BLANC
+
+
+			À partir de
+	
+ 
+
+9,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON DE FOOTBALL WIZZY MOUSSE DURE TAILLE 4
+
+
+			À partir de
+	
+ 
+
+7,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON FOOTBALL F900 FIFA PRO TAILLE 5 BLANC
+
+
+			À partir de
+	
+ 
+
+24,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+ADIDAS
+BALLON FOOTBALL REAL MADRID BLANC
+
+
+			À partir de
+	
+ 
+
+19,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON FOOTBALL FOAM 300 TAILLE 4 VERT BLEU
+
+
+			À partir de
+	
+ 
+
+4,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON FOOTBALL SUNNY 300 TAILLE 5 VERT BLEU
+
+
+			À partir de
+	
+ 
+
+3,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON FUTSAL 300 HYBRIDE TAILLE 63 CM ROUGE BLEU
+
+
+			À partir de
+	
+ 
+
+9,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON DE FOOTBALL FIRST KICK TAILLE 3
+
+
+			À partir de
+	
+ 
+
+3,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON FOOTBALL F100 HYBRIDE TAILLE 4 BLANC
+
+
+			À partir de
+	
+ 
+
+14,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON FUTSAL 300 HYBRIDE  TAILLE 63 CM JAUNE
+
+
+			À partir de
+	
+ 
+
+9,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON DE FOOTBALL FUTSAL 300 HYBRIDE TAILLE 63 CM ROUGE BLEU
+
+
+			À partir de
+	
+ 
+
+9,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+NIKE
+BALLON DE FOOTBALL DU PSG POUR LA SAISON 2016 -2017
+
+
+			À partir de
+	
+ 
+
+24,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON FOOTBALL F100 HYBRIDE TAILLE 5 BLANC
+
+
+			À partir de
+	
+ 
+
+9,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON DE FOOTBALL PORTUGAL TAILLE 5
+
+
+			À partir de
+	
+ 
+
+9,99 €			
+		
+
+
+
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON FOOTBALL  FOAM 300 TAILLE 1 BLEU VIOLET
+
+
+			À partir de
+	
+ 
+
+2,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON FOOTBALL SUNNY 300 TAILLE 1 VERT BLEU
+
+
+			À partir de
+	
+ 
+
+1,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+ADIDAS
+BALLON FOOTBALL CHAMION'S LEAGUE FINALE CAPITANO BLANC VERT
+
+
+			À partir de
+	
+ 
+
+19,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+ADIDAS
+BALLON DE FOOTBALL EUROPA LEAGUE CAPITANO BLANC ROUGE BLEU
+
+
+			À partir de
+	
+ 
+
+19,99 €			
+		
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON FOOTBALL FIRST KICK TAILLE 5 VERT BLEU
+
+
+			À partir de
+	
+ 
+
+3,99 €			
+		
+
+
+
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparer ce produit
+
+ 
+
+
+KIPSTA
+BALLON FOOTBALL FIRST KICK TAILLE 4 (ENFANT DE 8 À 12 ANS) JAUNE BLEU
+
+
+			À partir de
+	
+ 
+
+3,99 €			
+		
+
+
+
+
+
+
+
+
+
+
+							PLUS D’INFOS
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                	Votre produit a été ajouté
+                
+
+
+comparer mes produits (0/5)
+Ouvrir 
+
+
+
+
+
+aucun produit à comparer
+Votre comparateur est plein. Veuillez supprimer un produit.
+
+
+
+
+
+
+
+Supprimer
+
+
+
+
+
+
+
+
+
+
+
+
+Retour à la liste
+comparer mes produits
+
+
+
+
+
+
+
+
+
+
+
+
+Voir les  40 produits suivants (sur 82)
+					
+
+
+
+
+
+
+
+
+Quel ballon de foot selon les besoins  Le choix d'un
+
+ballon de football est moins simple qu'il n'y paraît.  Ballons adaptés à la pratique des 
+
+débutants, ballons aux couleurs de son équipe préférée, ballons pour les graines de footballeurs... Il y 
+
+a forcément un ballon de foot DECATHLON pour vous satisfaire au mieux dans 
+
+votre pratique sportive ou vos moments de détente.  Les ballons pour pratiquer le foot en 
+
+club  Pour le foot en club, on tendra à choisir des ballons résistants, avec des panneaux 
+
+thermocollés qui permettent une bonne précision des tir. On veillera aussi à choisir des ballons de 
+
+club comportant une vessie en butyl qui assure le maintien de la forme du ballon et un rebond 
+
+optimal. Les panneaux cousus mains apportent également bonne sphéricité et résistance à 
+
+l'ensemble. L'idéal est de faire confiance aux fédérations internationales. Pour les plus petits, on 
+
+choisit des ballons de foot enfants. Pour les moins de huit ans, on choisira une taille 
+
+3 ; moins de 12 ans une taille 4 ; au dessus une taille 5.   Le ballon de foot de loisir.  Pour 
+
+les pratiques sportives en extérieur et les moments de détente, on opte pour un ballon léger. Les ballons de 
+
+foot loisir sont conçus pour être utilisés sur sable, sur herbe ou terrain synthétique pour certains. 
+
+On trouve des ballons de football en mousse pour permettre à toute la famille de 
+
+s'amuser sans se faire mal.   Le ballon en salle ou futsal.  Pour une bonne pratique du 
+
+football en salle, on opte pour un ballon de taille 4, plus lourd et qui ne rebondit pas trop pour le 
+
+ballon de futsal, ou avec un rebond classique pour le football indoor. Les ballons de 
+
+football en salle ou futsal vous permettront de jouer sur parquet, sur ciment ou sur terrain synthétique.   
+
+Livraison  DECATHLON vous fait bénéficier d'une livraison efficace. Profitez aussi d'un 
+
+paiement en ligne sécurisé et d'un service après-vente de qualité.  
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+  Trouver
+mon magasin     échange
+365 jours     Cliquez & Retirez
+gratuitement     Moyens
+de paiement    Financement
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+Decathlon entreprise Qui sommes-nous ? Recrutement Entreprise responsable Programme fidélité Decathlon Pro
+Notre actu Nos conseils sportifs Decathlon coach Media / Presse Catalogue du moment
+Service client Nous contacter Nos garanties Modes de livraison Votre avis compte Rappels produits
+Nos Services Location de ski Trocathlon Carte cadeau Entretien et réparation Personnalisation Assurance
+Decathlon concepteur Nos innovations Nos marques Nos tests produits Decathlon Création
+
+
+
+ 
+ 
+
+
+ 
+
+
+Newsletter
+
+
+
+ 
+Merci pour votre inscription !
+Un e-mail automatique de confirmation vient d'être envoyé à votre adresse e-mail.
+L'adresse email que vous avez saisie n'est pas valide. Merci de vérifier votre saisie.
+Le format de l'adresse email que vous avez saisie n'est pas valide. Merci de vérifier votre saisie.
+L'adresse email que vous avez saisie est déjà utilisée.
+Merci de bien vouloir cocher les mentions légales.
+
+
+
+
+RETROUVEZ-NOUS SUR      
+APPLI MOBILE  
+
+ 
+ 
+
+
+38 Pays
+   
+
+ 
+Europe
+
+Allemagne
+Autriche
+Belgique
+Bulgarie
+Croatie
+Espagne
+Danemark
+Finlande
+France
+Grande- Bretagne
+Hongrie
+Irlande
+Islande
+Italie
+Luxembourg
+Norvège
+Pays-Bas
+Pologne
+Portugal
+République-Tchèque
+Roumanie
+Russie
+Slovaquie
+Slovénie
+Suède
+Suisse
+Turquie
+
+Asia
+
+Chine
+Hong Kong
+Inde
+Indonésie
+Japon
+Malaisie
+Philippines
+Singapour
+Taïwan
+Thaïlande
+
+Amérique du sud
+
+Brésil
+
+Afrique
+
+Afrique du Sud
+Maroc
+
+
+
+
+
+
+C.G.V. - C.G.U. - Mentions légales - Données Personnelles et cookies - F.A.Q. - Aide - Contact - Site Mobile - Site Classique
+ 
+ 
+
+
+Les Composants techniques de nos Marques - Nos guides de tailles - Codes de réduction
+ 
+
+** Offre valable pour tout achat sur le site www.decathlon.fr hors produits volumineux (matériel fitness, vélos, tables de tennis de table,...). En savoir plus
+Les déchets d'équipements électriques et électroniques (DEEE) ne doivent pas être jetés avec les déchets ménagers. Vous pouvez rapporter votre ancien matériel dans un magasin DECATHLON dans les bacs destinés à cet effet, ou en faire la demande auprès de notre centre de relation clients en cas de livraison à domicile. Vous pouvez également le rapporter dans une déchetterie agréée pour le tri sélectif ou dans une association qui œuvre pour le recyclage des produits.
+ 
+
+Retrouvez tous les conseils et les actualités Decathlon sur le blog Decathlon. Préparez vos cadeaux de Noël avec Decathlon, et découvrez toute une sélection de produits pour une rentrée sportive. Retrouvez enfin une large gamme de produits pour la randonnée, de nombreux masques de ski, nos nouvelles planches à voile et tous les VTT à prix de DECATHLON. Enfin, préparez vos soldes et anticipez les bonnes affaires avec de nombreux prix en baisse. Pour la location de skis dans plus de 350 stations, faites appel à notre partenaire Skimium.
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fermer
+Ce site utilise des cookies, en poursuivant votre navigation vous acceptez notre politique d'utilisation des cookies.En voir plus
+
+
+
+
+
+
+
+
+
+ACCUEIL
+CHAUSSURES
+HOMME
+ENFANT
+FEMME
+NOUVEAUTÉS
+GARDIENS
+GANTS DE GARDIEN HOMME
+GANTS DE GARDIEN ENFANT
+NOUVEAUTÉS
+HABITS DE GARDIEN HOMME
+HABITS DE GARDIEN ENFANT
+SUPPORTERS
+SUPPORTER HOMME
+SUPPORTER ENFANT
+Baselayers
+BALLONS
+TOUS LES BALLONS DE FOOTBALL
+Teamwear
+ÉQUIPEMENT
+TOUT L'ÉQUIPEMENT
+PROTÈGE-TIBIAS
+SACS ET BAGAGES
+ÉQUIPEMENT DE COACHING
+CAGES DE BUT ET ACCESSOIRES
+VÊTEMENTS
+TOUS LES VÊTEMENTS HOMME
+TOUS LES VÊTEMENTS ENFANT
+TOUS LES VÊTEMENTS FEMME
+Fitness
+Enfant
+Offres
+
+
+
+
+MON COMPTE
+Se Connecter/ Créer un Compte
+
+
+CHOISISSEZ VOTRE BOUTIQUE
+España
+Deutschland
+Italia
+Nederlands
+Polska
+United Kingdom
+United States
+
+
+DEVISE
+
+EUR €GBP £USD $
+
+
+PLUS DE SPORTS
+Pro-Direct Select
+Pro-Direct Running
+Pro-Direct Rugby
+Pro-Direct Tennis
+Pro-Direct Cricket
+
+
+
+
+
+
+Choisissez votre boutique Pro-Direct
+
+Deutschland
+España
+France
+Italia
+Nederlands
+Polska
+United Kingdom
+United States
+
+
+
+
+
+Select Your Pro-Direct Store
+
+Soccer
+Select
+Running
+Rugby
+Tennis
+Cricket
+Basketball
+Fitness
+
+
+
+
+
+
+
+French
+
+
+
+
+EUR €
+
+EUR €GBP £USD $
+
+
+
+Pro-Direct Soccer
+
+
+
+
+
+
+
+
+
+28 jours de délai de rétractation
+Livraison rapide
+Achat sécurisé
+
+
+
+
+
+320 sur 320
+Actualiser
+
+
+MARQUES:
+
+
+adidas [91]
+Diamond [6]
+HO [3]
+Ipro [11]
+Lotto [1]
+Mitre [37]
+New Balance [11]
+Nike [79]
+Pantofola d'Oro [7]
+Penalty [5]
+Puma [28]
+Response Ball [4]
+Uhlsport [11]
+Umbro [26]
+
+
+
+
+Gamme:
+
+
+Furon [7]
+
+
+
+
+Modèle:
+
+
+Furon Dispatch [3]
+
+
+
+
+TAILLES:
+
+
+Taille unique [6]
+Pro [3]
+Youth [1]
+Pro size [1]
+1 [10]
+2 [1]
+3 [85]
+4 [138]
+5 [268]
+
+
+
+
+COULEUR:
+
+
+Argent [5]
+Black [2]
+Blanc [146]
+Bleu [10]
+Bleu marine [1]
+Blue [2]
+Gold [1]
+Green [1]
+Gris [2]
+Jaune [43]
+Noir [7]
+Or [2]
+Orange [28]
+Red [4]
+Rose [7]
+Rouge [23]
+Vert [14]
+Violet [7]
+White [15]
+
+
+
+
+Niveau:
+
+
+FIFA-Approved [2]
+FIFA-Inspected [1]
+
+
+
+
+GENRES:
+
+
+Entraînement [226]
+Foot à cinq [2]
+Foot en Salle [9]
+Indoor [3]
+Jour de match [60]
+Petits ballons [4]
+Salle [1]
+Terrain synthétique [15]
+
+
+
+
+Ligues
+
+
+Bundesliga [4]
+La Liga [2]
+Ligue 1 [2]
+Premier League [9]
+Serie A [3]
+UEFA [7]
+
+
+
+
+Équipe
+
+
+Allemagne [1]
+Arsenal [3]
+Bayern Munich [3]
+Borussia Dortmund [1]
+Chelsea [1]
+Espagne [2]
+Grèce [1]
+Italie [1]
+Juventus Turin [1]
+Liverpool [1]
+Manchester United [4]
+Marseille [2]
+Milan AC [2]
+Real de Madrid [2]
+Russie [1]
+Suède [1]
+
+
+
+
+PRIX:
+
+
+€0 - €19 [199]
+€20 - €39 [79]
+€40 - €59 [17]
+€60 - €79 [6]
+€80 - €99 [8]
+€100 - €119 [7]
+
+
+
+
+
+
+
+
+
+HomeBallons de football
+
+
+Ballons de football
+
+
+
+
+
+Voir:32
+64
+96
+
+
+
+Page 1 / 10
+Page Suivante
+
+
+
+
+nike
+PDS Jour de match
+
+
+-33%
+
+Ballon Nike Ordem - Neymar x Jordan
+Prix PRO en ligne
+€113.99
+€170.00
+
+
+nike
+PDS Jour de match
+
+
+
+Ballon Nike Ordem 4 - Blanc/ Rose/ Noir
+Prix PRO en ligne
+€119.99
+
+
+nike
+PDS Jour de match
+
+
+
+Ballon Nike PL Ordem 4 - Blanc/ Bleu/ Noir
+Prix PRO en ligne
+€119.99
+
+
+nike
+PDS Jour de match
+
+
+
+Ballon Nike La Liga Ordem 4 - Blanc/ Orange/ Bleu
+Prix PRO en ligne
+€119.99
+
+
+nike
+PDS Jour de match
+
+
+
+Ballon Nike Serie A Ordem 4 - Blanc/ Violet/ Noir
+Prix PRO en ligne
+€119.99
+
+
+PDS Jour de match
+
+
+-7%
+
+Ballon adidas Finale 16 OMB - Blanc / Acier / Vert
+Prix PRO en ligne
+€117.00
+€126.00
+
+
+PDS Jour de match
+
+
+-5%
+
+Ballon adidas Finale 16 Competition - Blanc / Acier / Vert
+Prix PRO en ligne
+€42.00
+€44.00
+
+
+PDS Entraînement
+
+
+-6%
+
+Ballon adidas Finale 16 Training - Blanc / Acier / Vert
+Prix PRO en ligne
+€30.00
+€32.00
+
+
+PDS Petits ballons
+
+
+-8%
+
+Mini Ballon adidas Finale 16 - Blanc / Acier / Vert
+Prix PRO en ligne
+€12.00
+€13.00
+
+
+PDS Entraînement
+
+
+-11%
+
+Ballon adidas Finale 16 Capitano - Violet / Or
+Prix PRO en ligne
+€17.00
+€19.00
+
+
+PDS Entraînement
+
+
+-11%
+
+Ballon adidas Finale 16 Capitano - Bleu / Gris
+Prix PRO en ligne
+€17.00
+€19.00
+
+
+PDS Entraînement
+
+
+-11%
+
+Ballon adidas Finale 16 Capitano - Orange / Craft Chilli / Shock Slime
+Prix PRO en ligne
+€17.00
+€19.00
+
+
+nike
+PDS Entraînement
+
+
+
+Ballon Nike PL Strike - Blanc/ Bleu/ Noir
+Prix PRO en ligne
+€25.99
+
+
+nike
+PDS Entraînement
+
+
+
+Ballon Nike PL Pitch - Cyan/ Rose/ Volt
+Prix PRO en ligne
+€18.00
+
+
+nike
+PDS Entraînement
+
+
+
+Ballon Nike PL Pitch - Blanc/ Bleu Royal/ Noir
+Prix PRO en ligne
+€18.00
+
+
+nike
+PDS Entraînement
+
+
+
+Ballon Nike PL Pitch - Volt/ Bleu Royal/ Argent
+Prix PRO en ligne
+€18.00
+
+
+nike
+PDS Entraînement
+
+
+
+Ballon Nike PL Pitch - Rouge/ Argent/ Blanc
+Prix PRO en ligne
+€18.00
+
+
+nike
+PDS Entraînement
+
+
+
+Ballon Nike PL Skills - Blanc/ Violet/ Noir
+Prix PRO en ligne
+€12.00
+
+
+nike
+PDS Entraînement
+
+
+
+Ballon Nike La Liga Strike - Blanc/ Orange/ Bleu
+Prix PRO en ligne
+€26.00
+
+
+nike
+PDS Entraînement
+
+
+
+Ballon Nike Serie A Strike - Blanc/ Violet/ Noir
+Prix PRO en ligne
+€26.00
+
+
+nike
+PDS Entraînement
+
+
+
+Ballon Nike Serie A Skills - Blanc/ Violet/ Noir
+Prix PRO en ligne
+€12.00
+
+
+nike
+PDS Entraînement
+
+
+
+Ballon Nike Strike - Blanc/ Rose/ Noir
+Prix PRO en ligne
+€26.00
+
+
+nike
+PDS Entraînement
+
+
+
+Ballon Nike Pitch - Volt/ Rose/ Noir
+Prix PRO en ligne
+€18.00
+
+
+nike
+PDS Entraînement
+
+
+
+Ballon Nike Pitch - Blanc/ Rose/ Volt
+Prix PRO en ligne
+€18.00
+
+
+nike
+PDS Entraînement
+
+
+Nouveau
+
+Ballon Nike FootballX Premier - Orange/ Citrus/ Carmin
+Prix PRO en ligne
+€42.00
+
+
+nike
+PDS Entraînement
+
+
+Nouveau
+
+Ballon Nike FootballX Strike - Orange/ Citrus/ Carmin
+Prix PRO en ligne
+€26.00
+
+
+nike
+PDS Entraînement
+
+
+Nouveau
+
+Ballon Nike FootballX Menor - Carmin/ Orange
+Prix PRO en ligne
+€21.00
+
+
+nike
+PDS Entraînement
+
+
+Nouveau
+
+Ballon Nike FootballX Menor - Orange/ Citrus/ Carmin
+Prix PRO en ligne
+€21.00
+
+
+nike
+PDS Entraînement
+
+
+Nouveau
+
+Ballon Nike Strike - Hyper Violet/ Noir/ Citrus
+Prix PRO en ligne
+€26.00
+
+
+PDS Jour de match
+
+
+-7%
+
+Ballon adidas DFL OMB - Blanc / Noir / Rouge
+Prix PRO en ligne
+€117.00
+€126.00
+
+
+PDS Entraînement
+
+
+-9%
+
+Ballon adidas DFL Top Training - Blanc / Noir / Rouge
+Prix PRO en ligne
+€29.00
+€32.00
+
+
+PDS Entraînement
+
+
+-7%
+
+Ballon adidas DFL Hiver - Orange / Bleu / Noir
+Prix PRO en ligne
+€117.00
+€126.00
+
+
+
+
+
+Page 1 / 10
+Page Suivante
+
+
+
+
+
+
+
+Copyright ©  2005-2016 Pro:Direct. Tous droits réservés. Les marques déposées et leurs appelations commerciales sont la propriété exclusives de leurs propriétaires respectifs. En utilisant ce site Internet vous acceptez les conditions d'utilisation établies par Pro:Direct et vous engagez à les respecter.
+
+Confidentialité
+Termes et Conditions
+Aide et Questions
+Livraison Rapide
+Carrières
+Nous contacter
+
+
+
+visa
+mastercard
+maestro
+solo
+american express
+switch
+paypal
+
+
+
+
+
+
+
+
+     47%d'économie BALLON FOOTBALL ADIDAS LFP TOP TRAINING 15   Ballon Foot | Technologie TSBE :? meilleur contrôle de la balle.? ballon officiel des jeux indoor FIFA et UEFA, f...  BALLON NIKE STRIKE AH16 NOIR  Ballon Foot | Ballon d'entraînement offrant un toucher exceptionnel ainsi qu'une visibilité élevée 12%d'économie ADIDAS ADIDAS FINALE UEFA SALA BLANC,  MIXTE BLANC  Ballon Foot | Adidas Finale Uefa Sala blanc,  mixte  BALLON FOOTBALL ADIDAS FINALE MILANO 15 BLANC  Ballon Foot | Ballon de la finale de ligue des champions. Cousu main pour une bonne résistance à l'usure et un excellent to... 39%d'économie BALLON / MINI BALLONS FOOT ADIDAS EURO16 TOP  Ballon Foot | Le ballon EURO16 TOP GLIDER d'Adidas est cousu à la machine pour un toucher doux, une durabilité optimale et ...  ADIDAS BALLON DE FUTSAL ADIDAS FREEFOTBALL  Ballon Foot | Construction Nylon et TPU pou...  ADIDAS BALLON FOOTBALL ADIDAS TANGO GLIDER  Ballon Foot | ce ballon d'entraînement appr...  ADIDAS FINALE CAPITANO UCL AH16  Ballon Foot |   MITRE MITRE NOUVELLE TW 18P FOOTBALL BLANC  Ballon Foot | Mitre Nouvelle TW 18P Footbal...  ERIMA BALLON ALLROUND TRAINING T.3 (BLANC/BLEU -  Ballon Foot | Ballon d'entraînement fiable ...  ADIDAS EURO 2012 GLIDER  Ballon Foot |  29%d'économie BALLONS / MINI BALLONS FOOT ADIDAS CHAMPIONS  Ballon Foot | Le ballon de foot CHAMPIONS LEAGUE CAPITANO d'Adidas est cousu machine et offre donc un toucher doux ainsi qu... 29%d'économie BALLONS / MINI BALLONS FOOT PUMA EVOPOWER 6 3  Ballon Foot | Le ballon EVOPOWER 6 3 TRAINER de Puma présente 32 empiècements multi-couches cousus à la machine avec une en... 23%d'économie BALLON / MINI BALLONS FOOT ADIDAS EURO16 MINI BALL  Ballon Foot | Le ballon EURO16 MINI BALL d'Adidas est cousu à la machine pour un toucher doux, une durabilité optimale et p...  MONDO SOFT FOOT 200  Balles Et Ballons |  39%d'économie BALLON GO SPORT GOOOAL FRANCE 16   Ballon Foot | Votre ballon de foot aux coul...  BALLON ATHLITECH ATHLI FOOT BALL RG   Ballon Foot | Le ballon de football Athlite... 29%d'économie BALLON ADIDAS GLIDER 2 BALL AH15   Ballon Foot | Pour travailler tes contrôles, tes passes et tes frappes, il te faut un ballon de qualité. Ce modèle possède ...  BALLON NIKE STRIKE PREMIUM AH16 VERT  Ballon Foot | Ballon d'entraînement offrant un toucher exceptionnel ainsi qu'une visibilité optimale  NIKE BALLON  FOOTBALL  LOISIR MERCURIAL FADE T5  Ballon Foot | Mercurial fade t5 ballon  ADIDAS BALLON  FOOTBALL ENTRAINEMENT CONEXT15  Ballon Foot | Conext15 replique t5 44%d'économie SELECT BALLON EVOLUTION SELECT T4 TAILLE - T4  Ballon Foot | Ballon EVOLUTION SELECT T4 Taille - T4  ADIDAS BALLON  FOOTBALL  MATCH HOMOLOGUÉ EURO 16  Ballon Foot | Euro 16 omb pro  NIKE BALLON  FOOTBALL  LOISIR TEAM TRAINNING JAUNE  Ballon Foot | Team trainning jaune t5 42%d'économie SELECT BALLON EVOLUTION SELECT T3 TAILLE - T3  Ballon Foot | Ballon EVOLUTION SELECT T3 Taille - T3  ADIDAS BALLON COMPÉTITION EURO 2016 BLANC  Ballon Foot | Gamme Ligue 1 2014/2015  4FREESTYLE BALLON FRESTYLE FOOTBALL GRIPBALL  Ballon Foot | BALLON FREESTYLE FOOTBALL DE LA MARQUE NORVEGIENNE 4FREESTYLE.
+
+GRIPBALL EST EN CAOUTCHOUC, POUR UNE MEILLEUR... 33%d'économie JAKO BALLON FOOTBALL LIGHT 3.0 JAKO T4 TAILLE - T4  Equipements Club Sports Collectifs | Ballon de Football LIGHT 3.0 JAKO - Taille 4 - Jaune Conçu pour l entrainement de football, ce ballon volonta... 29%d'économie SELECT BALLON FUTSAL SAMBA SELECT BLANC TAILLE -  Equipements Club Sports Collectifs | Ballon de Futsal SAMBA SELECT 64cm - Blanc Conçu pour la pratique du futsal, ce ballon, Inspecté FIFA, assure... 33%d'économie JAKO BALLON FOOTBALL LIGHT 3.0 JAKO T3 TAILLE - T3  Equipements Club Sports Collectifs | Ballon de Football LIGHT 3.0 JAKO - Taille 3 - Orange Conçu pour l entrainement de football, ce ballon volont... 30%d'économie JAKO BALLON FOOTBALL GOAL CLASSICO 3.0 JAKO T3  Equipements Club Sports Collectifs | Ballon de Football GOAL CLASSICO 3.0 JAKO - Taille 3 - Jaune Conçu pour la pratique régulière du football, 30%d'économie JAKO BALLON FOOTBALL GOAL CLASSICO 3.0 JAKO T5  Equipements Club Sports Collectifs | Ballon de Football GOAL CLASSICO 3.0 JAKO - Taille 5 - Rouge Conçu pour la pratique régulière du football,  GO SPORT GO BALL JAUNE  Ballon Foot |  13,00 €d'économie JAKO BALLON FOOTBALL MATCH 3.0 IMS JAKO T5 TAILLE  Equipements Club Sports Collectifs | Ballon de Football MATCH 3.0 IMS JAKO - Taille 5 - Bleu Conçu pour la pratique régulière du football, 34%d'économie SELECT BALLON FUTSAL TALENTO SELECT U11 TAILLE -  Equipements Club Sports Collectifs | Ballon de Futsal TALENTO SELECT U11 - Blanc Conçu pour la pratique du futsal, ce ballon spécifique junior est... 16,00 €d'économie SELECT BALLON FOOTBALL TEAM FIFA SELECT TAILLE -  Equipements Club Sports Collectifs | Ballon de Football TEAM FIFA SELECT - Taille 5 - Blanc Conçu pour la pratique régulière du football, ce ballo...  SOUVENIRS DE FRANCE SOUVENIRS DE FRANCE - BALLON  Ballon Foot | Ballon de football officiel de la Fédération Française de Football (FFF), en cadeau ou en souvenir de l'équip... 11%d'économie NIKE BALLON  FOOTBALL ENTRAINEMENT BLAZE T5 JAUNE  Ballon Foot | Blaze t5 jaune football 40%d'économie SELECT BALLON FUTURA SELECT T4 TAILLE - T4  Ballon Foot | Ballon de Football Bleu FUTURA SELECT Taille 4 Conçu pour la pratique régulière du football tous types de sur...  ADIDAS BALLON  FOOTBALL  LOISIR CONEXT15 T5 ORG  Ballon Foot | Conext15 t5 org ballon  FREESTYLE ENERGY BALLON FREESTYLE FOOTBALL -  Ballon Foot | Le nouveau ballon de la marque Française Freestyle Energy est enfin disponible !
+
+Il s'appelle le EnergyGlobe...  UHLSPORT BALLON  FOOTBALL ENTRAINEMENT COUPE DE LA  Ballon Foot | Ballon  football entrainement Coupe de la ligue tenor 51,96 €d'économie UHLSPORT BALLON UHLSPORT TENOR OFFICIEL BLANC  Ballon Foot | Ballon Uhlsport Tenor Officiel  ERIMA BALLON ALLROUND FUTSAL SENIOR (BLANC/JAUNE -  Ballon Foot | Ballon de match Futsal de qualité avec d'exceptionnelles performances de jeu pour jouer dans un espace limité...  UHLSPORT BALLON  FOOTBALL ENTRAINEMENT SOCCER PRO  Ballon Foot | Soccer pro t 5 ballon  ADIDAS BALLON  FOOTBALL  LOISIR PROLIGUE1 PRO  Ballon Foot | Proligue1 pro  ADIDAS BALLON  FOOTBALL  LOISIR STARLANCER IVT5   Ballon Foot | Starlancer ivt5  lot de 8  ADIDAS BALLON  FOOTBALL  LOISIR EURO 16  GLIDER  Ballon Foot | Euro 16  glider blanc  PUBLICITÉPUBLICITÉGO Sport - Vente d'articles de sport sur internet et en boutique près de chez vous                Site de vente en ligne et magasins de sport. Vélos, skis, articles et matériel de sport pour la randonnée, la musculation, le fitness, le tennis, le running, les sports d'équipe. Trouvez les magasins partout en France. Des services pour vos pratiques sportives. Achat article de sport - Ballons                La pratique du sport nécessite souvent des vêtements et des tenues spécifiques pour être à l'aise.GO Sport propose une gamme complète de vêtements, de chaussures et de matériel pour une utilisation occasionnelle, régulière ou intensive pour les femmes, les hommes et les enfants. Avec GO Sport découvrez toutes les marques internationales ainsi que des conseils pour pratiquer votre sport préféré avec le maximum de plaisir.GO Sport, c'est la garantie d'une livraison fiable, rapide et sécurisée.  Vous pouvez vous faire livrer à domicile ou retirer votre colis dans un des relais.Paiement sécuriséLivraison offertedès 30€ d'achatéchange gratuiten magasintrouver un magasin Homepage MarketPlace vendeurPlan du siteNos servicesVendez vos produitsDécouvrez GO Sport MarketPlaceNotre programme FeelGoodCarte cadeauTout sur la DEEEGO Sport LocationGO Sport OccasionDevenir affiliésNos guidesNos tractsPaiement et LivraisonTout sur la livraisonTout sur le paiementNos conditions de retourBesoin d'aideContactez-nousContactez-nousSuivez-nous sur FacebookSuivez-nous sur TwitterSuivez-nous sur InstagramA propos de GO SportMentions LégalesRecrutementGroupe GO SportConditions générales de vente haut                Paiment Sécurisé     
+
+ 
+
+
+
+
+
+
+Ballon de football
+
+Un article de Wikipédia, l'encyclopédie libre.
+
+
+					Aller à :					navigation, 					rechercher
+
+ Pour les articles homonymes, voir Ballon.
+Le ballon de football, normalisé par la Fédération internationale de football association (FIFA), a 32 faces : c'est un polyèdre appelé icosaèdre tronqué.
+
+
+
+Sommaire
+
+
+1 Caractéristiques
+
+1.1 Forme
+1.2 Couleur
+
+
+2 Ballons de football officiels
+
+2.1 Jeux Olympiques
+2.2 Coupe du monde
+2.3 Championnat d'Europe
+
+
+3 Représentation du ballon de football en informatique
+4 Notes et références
+5 Liens externes
+
+
+
+Caractéristiques[modifier | modifier le code]
+Ses caractéristiques sont définies par la Loi 2 du football de l'International Football Association Board. Elles ont été arrêtées en 1837. Le ballon doit être sphérique, en cuir ou dans une autre matière adéquate, avoir une circonférence de 70 cm au plus et de 68 cm au moins (soit un diamètre de 22 cm), une masse de 450 g au plus et de 400 g au moins au début du match et une pression relative se situant entre 0,6 (pour les ballons de futsal) et 1,1 atmosphère (600 - 1100 g/cm²).
+Des ballons de plus petites tailles sont utilisés pour les compétitions de jeunes [1]
+
+taille n° 5 à partir de 13 ans
+taille n°4 pour 12 ans et 11 ans ;
+taille n°3 pour les débutants, 6 et 9 ans.
+taille n°2 pour les petits de 3 à 6 ans
+taille n°1 pour les petits de 1 à 3 ans
+
+Forme[modifier | modifier le code]
+
+
+
+
+icosaèdre tronqué
+
+
+
+
+
+
+forme géométrique : icosaèdre tronqué et forme réelle
+
+
+La forme idéale et théorique est sphérique. Mais les essais de moulage comme pour le ballon de basket-ball n'en faisaient pas un objet assez souple. Les techniciens ont donc choisi l'assemblage de pièces de cuir. Au départ, certains ballons comportaient 18 panneaux de cuir assemblés et cousus. Ils étaient fermés par un lacet, qui, une fois desserré, assemblait les derniers panneaux et renfermait le système de gonflage (un tuyau relié à la vessie, replié sur lui-même)
+C'est un ancien gardien de but de l'équipe du Danemark, Eigil Nielsen, fondateur de la marque danoise Select Sport qui a le premier introduit le principe d'une valve dans les ballons, en 1947 : il voulait remplacer le lacet qui refermait le ballon. Pour fermer et coudre les derniers panneaux, il a donc décidé d'utiliser une longue aiguille incurvée, pour terminer la couture à l'intérieur de la balle. Ce principe nouveau fit disparaitre progressivement les ballons à lacets.
+C'est encore Nielsen qui invente le premier un ballon à 32 panneaux de coton pour rendre le ballon plus circulaire. Géométriquement, le ballon à 32 panneaux peut être décrit comme un icosaèdre tronqué soit un polyèdre semi-régulier possédant 60 sommets et 32 faces, 20 hexagonales et 12 pentagonales, dont les arêtes ont toutes la même longueur. L'enveloppe extérieure est alors constituée de 32 pièces de cuir (naturel ou synthétique), cousues entre elles, contenant une vessie de caoutchouc gonflable. La vessie peut être en latex naturel ou en butyl, un latex synthétique. L'enveloppe intérieure de la balle est en cuir synthétique appelé polyuréthane. L'introduction du cuir synthétique dans les ballons date de 1965, quand la marque Select a lancé son premier ballon étanche, dont le cuir était recouvert de polyuréthane. En 1974, Select invente le premier ballon totalement synthétique, fabriqué en polyuréthane.
+Depuis, le cuir a totalement disparu des ballons de football et a été remplacé par de la mousse, du PVC, et du polyuréthane, dont la qualité et l'épaisseur garantissent la solidité, le rebond et la souplesse de la balle.
+La forme de ballon à 32 panneaux, non totalement ronde peut avoir un effet lors des tirs.
+Article détaillé : Effet Magnus et turbulence dans le football.
+Pour la coupe du monde 2006 en Allemagne, Adidas, équipementier de la FIFA, a fourni un nouveau ballon pour la compétition, Teamgeist ("esprit d'équipe"), n'a que 14 découpages et donc une surface plus lisse et plus sphérique, permettant au joueur une meilleure précision de frappe.
+Couleur[modifier | modifier le code]
+Couleur cuir à l'origine, il eut le droit d'être blanc en 1951 pour être plus visible sur l'écran de télévision. En 1970, avec les exigences visuelles de la retransmission en couleur de la Coupe du monde au Mexique, l'objet, fait jusqu'alors de bandes de cuir cousues, prend sa forme et son apparence bicolore actuelles. Depuis la Coupe du monde de 1978 en Argentine, la structure est moins visible car les couleurs, toujours noir et blanc, n'épousent plus forcément le tracé des faces.
+Sur les terrains enneigés, on utilise plutôt des ballons de couleur jaune ou orange.
+Ballons de football officiels[modifier | modifier le code]
+Depuis 1996, les ballons avec les mentions officielles Fifa Approved (approuvé par la FIFA), Fifa inspected (contrôlé par la FIFA) ou International Matchball Standard (norme internationale pour ballon de match), signes qu'ils ont été testés, et répondent à des critères de qualité très précis, sont autorisés pour les compétitions de la FIFA et des six Confédérations. .
+La mention Fifa Approved est ainsi présente sur tous les ballons utilisés lors des Coupes du monde de football, mais aussi lors des Championnat d'Europe (ou Euro), et de la Copa América.
+Jeux Olympiques[modifier | modifier le code]
+Aux Jeux Olympiques, en 1952 à Helsinki (Finlande) et en 1956 à Melbourne (Australie), c'est un ballon de la marque SELECT, le SELECT Super, premier ballon avec valve et sans lacet, qui est le ballon officiel des matchs de football.
+Coupe du monde[modifier | modifier le code]
+Depuis 1970, l'équipementier sportif Adidas, fournisseur exclusif pour la coupe du monde, fournit un ballon spécifique pour chaque compétition[2].
+
+
+Coupe du monde
+Nom du ballon
+Image
+Fabricant officiel
+Remarques
+
+
+Mexique 1970
+Telstar
+
+Adidas
+Le premier ballon avec des formes blanches et noires utilisé pour une phase finale de coupe du monde de football.
+
+
+Allemagne 1974
+Telstar Durlast
+
+Adidas
+
+
+
+Argentine 1978
+Tango
+
+Adidas
+Introduction d'un nouveau design avec des "triades" donnant l'illusion qu'il est composé de 12 cercles. Ce design durera une vingtaine d'année. Un des ballons les plus populaires.
+
+
+Espagne 1982
+Tango España
+
+Adidas
+Amélioration annoncée de sa résistance à l'eau par un assemblage caoutchouté mais connaitra des problèmes de résistance et devra être changé quelquefois plusieurs fois pendant les matches
+Dernier ballon en cuir véritable.
+
+
+Mexique 1986
+Azteca
+
+Adidas
+ 
+
+
+Italie 1990
+Etrusco
+
+Adidas
+ 
+
+
+États-Unis 1994
+Questra [3]
+
+Adidas
+ 
+
+
+France 1998
+Tricolore
+
+Adidas
+Premier ballon avec plus de deux couleurs utilisé pour une phase finale de coupe du monde. Dernier à utiliser le design du Tango.
+
+
+Corée-du-Sud/Japon 2002
+Fevernova
+
+Adidas
+ 
+
+
+Allemagne 2006
+Teamgeist ("esprit d'équipe")
+
+Adidas
+Le Teamgeist est un ballon à "seulement" 14 faces. Chaque match de la phase finale a ses propres ballons, avec date du match, stade et équipe imprimés sur les ballons.
+Pour la finale, des ballons nommés "Teamgeist Berlin" sont de couleur doré.
+
+
+
+Teamgeist Berlin (uniquement pour la finale)
+
+
+
+Afrique du Sud 2010
+Jabulani (Le mot jabulani signifie "fête" ou "célébrer" en langue zoulou).
+
+Adidas
+Le ballon est habillé de quatre triangles colorés, inspirés de la culture sud-africaine, qui reposent sur un fond blanc. Critiqué par certains gardiens pour sa trajectoire flottante et fluctuante.
+
+
+Jobulani
+
+
+Brésil 2014
+Brazuca
+
+Adidas
+Composé de six panneaux de polyuréthane. Les motifs dessinés représentent les célèbres bracelets brésiliens[4].
+
+
+Championnat d'Europe[modifier | modifier le code]
+
+
+Euro
+Nom du ballon
+Fabricant officiel
+Remarques
+
+
+Italie 1980
+Tango River Plate
+Adidas
+ 
+
+
+France 1984
+Tango Mundial
+Adidas
+ 
+
+
+Allemagne 1988
+Tango Europa
+Adidas
+ 
+
+
+Suède 1992
+Etrusco Unico
+Adidas
+Même ballon que celui de la Coupe du monde de 1990.
+
+
+Angleterre 1996
+Questra Europa
+Adidas
+ 
+
+
+Belgique - Pays-Bas 2000
+Terrestra Silverstrea
+Adidas
+ 
+
+
+Portugal 2004
+Roteiro
+Adidas
+Critiqué par certains gardiens pour une prise en mains jugée peu fiable et des trajectoires fluctuantes.
+
+
+Autriche - Suisse 2008
+Europass
+Adidas
+ 
+
+
+Pologne - Ukraine 2012
+Tango 12
+Adidas
+ 
+
+
+France 2016
+Beau Jeu
+Adidas
+Ballon utilisant les couleurs bleu blanc rouge, du drapeau français (pays hôte de la compétition) avec une superposition des mots EURO et 2016. Sa solidité fut remise en cause lorsqu'un ballon explosa durant le match France-Suisse.
+
+
+Fracas
+Ballon utilisé pour les phases à élimination directe. Il reprend le design de Beau Jeu avec un effet de projection symbolisant le mouvement et le jeu explosif.Les couleurs dominantes sont plus agressives : rouge et noir.
+
+
+Selon son concepteur et fabricant, l'équipementier sportif Adidas, l'Europass « la texture doit assurer une meilleure transmission de la force de frappe des joueurs et, grâce à une vitesse de rotation accrue, permettre de donner plus d'effet au ballon. »[5] Il doit en outre offrir une meilleure prise aux gardiens de but[6]. Il semble être dérivé du Teamgeist, il en reprend la conception (la technique d'assemblage et le collage thermique sont identiques[6]) et dont seule la texture de surface aurait été modifiée. Il est de couleur blanche et noire avec des éléments rouges et argentés[6].
+Représentation du ballon de football en informatique[modifier | modifier le code]
+L'Unicode contient un casseau représentant un ballon de football, au code U+26BD ⚽.
+Notes et références[modifier | modifier le code]
+
+
+↑ Caractéristiques du ballon - Circulaire FFF 2.02 (consulté le 16 décembre 2011)
+↑ Fifa, « Ballons de la Coupe du monde de la FIFA », sur www.fifa.com, Fifa (consulté le 21 juin 2010)
+↑ Soccer Ball World - Adidas Questra (consulté le 9 juin 2006)
+↑ « Le Brazuca, le ballon cubique de la Coupe du monde », sur Image des mathématiques (consulté le 14 juillet 2014)
+↑ France Football, Euro 2008 "La France retrouve l'Italie
+↑ a, b et c Angola Press, 2 décembre 2007, SUISSE/Euro-2008: L`"Europass", ballon officiel à la surface de velours
+
+
+Liens externes[modifier | modifier le code]
+
+Sur les autres projets Wikimedia :
+
+Ballon de football, sur Wikimedia Commons
+
+
+
+Comment dessiner un ballon de foot
+(en) icosaèdre
+
+
+
+
+
+
+v · m
+
+Balles, ballons et boules de sport
+
+
+Balle
+Baseball · Cricket · Golf · Jonglerie · Pelote basque · Squash · Tennis · Tennis de table
+
+
+Ballon
+Basket-ball · Football · Football américain · Football australien · Gymnastique · Handball · Rugby à XIII · Rugby à XV · Volley-ball
+
+
+Boule
+Billard · Bowling
+
+
+
+
+ Portail du football
+
+
+ 
+						Ce document provient de « https://fr.wikipedia.org/w/index.php?title=Ballon_de_football&oldid=130751445 ».					
+Catégories : Ballon de footballTerminologie du footballÉquipement de footballCatégories cachées : Catégorie Commons avec lien local identique sur WikidataPortail:Football/Articles liésPortail:Sport/Articles liés 
+
+
+
+Menu de navigation
+
+
+Outils personnels
+
+Non connectéDiscussionContributionsCréer un compteSe connecter 
+
+
+
+Espaces de noms
+
+Article
+Discussion
+
+
+
+
+Variantes
+
+
+
+
+
+
+
+
+
+Affichages
+
+Lire
+Modifier
+Modifier le code
+Historique
+
+
+
+Plus
+
+
+
+
+
+
+
+Rechercher
+
+
+
+
+
+
+
+
+Navigation
+
+
+AccueilPortails thématiquesArticle au hasardContact 
+
+
+
+Contribuer
+
+
+Débuter sur WikipédiaAideCommunautéModifications récentesFaire un don 
+
+
+
+Outils
+
+
+Pages liéesSuivi des pages liéesImporter un fichierPages spécialesAdresse permanenteInformation sur la pageÉlément WikidataCiter cette page 
+
+
+
+Imprimer / exporter
+
+
+Créer un livreTélécharger comme PDFVersion imprimable 
+
+
+
+Dans d’autres projets
+
+
+Wikimédia Commons 
+
+
+
+Dans d’autres langues
+
+
+العربيةAzərbaycancaБеларускаяБеларуская (тарашкевіца)‎БългарскиDanskDeutschEnglishSuomiעבריתHrvatskiMagyarՀայերենBahasa IndonesiaItaliano日本語Қазақша한국어PolskiPortuguêsRomânăРусскийSrpskohrvatski / српскохрватскиСрпски / srpskiSvenskaதமிழ்TürkçeУкраїнськаOʻzbekcha/ўзбекча 
+Modifier les liens 
+
+
+
+
+
+ Dernière modification de cette page le 17 octobre 2016, à 14:53.
+Droit d'auteur : les textes sont disponibles sous licence Creative Commons attribution, partage dans les mêmes conditions ; d’autres conditions peuvent s’appliquer. Voyez les conditions d’utilisation pour plus de détails, ainsi que les crédits graphiques. En cas de réutilisation des textes de cette page, voyez comment citer les auteurs et mentionner la licence.
+Wikipedia® est une marque déposée de la Wikimedia Foundation, Inc., organisation de bienfaisance régie par le paragraphe 501(c)(3) du code fiscal des États-Unis.
+
+
+Politique de confidentialité
+À propos de Wikipédia
+Avertissements
+Développeurs
+Déclaration sur les cookies
+Version mobile
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
