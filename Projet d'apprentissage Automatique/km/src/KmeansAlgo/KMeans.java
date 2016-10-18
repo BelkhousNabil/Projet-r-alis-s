@@ -22,7 +22,7 @@ import org.knowm.xchart.demo.charts.ExampleChart;
 /**
  * @author BELKHOUS
  * @version 3.0
- * Date: 30/09/2016
+ * Date: 10/10/2016
  * 
  * Main class that allows to implement the k-means algorithm
  */
