@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://univ.fr/stb" xmlns="http://univ.fr/stb">
+	
+	<xs:element name="stb">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Titre" type="xs:string"/>
+				<xs:element name="Version" type="xs:string"/>
+				<xs:element name="Date" type="xs:date"/>
+				<xs:element name="Description" type="xs:string"/>
+				<xs:element name="Client" minOccurs="1">
+					<xs:complexType>        
+						<xs:sequence>       
+							<xs:element name="Entite" type="xs:string"/>
+							<xs:element name="Contact" type="xs:string"/>
+							<xs:element name="CP" type="xs:integer"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Equipe" minOccurs="2" maxOccurs="7">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="nom" type="xs:string"/>
+							<xs:element name="prenom" type="xs:string"/>
+							<xs:element name="gender" type="xs:boolean"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="Fonctionnalite" minOccurs="2" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Description" type="xs:string"/>
+							
+							<xs:element name="Priorite">
+							  <xs:simpleType>
+								<xs:restriction base="xs:integer">
+								  <xs:minInclusive value="0"/>
+								  <xs:maxInclusive value="10"/>
+								</xs:restriction>
+							  </xs:simpleType>
+							</xs:element>
+							
+							<xs:element name="Exigence" minOccurs="2" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Identifiant" type="xs:string"/>
+										<xs:element name="Description" type="xs:string"/>
+										<xs:element name="Priorite">
+										  <xs:simpleType>
+											<xs:restriction base="xs:integer">
+											  <xs:minInclusive value="0"/>
+											  <xs:maxInclusive value="10"/>
+											</xs:restriction>
+										  </xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Commentaire" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+			
+		</xs:complexType>
+		
+	</xs:element>
+	
+</xs:schema>

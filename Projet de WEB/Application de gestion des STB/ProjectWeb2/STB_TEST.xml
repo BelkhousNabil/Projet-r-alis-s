@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:stb xmlns:p="http://univ.fr/stb" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://univ.fr/stb STB.xsd ">
+  <Titre>Projet Web 2</Titre>
+  <Version>1.0</Version>
+  <Date>2016-04-26</Date>
+  <Description>STB pour le projet de web</Description>
+  <Client>
+    <Entite>Université de Rouen</Entite>
+    <Contact>CLient: S.HERAUVILLE</Contact>
+    <CP>76000</CP>
+  </Client>
+  <Equipe>
+    <nom>BELKHOUS</nom>
+    <prenom>Nabil</prenom>
+    <gender>true</gender>
+  </Equipe>
+  <Equipe>
+    <nom>Zebouchi</nom>
+    <prenom>Mohammed</prenom>
+    <gender>true</gender>
+  </Equipe>
+
+  <Fonctionnalite>
+    <Description>Ajout de STB</Description>
+    <Priorite>10</Priorite>
+    <Exigence>
+      <Identifiant>Client</Identifiant>
+      <Description>Ajouter à partir d'un formulaire</Description>
+      <Priorite>10</Priorite>
+    </Exigence>
+	<Exigence>
+      <Identifiant>Client</Identifiant>
+      <Description>Ajouter un fichier</Description>
+      <Priorite>10</Priorite>
+    </Exigence>
+    <Exigence>
+      <Identifiant>But du projet</Identifiant>
+      <Description>Le resultat final</Description>
+      <Priorite>1</Priorite>
+    </Exigence>
+  </Fonctionnalite>
+  
+  <Fonctionnalite>
+    <Description>Résumé</Description>
+    <Priorite>10</Priorite>
+    <Exigence>
+      <Identifiant>Client</Identifiant>
+      <Description>Afficher résumé STB</Description>
+      <Priorite>10</Priorite>
+    </Exigence>
+	<Exigence>
+      <Identifiant>Client</Identifiant>
+      <Description>Afficher résumé des STBs</Description>
+      <Priorite>10</Priorite>
+    </Exigence>
+    <Exigence>
+      <Identifiant>Creation à partir de l'IHM des diagrammes</Identifiant>
+      <Description>Diagrammes UML</Description>
+      <Priorite>2</Priorite>
+    </Exigence>
+  </Fonctionnalite>
+  
+  <Fonctionnalite>
+    <Description>Accueil</Description>
+    <Priorite>10</Priorite>
+    <Exigence>
+      <Identifiant>Membres</Identifiant>
+      <Description>Afficher Membres projet</Description>
+      <Priorite>10</Priorite>
+    </Exigence>
+	<Exigence>
+      <Identifiant>Nombre STBs</Identifiant>
+      <Description>Afficher le nombre de STBs</Description>
+      <Priorite>10</Priorite>
+    </Exigence>
+    <Exigence>
+      <Identifiant>à partir d'un fichier Java générer le diagramme de Classe</Identifiant>
+      <Description>Obtention d'un diagramme</Description>
+	  <Priorite>5</Priorite>
+    </Exigence>
+  </Fonctionnalite>
+  <Commentaire> Projet réalisé par Belkhous et Zebouchi</Commentaire> 
+  
+</p:stb>

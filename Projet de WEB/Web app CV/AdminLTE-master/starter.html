@@ -109,7 +109,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-          	<li><a href="#scrap">Grand corpus</br>Web Scraping</a></li>
+            <li><a href="#scrap">Grand corpus</br>Web Scraping</a></li>
             <li><a href="#api">API de parametrege</br>et de savegarde </br></br>de projet JAVA</a></li>
             <li><a href="#rn">Jeu de batons</br>-Réseaux de neurones-</a></li>
             <li><a href="#kmeans">Projet K-means</a></li>
@@ -660,7 +660,7 @@
                             <div class="progress sm" style="width:50%;margin-top:15px;">
                               <div class="progress-bar progress-bar-red" style="width: 40%"></div>
                             </div>
-                          </div><hr/>	
+                          </div><hr/> 
                        
                           <div class="progress-group" style="display:inline;">
                             <i><img src="dist/img/r.png" class="img-rectangle" alt="projects" style="float:left;margin-right:10px;"></i>
@@ -1033,27 +1033,27 @@
                     <!-- /.box-header -->
                    
                     <div class="box-body">
-		              <div class="row">
-		                <div class="col-xs-6 col-md-3">
-		                  <div style="display:inline;width:90px;height:90px;"><canvas width="90" height="90"></canvas><input type="text" class="knob" value="100" data-skin="tron" data-thickness="0.2" data-width="90" data-height="90" data-fgcolor="#f56954" data-readonly="true" readonly="readonly" style="width: 49px; height: 30px; position: absolute; vertical-align: middle;  border: 0px; background: none; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 18px; line-height: normal; font-family: Arial; text-align: center; color: rgb(60, 141, 188); padding: 0px; -webkit-appearance: none;"></div>
+                  <div class="row">
+                    <div class="col-xs-6 col-md-3">
+                      <div style="display:inline;width:90px;height:90px;"><canvas width="90" height="90"></canvas><input type="text" class="knob" value="100" data-skin="tron" data-thickness="0.2" data-width="90" data-height="90" data-fgcolor="#f56954" data-readonly="true" readonly="readonly" style="width: 49px; height: 30px; position: absolute; vertical-align: middle;  border: 0px; background: none; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 18px; line-height: normal; font-family: Arial; text-align: center; color: rgb(60, 141, 188); padding: 0px; -webkit-appearance: none;"></div>
 
-		                  <div class="knob-label" style="font-size:15px;">Arabe</div>
-		                </div>
-		                
-		                <div class="col-xs-6 col-md-3">
-		                  <div style="display:inline;width:90px;height:90px;"><canvas width="90" height="90"></canvas><input type="text" class="knob" value="100" data-skin="tron" data-thickness="0.2" data-width="90" data-height="90" data-fgcolor="#00a65a" data-readonly="true" readonly="readonly" style="width: 49px; height: 30px; position: absolute; vertical-align: middle;  border: 0px; background: none; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 18px; line-height: normal; font-family: Arial; text-align: center; color: rgb(60, 141, 188); padding: 0px; -webkit-appearance: none;"></div>
+                      <div class="knob-label" style="font-size:15px;">Arabe</div>
+                    </div>
+                    
+                    <div class="col-xs-6 col-md-3">
+                      <div style="display:inline;width:90px;height:90px;"><canvas width="90" height="90"></canvas><input type="text" class="knob" value="100" data-skin="tron" data-thickness="0.2" data-width="90" data-height="90" data-fgcolor="#00a65a" data-readonly="true" readonly="readonly" style="width: 49px; height: 30px; position: absolute; vertical-align: middle;  border: 0px; background: none; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 18px; line-height: normal; font-family: Arial; text-align: center; color: rgb(60, 141, 188); padding: 0px; -webkit-appearance: none;"></div>
 
-		                  <div class="knob-label" style="font-size:15px;">Français</div>
-		                </div>
+                      <div class="knob-label" style="font-size:15px;">Français</div>
+                    </div>
 
-		                <div class="col-xs-6 col-md-3" >
-		                  <div style="display:inline;width:90px;height:90px;"><canvas width="90" height="90"></canvas><input type="text" class="knob" value="70" data-skin="tron" data-thickness="0.2" data-width="90" data-height="90" data-fgcolor="#3c8dbc" data-readonly="true" readonly="readonly" style="width: 49px; height: 30px; position: absolute; vertical-align: middle;  border: 0px; background: none; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 18px; line-height: normal; font-family: Arial; text-align: center; color: rgb(60, 141, 188); padding: 0px; -webkit-appearance: none;"></div>
-		                  <div class="knob-label" style="font-size:15px;">Anglais</div>
-		                 
-		                </div>		              
-		              </div>
-		              <!-- /.row -->
-		            </div>
+                    <div class="col-xs-6 col-md-3" >
+                      <div style="display:inline;width:90px;height:90px;"><canvas width="90" height="90"></canvas><input type="text" class="knob" value="70" data-skin="tron" data-thickness="0.2" data-width="90" data-height="90" data-fgcolor="#3c8dbc" data-readonly="true" readonly="readonly" style="width: 49px; height: 30px; position: absolute; vertical-align: middle;  border: 0px; background: none; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 18px; line-height: normal; font-family: Arial; text-align: center; color: rgb(60, 141, 188); padding: 0px; -webkit-appearance: none;"></div>
+                      <div class="knob-label" style="font-size:15px;">Anglais</div>
+                     
+                    </div>                  
+                  </div>
+                  <!-- /.row -->
+                </div>
 
                     <!-- /.box-body -->
                   </div>
@@ -1077,7 +1077,7 @@
               <div class="row">
                 <div class="col-xs-12">
 
-                	<div class="box box-solid" id="scrap">
+                  <div class="box box-solid" id="scrap">
                     <div class="box-header">
                       
                       <h3 class="box-title"><a href="https://github.com/BelkhousNabil/Projets-Informatiques/tree/master/Projet%20Web%20Scraping" target="_blank">Projet de réalisation d'un grand corpus à partir des contenus web avec la techique du Web Scraping</a></h3>
@@ -1101,8 +1101,8 @@
                               <i><img src="dist/img/bs.png" class="img-rectangle" alt="projects" style="float:left;margin-right:10px;"></i>
                             </div>
                             <span>
-                            	Le but de ce projet est de constituer un grand corpus relative à un domaine définie par un lexique. En utilisant la technique du Web Scraping on aspire le contenu de site web selon des critères et des choix précis. En sortie de notre script on aura un ensemble d'articles en relation avec le lexique défini.
-							</span>
+                              Le but de ce projet est de constituer un grand corpus relative à un domaine définie par un lexique. En utilisant la technique du Web Scraping on aspire le contenu de site web selon des critères et des choix précis. En sortie de notre script on aura un ensemble d'articles en relation avec le lexique défini.
+              </span>
                           </div><hr/>
                       
                       </div>  
@@ -1137,16 +1137,16 @@
                               <i><img src="dist/img/maven.png" class="img-circle" alt="projects" style="float:left;margin-right:10px;"></i>
                             </div>
                             <span>
-                            	Le but de l’application est de réaliser une API qui permet de sauvegarder les
-								paramètres d’exécution pour les utilisateurs d’une application, afin que chaque partie de cette
-								dernière puisse accéder directement au réglage qui lui convient.</br>
-								Ces paramètres sont stockés dans des fichiers de telle manière que l’application
-								récupère se dont elle a besoin.</br>
-								Si par exemple elle a besoin de paramétrer l’affichage d’un composant en une liste
-								d’items selon l’environnement utilisé, on peut mettre ce réglage dans le fichier de
-								configuration ou encore pour stocker ou récupérer les identifiants et les mots de passes d’un serveur,
-								on peut utiliser également un fichier de paramètres.
-							</span>
+                              Le but de l’application est de réaliser une API qui permet de sauvegarder les
+                paramètres d’exécution pour les utilisateurs d’une application, afin que chaque partie de cette
+                dernière puisse accéder directement au réglage qui lui convient.</br>
+                Ces paramètres sont stockés dans des fichiers de telle manière que l’application
+                récupère se dont elle a besoin.</br>
+                Si par exemple elle a besoin de paramétrer l’affichage d’un composant en une liste
+                d’items selon l’environnement utilisé, on peut mettre ce réglage dans le fichier de
+                configuration ou encore pour stocker ou récupérer les identifiants et les mots de passes d’un serveur,
+                on peut utiliser également un fichier de paramètres.
+              </span>
                           </div><hr/>
                       
                       </div>  
@@ -1212,8 +1212,8 @@
                               <i><img src="dist/img/java.png" class="img-rectangle" alt="projects" style="float:left;margin-right:10px;"></i>
                             </div>
                             <span>
-                            	Implémentation de l'algorithme K-means dans le cadre de l'apprentissage automatique avec les paramètres CH et DB.
-							             </span>
+                              Implémentation de l'algorithme K-means dans le cadre de l'apprentissage automatique avec les paramètres CH et DB.
+                           </span>
                           </div></br></br><hr/>
 
                       </div>  
@@ -1246,8 +1246,8 @@
                               <i><img src="dist/img/oracle.JPG" class="img-rectangle" alt="projects" style="float:left;margin-right:10px;"></i>
                             </div>
                             <span>
-                            	L'application a pour but de proposer aux medecins un traitement pour les patients lors d'une consultations en se référant aux différentes caractèristiques de ces derniers .
-							</span>
+                              L'application a pour but de proposer aux medecins un traitement pour les patients lors d'une consultations en se référant aux différentes caractèristiques de ces derniers .
+              </span>
                           </div></br></br><hr/>
 
                       </div>  
@@ -2037,6 +2037,6 @@
   }
 </script>
 
-	
+  
 </body>
 </html>
