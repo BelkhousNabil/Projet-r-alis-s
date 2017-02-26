@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import random
 from Neuron import *
 
@@ -44,7 +46,7 @@ class CPUPlayer(Player):
     
     #Constructeur par defaut de la classe
     def __init__(self,name,mode,nbSticks):
-        super().__init__(name)
+        self.name = name
         self.mode = mode
         self.netw = NeuronNetwork(3,nbSticks)
         self.previousNeuron = None

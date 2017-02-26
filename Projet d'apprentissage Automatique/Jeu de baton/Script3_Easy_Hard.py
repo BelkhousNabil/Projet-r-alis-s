@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from Game import *
 from Player import *
 from Neuron import *
