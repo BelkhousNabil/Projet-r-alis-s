@@ -1,0 +1,49 @@
+@startuml
+
+package fr.univrouen.umlreverse.ui.view {
+	interface IDiagramEditor
+    abstract class ADiagramEditor
+    class ClassDiagramEditor
+    class UseCaseDiagramEditor
+	interface IDiagramEditorController
+	abstract class ADiagramEditorController
+    class ClassDiagramEditorController
+    class UseCaseDiagramEditorController
+}
+
+package fr.univrouen.umlreverse.ui.component {
+	package common {
+		abstract class AEntityGraphic
+		class NoteGraphic
+		abstract class AEntityGraphicController
+		class NoteGraphicController
+		class DialogNoteEdit
+		class RelationGraphic
+	}
+
+	package clazz {
+		class PackageGraphic
+		class PackageGraphicController
+		class DialogPackageEdit
+		
+		class ObjectEntityGraphic
+		class ObjectEntityGraphicController
+		class DialogObjectEntityEdit
+	}
+
+	package usecase {
+		class UsecaseGraphic
+		class UsecaseGraphicController
+		class DialogUsecaseEdit
+		
+		class ActorGraphic
+		class ActorGraphicController
+		class DialogActorEntityEdit
+
+		class BorderGraphic
+		class BorderGraphicController
+		class DialogBorderEntityEdit
+	}
+}
+
+@enduml

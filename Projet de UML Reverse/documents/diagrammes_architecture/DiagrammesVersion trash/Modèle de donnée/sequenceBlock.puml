@@ -1,0 +1,38 @@
+@startuml
+
+
+
+
+
+
+package sequence { 
+' -------------------------------- umlreverse.model.diagram.sequence
+abstract ABlock
+class AlternativeBlock extends ABlock {
+	+getNodes(String condition) : List<ISequenceNode>
+	+getConditions() : List<String>
+	..
+	+addCondition(String condition) : void
+	+removeCondition(String condition) : void
+	+addNode(String condition, ISequenceNode node)
+	+removeNode(String condition, ISequenceNode noce)
+}
+class LoopBlock extends ABlock {
+	+getCondition() : String
+	+setcondition(String condition) : void	
+}
+class IterativeBlock extends ABlock {
+	+getCondition() : String
+	+setcondition(String condition) : void
+}
+class StrictBlock extends ABlock 
+class ParallelBlock extends ABlock
+
+}
+' --------------------------------------------------------- fin package sequence'
+
+
+
+
+
+@enduml

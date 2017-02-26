@@ -1,0 +1,25 @@
+@startuml
+title Diagramme de sequence d'un senario de création de classe
+	
+	user -> system : créer une classe
+	
+	
+	
+	alt Class not exist
+	system ->> user:Création classe	
+	user -> system : créer un attribut
+		alt Attribut not exist
+		system ->> user:Création attribut
+		else attribut exist
+		system --> user : Message d'erreur
+		end
+		user -> system : créer une méthide
+		alt Methode not exist
+		system ->> user:Création Methode
+		else Methode exist
+		system --> user : Message d'erreur
+		end
+	end
+	system --> user : Resultat création
+
+@enduml

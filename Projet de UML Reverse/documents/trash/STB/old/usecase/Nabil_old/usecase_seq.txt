@@ -1,0 +1,39 @@
+@startuml
+
+title Cas d'utilisation d'un diagramme de séquence
+
+actor :user:
+
+rectangle {
+	(Ajouter un objet) as (obj)
+	(Ajouter un message) as (msg)
+	(Ajouter un\n cadre d'interaction) as (inter)
+	
+	:user: <-- (obj)
+	:user: <-- (msg)
+	:user: <-- (inter)
+	
+	(Ajouter une ligne de vie) as (line)
+	(obj) ..|> "<include>" (line)
+	
+	(Message synchrone) as (sync)
+	(Message asynchrone) as (async)
+	(Création d'objet) as (new)
+	(Destruction d'objet) as (destroy)
+	
+	(msg) <|-- (sync)
+	(msg) <|-- (async)
+	(msg) <|-- (new)
+	(msg) <|-- (destroy)
+	
+	(sync) ..|> "<include>" (Message de\n réponse)
+	
+	(inter) <|-- (alt)
+	(inter) <|-- (opt)
+	(inter) <|-- (for)
+	(inter) <|-- (loop)
+	(inter) <|-- (ref)
+	
+}
+
+@enduml

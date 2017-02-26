@@ -1,0 +1,48 @@
+@startuml
+
+class UmlReverseApp{	
+}
+
+package javafx  {
+
+	class Stage {
+	}
+	class Scene {
+	}
+
+    class TreeView {
+    }
+
+    class BorderPane {
+    }
+
+	class MenuBar {
+	}
+
+	class MenuItem {
+	}
+
+}
+
+Interface IDiagramEditor{
+}
+
+Interface IDiagramMenu {
+	+ToolBar getToolBar()
+	--
+	+void setToolBar(ToolBar)
+	
+}
+
+
+BorderPane "1" o--> TreeView
+UmlReverseApp "1" o--> Stage
+Scene o--> BorderPane
+BorderPane "1" o--> IDiagramEditor
+Stage "1" o--> Scene
+BorderPane "1" o--> IDiagramMenu
+BorderPane "1" o--> MenuBar
+MenuBar "1..n" o--> MenuItem
+
+@enduml
+

@@ -1,0 +1,113 @@
+@startuml
+
+
+
+package diagram.util { 
+' -------------------------------- umlreverse.model.diagram.util
+
+interface IStyleManager
+abstract class ADiagram implements IDiagram 
+interface IEntity 
+
+ADiagram o--> IEntity
+ADiagram o--> INote
+AEntity o--> IStyleManager
+abstract AEntity implements IEntity
+}
+' --------------------------------------------------------- fin package util
+
+
+
+
+
+package sequence { 
+' -------------------------------- umlreverse.model.diagram.sequence
+enum SequenceStylizableElement {
+	Entity
+	AlternativeBlock
+	LoopBlock
+	IterativeBlock
+	StrictBlock
+	ParallelBlock
+	AsynchroneMessage
+	SynchroneMessage
+	CreateDestroyMessage
+	CreateMessage
+	LostMessage
+	FindMessage
+	Note
+}
+
+interface ISequenceDiagram implements IDiagram {
+	+getEntity(String name) : ISequenceEntity
+	+getEntities() : Set<ISequenceEntity> 
+	+getGlobalStyle(SequenceStylizableElement element) : StyleManager
+	+getBlocks() : List<ASequenceNode>
+	..
+	+setGlobalStyle(SequenceStylizableElement element, StyleManager style) : void
+	+addBlock(ASequenceNode block) : void
+	+removeBlock(ASequenceNode block) : void
+	+addEntity(String name) : void
+	+removeEntity(String name) : void
+	+accept(SequenceVisitor visitor) : void
+	+accept(DiagramVisitor visitor)
+}
+
+
+class SequenceDiagram extends ADiagram implements ISequenceDiagram
+SequenceDiagram "0..1" o--> "0..n" ISequenceNode
+SequenceDiagram "0..1" o--> "0..n" ISequenceEntity
+SequenceDiagram -> SequenceStylizableElement
+
+interface ISequenceEntity implements IEntity {
+	+getDiagram() : SequenceDiagram
+	+accept(SequenceVisitor) : void
+}
+class SequenceEntity extends AEntity implements ISequenceEntity
+
+interface ISequenceNode {
+	+getStyle() : StyleManager
+	+getGlobalStyle() : StyleManager
+	+getNotes() : Set<INote>
+	+getId() : String
+	..
+	+addNote(INote note) : void
+	+removeNote(INote note) : void
+	+setStyle(StyleManager) : void
+	+setGlobalStyle(StyleManager) : void
+	+accept(SequenceVisitor) : void
+}
+
+abstract ASequenceNode implements ISequenceNode 
+
+abstract AMessageNode extends ASequenceNode{
+	+getEntitySource() : ISequenceEntity
+	+getEntityTarget() : ISequenceEntity
+	+getMessage() : String
+	+setMessage(String message) : void 
+}
+
+abstract ABlockMessage extends AMessageNode {
+	+getNodes() : List<ISequenceNode>
+	..
+	+addNode(ISequenceNode node)
+	+removeNode(ISequenceNode node)	
+}
+ABlockMessage "0..1" o--> "0..n" ISequenceNode
+
+abstract ABlock extends ASequenceNode {
+	+getNodes() : List<ISequenceNode>
+	..
+	+addNode(ISequenceNode node)
+	+removeNode(ISequenceNode node)	
+}
+ABlock "0..1" o-> "0..n" ISequenceNode
+
+}
+' --------------------------------------------------------- fin package sequence'
+
+
+
+
+
+@enduml

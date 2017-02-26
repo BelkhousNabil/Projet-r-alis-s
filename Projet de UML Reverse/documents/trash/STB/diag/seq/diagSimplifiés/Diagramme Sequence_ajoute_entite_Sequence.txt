@@ -1,0 +1,19 @@
+@startuml
+title Diagramme de sequence d'un senario d'ajout d'une sequence à partir de l'IHM
+	
+	user -> system : Ajouter_entity();
+	system ->> user : Boite_de_dialogue();
+	
+	user -> system : Nommer_entity();
+	
+	alt Type de diagramme choisie = sequence
+		alt Nom de l'objet n'existe pas
+			system ->> user :Affichage_Objet();	
+			user -> system : Deplacer_Objet();
+			system ->> user :Deplacement_entity_Surbrillance();
+			else Nom de l'objet existe dèja
+				system ->> user :message("Ce nom existe dèja");
+		end
+	end
+
+@enduml

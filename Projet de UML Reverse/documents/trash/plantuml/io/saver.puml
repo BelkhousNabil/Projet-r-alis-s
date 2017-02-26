@@ -1,0 +1,19 @@
+@startuml
+title Sauvegarde d'un diagramme
+actor user
+entity saver
+
+user -> saver : save(diagram, filename)
+create entity plantUMLVisitor
+saver -> plantUMLVisitor : new PlantUMLVisitor(diagram)
+saver -> plantUMLVisitor : save(filename.puml)
+create database filename.puml
+plantUMLVisitor -> filename.puml : (write)
+create entity styleVisitor
+saver -> styleVisitor : new StyleVisitor(diagram)
+saver -> styleVisitor : save(filename.less)
+create database filename.less
+styleVisitor -> filename.less : (write)
+saver -> user : (return)
+
+@enduml

@@ -1,0 +1,25 @@
+@startuml
+
+title Cas d'utilisation d'un diagramme d'états
+
+actor :user:
+
+rectangle {
+	(Créer un état) as (state)
+	(Supprimer un état) as (remstate)
+	(Créer des transitions) as (trans)
+	(Créer un point d'entrée) as (in)
+	(Créer un point de sortie) as (out)
+	(Créer un pseudo-état) as (pseudo)
+	(Créer un état avec un\ncontenant parralèle) as (parallel)
+}
+
+:user: <-- (state)
+:user: <-- (remstate)
+:user: <-- (trans)
+:user: <-- (in)
+:user: <-- (out)
+:user: <-- (pseudo)
+:user: <-- (parallel)
+
+@enduml

@@ -1,0 +1,111 @@
+@startuml
+
+title Diagramme de classes du paquet umlreverse.model.io
+
+package umlreverse.model.io {	
+	package antlr {
+		class Java8Lexer
+		
+		class Java8Parser
+		
+		class PlantUMLLexer
+		
+		class PlantUMLParser
+	}
+	
+	interface IDiagramLoader {
+		+IDiagram loadDiagramFromJava(String nomFichierJava)
+		+IDiagram loadDiagramFromPlantUML(String nomFichierPlantUml)
+		+void applyStyle(IDiagram diagram, String nomFichierParameter)
+	}	
+	
+	abstract AbstractParser {
+		+File getFile()
+		+void setFile(File file)
+	}
+	
+	interface IDiagramParser<D extends IDiagram> {
+		+D getDiagram()
+	}
+	IDiagramParser <. IDiagramLoader
+	
+	interface IClassParser {
+		+IClassDiagram getDiagram()
+	}
+	IDiagramParser <|-- IClassParser
+	
+	class JavaClassParser {
+		+IClassDiagram getDiagram()
+	}
+	IClassParser <|.. JavaClassParser
+	AbstractParser <|---- JavaClassParser
+	
+	class PlantUMLClassParser {
+		+IClassDiagram getDiagram()
+	}
+	IClassParser <|.. PlantUMLClassParser
+	AbstractParser <|---- PlantUMLClassParser
+	
+	interface ISequenceParser {
+		+ISequenceDiagram getDiagram()
+	
+	}
+	IDiagramParser <|-- ISequenceParser
+	
+	class PlantUMLSequenceParser {
+		+ISequenceDiagram getDiagram()
+	
+	}
+	ISequenceParser <|.. PlantUMLSequenceParser
+	AbstractParser <|---- PlantUMLSequenceParser
+	
+	interface IUseCaseParser {
+		+IUseCaseDiagram getDiagram()
+	
+	}
+	IDiagramParser <|-- IUseCaseParser
+	
+	class PlantUMLUseCaseParser {
+		+IUseCaseDiagram getDiagram()
+	
+	}
+	IUseCaseParser <|.. PlantUMLUseCaseParser
+	AbstractParser <|---- PlantUMLUseCaseParser
+	
+	interface IStyleParser {
+		+IStyleManager getStyle()
+	}
+	IDiagramLoader .> IStyleParser
+	
+	class LessStyleParser {
+		+IStyleManager getStyle()
+	}
+	IStyleParser <|.. LessStyleParser
+	AbstractParser <|-- IStyleParser
+}
+
+
+package org.antlr.v4.runtime {
+	class Lexer
+	Lexer <|----- Java8Lexer
+	Lexer <|----- PlantUMLLexer
+	
+	class Parser
+	Parser <|----- Java8Parser
+	Parser <|----- PlantUMLParser
+	
+	package tree {
+		interface ParseTreeVisitor<T> {
+			+T visit(ParseTree tree)
+			+T visitChildren(RuleNode node)
+			+T visitTerminal(TerminalNode node)
+			+T visitErrorNode(ErrorNode node)
+		}
+		ParseTreeVisitor <|..... AbstractParser
+		
+	}
+}
+
+
+
+@enduml

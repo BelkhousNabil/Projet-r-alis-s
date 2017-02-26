@@ -1,0 +1,16 @@
+@startuml
+User -> Systeme: generer();
+Systeme --> User:  Response(); 
+
+
+User -> Systeme: genererDiagramme();
+Systeme --> User:  instance_Mdl_Vide();
+Systeme --> User:  instance_Mdl_Uml();
+
+
+User -> Systeme: gnrDiagrammeRev();
+Systeme --> User:  instance_Mdl_CS(); 
+
+
+
+@enduml

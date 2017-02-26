@@ -1,0 +1,166 @@
+@startuml
+
+interface IDiagramEditor
+interface IClassDiagramEditor
+interface IUseCaseDiagramEditor
+abstract ADiagramEditor
+class ClassDiagramEditor
+class UseCaseDiagramEditor
+
+interface IEntityGraphic
+interface INoteGraphic
+class NoteGraphic
+abstract AEntityGraphic
+
+package javafx {
+    class Shape
+    class Group
+}
+
+package model {
+    interface IClassDiagram
+    interface IUseCaseDiagram
+    interface INote
+}
+
+'-----------------------------
+'---------DEFINITIONS
+'----------------------------- 
+
+interface IDiagramEditor {
+    + getDiagram() : IDiagram
+    + setDiagramme(IDiagram) 
+} 
+
+abstract ADiagramEditor {
+    + addNote(INote)
+    + getNotes() : List<INote>
+}
+
+interface IClassDiagramEditor {
+    + addInterface(IInterface) 
+    + addClass(IClass)
+    + addEnum(IEnum)
+    + getInterfaces() : List<IInterface>
+    + getClasses() : List<IClass>
+    + getEnums() : List<IEnum>
+    + removeEntity(IClassEntity) 
+}
+
+interface IUseCaseDiagramEditor {
+    + addActor(IActor) 
+    + addBorder(IUseCaseGroup)
+    + addUseCase(IUseCase)
+    + getActors() : List<IActor>
+    + getBorders() : List<IUseCaseGroup>
+    + getUseCases() : List<IUseCase>
+}
+
+/'
+interface ISequenceDiagramEditor {
+    + addActor(IActor) 
+    + addSequenceEntity(ISequenceEntity)
+    + addAlternativeBlock(AlternativeBlock)
+    + addLoopBlock(LoopBlock)
+    + addIterativeBlock(IterativeBlock)
+    + addStrictBlock(StrictBlock)
+    + addParalleleBlock(ParalleleBlock)
+    + getActors() : List<IActor>
+    + getSequenceEntities(ISequenceEntity) : List<ISequenceEntity>
+    + getAlternativeBlocks(AlternativeBlock) : List<AlternativeBlock>
+    + getLoopBlocks(LoopBlock) : List<LoopBlock>
+    + getIterativeBlocks(IterativeBlock) : List<IterativeBlock>
+    + getStrictBlocks(StrictBlock) : List<StrictBlock>
+    + getParalleleBlocks(ParalleleBlock) : List<ParalleleBlock>
+}
+'/
+
+class NoteGraphic {
+    + NoteGraphic(INote)
+    + getText() : String
+    + setText(String)
+}
+
+interface IEntityGraphic {
+     + setName(String)
+     + remove()
+}
+
+abstract AEntityGraphic {
+     + setName(String)
+     + remove()
+}
+
+
+
+'-----------------------------
+'---------RELATIONS
+'-----------------------------
+
+IDiagramEditor <|-- IClassDiagramEditor
+IDiagramEditor <|-- IUseCaseDiagramEditor
+'IDiagramEditor <|-- ISequenceDiagramEditor
+IDiagramEditor <|... ADiagramEditor
+ADiagramEditor <|-- ClassDiagramEditor
+ADiagramEditor <|-- UseCaseDiagramEditor
+'ADiagramEditor <|-- SequenceDiagramEditor
+IClassDiagramEditor <|.. ClassDiagramEditor
+IUseCaseDiagramEditor <|.. UseCaseDiagramEditor
+' ISequenceDiagramEditor <|.. SequenceDiagramEditor
+Group <|--- ADiagramEditor
+ClassDiagramEditor "0..*" o--> "1..1" IClassDiagram : -diagram
+UseCaseDiagramEditor "0..*" o--> "1..1" IUseCaseDiagram : -diagram
+'SequenceDiagramEditor "0..*" o--> "1..1" ISequenceDiagram : -diagram
+ADiagramEditor "0..*" o---> "0..*" INoteGraphic : -notes
+
+IEntityGraphic <|.. AEntityGraphic
+INoteGraphic <|.. NoteGraphic
+IEntityGraphic <|-- INoteGraphic
+NoteGraphic "0..n" o--> "1..1" INote : -note
+AEntityGraphic <|-- NoteGraphic
+Group <|-- AEntityGraphic
+Shape <--o AEntityGraphic
+
+
+
+package model.class.visitor { 
+    interface ClassVisitor {
+                    +visit(ClassDiagram) : void
+                    +visit(ClassEntity) : void
+                    +visit(EnumEntity) : void
+                    +visit(InterfaceEntity) : void
+                    +visit(Method) : void
+                    +visit(Attribute) : void
+                    +visit(Inheritance) : void
+                    +visit(Implementation) : void
+                    +visit(Dependance) : void
+                    +visit(Association) : void
+                    +visit(DoubleAssociation) : void
+                    +visit(Composition) : void
+                    +visit(Aggregation) : void
+                    +visit(Note) : void
+                    +visit(Package) : void
+            }
+    class toViewClassVisitor implements ClassVisitor
+    ClassDiagramEditor ..> ClassVisitor
+}
+
+
+package model.usecase.visitor { 	
+	interface UseCaseVisitor {
+		+visit(UseCaseDiagram) : void
+		+visit(UseCase) : void
+		+visit(Actor) : void
+		+visit(UseCaseGroup) : void
+		+visit(Generalization) : void
+		+visit(Extension) : void
+		+visit(Inclusion) : void
+		+visit(usecase.relation.Association) : void
+	}
+	class toViewUseCaseVisitor implements UseCaseVisitor
+}
+
+UseCaseDiagramEditor ..> UseCaseVisitor
+
+
+@enduml

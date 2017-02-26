@@ -1,0 +1,89 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{rotating}
+\usepackage{adjustbox}
+\usepackage{lscape}
+\usepackage{geometry}   %pour les marges
+\usepackage{color} %pour la definition de nouvelles couleurs
+\usepackage{graphicx} %pour ajouter des images
+\usepackage[final]{pdfpages}
+\usepackage[french]{varioref}
+\usepackage[francais]{babel} % ``Franciser '' le document
+\usepackage
+  [colorlinks=false, urlcolor=red, breaklinks, pagebackref, citebordercolor={0 0 0},
+  filebordercolor={0 0 0}, linkbordercolor={0 0 0}, pagebordercolor={0 0 0},
+  runbordercolor={0 0 0}, urlbordercolor={0 0 0}, pdfborder={0 0 0}]
+    {hyperref} % Ajouter le package des lien redirigeant sans les encadrer
+\usepackage{eurosym}
+
+%couleurs pour les morceaux de code
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codered}{rgb}{1,0.1,0.2}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+
+%modificaion des marges
+\geometry{hmargin=2.5cm,vmargin=3cm}
+
+
+%opening
+\title{Analyse des risques~: UML Reverse}
+
+\begin{document}
+\maketitle
+\begin{center}
+\begin{tabular}{ll}
+  Version~: & 4.2\\[.5em]
+  Date~: & \date{\today}\\[.5em]
+  Rédigé par~: & Stephen \textsc{Cauchois}\\
+               & Florian \textsc{Inchingolo}\\
+               & Anthony \textsc{Godin}\\
+               &\\[.5em]
+  Relu par~:   & Florian \textsc{Inchingolo}\\
+               & Nicolas \textsc{Meniel}\\
+               &\\
+\end{tabular}
+\end{center}
+\newpage
+\vspace*{\stretch{3}}
+Le document a pour but de nous préparer à affronter les risques potentiels du projet 
+afin de ne pas se retrouver bloqués si l’un d’eux apparaît durant le développement.
+Les risques seront revus après chaque réunion afin de déterminer les plus probables pour 
+la suite du projet, et de réfléchir au plus vite aux solutions à apporter.
+Afin de prévenir les risques liés aux technologies utilisées, des tests ont été effectués
+pour s’assurer que les principales fonctionnalités du projet ne se retrouverait pas bloquées 
+par des manques de ces technologies.
+Les risques ont déjà été réévalués plusieurs fois et ceux qui sont finalement dans ce fichier sont 
+triés par leurs impacts estimés sur le projet. Il n’y a donc pas à proprement parler d’identification
+du risque le plus important car celui-ci ressort du tri effectué sur tous les risques.
+\vspace*{\stretch{5}}
+\newpage
+\begin{landscape}
+  \begin{tabular}{|p{1cm}|p{1.2cm}|p{2cm}|p{1.6cm}|p{3.5cm}|p{3.5cm}|p{3.5cm}|p{2cm}|p{1.3cm}|}
+    \hline{\textbf{Rang}} & {\textbf{Risque}} & {\textbf{Catégorie}} & {\textbf{Interne/ Externe}} & {\textbf{Description}}
+    & {\textbf{Conséquences}} &  {\textbf{Réponse}} & {\textbf{Probabilité (0 - 1)}} & {\textbf{Impact (1 - 5)}}\\\hline
+
+    \hline
+    {1} & {Majeur} & {Temporel} & {Interne/ Externe} & {Manque de temps dû aux autres projets universitaires} & {Accumulation du retard,
+    impossibilité de finir l’application} & {Mise en place de créneaux de travail par semaine} & {1} & {4}\\\hline
+
+    {2} & {Majeur} & {Temporel} & {Interne} & {Conflit sur la gestion du projet} & {Retard sur le projet, produit non conforme aux attentes du client} & {Spécification d’un maximum
+    de choses et mise en place de réunions régulières pour se mettre d’accord} & {0,5} & {2,5}\\\hline
+    {3} & {Majeur} & {Temporel} & {Interne} & {Algorithme de placement automatique des flèches}  & {Perte de temps importante}
+    & {En cas de perte de temps trop importante, mise en place d’un placement manuel} & {0,6} & {2,5}\\\hline
+    {4} & {Moyen} & {Temporel / Technique} & {Interne} & {Drag and drop ne répondant pas aux attentes} & {Perte de temps, impossibilité de déplacer les entités} &
+    {En cas de perte de temps trop importante, mise en place d’un déplacement par coordonnées.} & {0,3} & {1,5}\\\hline
+    {5} & {Majeur} & {Temporel / Organisation} & {Interne} & {Problème lors de l’utilisation du parseur Antlr} & {Perte de temps importante, impossibilité de faire du reverse engineering}
+    & {En cas de conflit ou de perte de temps trop importante, création d’un parseur manuellement} & {0,4} & {1}\\\hline
+    {6} & {Mineur} & {Temporel} & {Interne} & {Problème lors de l’intégration} & {Perte de temps importante} & {Architecture modulaire + intégration continue}
+    & {0,4} & {1}\\\hline
+    {7} & {Majeur} & {Technique / Temporel} & {Interne} & {Utilisation d’un nouveau framework~: JavaFX} & {Perte de temps pour se familiariser
+    avec le framework et s’assurer que le framework réponde aux attentes} & {Formation avant de coder, recherche + ébauche en JavaFX. En cas de perte de temps trop importante, retour sur Swing
+    } & {0,1} & {1}\\\hline
+
+
+  \end{tabular}
+\end{landscape}
+\end{document}

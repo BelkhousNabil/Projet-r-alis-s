@@ -1,0 +1,9 @@
+@startuml
+title Diagramme de séquence d'une sauvegarde de diagramme
+	
+	user -> system : Sauvegarder
+	system ->> user : Demande où enregistrer le fichier
+	user -> system : $path: adresse d'un fichier
+	system -> system : Sauvegarde dans $path
+
+@enduml

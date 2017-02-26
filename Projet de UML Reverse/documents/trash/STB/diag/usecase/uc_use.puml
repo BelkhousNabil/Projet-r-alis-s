@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+title Schéma d'utilisation de la modification\nd'un diagramme de cas d'utilisation
+
+Actor :user:
+
+rectangle {
+    
+    (Créer/Supprimer/Afficher/Cacher/Modifier) as (manip)
+    (Cas d'utilisation) as (cas)
+    
+    :user: - (manip)
+    :user: - (Déplacer)
+
+    (Déplacer) <|-- (Entité)
+    (manip) <|-- (Entité)
+    (Entité) <|-- (Acteur)
+    (Entité) <|-- (Frontière)
+    (Entité) <|-- (Note)
+ 
+    (Entité) <|-- (cas)
+		
+		(Relation) as (rel)
+    (manip) <|-- (rel)
+    (rel) <|-- (Association)
+    (rel) <|-- (Inclusion)
+    (rel) <|-- (Extension)
+    (rel) <|-- (Généralisation)
+}
+@enduml

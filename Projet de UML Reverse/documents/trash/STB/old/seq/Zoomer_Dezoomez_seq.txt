@@ -1,0 +1,10 @@
+@startuml
+User -> Systeme: selection outil de zoom;
+User -> Systeme: selection objet à zoomer;
+Systeme --> User: Zoom(); 
+
+User -> Systeme: selection outil dezoom;
+User -> Systeme: selection objet à dezoomer;
+Systeme --> User: deZoom(); 
+
+@enduml

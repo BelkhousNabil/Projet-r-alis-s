@@ -1,0 +1,19 @@
+@startuml
+title Ouvrir un style
+
+User --> Sys: Clique sur le bouton "Charger Style"
+Sys --> User: Enregistrer une copie du style actuel ?
+User --> Sys: Choix de l'utilisateur
+alt sauver
+	User --> Sys: action de sauvegarde, voir diagramme correspondant
+end
+Sys --> User: Dialogue de sélection de fichier
+User --> Sys: Choix du fichier
+alt ouverture faite
+	Sys --> User: Notification indiquant que le style est appliqué
+	Sys --> User: Rafraîchissement du diagramme
+else erreur d'ouverture
+	Sys --> User: Notification indiquant que le logiciel ne reconnait pas le fichier
+	Sys --> User: Retour dialogue séléction du fichier
+end
+@enduml

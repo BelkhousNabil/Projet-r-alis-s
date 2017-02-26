@@ -1,0 +1,6 @@
+#Ignorer tous ces fichiers:
+*.aux 
+*.log 
+*.out 
+*.toc 
+*.backup

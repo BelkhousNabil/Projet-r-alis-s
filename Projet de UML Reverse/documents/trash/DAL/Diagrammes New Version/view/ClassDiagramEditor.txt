@@ -1,0 +1,143 @@
+@startuml
+
+
+        class ClassDiagramEditor
+        note left {
+            Départ
+        }
+        interface IEntityGraphic
+        class ClassGraphic
+        class InterfaceGraphic
+        class EnumGraphic
+        abstract AClassObjectGraphic
+
+        interface IPackageGraphic
+        class PackageGraphic
+
+    
+    
+    interface IClassEntityGraphic
+    abstract AEntityGraphic
+
+
+
+package javafx {
+    class Shape
+    class Group
+}
+
+package model {
+    interface IAttribute
+    interface IMethode
+    interface IClassDiagram
+    interface IClass
+    interface IInterface
+    interface IClass
+    interface IEnum
+    interface IPackage
+}
+
+'-----------------------------
+'---------DEFINITIONS
+'----------------------------- 
+
+interface IClassEntityGraphic {
+    + addAttribut(String)
+    + addMethod(String)
+    + addConstructor(String)
+}
+
+abstract AClassObjectGraphic {
+    - attributes : List<IElementGraphic>
+    - methodes : List<IElementGraphic>
+    + addAttribute(IAttribute) 
+    + addMethode(IMethode) 
+    + getAttributes() : List<IElementGraphic>
+    + getMethodes() : List<IElementGraphic>
+    + removeAttribute(IAttribute)
+    + removeMethode(IMethode)
+}
+
+class ClassGraphic {
+    + ClassGraphic(IClass)
+}
+
+class InterfaceGraphic {
+    + InterfaceGraphic(IInterface)
+}
+
+class EnumGraphic {
+    + EnumGraphic(IEnum)
+}
+
+interface IPackageGraphic {
+    + addInterface(IInterface)
+    + addClass(IClass)
+    + addEnum(IEnum)
+    + addPackage(IPackage)
+    + getInterfaces() : IInterface
+    + getClasses() : IClass
+    + getEnums() : IEnum
+    + getPackages() : IPackage
+    + setInterface(IInterface)
+    + setClass(IClass)
+    + setEnum(IEnum)
+    + setPackage(IPackage)
+}
+
+interface IEntityGraphic {
+     + setName(String)
+     + setColor(String)
+     + getColor() : String
+}
+
+abstract AEntityGraphic {
+     + setName(String)
+}
+
+interface IElementGraphic {
+     
+}
+
+class PackageGraphic {
+    + PackageGraphic(IPackage)
+}
+
+'-----------------------------
+'---------RELATIONS
+'-----------------------------
+
+ClassDiagramEditor "0..*" o--> "1..1" IClassDiagram : -diagram
+
+ClassDiagramEditor "0..*" o---> "0..*" ClassGraphic : -classes
+ClassDiagramEditor "0..*" o---> "0..*" InterfaceGraphic : -interfaces
+ClassDiagramEditor "0..*" o---> "0..*" EnumGraphic : -enums
+ClassDiagramEditor "0..*" o---> "0..*" PackageGraphic : -packages
+
+IEntityGraphic <|-- IClassEntityGraphic
+IEntityGraphic <|.. AEntityGraphic
+IClassEntityGraphic <|.. AClassObjectGraphic
+
+IPackageGraphic <|.. PackageGraphic
+IEntityGraphic <|-- IPackageGraphic
+PackageGraphic "0..n" o--> "1..1" IPackage : -package
+
+AEntityGraphic <|-- AClassObjectGraphic
+AClassObjectGraphic <|-- ClassGraphic
+AClassObjectGraphic <|-- InterfaceGraphic
+AClassObjectGraphic <|-- EnumGraphic
+
+InterfaceGraphic "0..*" o--> "1..1" IInterface : -interface
+EnumGraphic "0..*" o--> "1..1" IEnum : -enum
+ClassGraphic "0..*" o--> "1..1" IClass : -class
+AEntityGraphic <|-- PackageGraphic
+PackageGraphic "0..*" <-o "0..*" PackageGraphic : -packages
+
+EnumGraphic "0..*" <-o "0..*" PackageGraphic : -enums
+ClassGraphic "0..*" <-o "0..*" PackageGraphic : -classes
+InterfaceGraphic "0..*" <-o "0..*" PackageGraphic : -interfaces
+
+Group <|-- AEntityGraphic
+Shape <--o AEntityGraphic
+
+@enduml

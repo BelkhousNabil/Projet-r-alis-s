@@ -1,0 +1,137 @@
+@startuml
+
+
+
+package diagram.util { 
+' -------------------------------- umlreverse.model.diagram.util
+
+interface IStyleManager
+abstract class ADiagram implements IDiagram 
+interface IEntity 
+abstract AEntity implements IEntity
+ADiagram o--> IEntity
+ADiagram o--> INote
+IEntity o--> IStyleManager
+
+}
+' --------------------------------------------------------- fin package util
+
+
+
+package usecase { 
+' -------------------------------- umlreverse.model.diagram.usecase
+
+
+enum UseCaseStylizableElement {
+	Group
+	Entity
+	Actor
+	Association
+	Generalization
+	Inclusion
+	Extension
+	Note
+}
+
+interface IUseCaseDiagram extends IDiagram {
+	+getGroups() : Set<IUseCaseGroup>
+	+getActor(String name) : Actor
+	+getEntities() : List<IUseCaseEntity>
+	+getUseCase(String name) : UseCaseEntity
+	+getGlobalStyle(UseCaseStylizableElement class) : StyleManager
+	+getStyle() : StyleManager
+
+	+setStyle(StyleManager styleBox) : void
+	+addGroup(IUseCaseGroup group) : void
+	+removeGroup(IUseCaseGroup group) : void
+	+addEntity(String name) : void
+	+addActor(String name) : void
+	+removeActor(Actor actor) : void
+	+removeEntity(UseCaseEntity)
+	+accept(DiagramVisitor visitor) : void
+	+accept(UseCaseVisitor visitor) : void
+	
+	+getVetoableChangeListeners() : VetoableChangeListener[]
+	+addVetoableChangeListener(VetoableChangeLister listener) : void
+	+removeVetoableChangeListener(VetoableChangeLister listener) : void
+}
+
+class UseCaseDiagram extends ADiagram implements IUseCaseDiagram
+
+UseCaseDiagram --> UseCaseStylizableElement
+interface IUseCaseGroup {
+	+getGroups() : Set<IUseCaseGroup>
+	+getName() : String
+	+getUseCases() : Set<IUseCase>
+	+getGlobalStyle() : StyleManager
+	+getStyle() : StyleManager
+	+getNotes() : Set<INote<IClassEntity>>
+	..
+	+addNote(INote<ClassEntity> note) : void
+	+removeNote(INote<ISequenceEntity> note) : void
+	+addGroup(IUseCaseGroup group) : void
+	+removeGroup(IUseCaseGroup group) : void
+	+setStyle(StyleManager styleBox) : void
+	+setName(String name) : void
+	+addEntity(IUseCase entity) : void
+	+removeEntity(IUseCase entity) : void
+	+removeEntity(String name) : void
+	+accept(UseCaseVisitor visitor) : void
+
+
+	+getVetoableChangeListeners() : VetoableChangeListener[]
+	+addVetoableChangeListener(VetoableChangeLister listener) : void
+	+removeVetoableChangeListener(VetoableChangeLister listener) : void
+}
+
+class UseCaseGroup implements IUseCaseGroup
+
+interface IUseCaseEntity extends IEntity {
+	+getDiagram() : UseCaseDiagram
+	+getNotes() : Set<INote<IClassEntity>>
+	+getRelations() : Set<usecase.relation.IRelation>
+	..
+	+addNote(INote<ClassEntity> note) : void
+	+removeNote(INote<ISequenceEntity> note) : void
+	+accept(UseCaseVisitor visitor) : void
+
+	+getVetoableChangeListeners() : VetoableChangeListener[]
+	+addVetoableChangeListener(VetoableChangeLister listener) : void
+	+removeVetoableChangeListener(VetoableChangeLister listener) : void
+}
+
+abstract AUseCaseEntity extends AEntity implements IUseCaseEntity
+
+class UseCase extends AUseCaseEntity {
+	+getExtension(String id) : Extension
+	+getGeneralization(String id) : Generalization
+	+getInclusion(String id) : Inclusion
+	..
+	+addExtension(UseCaseEntity entity, String id) : void
+	+addGeneralization(UseCaseEntity entity, String id) : void
+	+addInclusion(UseCaseEntity entity, String id) : void
+	+removeExtension(Extension relation) : void
+	+removeGeneralization(Generalization relation) : void
+	+removeInclusion(Inclusion relation) : void
+}
+class Actor extends AUseCaseEntity {
+	+getAssociation(String id) : usecase.relation.Association
+	+getGeneralization(String id) : Generalization
+	+addAssociation(UseCaseEntity entity, String id) : void
+	+addGeneralization(Actor actor, String id) : void
+	+removeAssociation(usecase.Association relation) : void
+	+removeGeneralization(Generalization relation) : void
+}
+
+IUseCaseDiagram --> IUseCaseGroup
+UseCaseDiagram "1..1" o--> "0..n" IUseCaseEntity
+UseCaseDiagram "1..1" o--> "0..n" IUseCaseGroup
+UseCaseGroup "1..1" o--> "0..n" IUseCaseGroup
+UseCaseGroup "1..1" o--> "0..n" IUseCaseEntity
+} 
+' --------------------------------------------------------- fin package usecase
+
+
+
+
+@enduml

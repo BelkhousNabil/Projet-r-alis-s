@@ -1,0 +1,41 @@
+@startuml
+
+title Cas d'utilisation généraux de UML Reverse
+
+actor :user:
+
+rectangle {
+	(Dessiner\n des diagrammes) as (draw)
+	(Modifier\nun diagramme) as (edit)
+	(Supprimer\nun diagramme) as (rem)
+	(Générer\nun diagramme) as (gen)
+	(Déplacer les entités\nd'un diagramme) as (move)
+	(Charger une\n feuille de styles) as (loadcss)
+	(Charger un\nfichier Java) as (loadjava)
+	(Charger un\nfichier PlantUML) as (loadpuml)
+	(Charger un projet) as (load)
+	(Sauvegarder un\nprojet) as (save)
+	(Exporter au\nformat PlantUML) as (exportuml)	
+	(Exporter la\nfeuille de style) as (exportcss)
+	(Exporter une\nimage) as (exportimg)
+	(Imprimer le\ndiagramme) as (print)
+	
+	:user: -- (draw)
+	:user: -- (edit)
+	:user: -- (rem)
+	:user: -- (gen)
+	:user: -- (move)
+	:user: -- (loadcss)
+	:user: -- (loadjava)
+	:user: -- (loadpuml)
+	:user: -- (load)
+	:user: -- (save)
+	:user: -- (exportuml)
+	:user: -- (exportcss)
+	:user: -- (exportimg)
+	:user: -- (print)
+	(loadjava) "<include>" <|.. (gen)
+	(loadpuml) <|.. "<include>" (gen)
+}
+
+@enduml

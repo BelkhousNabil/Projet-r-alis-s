@@ -1,0 +1,60 @@
+@startuml
+/'left to right direction'/
+title Diagramme de cas d'utilisation\ngénéral de l'application UML Reverse
+
+actor user
+
+rectangle Utilisation {
+        (Instancier un\nmodèle d'objet à partir d'un\nfichier PlantUML) as (loadpuml)
+        (Instancier un\nmodèle d'objetà partir d'un\ncode source) as (loadjava)
+        (Instancier un modèle\nd'objet vide) as (creat)
+        (Charger) as (load)
+        (Exporter\nen fichier) as (export)
+        (Supprimer\nun diagramme) as (rem)
+        (Sauvegarder\nun diagramme) as (save)
+        (Générer) as (gen)
+        (Modifier un\ndiagramme) as (edit)
+
+        :user: - (edit)
+        :user: - (load)
+        :user: - (export)
+	:user: - (gen)
+        :user: - (rem)
+        :user: -(save)
+        :user: -(Zoomer/Dézoomer)
+		
+        (load) <|-- (Paramètre)
+        (export) <|-- (PlantUML)
+        (export) <|-- (Image)
+        (export) <|-- (Paramètre)
+        (export) <|-- (Impression)
+        (gen) <|-- (Diagramme)
+        (gen) <|-- (Diagramme Reverse)
+
+        (Couleurs) as (couleurs)
+        (Position des entités) as (position) 
+        (Liste des\ncomposant cachés) as (hidecomposant)
+        
+        (Paramètre) <|-- (couleurs) 
+        (Paramètre) <|-- (position) 
+        (Paramètre) <|-- (hidecomposant)
+		
+        (Diagramme Reverse) ..|> "<include>"  (loadjava)
+	(Diagramme) ..|> "<include>" (loadpuml)
+	(Diagramme) ..|> "<include>" (creat)
+ 
+        note bottom of (edit)
+            Pour chaque diagramme les possibilités 
+            seront différentes. C'est pour cela que l'on 
+            va définir les options de modification pour 
+            chaque type de diagramme
+        end note
+        
+        note top of (Diagramme Reverse)
+            -Diagramme de paquetage
+            -Diagramme de classe
+            -Diagramme de séquence
+        end note
+}
+
+@enduml

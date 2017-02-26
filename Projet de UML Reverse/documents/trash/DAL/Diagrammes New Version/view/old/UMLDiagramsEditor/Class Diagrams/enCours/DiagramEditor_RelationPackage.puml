@@ -1,0 +1,27 @@
+@startuml
+
+package ui.component.relation {
+    
+        package usecases {
+            class AssociationGraphic
+            class ExtentionGraphic
+            class InclusionGraphic
+            class GeneralizationGraphic
+        }
+
+        package class {
+            class AssociationGraphic
+            class CompositionGraphic
+            class AgregationGraphic
+            class DoubleAssociationGraphic
+            class DependanceGraphic
+            class InheritanceGraphic
+            class ImplementationGraphic
+        }
+        package common {
+            abstract ARelationGraphic
+        }
+
+}
+
+@enduml

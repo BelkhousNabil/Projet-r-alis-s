@@ -1,0 +1,5 @@
+@startuml
+User -> Systeme: sauvegarder();
+Systeme --> User:  Response 
+
+@enduml

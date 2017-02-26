@@ -1,0 +1,20 @@
+@startuml
+
+actor user
+entity loader
+
+title Génération d'un diagramme depuis un fichier PlantUML
+user -> loader : load(filename.puml)
+group if exists(filename.css)
+	loader -> loader : load(filename.puml, puml)
+	create entity diagram
+	loader -> diagram : (return) 
+	diagram -> user : (return)
+end group
+create entity plantUMLParser
+loader -> plantUMLParser : new PlantUMLParser(filename.puml)
+loader -> plantUMLParser : load()
+plantUMLParser -> diagram : (return)
+diagram -> user : (return)
+
+@enduml

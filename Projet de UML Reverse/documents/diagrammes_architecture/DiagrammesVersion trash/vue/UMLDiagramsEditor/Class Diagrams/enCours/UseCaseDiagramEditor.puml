@@ -1,0 +1,137 @@
+@startuml
+
+
+        class UseCaseDiagramEditor
+        note left {
+            Départ
+        }
+        interface IEntityGraphic
+        class ActorGraphic
+        class UseCaseGraphic
+        abstract AClassObjectGraphic
+
+        interface IUseCaseGroupGraphic
+        class UseCaseGroupGraphic
+
+        class NameGraphic
+        class NameGraphic
+    
+    
+    interface IUseCaseEntityGraphic
+    abstract AEntityGraphic
+    interface IElementGraphic
+    abstract AElementGraphic
+
+
+
+package javafx {
+    class Text
+    class Shape
+    class UseCaseGroup
+}
+
+package model {
+    interface IClassDiagram
+    interface IActor
+    interface IUseCase
+    interface IUseCaseGroup
+}
+
+'-----------------------------
+'---------DEFINITIONS
+'----------------------------- 
+
+interface IUseCaseEntityGraphic {
+    + setName(String) 
+    + getName() : IElementGraphic
+}
+
+abstract AClassObjectGraphic {
+    + setName(String) 
+    + getName() : IElementGraphic
+}
+
+
+class ActorGraphic {
+    + ActorGraphic(IActor)
+}
+
+class UseCaseGraphic {
+    + UseCaseGraphic(IUseCase)
+}
+
+interface IUseCaseGroupGraphic {
+    + addActor(IActor)
+    + addUseCase(IUseCase)
+    + addUseCaseGroup(IUseCaseGroup)
+    + getActors() : IActor
+    + getUseCases() : IUseCase
+    + getUseCaseGroups() : IUseCaseGroup
+    + setActor(IActor)
+    + setUseCase(IUseCase)
+    + setUseCaseGroup(IUseCaseGroup)
+}
+
+interface IEntityGraphic {
+     + setName(String)
+     + setColor(String)
+     + getColor() : String
+}
+
+abstract AEntityGraphic {
+     + setName(String)
+}
+
+interface IElementGraphic {
+     
+}
+
+class NameGraphic {
+    + NameGraphic(String)
+}
+
+
+class UseCaseGroupGraphic {
+    + UseCaseGroupGraphic(IUseCaseGroup)
+}
+
+'-----------------------------
+'---------RELATIONS
+'-----------------------------
+
+UseCaseDiagramEditor "0..*" o--> "1..1" IClassDiagram : -diagram
+
+UseCaseDiagramEditor "0..*" o---> "0..*" ActorGraphic : -actors
+UseCaseDiagramEditor "0..*" o---> "0..*" UseCaseGraphic : -usecases
+UseCaseDiagramEditor "0..*" o---> "0..*" UseCaseGroupGraphic : -groups
+
+IEntityGraphic <|-- IUseCaseEntityGraphic
+IEntityGraphic <|.. AEntityGraphic
+IUseCaseEntityGraphic <|.. AClassObjectGraphic
+
+IUseCaseGroupGraphic <|.. UseCaseGroupGraphic
+IEntityGraphic <|-- IUseCaseGroupGraphic
+UseCaseGroupGraphic "0..n" o--> "1..1" IUseCaseGroup : -group
+
+AEntityGraphic <|-- AClassObjectGraphic
+AClassObjectGraphic <|-- ActorGraphic
+AClassObjectGraphic <|-- UseCaseGraphic
+
+ActorGraphic "0..*" o--> "1..1" IActor : -actor
+UseCaseGraphic "0..*" o--> "1..1" IUseCase : -usecase
+AEntityGraphic <|-- UseCaseGroupGraphic
+UseCaseGroupGraphic "0..*" <-o "0..*" UseCaseGroupGraphic : -groups
+
+UseCaseGraphic "0..*" <-o "0..*" UseCaseGroupGraphic : -enums
+ActorGraphic "0..*" <-o "0..*" UseCaseGroupGraphic : -interfaces
+
+UseCaseGroup <|-- AEntityGraphic
+Shape <--o AEntityGraphic
+NameGraphic "1..1" <-o "0..*" AClassObjectGraphic : -name
+IElementGraphic <|.. AElementGraphic
+AElementGraphic <|-- NameGraphic
+Text <|-- AElementGraphic
+
+NameGraphic "0..*" o-> "1..1" String : -name
+
+@enduml

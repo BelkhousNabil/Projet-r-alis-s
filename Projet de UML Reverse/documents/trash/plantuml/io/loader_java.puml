@@ -1,0 +1,15 @@
+@startuml
+
+title Génération d'un diagramme depuis un ensemble de sources Java
+actor user
+entity loader
+
+user -> loader : reverse(filename.java)
+create entity javaParser
+loader -> javaParser : new JavaParser(filename.puml)
+loader -> javaParser : load()
+create entity diagram
+javaParser -> diagram : (return)
+diagram -> user : (return)
+
+@enduml

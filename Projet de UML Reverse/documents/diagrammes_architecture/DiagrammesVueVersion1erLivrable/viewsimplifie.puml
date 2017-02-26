@@ -1,0 +1,76 @@
+@startuml
+package View {
+class ADiagramEditor extends Pane implements IDiagramEditor {
+       
+    }
+    class ADiagramEditorController implements IDiagramEditorController {
+
+    }
+    class classDiagramEditor extends ADiagramEditor {
+       
+    }
+    class ClassDiagramEditorController extends ADiagramEditorController {
+        
+      
+        
+    }
+
+
+
+    class Gestures {
+      
+      
+    }
+
+
+
+    interface IDiagramEditor {
+      
+    }
+    interface IDiagramEditorController {
+       
+    }
+    class MenuController {
+        
+       
+    }
+    class NodeGestures extends Gestures {
+       
+    }
+    class PannableCanvas extends Group {
+       
+    }
+    class SceneGestures extends Gestures {
+        
+        
+    }
+    class ZoomableScrollPane extends ScrollPane {
+       
+    }
+}
+
+
+
+SceneGestures --> EventHandler
+Gestures +-- DragContext
+NodeGestures ..> PannableCanvas
+ZoomableScrollPane --> Group
+ZoomableScrollPane ..> Node
+MenuController o-- MenuBar
+MenuController o-- Window
+MenuController --> ADiagramEditor
+PannableCanvas --o "1" ADiagramEditor
+ADiagramEditor --> IDiagramEditorController
+ADiagramEditor --> PannableCanvas
+ADiagramEditorController --> ADiagramEditor
+ADiagramEditorController --> INoteGraphic
+ADiagramEditorController --> MenuItem
+ADiagramEditorController --> ISelectionableEntityGraphic
+ADiagramEditorController ..> INoteGraphic
+ADiagramEditorController ..> IRelationGraphic
+ADiagramEditorController ..> ISelectionnableEntityGraphic
+ADiagramEditorController ..> NoteGraphic
+ClassDiagramEditorController --> IClassDiagram
+ClassDiagramEditorController ..> ADiagramEditor
+ClassDiagramEditorController ..> ObjectEntityGraphic
+@enduml

@@ -1,0 +1,129 @@
+\documentclass[hidelinks, 10pt,a4paper]{article}
+
+\usepackage[english,francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[pdftex]{graphicx}
+\usepackage{adjustbox}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage[french]{varioref}
+\usepackage{comment}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[L]{}
+\fancyhead[C]{\textbf{UML Reverse}}
+\fancyhead[R]{\includegraphics[width=2cm]{imgimgTerminologie/universite-rouen.jpg}}
+
+
+
+%Opening
+\title{\bfseries Terminologie\\Projet UML Reverse}
+\geometry{hmargin=2.5cm,vmargin=3cm}
+
+
+\begin{document}
+\maketitle
+\begin{center}
+\begin{tabular}{ll}
+  Version~: & 0.1\\[.5em]
+  Date~: & \date{\today}\\[.5em]
+  Rédigé par~: & Nabil \textsc{Belkhous}\\
+               & Stephen \textsc{Cauchois}\\
+               & Anthony \textsc{Godin}\\
+               & Yohann \textsc{Henry}\\
+               & Florian \textsc{Inchingolo}\\
+               & Nicolas \textsc{Meniel}\\
+               & Saad \textsc{Mrabet}\\[.5em]
+
+\end{tabular}
+\end{center}
+
+\newpage
+
+\begin{description}
+  \item[Agilité]~\\ Capacité à favoriser le changement et à y répondre en vue de s'adapter au mieux à un environnement turbulent.
+  \item[Cacher/Afficher (action)]~\\ Cacher ou afficher un élément. Un élément caché ne sera pas généré dans toute exportation. Cette action est enregistrée 
+	dans le fichier de paramètres.
+	 \item[\textbf{Chef de projet}]~\\ Responsable de gérer et d'unir le travail des membres de l'équipe pour aboutir à la réalisation du projet.
+ \item[Créer (action)]~\\ Dans le cas d’un élément, créer et ajouter l’élément dans le diagramme. Dans le cas de la création d’un diagramme, ajouter un nouveau diagramme 
+  vide ou généré au projet.
+   \item[Déplacer (action)]~\\ Déplacer un élément graphiquement. La position de l’élement est enregistrée dans le fichier de paramètres. Le déplacement d'une entité 
+  se fait aussi de façon visuelle. Ses éléments doivent le suivre et les relations aussi.
+    \item[Diagramme]~\\ Dans ce document, quand on parle de diagramme, on ne fait pas référence simplement à un dessin mais à l’ensemble 
+			des fichiers qui permettent de définir ce diagramme. On les édite dans un projet grâce à un fichier écrit en PlantUML 
+			et pouvant être «~stylisés~» par un fichier de paramètres.
+   \item[Éditer (action)]~\\ Suppose l’ouverture (le chargement), la modification, la sauvegarde et la suppression.
+  \item[Élément]~\\ Une des informations affichées dans un diagramme. Par exemple, une entité est un élément, une méthode est un élément, une fléche est un élément.
+  \item[Entité]~\\ Élément de base d’un diagramme. Il n’a pas d’élément parent. Dans le cas d’un diagramme de classes, par exemple, une classe et une note sont des
+      entités, mais une méthode est un élément de l’entité Classe.
+    \item[\textbf{L'érgonomie}]~\\ L'érgonomie pour ce produit consiste à l'utilisateur de pouvoir rapidement faire ce qu'il veut sans perdre de temps à 
+	  manipuler le produit. On fixe une limite à 4 cliques maximum pour effectuer toutes les actions possibles.
+	  Le produit doit pouvoir être utilisé facilement sans lire de manuel.
+   \item[Fichier de paramètres]~\\ Spécifique à notre application, il est là pour enregistrer les modifications graphiques de l’utilisateur, comme la position des 
+	  entités ou la liste des éléments cachés. Ces informations ne sont pas supportées par PlantUML. Ces fichiers sont associés à 
+	  n’importe quel diagramme de notre application.
+  \item[Flèche]~\\ Lien entre deux entités~; une relation ou une action, par exemple. Elle est représentée par une tête de flèche, une queue de flèche et un corps 
+    éditables. Elle peut contenir jusqu’à 3 chaînes de caractères en fonction du diagramme.
+  \item[Frontière]~\\ Une frontière se place dans un diagramme d’utilisation. Elle est représentée par un rectangle et délimite un système où on place généralement les cas 
+    d’utilisation.
+  \item[Itération]~\\ Appellé aussi sprint. (Voir la définition)
+    \item[\textbf{JUnit}]~\\ Framework de test unitaire fonctionnant pour JAVA.
+    \item[\textbf{Maven}]~\\ Outil pour la gestion et l'automatisation de production des projets logiciels JAVA.
+    \item[Mélée]~\\ Réunion de planification « juste à temps » et permet aux développeurs de faire un point de coordination sur 
+		    les tâches en cours et sur les difficultés rencontrées.
+   \item[Modifier (action)]~\\ Modifier un élément ou l’un de ses contenus. Par exemple, si l’élément peut être nommé, nous pouvons modifier son nom.
+   \item[Mot/Nom (dans un diagramme)]~\\ Suite de caractères en UTF-8 sans espace, pouvant avoir une taille d’au moins 100 octets.
+    \item[\textbf{MVC}]~\\ Modèle Vue Controleur. Le modèle s'occupe de gérer la partie logique du projet et le controleur s'occupe
+			de faire coopérer la modèle et la vue.
+\item[\textbf{Phase de test}]~\\ Période où l'équipe test les fonctionnalités du projet en fonction du cahier des tests et les valide avant de rendre un livrable.
+  \item[PlantUML]~\\ Projet open source qui permet de dessiner rapidement~:
+    \begin{itemize}
+      \item des diagrammes de séquence~;
+      \item des diagrammes de cas d’utilisation~;
+      \item des diagrammes de classes (et de paquetages)~;
+      \item des diagrammes d’activités~;
+      \item des diagrammes de composants~;
+      \item des diagrammes d’états~;
+      \item des diagrammes d’objets.
+    \end{itemize}
+    Les diagrammes sont définis à l’aide d’un pseudo-langage simple et intuitif. % http://PlantUML.sourceforge.net/PlantUML%20Language%20Reference%20Guide.pdf
+    \item[\textbf{Preuve de concept}]~\\ Réalisation courte ou incomplète d'une certaine méthode ou idée pour démontrer sa faisabilité.
+    \item[\textbf{Product Backlog}]~\\ L'ensemble des fonctionnalités du produit que l'on veut développer.
+    \item[\textbf{Product Owner}]~\\  Représentant du client ou des utilisateurs.
+     \item[\textbf{Projet}]~\\ Ensemble de diagrammes contenus dans un dossier de projet. Ce dossier peut actuellement contenir les sous dossiers : 
+	\begin{itemize}
+	  \item case
+	  \item clas
+	  \item seq
+	\end{itemize}
+	Les diagrammes sont rangés dans un de ces dossiers selon son type. Les diagrammes sont 
+	enregistrés dans un dossier du même nom que le diagramme et contiennent les dossiers :
+	\begin{itemize}
+	  \item src/plantuml: contient le code source.
+	  \item parameters/css: contient les fichiers de paramètres.
+	\end{itemize}
+	Il y a au moins un fichier source (dans src/plantuml) du même (strictement) nom que le projet. Il en est de même pour le fichier de paramètre. 
+  \item[Reverse]~\\ Génération d’un diagramme UML à partir d’un code source. Dans notre application, seul un code source Java peut être utilisé en entrée.
+  \item[Sauvegarder (action)]~\\ Sauvegarder un diagramme dans le projet avec ses paramètres.
+  \item[Scrum]~\\ Cadre de développement informatique dit agile. Il est utilisé pour développer des produits en quelques mois. Formé de plusieurs itérations (sprint)
+		  validées par le client, de mêlés organisées par l'équipe toutes les semaines et de l'écriture d'un product backlog.
+  \item[Sprint]~\\ Bloc de temps fixé aboutissant à créer un incrément du produit potentiellement livrable.
+  \item[Sprint Backlog]~\\ Le sprint backlog représente l’ensemble des tâches sélectionnées depuis le product backlog 
+			  lors de la réunion de planification afin d’améliorer le produit avec de nouvelles fonctionnalités.
+  \item[Sprint Rétrospective]~\\ Réunion dont le but est d'améliorer le processus pour le prochain sprint.
+  \item[Sprint Review]~\\  L'objectif est de valider l'incrément de produit qui a été réalisé pendant le sprint. Cela permet une visibilité sur le produit.
+			On analyse ce qu'on a fait du produit.
+  \item[Supprimer (action)]~\\ Supprimer un élément et tous ses contenus.
+  \item[UML]~\\ Langage de modélisation unifié, de l’anglais Unified Modeling Language. C’est un langage de modélisation 
+    graphique à base de pictogrammes conçu pour fournir une méthode normalisée pour visualiser la conception d’un système. %wikipedia
+  \item[Texte (dans un diagramme)]~\\ Texte en UTF-8 de taille raisonnable, pouvant avoir une taille d’au moins 1 Mo.
+   \item[\textbf{Type de projet}]~\\ Le type d'un projet c'est le type de diagramme qu'il représente: cas d'utilisation ou classe ou séquence.
+\end{description}
+\end{document}

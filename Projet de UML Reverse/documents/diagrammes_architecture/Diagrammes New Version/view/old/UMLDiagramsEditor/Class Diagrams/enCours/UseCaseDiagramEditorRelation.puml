@@ -1,0 +1,81 @@
+@startuml
+
+class UseCaseDiagramEditor
+
+package javafx {
+    class Text
+    class Line
+}
+
+package model {
+    class Association
+    class Extention
+    class Inclusion
+    class Generalization
+}
+
+abstract ARelationGraphic
+
+class AssociationGraphic
+class ExtentionGraphic
+class InclusionGraphic
+class GeneralizationGraphic
+
+'-----------------------------
+'---------DEFINITIONS
+'----------------------------- 
+
+abstract ARelationGraphic {
+    + getColor() : Color
+    + setColor(String)
+    + remove()
+}
+
+class AssociationGraphic {
+    + getSource() : IActor
+    + getTarget() : IUseCase
+    + setSource(IActor)
+    + setTarget(IUseCase) 
+}
+class ExtentionGraphic {
+    + getSource() : IActor
+    + getTarget() : IUseCase
+    + setSource(IActor)
+    + setTarget(IUseCase) 
+}
+class InclusionGraphic {
+    + getSource() : IActor
+    + getTarget() : IUseCase
+    + setSource(IActor)
+    + setTarget(IUseCase)  
+}
+class GeneralizationGraphic {
+    + getSource() : IUseCaseEntity
+    + getTarget() : IUseCaseEntity
+    + setSource(IUseCaseEntity)
+    + setTarget(IUseCaseEntity) 
+}
+
+'-----------------------------
+'---------RELATIONS
+'-----------------------------
+
+UseCaseDiagramEditor "0..*" o---> "0..*" AssociationGraphic : -associations
+UseCaseDiagramEditor "0..*" o---> "0..*" ExtentionGraphic : -extentions
+UseCaseDiagramEditor "0..*" o---> "0..*" InclusionGraphic : -inclusions
+UseCaseDiagramEditor "0..*" o---> "0..*" GeneralizationGraphic : -generalizations
+
+Line "1..*" <--o "0..*" ARelationGraphic : lines
+Text "1..*" <--o "0..*" ARelationGraphic : textes
+
+ARelationGraphic <|-- AssociationGraphic
+ARelationGraphic <|-- ExtentionGraphic
+ARelationGraphic <|-- InclusionGraphic
+ARelationGraphic <|-- GeneralizationGraphic
+
+AssociationGraphic "0..*" o--> "1..1" Association
+ExtentionGraphic "0..*" o--> "1..1" Extention
+InclusionGraphic "0..*" o--> "1..1" Inclusion
+GeneralizationGraphic "0..*" o--> "1..1" Generalization
+
+@enduml

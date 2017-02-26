@@ -1,0 +1,27 @@
+@startuml
+title Cas d'utilisation d'un diagramme d'Etats
+actor :user:
+rectangle {
+	(Creer\nEtat) as (CrEt)
+	(Supprimer\nEtat) as (SupEt)
+	(Modifier\nEtat) as (ModifEt)
+	(Creer\nTransition) as (CrTr)
+	(Creer\nPseudo\nEtat) as (CrPsEt)
+	(Supprimer\nPseudo\nEtat) as (SupPsEt)
+	(Creer\nEtat\nParallele) as (CrEtPr)
+	(Creer\nPoint\nd'entree) as (CrPtE)
+	(Creer\nPoint\nde sortie) as (CrPtS)
+	
+	(CrEt) <-- :user:
+	(SupEt) <-- :user:
+	(ModifEt) <-- :user:	
+	(CrTr) <-- :user:
+	(CrPsEt) <-- :user:
+	(SupPsEt) <-- :user:	
+	(CrEtPr) <-- :user:
+	(CrPtE) <-- :user:
+	(CrPtS) <-- :user:
+	(CrEtPr) <-- :user:
+	
+}
+@enduml

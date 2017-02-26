@@ -1,0 +1,15 @@
+@startuml
+package visitor {
+interface IDiagramVisitor{
+	+visit(XXX instance)
+
+	XXX représente toutes les 
+	types d'instances existantes
+	dans les diagrammes
+}
+
+class SavePlantumlVisitor implements IDiagramVisitor
+class SaveStyleVisitor  implements IDiagramVisitor
+class displayViewVisitor implements IDiagramVisitor
+}
+@enduml

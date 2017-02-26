@@ -1,0 +1,19 @@
+@startuml
+title Diagramme de sequence d'un senario d'ajout d'une classe à partir de l'IHM
+	
+	user -> system : Ajouter_entity();
+	system ->> user : Boite_de_dialogue();
+	
+	user -> system : Nommer_entity();
+	
+	alt Type de diagramme choisie = classe
+		alt Nom de la classe n'existe pas
+			system ->> user :Affichage_Classe();	
+			user -> system : Deplacer_Classe();
+			system ->> user :Deplacement_entity_Surbrillance();
+			else Nom de classe existe dèja
+				system ->> user :message("Ce nom existe dèja");
+		end
+	end
+
+@enduml

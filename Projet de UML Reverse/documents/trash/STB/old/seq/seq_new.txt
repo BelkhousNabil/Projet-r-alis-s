@@ -1,0 +1,13 @@
+@startuml
+title Nouveau projet UMLReverse
+
+User --> Sys: Clique sur le bouton "Nouveau Projet" ou Ctrl-N
+alt édition en cours
+	Sys --> User: Dialogue de confirmation (enregistrer ou non)
+	User --> Sys: Choix de l'utilisateur
+	alt sauver
+		User --> Sys: action de sauvegarde, voir diagramme correspondant
+	end
+end
+Sys --> User: Notification indiquant qu'un nouveau projet a été créé
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+title Diagramme de sequence d'un senario d'ajout d'un element à un use case à partir de l'IHM
+	
+	user -> system : Clic_Sur_entity();
+	system ->> user : Surbrillance_Entity();
+	system ->> user : Afficher_Barre_BouttonFlottant();
+	
+	user -> system : Clic_Bouton_Ajouter_Element();
+	system ->> user : Boite_Dialogue_Creation();
+	user -> system : Create_Element(TypeElem,Nom);
+	
+	alt Type de diagramme choisie = Use Case
+		alt Type=Relation
+			system ->> user :Affichage_Relation();	
+		end 
+				
+		alt Type=Acteur
+			system ->> user :Affichage_Acteur();	
+		end
+	end
+
+@enduml

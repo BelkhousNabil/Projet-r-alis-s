@@ -1,0 +1,62 @@
+@startuml
+
+title Cas d'utilisation d'un diagramme de classes
+
+Actor :user:
+
+rectangle {
+	(Ajouter élément) as (addelem)
+	(Editer élément) as (editelem)
+	(Supprimer élément) as (remelem)
+	(Ajouter des dépendances) as (adddep)
+	(Ajouter des cardinalités) as (addcard)
+	(Modifier visibilité) as (editvis)
+	
+	:user: -- (addelem)
+	:user: -- (editelem)
+	:user: -- (remelem)
+	:user: -- (adddep)
+	:user: -- (addcard)
+	:user: -- (editvis)
+	
+	(Classe) as (class)
+	(Attribut) as (attr)
+	(Méthode) as (method)
+	
+	(addelem) <|-- (class)
+	(editelem) <|-- (class)
+	(remelem) <|-- (class)
+	(addelem) <|-- (attr)
+	(editelem) <|-- (attr)
+	(remelem) <|-- (attr)
+	(addelem) <|-- (method)
+	(editelem) <|-- (method)
+	(remelem) <|-- (method)
+	
+	(Dépendance) as (depend)
+	(Héritage) as (herit)
+	(Association) as (asso)
+	(Implémentation) as (imp)
+	(Agrégation) as (arg)
+	(Composition) as (comp)
+	
+	(adddep) <|-- (depend)
+	(adddep) <|-- (herit)
+	(adddep) <|-- (asso)
+	(adddep) <|-- (imp)
+	(adddep) <|-- (arg)
+	(adddep) <|-- (comp)
+	
+	(editvis) <|-- (Public)
+	(editvis) <|-- (Package)
+	(editvis) <|-- (Private)
+	(editvis) <|-- (Protected)
+	
+	note top of :user: {
+		Ajouter type de classe.
+		Ajouter paquet ? (PlantUML le fait)
+		Ajouter type méthode ?
+	}
+}
+
+@enduml

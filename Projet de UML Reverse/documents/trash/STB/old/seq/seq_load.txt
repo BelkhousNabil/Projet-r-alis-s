@@ -1,0 +1,21 @@
+@startuml
+title Ouvrir un projet UMLReverse
+
+User --> Sys: Clique sur le bouton "Ouvrir Projet" ou Ctrl-O
+alt édition en cours
+	Sys --> User: Dialogue de confirmation (enregistrer ou non)
+	User --> Sys: Choix de l'utilisateur
+	alt sauver
+		User --> Sys: action de sauvegarde, voir diagramme correspondant
+	end
+end
+Sys --> User: Dialogue de sélection de fichier
+User --> Sys: Choix du fichier
+alt ouverture faite
+	Sys --> User: Notification indiquant que le projet est ouvert
+	Sys --> User: Passage à la vue du diagramme de paquets
+else erreur d'ouverture
+	Sys --> User: Notification indiquant que le logiciel ne reconnait pas le fichier
+	Sys --> User: Retour dialogue séléction du fichier
+end
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+package null {
+class ParseDiagram <IClassDiagram> {
+	--
+}
+}
+class ParseClassDiagram {
+	--
+}
+class IClassDiagram {
+	--
+}
+class ParseDiagram {
+	--
+}
+class Logger {
+	--
+}
+class ParseDiagram<2>  {
+	--
+}
+class ParseDiagram<f>  {
+	--
+}
+ParseClassDiagram --|> ParseDiagram
+@enduml

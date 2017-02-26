@@ -1,0 +1,21 @@
+@startuml
+title Importer un projet UMLReverse depuis Java
+
+User --> Sys: Clique sur le bouton "Importer depuis Java" ou Ctrl-Maj-O
+alt édition en cours
+	Sys --> User: Dialogue de confirmation (enregistrer ou non)
+	User --> Sys: Choix de l'utilisateur
+	alt sauver
+		User --> Sys: action de sauvegarde, voir diagramme correspondant
+	end
+end
+Sys --> User: Dialogue de sélection de dossier
+User --> Sys: Choix du dossier
+alt génération faite
+	Sys --> User: Notification indiquant que projet est généré
+	Sys --> User: Passage à la vue du diagramme de paquets généré
+else erreur d'ouverture
+	Sys --> User: Notification indiquant que le logiciel ne trouve pas de fichier Java
+	Sys --> User: Retour dialogue séléction du dossier
+end
+@enduml

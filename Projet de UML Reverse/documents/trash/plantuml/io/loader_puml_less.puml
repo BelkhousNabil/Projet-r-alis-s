@@ -1,0 +1,21 @@
+@startuml
+
+title Génération d'un diagramme depuis un fichier PlantUML et son fichier de paramètres
+actor user
+entity loader
+
+user -> loader : load(filename.puml, filename.less)
+create entity plantUMLParser
+loader -> plantUMLParser : new PlantUMLParser(filename.puml)
+loader -> plantUMLParser : load()
+create entity diagram
+plantUMLParser -> diagram : (return)
+create entity styleParser
+loader -> styleParser : new StyleParser(filename.less)
+loader -> styleParser : apply(diagram)
+group for each style
+	styleParser -> diagram : apply()
+end group
+diagram -> user : (return)
+
+@enduml

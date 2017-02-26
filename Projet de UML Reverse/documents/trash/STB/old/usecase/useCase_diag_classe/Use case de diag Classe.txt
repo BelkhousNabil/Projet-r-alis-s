@@ -1,0 +1,70 @@
+@startuml
+title Cas d'utilisation d'un diagramme de classe
+actor :user:
+rectangle {
+	(Ajouter\nElement) as (AjElem)
+	(Modifier\nElement) as (ModElem)
+	(Supprimer\nElement) as (SupElem)
+	(Ajouter\nDependances) as (AjDep)	
+	(Ajouter\nvisibilité) as (AjVis)
+	(Ajouter\nCardinalité) as (AjCard)
+	(Ajouter\nInterface) as (AjInt)
+
+
+	(AjElem)<-- :user:
+	(ModElem)<-- :user:
+	(SupElem)<-- :user:
+	(AjDep)	<-- :user:
+	(AjVis)<-- :user:
+	(AjCard)<-- :user:
+	(AjInt)<-- :user:
+	
+	(Classe)
+	(Attributs)
+	(Methodes)
+
+	(Classe\nNormale)
+	(Classe\nAbstraite)
+	
+	(Dependance)
+	(Heritage)
+	(Association)
+	(Implementation)
+	(Agrégation)
+	(Composition)
+
+	(Public)
+	(Protected)
+	(Package)
+	(Private)
+	
+	(Classe)<|-- (Classe\nNormale)
+	(Classe)<|-- (Classe\nAbstraite)
+
+	(AjElem) <|-- (Classe)
+	(AjElem) <|-- (Attributs)
+	(AjElem) <|-- (Methodes)
+
+	(ModElem) <|-- (Classe)
+	(ModElem) <|-- (Attributs)
+	(ModElem) <|-- (Methodes)
+
+	(SupElem) <|-- (Classe)
+	(SupElem) <|-- (Attributs)
+	(SupElem) <|-- (Methodes)
+
+	(AjDep)	<|-- (Dependance)
+	(AjDep)	<|-- (Heritage)
+	(AjDep)	<|-- (Association)
+	(AjDep)	<|-- (Implementation)
+	(AjDep)	<|-- (Agrégation)
+	(AjDep)	<|-- (Composition)
+
+	(AjVis) <|-- (Public)
+	(AjVis) <|-- (Protected)
+	(AjVis) <|-- (Package)
+	(AjVis) <|-- (Private)
+	
+	
+}
+@enduml

@@ -1,0 +1,32 @@
+@startuml
+title Diagramme de sequence d'un senario de création de diagramme à partir de l'IHM
+	
+	user -> system : Créer_Diagramme();
+	system ->> user : Affichage_fenêtre_nouveau_diagramme();
+	
+	alt Type de diagramme choisie = classe
+	user -> system : Choisir_Type_Diagramme();
+	system ->> user :Affichage_Classe_vide();	
+	end
+	
+	alt Type de diagramme choisie = sequence
+	user -> system : Choisir_Type_Diagramme();
+	system ->> user :Affichage_sequence_vide();
+	end
+	
+	alt Type de diagramme choisie = Use case
+	user -> system : Choisir_Type_Diagramme();
+	system ->> user :Affichage_UseCase_vide();
+	end
+	
+	alt Type de diagramme choisie = Package
+	user -> system : Choisir_Type_Diagramme();
+	system ->> user :Affichage_Package_vide();
+	end
+	
+	alt Type de diagramme choisie = Etat
+	user -> system : Choisir_Type_Diagramme();
+	system ->> user :Affichage_Etat_vide();
+	end
+
+@enduml

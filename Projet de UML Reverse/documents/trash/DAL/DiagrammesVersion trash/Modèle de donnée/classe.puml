@@ -1,0 +1,214 @@
+@startuml
+
+
+package class { 
+' -------------------------------- umlreverse.model.diagram.class
+
+abstract AClassEntity extends util.AEntity implements IClassEntity {
+	+getStyle() : StyleManager
+	+getGlobalStyle() : StyleManager
+	..
+	+setGlobalStyle(StyleManager) : void
+	+setStyle(StyleManager styleBox) : void
+	+setModifier(Set<Modifier> modifs) : void
+	+setPackage(String package) : void
+	
+}
+
+interface IEnum extends IClassEntity {
+	+isStatic() : boolean
+	+getItems() : List<String>
+	..
+	+setStatic(boolean isStatic) : void
+	+addItem(String enum) : void
+	+removeItem(String enum) : void
+}
+
+interface IClassOrInterface extends IClassEntity {
+	+getMethods() : List<IMethod> 
+	+getMethods(Modifier filtre) : List<IMethod>
+	+getMethods(String name, List<IType> arguments) 
+	+getVisibility(IMethod method) : visibility
+	+getVisibility(IAttribute attribut) : visibility
+
+	+getModifier(IMethod method) : Set<Modifier>
+	+getModifier(IAttribute attribut) : Set<Modifier>
+	+getAttributes() : List<IAttribute> 
+	+getAttributes(Modifier filtre) : List<IAttribute> 
+	+isGeneric() : boolean 
+	+getGenericTypes() : List<IType>
+	+getRelations() : List<IRelation>
+	+getDependance(String id) : Dependance
+	..
+	+addDependance(IClassEntity target, String id) : void
+	+removeRelation(Dependane relation)
+	+setGeneric(List<IType> types) : void
+
+	+removeMethod(String name, List<IType> arguments) : void
+	+removeMethod(IMethod method) : void
+	+addMethod(IMethod method) : void
+
+	+removeAttribute(String attr) : void
+	+removeAttribute(IAttribute attr) : void
+	+addAttribute(IAttribute attr) : void
+	
+	+accept(ClassVisitor visitor) : void
+
+}
+
+abstract AClassOrInterface extends AClassEntity implements IClassOrInterface
+
+interface IClass extends IClassOrInterface {
+	+isAbstract() : bool
+	+getAssociation(String id) : Association
+	+getDoubleAssociation(String id) : DoubleAssociation
+	+getAggregation(String id) : Aggregation
+	+getComposition(String id) : Composition
+	+getImplementation(String id) : Implementation
+	+getInheritance(String id) : Inheritance
+	..
+	+setAbstract(bool isAbstract) : void
+	+addAssociation(IClassEntity target, String id) : void
+	+addDoubleAssociation(IClass class, String id) : void
+	+addAggregation((IClassEntity target, String id) : void
+	+addComposition(IClass target, String id) : void
+	+addComposition(IInterface target, String id) : void
+	+addInheritance(IClass target, String id) : void
+	+addImplementation(IInterface target, String id) : void
+	+removeRelation(Association relation) : void
+	+removeRelation(DoubleAssocation relation) : void
+	+removeRelation(Aggregation relation) : void
+	+removeRelation(Composition relation) : void
+	+removeRelation(Inheritance relation) : void
+}
+
+interface IInterface extends IClassOrInterface {
+	+getInheritance(String id) : Implementation
+	..
+	+addInheritance(IInterface target, String id) : void
+	+removeRelation(Inheritance relation) : void
+}
+
+class EnumEntity extends AClassEntity implements IEnum
+class InterfaceEntity extends AClassOrInterface implements IInterface
+class ClassEntity extends AClassOrInterface implements IClass
+
+interface IMethod {
+	+getReturn() : IType 
+	+getName() : String 
+	+getVisibility() : Visibility
+	+getArguments() : List<Argument> 
+	+getProperty() : String
+	..
+	+setProperty(String property) : void
+	+setReturn(IType type) : void
+	+setName(String name) : void
+	+setArguments(List<Argument> arguments) : void
+	+setVisibility() : Visibility
+	+accept(ClassVisitor visitor) : void
+
+	+getVetoableChangeListeners() : VetoableChangeListener[]
+	+addVetoableChangeListener(VetoableChangeLister listener) : void
+	+removeVetoableChangeListener(VetoableChangeLister listener) : void
+	#fireVetoableChange(String name, Object oldValue, Object newValue) : void
+}
+class Method implements IMethod
+
+class Argument extends Variable {
+	getDirection() : Direction
+	setDirection(Direction direction) : void
+}
+
+Argument o--> Direction
+
+enum Direction {
+	In
+	Out
+	InOut
+}
+
+interface IType {
+	+toString() : String 
+	+isGeneric() : boolean 
+	+isConst() : boolean 
+	+getGenericType() : List<IType>
+	..
+	+setGenericType(List<IType) : IType
+	+setConst(boolean) : void 
+	+accept(ClassVisitor visitor) : void
+
+	+getVetoableChangeListeners() : VetoableChangeListener[]
+	+addVetoableChangeListener(VetoableChangeLister listener) : void
+	+removeVetoableChangeListener(VetoableChangeLister listener) : void
+}
+class Type implements IType
+
+
+interface IAttribute {
+	+getVisibility() : Visibility	
+	+getVariable() : IVariable 
+	+getProperty() : String
+	+setVisibility(Visibility visibility) : void
+	+setVariable() : IVariable
+	+setProperty(String property) : void
+	+accept(ClassVisitor visitor) : void
+	+getVetoableChangeListeners() : VetoableChangeListener[]
+	+addVetoableChangeListener(VetoableChangeLister listener) : void
+	+removeVetoableChangeListener(VetoableChangeLister listener) : void
+	#fireVetoableChange(String name, Object oldValue, Object newValue) : void
+
+}
+class Attribute implements IAttribute
+
+
+interface IVariable {
+	+getName() : String 
+	+getType() : IType 
+	+getInitialization() : String
+	..
+	+setInitialization(String init) : void
+	+setType(IType type) : void 
+	+setName(String name) : void
+}
+class Variable implements IVariable 
+
+
+enum Visibility {
+	{static}-strToVisibility : HashSet<String, Visibility> 
+	--
+	+Protected
+	+Private
+	+Public
+	+Package
+	..
+	{static}+getvisibility(String visibility) : Visibility
+	+accept(ClassVisitor visitor) : void
+}
+
+enum Modifier {
+	{static}-strToModifier : HashSet<String, Modifier>
+	--
+	+Abstract
+	+Static
+	..
+	{static}+getModifier(String modifier) : Modifier
+	+accept(ClassVisitor visitor) : void
+}
+
+
+AClassOrInterface "1" o--> "0..n" IMethod
+AClassOrInterface "1" o--> "0..n" IAttribute
+Method "0..1" o--> "1" IType
+Method "0..1" o--> "0..n" Argument
+Method --> Modifier
+Type "0..1" o--> "0..n" IType
+Variable "0..1" o--> "1" IType
+AClassOrInterface "0..n" o--> "1" Visibility
+Attribute "0..1" o--> "1" IVariable
+
+
+}
+' --------------------------------------------------------- fin package class
+
+
+@enduml

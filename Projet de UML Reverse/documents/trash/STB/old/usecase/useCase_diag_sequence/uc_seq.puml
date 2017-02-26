@@ -1,0 +1,33 @@
+@startuml
+title Diagramme de cas d'utilisation\nde la modification d'un diagramme de séquence
+
+actor user
+
+rectangle {
+
+        (Créer/Supprimer/Cacher/Modifier) as (edit)
+        (cadre d'interaction) as (AjtInter)
+
+        :user: -- (edit)
+
+        (edit) <|-- (Entité)
+        (edit) <|-- (Relation)
+        (Entité) <|--(Objet)
+        (Entité) <|-- (Acteur)
+        (Entité) <|-- (Instance)
+        (Entité) <|-- (AjtInter)
+		
+	(AjtInter) <|-- (opt)
+	(AjtInter) <|-- (loop)
+	(AjtInter) <|-- (ref)
+	(AjtInter) <|-- (alt)
+	(AjtInter) <|-- (for)
+		
+        note right of (Entité)
+            Possibilité de modifier la visibilité 
+            et la position de nos entités
+	end note
+		
+}
+
+@enduml

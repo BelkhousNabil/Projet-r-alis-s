@@ -1,0 +1,387 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry} 	%pour les marges
+\usepackage{color} %pour la definition de nouvelles couleurs
+\usepackage{graphicx} %pour ajouter des images 
+\usepackage[final]{pdfpages} 
+\usepackage[francais]{babel} % ``Franciser '' le document.
+\usepackage	
+  [colorlinks=false, urlcolor=red, breaklinks, pagebackref, citebordercolor={0 0 0}, 
+  filebordercolor={0 0 0}, linkbordercolor={0 0 0}, pagebordercolor={0 0 0}, 
+  runbordercolor={0 0 0}, urlbordercolor={0 0 0}, pdfborder={0 0 0}]
+	{hyperref} % Ajouter le package des lien redirigeant sans les encadrer 
+\usepackage{eurosym}
+
+%couleurs pour les morceaux de code
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codered}{rgb}{1,0.1,0.2}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+
+%modificaion des marges
+\geometry{hmargin=2.5cm,vmargin=3cm}
+
+
+%opening
+\title{Compte rendu des réunions : UML Reverse}
+
+\author{
+Florian INCHINGOLO\\ 
+Yohann HENRY\\ 
+Nabil BELKHOUS\\ 
+Stephen CAUCHOIS\\ 
+Saad MRABET\\ 
+Nicolas MENIEL\\ 
+Anthony GODIN}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Réunions client}
+\subsection{Vendredi 16/10/2015}
+\underline{Présents: M.Hérauville avec toute l'équipe}
+\\ \\
+Réunion rapide avec le client qui nous a résumé ce qu'il voulait et ses disponibilités.
+\subsection{Jeudi 23/10/2015}
+\underline{Présents: M.Hérauville avec toute l'équipe}
+\\ \\
+Présisions plus techniques des envies du client et réponses à certaines questions.
+\subsection{Jeudi 05/11/2015}
+\underline{Présents: M.Hérauville - Anthony - Nabil}
+\\ \\
+\textbf{\underline{Questions :}}
+\begin{enumerate}
+  \item Doit-on créer un outil ou un Logiciel ? C'est à dire, quand nous créons du plantUML en lisant du code, doit on stocker toutes les infos lues dans
+  le plantUML ou juste ce qui ait demandé par l'utilisateur ?\\
+  Si on stock tous dans le plantUML, ça veut dire qu'on définira ce qu'on veut afficher sur nos diagrammes dans un fichier de parametre (surement un XML). 
+  Mais ce choix impose qu'on perdera ces paramètres si on change de logiciel pour afficher notre diagramme. D'un autre coté avec nos logiciels on perd rien.
+  (ps: les parametres dont je parle c'est genre: afficher ou non les fonctions privés, les attributs etc... Rien de plus)
+  \item On suppose que le code java est valide à la compilation ? S'il ne l'air pas, que fait-on ?
+  \item Le fichier de style doit t'il obligatoirement être un fichier css ? On pourrait sauver les parametres du diagramme dans un XML.
+  \item Le client a t'il des contraintes techniques ? S'interesse t'il a la structure technique du projet ?
+  \item Peut on utiliser le code d'un outil sous licence EPL ?
+\end{enumerate}
+
+\textbf{\underline{Réponses :}} 
+\begin{enumerate}
+ \item Il serait dommage de perdre des infos dans le plantUML. On garde le plantUML complet et on cache les info grace à un autre fichier. 
+	Ou on peut avoir deux PlantUML. Un complet et un avec les données souhaitant être gardé. Le choix est libre, il faut juste avoir au moins
+	un plantUML complet pour ne pas perdre des infos.
+ \item Ce n'est Pas notre probleme. On suppose que le code est valide.
+ \item Le client nous a parlé de css pour nous donner un exemple. Mais on utilise ce qu'on veut, le choix est libre.
+ \item Pas vraiment. Le choix est assez libre. Il faut par contre que le logiciel soit utilisable à la fac. Il nous a demandé si
+	nous allions avoir des contraintes. On lui a dit que pour le moment on en avait pas vu. \textcolor{red}{Mais ça semble important pour lui 
+	qu'on y réfléchisse et qu'on le prévienne tôt si on en avait. Je pense notamment à l'execution de JAVAFX sur n'importe quel ordi.}
+ \item Le prof ne connait pas cette licence. Il faut qu'on vérifie par nous même. Du moment que le projet est open source, modifiable, portable etc...
+\end{enumerate}
+
+\textbf{\underline{Commentaire du client :}}
+\begin{itemize}
+  \item Attention il faut anticiper le temps de développement et s'y connaitre mieux en JavaFX. Ca semble très important pour la gestion des risques. 
+	\textcolor{red}{Il faudrait qu'on se mette rapidement à la technologie qu'on utilisera. (JAVAFX)}
+  \item Comment allons faire les test ? Il faudrait qu'on voit ça.
+  \item Il faudra des livraisons ponctuels au deuxième semestre (AGILITÉ)
+\end{itemize}
+
+\textbf{\underline{Commentaire :}}
+\begin{itemize}
+  \item Prochaine réunion la semaine prochaine, jour à définir par mail(il ne peut ni jeudi, ni vendredi aprem. Peut etre vendredi midi). 
+	Je (Anthony) lui ai promis de lui envoyer rapidement la STB avant la prochaine réunion avec pourquoi pas des diagrammes. 
+	(il accepte tous ce qui est exploitable pour le moment, c'est à dire les diagrammes/dessins à la main, sur paint etc...).
+  \item M.Nicart nous a conseillé pour le premier TP de gestion de projet de bien résumer notre projet pour le présenter à l'intervenant 
+	du TP de gestion de projet pour glaner le plus de conseil possible. Je (Anthony) vais essayer de faire ça ce soir en récupérant ce que vous avez déjà fait.
+\end{itemize}
+
+\subsection{Jeudi 09/12/2015}
+\underline{Présents: M.Hérauville - Anthony}\\
+\textbf{\underline{Sujet: Vérification de la STB}} \\
+La STB convient au client mise à part quelques faute de français. Voici quelques informations suplémentaires:
+\begin{itemize}
+ \item Les diagrammes doivent respecter UML2. Si possible il faudra interdire à un utilisateur de mettre n'importe quelles fleches dans un diagramme.
+      Il faudra que l'application le force un minimum à faire des diagrammes correctes. Si possible.
+ \item Lire la doc UML2 pourrait être sympa pour être sur de bien la respecter.
+ \item A la fin du projet, il faudra lister tous ce q'on a pas reussi à faire respecter de l'UML2 et tous ce qu'on a pu ajouter en plus.
+ \item Le client m'a dit qu'il avait discuté avec M.Nicart d'une façon d'implémenter le Reverse. Il nous propose (il ne l'impose pas) à la place 
+    d'utiliser un parseur c'est d'utiliser un code recompilé. Je n'ai pas trop compris... Il faudra qu'on en rediscute avec lui.
+ \item Il faut vérifier dans la STB que je n'ai pas oublié des fonctionnalités dans les modifications de diagramme par rapport à UML2. Plus on est précis
+    mieux c'est. Ca évitera qu'on nous fasse des coups malhonnetes dans le genre ``j'ai essayé de mettre un texte de 1GO dans le titre du diagramme et ça a planté.
+    Votre application n'est pas conforme à ce qu'on a signé.''.
+ \item Il faut demandé à notre intervenant quels sont les documents que le client doit signer
+ \item Le client est pret à signer la STB. Cependant je pense qu'il est utile d'ajouter encore quelques trucs. Quite à retarder un peu la signature.
+ Je ne suis pas satisfait de cette STB. Il manque trop de détail par rapport aux exigences d'UML2.
+\end{itemize}
+
+
+\textbf{\underline{Questions :}}
+\begin{enumerate}
+  \item Nous avons appris que ce projet a déjà été fait par des M1 GIL il y a deux ans. Pourquoi le recommencer ? Quels ont été leurs erreurs ?
+  \item Est-on obligé de sauvegarder notre diagramme en plantUML si nous avons une option pour exporter un diagramme en plantUML ?\\
+	Personnellement (anthony) je pensais sauvegarder le diagramme en plantUML en y laissant le max d'info et je mettrais avec un dossier
+	pour stocker les fichiers de paramètres qui permettre de faire le tri. On aurait deux options pour retirer un élément d'une classe:
+	\begin{itemize}
+	  \item Cacher un élément: l'élément en question reste enregistré dans le plantUML mais est listé comme étant caché dans les parametres.
+		Ceci sert à éviter de devoir regénérer un diagramme à partir d'un code si on supprime un élément qu'on voulait récupérer.
+		Mais en vérité cette option est t'elle si utile que ça ?...
+	  \item Supprimer un élément: l'élément en question est supprimé du plantUML et est irécupérable.
+	  \item Concernant la parti reverse. Quand on génére un diagramme de classe, doit on le faire égalalement pour les package importé ?
+	\end{itemize}
+\end{enumerate}
+
+\textbf{\underline{Réponses :}} 
+\begin{enumerate}
+ \item bla
+ \item bla
+\end{enumerate}
+
+\subsection{Jeudi 27/01/2016}
+\underline{Présents: M.Hérauville - Anthonyc- Nabil - Yohann}
+
+\textbf{\underline{Sujet: Nouvelle demande du client}}
+Le client a rédéfinie sa demande. Il ne veut plus d'un éditeur de diagramme sous la norme UML2.
+Il veut un éditeur de diagramme avec un validateur uml2.
+Le modèle est donc simplifié, plus besoin de restriction. On sauvegarde tous ce que peut contenir un diagramme (sous plantuml).
+
+\subsubsection*{Diagramme de classe}
+
+Les 5 entités : Classe, interface, Enumeration et classe abstraite, paquetage.
+Les classes et classes abstraites sont la même classe
+
+Une interace peut avoir des attributs ? 
+-Oui
+
+Quelles peuvent être les visibilités d'une interface ? De ses attributs et methodes ?
+-Le client n'est pas sur il doit vérifier pour les attributs et les méthodes. L'interface peut avoir n'importe quel visibilité. 
+
+Une énumeration peut avoir des attributs/methodes ? 
+-Nope
+
+Quelles peuvent être les visibilités d'une enumeration ? 
+-Toutes
+
+Quelles peuvent être les visibilités d'une classe ? De ses attributs et methodes ?
+-Toutes, toutes, toutes
+
+Restriction pour les paquetages ? On peut les déplacer ? Ca déplace les classes qu'ils contiennent ? Relation entre classe dans paquetage ? (intérieur et extérieur)
+-Les relations sont affichées tel quel, les classes se déplacent avec le paquetage puisque leur coordonnée sont calculées relativement au package.
+On peut déplacer un package et deux packages ne peuvent posséder le même nom dans un meme package.
+
+Des précisions sur les éléments d'une relation ? Des cardinalités ? Seulement pour un type de relation possible ?
+-Il existe plusieurs sortes de relations : les pondérés et les directionnels. Il existe donc 4 sortes de flèches (pour tous les mélanges possible)
+
+
+\subsubsection*{Diagrammes en general}
+Quelles sont vos restriction en fonction des notes ? relations sur les entités ?
+-Les notes sont juste une boite avec un possible titre et une chaine de caractères.
+Les entitées et les relations contiennent des notes contraintes et des notes basiques (Accrochage de la flèche différent à l'entité, symbole un peu chelou)
+
+\subsubsection*{Notes supplémentaires du modèle de données}
+Globalement, on doit éviter le recours au parallèle avec java et plutot travailler à visualiser les diagrammes selon les règles présentes dans son cours. rien de plus, rien de moins.
+Les interfaces boucles ne seront pas comprises sauf si le temps le permet.
+
+Techniquement dans une interface, tout le contenu est abstract.
+
+Une classe est abstraite si et seulement si, elle contient au moins une méthode abstraite.
+
+On peut être large sur les contraintes de noms au niveau du modèle de donnée mais pensez à une normalisation pour le plantUML.
+
+Le modèle de données doit pouvoir représenter de l'uml2 meme si plantuml ne le permet pas.
+Dans ce sens, il faut prévoir une sauvegarde du modèle différente de plantuml. PlantUML doit etre considéré comme un import/export, non pas comme une sauvegarde.
+
+Il faut pouvoir créer des classe association.
+
+\paragraph{Questions/Réponses}
+\subparagraph{Questions}
+\begin{enumerate}
+ \item Comment voulez vous qu'on manipule les relations entre entité ? Elles se calculent toute seules ? 
+	D\&D ? En arrondis ? En ligne droite ? Quelles sont vos exigences précises à ce sujet ?
+ \item Rendez-vous la semaine prochaine pour spécifier l'ergonomie ensemble ?
+ \item Date précise du rendu du projet ?
+\end{enumerate}
+
+\subparagraph{Reponse}
+\begin{enumerate}
+ \item Trait déplacable et fleche direct. Pas de calcul de trajectoire.
+ \item 9h mercredi 3 février
+ \item avant les exam
+\end{enumerate}
+
+
+\subsection{Jeudi 03/02/2016}
+\underline{Présents: M.Hérauville - Anthony}\newline
+\textbf{\underline{Sujet: Spécifier les normes UML2 à implémenter}}\newline
+Nouvelle demande du client. Il veut un éditeur de diagramme uml avec un validateur uml2.
+
+\subsection{Jeudi 24/02/2016 à 9h}
+\underline{Présents: M.Hérauville - Anthony - Nicolas}\newline
+\textbf{\underline{Sujet: Demonstration de la premiere démonstration}}\newline
+Le client a apprécié la vue. Cependant il a quelques petites remarques :
+\begin{enumerate}
+ \item Le zoom doit se faire sur le curseur de souris avec un scroll. Si on zoom depuis le menu, 
+	on peut le faire au centre de la vue ou sur le coin gauche.
+ \item La création d'entité doit se faire sur le curseur de souris.
+ \item La représentation graphicdes entités doit être à peu près la même que plantuml. Par exemple pour les note, les coins doivent 
+ être des angle droit sauf celui en haut à droit qui doit être retroussé. Il n'a pas de restriction POUR L'INSTANT concernant le style.
+ Pouvoir seulement modifier la couleur de fond de l'entité et de la police lui va actuellement.
+\end{enumerate}
+Le modèle (au premier abort) lui plait. Petite remarque : On peut définir des type par défaut. 
+Par exemple si on crée un attribut ``boujour''. On peut lui associé un type Object ou Property ou autre par défaut.
+De même pour la visibilité (public par défaut par exemple). De même pour les méthodes, on peut mettre void par défaut.
+
+
+\subsection{Vendredi 18/03/2016}
+\underline{Présents: M.Hérauville - Anthony - Yohann}\newline
+\textbf{\underline{Sujet: Retour du 1er livrable}}\newline
+Le client est globalement satisfait de la simplicité et de l'ergonomie du logiciel. On lui a présenter la maquette.
+Il veut pouvoir afficher/cacher facilement les barre d'outil. Il approuve le ``linkage'' des entités (sans copie, la suppression d'une methode d'une classe C dans un diagramme 
+la supprime de la banque de donnée et donc de tous les diagramme qui contenait cette entité.)
+Bug lors de la création d'une entité dans le diagramme sur la position lorsque c'est zommé.``
+Problème de police, on a pas les droits sur une police window.
+Le client sera indisponible la deuxieme semaine des vacances. On va donc lui envoyer un livrable dès la premiere semaine des vacances en lui demandant 
+un retour.
+
+\section{Réunions équipe}
+\subsection{Jeudi 15/10/2015}
+\underline{Présents: Toute l'équipe}
+\\
+\begin{itemize}
+  \item Rencontre de l'équipe dans un lieu conviviale. Tous le monde s'est présenté et a dressé une petite fiche renseignant 
+    sur ses qualités et ses défauts en projet informatique.
+  \item Désignation d'un chef de projet: Florian Inchingolo. 
+\end{itemize}
+
+\subsection{Mardi 20/10/2015}
+\underline{Présents: Toute l'équipe}
+\\
+\begin{itemize}
+  \item Nous avons commencé à réfléchir/débattre à l'architecture que notre projet pourrait avoir. 
+  \item Désignation des chargés de communication avec le client : Anthony Godin, Nabil Belkhous.
+\end{itemize}
+ 
+\subsection{Mardi 03/11/2015}
+\underline{Présents: Anthony - Florian - Yohann}
+\\
+\begin{itemize}
+  \item Récap' et construction de la structure du projet. Plusieurs idées et questions sont abordées. La prochaine réunion avec le client
+	nous permettra de prendre des décisions importantes pour la structure.
+\end{itemize}
+
+
+\subsection{Mercredi 04/11/2015}
+\underline{Présents: Anthony - Florian - Nabil - Nicolas - Stephen - Yohann} 
+\\
+\begin{itemize}
+  \item Récap' de la dernière réunion. Tous le monde semble d'accord avec la structure imaginée.
+  \item Répartition du travail. Il y aura 3 parties: \begin{enumerate}
+                                                      \item IHM
+                                                      \item Ensemble d'objet (la partie qui modélise les info virtuellement + les options à gérer)
+                                                      \item Acteur (parseurs)
+                                                     \end{enumerate}
+\end{itemize}
+A la prochaine réunion (le lendemain) il faudra commencer à lister préciséments les options de l'application.
+
+\subsection{Jeudi 05/11/2015}
+\underline{Présents: Anthony - Florian - Nabil - Saad - Stephen - Yohann} 
+Début de STB et des diagramme de cas d'utilisation.
+
+\subsection{Vendredi 06/11/2015}
+\underline{Présents: Toute l'équipe} 
+Pour le TP2 de Gestion de projet:\\
+\begin{itemize}
+ \item \textcolor{red}{\underline{Finaliser la STB}}
+ \item Revue de la STB avec le client
+ \item Réunion Hebdo avec le client
+ \item Lister les difficultés du projet
+\end{itemize}
+
+Template d'un compte rendu de réunion:
+\begin{itemize}
+ \item Date/ Personne/ Sujet
+ \item Contexte\\
+ \item Action\\
+ \item Sujet abordé
+\end{itemize}
+
+
+\subsection{Jeudi 11/11/2015}
+\underline{Présents: Anthony - Florian - Nabil - Nicolas - Saad - Yohann} \newline
+Sujet: Travail pour la STB 
+\begin{itemize}
+ \item Construction de la structure de la STB
+ \item Reconstruction des diagrammes des cas
+ \item Commencement des cas d'utilisation
+ \item Premier test d'interface graphique
+\end{itemize}
+
+\subsection{Jeudi 29/01/2016}
+\underline{Présents: Anthony - Florian - Nicolas - Saad - Yohann - Stephen}  \newline
+\textbf{Sujet} : Présentation de notre PDD, plannification de sprint et changement de chef de projet. 
+\newline
+
+Nous avons fait une mélée. Globalement on a tous installé notre environement de travail sur notre pc cette semaine.\newline
+Florian démissionne de son statut de chf de projet. Il ne se sent plus apte à tenir ce rôle à cause de problèmes personnels.
+Une éléction d'un nouveau chef de projet est prévu sur Slack.\newline
+Le PDD est refait. On y intégre Scrum. Nous l'avons présenté à l'équipe avec le diagramme de Gantt.\newline
+La préparation du sprint est faite. Nous avons mis en place un BackLog sur Trello.\newline
+L'itération 1 débute offciellement.\newline
+Pour la premiere semaine :
+\begin{itemize}
+ \item Vue : Stephen(responsable), Saad et Anthony
+ \item Modèle de diagramme : Yohann (responsable), Nabil et Nico
+ \item Parseur : Florian (responsable)2524
+\end{itemize}
+
+\subsection{Jeudi 29/01/2016}
+\underline{Présents: Toute l'équipe}  \newline
+\textbf{Sujet} : Petite mélée. Rappel des taches de la semaine de chacun.
+\newline
+A faire :
+\begin{itemize}
+ \item Elire un nouveau chef de projet
+ \item Reparler de l'ergonomie rapidement
+ \item Rappeler l'attribution des taches
+ \item Faire un point sur le backlog. Les trois responsables doivent s'assurer que les 
+ dates sont bien fixée pour chacunes des taches. 
+ Que ça correspondent bien avec le Gantt. Il faut à tous pris éviter le retard...
+\end{itemize}
+Niveau ergonomie : Quand on ajoute une entité, une pop-up s'affiche et demande son nom et ses d'elements si l'utilisateur le veut.
+
+\subsection{Jeudi 04/02/2016}
+\underline{Présents: Anthony, Nabil, Nicolas, Stephen, Yohann}  \newline
+\textbf{Sujet} : Mélée. Rappel des taches de la semaine de chacun. Compte rendu de réunion client
+\newline
+Rappel: On code en anglais. Les nom de toutes les fonctions doivent être en ANGLAIS. \newline
+Explication du nouveau modèle à l'équipe et de la nouvelle vue. Nouvelle planification des équipes jusqu'au 12 février :
+\begin{itemize}
+ \item Vue : Stephen, Anthony, Saad et Nico
+ \item Modèle : Yohann et Nabil
+ \item Parseur : Florian
+\end{itemize}
+Prochaine réunion prévu : Lundi 8 février après midi chez Yohann ou chez Anthony. Mélée + développement en groupe : 4h.\newline
+Un nouveau PDD avec un nouveau planning est prévu pour le 8 février.
+\subsubsection*{Nouveau modèle}
+Le nouveau modèle ne fait plus de restriction. Il peut contenir tous ce qu'on peut interpréter en uml. Attention tout de même,
+un diagramme de classe ne peut pas contenir un cas d'utilisation.
+Le modèle d'un diagramme de classe contient :
+\begin{itemize}
+ \item Des entités (classe, interface etc...) avec un id.
+ \item Des relations qui contiennent un id ainsi que l'id des entités source et destination de la relation.
+\end{itemize}
+\subsubsection*{Nouvelle vue}
+Il faudra ajouter dans la vue une nouvelle boite qui permet d'afficher toutes les entités et relation que contient un projet avec la possibilité de les éditer.
+Evidemment de manière ergonomique. Le chargé clientèle travaillera bientot ça avec le client.
+\subsubsection*{Nouvelle responsabilité}
+Saad devient responsable du menu. Il gerera sa partie visuelle ainsi que le controleur.
+
+\subsection{Lundi 21/02/2016}
+\underline{Présents: Toute l'équipe}  \newline
+\textbf{Sujet} : Mélée. Gros point sur le travail des vacances, sur le travail sur le gantt.
+\newline
+Attribution des taches, préparation de la réunion/présentation avec le client. \newline
+Présentation des structures logiciels des 3 parties et tous le monde vérifie que les parties sont bien compatibles. \newline
+Discution avec le modèle de diagramme des property !
+
+\end{document}

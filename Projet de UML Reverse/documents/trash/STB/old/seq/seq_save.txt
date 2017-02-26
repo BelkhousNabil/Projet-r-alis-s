@@ -1,0 +1,19 @@
+@startuml
+title Enregistrer un projet UMLReverse
+
+User --> Sys: Clique sur le bouton "Sauver Projet" ou Ctrl-S
+alt déjà sauvé
+	Sys --> User: Notification indiquant que le fichier est sauvé
+else nouveau diagramme
+	Sys --> User: Dialogue de séléction de nom
+	User --> Sys: Entrée du nom
+	alt fichier utilisé
+		Sys --> User: Dialogue de confirmation (écraser ou non)
+		User --> Sys: Choix de l'utilisateur
+		alt ne pas écraser
+			Sys --> User: Retour au dialogue sélection du nom
+		end
+	end
+	Sys --> User: Notification indiquant que le fichier est sauvé
+end
+@enduml

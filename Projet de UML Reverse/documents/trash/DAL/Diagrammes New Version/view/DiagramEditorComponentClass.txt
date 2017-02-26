@@ -1,0 +1,112 @@
+@startuml
+
+package fr.univrouen.umlreverse.ui.component {
+	abstract class AEntityGraphic
+	class NoteGraphic
+	abstract class AEntityGraphicController
+	class NoteGraphicController
+
+	class PackageGraphic
+	class PackageGraphicController
+
+	class ObjectEntityGraphic
+	class ObjectEntityGraphicController
+
+	abstract class AEntityGraphic {
+		+ isSelected() : boolean
+		+ getBackgroundColor() : Color
+		--
+		+ setSelected(boolean)
+		+ setBackgroundColor(Color)
+	}
+
+	class NoteGraphic {
+	    + NoteGraphic(DiagramEditorController)
+	    + getController() : NoteGraphicController
+	    + getRectangle() : Rectangle
+	    + final getText() : Text
+	    + getTextColor() : Color
+		+ getTextSize() : int
+	    --
+	    + final setText(String) 
+	    + setTextColor(Color) 
+		+ setTextSize(int) 
+	}
+
+	class NoteGraphicController {
+		- note : INote ou NoteViewEntity
+		--
+		+ NoteGraphicController(AEntityGraphic, 
+            DiagramEditorController)
+		+ getBackgroundColor() : Color
+		+ getTextColor() : Color
+		+ getTextSize() : int
+		+ final TextProperty() : ObjectProperty<Text>
+		--
+		+ final setText(Text) 
+		+ setBackgroundColor(Color) 
+		+ setTextColor(Color) 
+		+ setTextSize(int) 
+	}
+
+
+	abstract class AEntityGraphicController {
+		+ AEntityGraphicController(AEntityGraphic,
+            DiagramEditorController) 
+		+ getContetMenu() : ContextMenu 
+		+ getEditMI() : MenuItem
+		+ getRemoveMI() : MenuItem
+		+ getEntityGraphic() : AEntityGraphic
+		+ getDiagramEditorController() : DiagramEditorController 
+		+ {abstract} getBackgroundColor() : Color
+		--
+		+ {abstract} setBackgroundColor(Color) 
+	}
+
+	class PackageGraphic {
+		+ PackageGraphic(ClassDiagramEditorController)
+		+ getContainerBorder() : Rectangle
+		+ getBackgroundColor() : Color
+		+ getTitleBorder() : Rectangle
+		+ final getName() : Text
+		+ getController() : AEntityGraphicController
+		--
+		+ setBackgroundColor(Color)
+		+ final setName(String)
+ 	}
+
+ 	class PackageGraphicController {
+ 		- package : Package ou PackageViewEntity
+ 		--
+ 		+ PackageGraphicController(AEntityGraphic, 
+ 		ClassDiagramEditorController)
+ 		+ getBackgroundColor() : Color
+ 		+ final TextProperty() : ObjectProperty<Text>
+ 		--
+ 		+ setBackgroundColor(Color)
+ 		+ addPackage(PackageGraphic)
+ 		+ final setName(String)
+ 	}
+
+ 	class ObjectEntityGraphicController {
+ 		- object : IObjectEntity ou ObjectViewEntity
+ 		--
+ 	}
+
+	AEntityGraphic <|-- NoteGraphic
+	AEntityGraphicController <|-- NoteGraphicController
+
+	AEntityGraphic <|-- PackageGraphic
+	AEntityGraphicController <|-- PackageGraphicController
+
+	AEntityGraphic <|-- ObjectEntityGraphic
+	AEntityGraphicController <|-- ObjectEntityGraphicController
+
+	NoteGraphic "1" o---o "1" NoteGraphicController : controller
+	PackageGraphic "1" o---o "1" PackageGraphicController : controller
+	ObjectEntityGraphic "1" o---o "1" ObjectEntityGraphicController : controller
+}
+
+javafx.scene.layout.Pane <|-- AEntityGraphic
+
+@enduml

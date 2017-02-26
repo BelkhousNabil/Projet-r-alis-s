@@ -1,0 +1,18 @@
+@startuml
+title Diagramme de sequence d'un senario d'ajout d'un cas d'utilisation à partir de l'IHM
+	
+	user -> system : Ajouter_entity();
+	system ->> user : Boite_de_dialogue();
+	
+	user -> system : Nommer_entity();
+	alt Type de diagramme choisie = Use casse
+		alt Nom du cas d'utilisation n'existe pas
+			system ->> user :Affichage_use_case();	
+			user -> system : Deplacer_use_case();
+			system ->> user :Deplacement_entity_Surbrillance();
+			else Nom du cas d'utilisation existe dèja
+				system ->> user :message("Ce nom existe dèja");
+		end
+	end
+
+@enduml

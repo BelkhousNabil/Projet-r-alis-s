@@ -1,0 +1,26 @@
+ @startuml
+
+
+
+
+interface IDiagramManager {
+	+getDiagram(String name) : IDiagram
+	+containsFilename(String filename) : bool
+	+containsDiagram(String name) : bool
+	+getDiagrams() : Set<IDiagram>
+	..
+	+addDiagram(String filePlantUml) 
+	+addDiagram(String filePlantUml, String fileParameter) 
+	+reverseJava(String directoryJava, String name) 
+	+applyStyle(IDiagram diagram, String fileParameter) 
+	+toPlantUml(IDiagram diagram) 
+	+toPlantUml(IDiagram diagram, String fichier) 
+	+toParameters(IDiagram diagram, String fichier) 
+	+addDiagram(IDiagram diagram) 
+	+removeDiagram(IDiagram diagram) 
+	+removeDiagram(String name) 
+}
+
+class DiagramManager implements IDiagramManager
+
+@enduml

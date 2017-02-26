@@ -1,0 +1,9 @@
+@startuml
+title Diagramme de sequence d'un senario de sauvegarde d'un diagramme à partir de l'IHM
+	
+	user -> system : Clic_Sur_Bouton_Sauvegarder();
+	system ->> user : Fenetre_Selection_Fichier();
+	user -> system : Choix_Fichier();
+	system ->> user : message_reponse();
+
+@enduml

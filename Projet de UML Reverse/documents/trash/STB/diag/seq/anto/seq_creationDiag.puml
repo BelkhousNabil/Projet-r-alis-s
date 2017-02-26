@@ -1,0 +1,10 @@
+@startuml
+title Diagramme de sequence de la création de diagramme
+	
+	user -> system : Créer un diagramme
+	system ->> user : Demande de quel type de diagramme
+	user -> system : $type : type du diagramme
+	system -> system : Crée un diagramme vide \nde type $type
+        system -> user : Affiche le diagramme
+
+@enduml

@@ -1,0 +1,236 @@
+
+@startuml
+package clazz {
+       
+        
+        class DialogArgs
+        class DialogArgsController {
+            + {static} EDIT_TEXT : String 
+            + {static} ADD_TEXT : String 
+            + {static} DELETE_TEXT : String
+            + {static} CANCEL_TEXT : String
+            - argumentList : List<Argument>
+            - currentArgument : Argument
+            - argumentListView : ListView<Argument>
+            - nameText : TextField
+            - valueText : TextField
+            - inbox : CheckBox
+            - outBox : Checkbox
+            - addButton : Button
+            - deleteButton : Button
+            - newButton : Button
+            
+            + loadValues(List<Argument>) : void
+            - setBehaviors() : void
+            - fill(Argument) : void
+            - fill() : void
+            
+            
+        }
+        class DialogOEGEdit {
+            - diagramController : ClassDiagramEditorController
+            - typeEntity : TypeEntity
+            - entityGraphic : ObjectEntityGraphic 
+            - dialog : Dialog
+            - controller : DialogOEGEditController
+            - type : DialogType
+            - okButtonType : ButtonType
+            - result : Optional
+            
+            + showAndWait() : void
+            + applyChanges() : boolean
+            + getObjectEntityGraphic : ObjectEntityGraphic
+            - createDialog() : void
+            - {static} toRGBCode(Color) : String
+            
+            
+            
+        }
+        
+        enum DialogType {
+                CREATE
+                EDIT
+        }
+        
+        class DialogOEGEditController {
+            + {static} EDIT_TEXT : String
+            + {static} ADD_TEXT : String
+            + {static} HIDE_TEXT : String
+            + {static} SHOW_TEXT : String
+            + {static} DELETE_TEXT : String
+            + {static} CANCEL_TEXT : String
+            + {static} ARGS_TEXT : String
+            - entity : ViewEntity
+            - currentMethod : IMethod
+            - currentAttribute : IAttribute
+            - currentEnum : String
+            - currentOther : String
+            - argumentList : List<Argument>
+            - entityName : TextField
+            - entityType : ComboBox<TypeEntity>
+            - entityVisibility : ComboBox<Visibility>
+            - backgroundColor : ColorPicker
+            - color : ColorPicker
+            - methodList : ListView<IMethod>
+            - attributeList : ListView<IAttribute>
+            - enumList : ListView<String>
+            - otherList : ListView<String>
+            - methodName : TextField
+            - methodType : TextField
+            - methodArgsButton : Button
+            - methodProperty : TextField
+            - methodVisibility : ComboBox<Visibility>
+            - staticMethod : CheckBox
+            - abstractMethod : CheckBox
+            - newMethodButton : Button
+            - addMethodButton : Button
+            - hideMethodButton : Button
+            - deleteMethodButton : Button
+            - attributeName : TextField
+            - attributeType : TextField
+            - attributeValue : TextField
+            - attributeProperty : TextField
+            - attributeVisibility : ComboBox<Visibility>
+            - staticAttribute : CheckBox
+            - abstractAttribute : CheckBox
+            - newAttributeButton : Button
+            - addAttributeButton : Button
+            - hideAttributeButton : Button
+            - deleteAttributeButton : Button
+            - enumField : TextField
+            - newEnumButton : Button
+            - addEnumButton : Button
+            - deleteEnumButton : Button
+            - otherText : TextField
+            - newOtherButton : Button
+            - addOtherButton : Button
+            - hideOtherButton : Button
+            - deleteOtherButton : Button
+            
+            + apply() : void
+            + loadValues(ViewEntity) : void
+            - setBehaviors() : void
+            - refreshElements() : void
+            - fillAttribute() : void
+            - fillAttribute(IAttribute) : void
+            - fillMethod() : void
+            - fillMethod(IMethod) : void
+            - fillEnum() : void
+            - fillEnum(String) : void
+            - fillOther() : void
+            - fillOther(String) : void
+            + {static} showError(String, String) : void
+            - {static} toRGBCode(Color) : String
+           
+            
+        }
+        class DialogPackageEdit {
+            - name : String
+            - nameText : TextField
+            - backgroundColor : ColorPicker
+            - dialog : Dialog<String>
+            - packageG : PackageGraphic
+            - diagramController : ClassDiagramEditorController
+            
+             + showAndWait() : void
+             - createDialog() : void
+             
+        }
+        
+         enum DialogNoteEditMode {
+                CREATE
+                EDIT
+        }
+        class ObjectEntityGraphic {
+            + {static} X_MARGIN : int
+            + {static} Y_MARGIN : int
+            + {static} CIRCLE_MARGIN : int
+            + {static} DEFAULT_BACKGROUND_COLOR : Color
+            + {static} DEFAULT_TEXT_COLOR : Color
+            + {static} DEFAULT_STROKE_COLOR : Color
+            + {static} DEFAULT_TEXT_SIZE : int
+            + {static} CIRCLE_SIZE : double
+            - controller : ObjectEntityGraphicController
+            - entity : ViewEntity
+            - head : Rectangle
+            - name : Text
+            - width : double
+            - pane : Pane
+            
+            + getController() : IEntityGraphicController
+            + getRectangle() : Rectangle
+            + positionProperty() : ObjectProperty
+            + toString() : String
+            + getTextColor() : Color
+            + getTextSize() : int
+            + getViewEntity : ViewEntity
+            + getDefaultType : RelationGraphic.RelationTypeEnum
+            + setTextColor(Color) : void
+            + refresh() : void
+            - setList(Iterable<?>, List<Text>, Font, Color) : void
+            - drawHead(Color) : void
+            - drawField(List<Text>, Rectangle, Color) : Rectangle
+             
+        }
+        class ObjectEntityGraphicController {
+            - entity : ObjectEntityGraphic
+            - diagramController : ClassDiagramEditorController
+            - background : Color
+            - color : Color
+            
+            + getBackgroundColor() : Color
+            + getTextColor() : Color
+            + setBackgroundColor(Color) : void
+            + setTextColor(Color) : void
+            - createController() : void
+            - edit : void
+            - {static} toRGBCode(Color) : String
+        }
+        class PackageGraphic {
+            + {static} BACKGOURND_COLOR_DEFAULT : Color
+            + {static} WIDTH_MARGE : int
+            + {static} WIDTH_MARGE_CONTAINER : int
+            - containerBorder : Rectangle
+            - titleBorder : Rectangle
+            - name : Text
+            - controller : PackageGraphicController
+            
+            + getContainerBorder() : Rectangle
+            + getDefaultType() : RelationGraphic.RelationTypeEnum
+            + getRectangle() : Rectangle
+            + getBackgroundColor() : Color
+            + getTitleBorder() : Rectangle
+            + getName() : Text
+            + toString() : String
+            + getController() : AEntityGraphicController
+            + getPosition() : Point2D
+            + positionProperty() : ObjectProperty
+            + setBackgroundColor(Color) : void
+            + setName(String) : void
+            + setPosition(Point2D) : void
+            # createController() : void
+        }
+        class PackageGraphicController {
+            - packages : List<PackageGraphic>
+            - backgroundColor : Color
+            - textProperty : StringProperty
+            - packageG : PackageGraphic
+            
+            + getBackgroundColor() : Color
+            + StringProperty() : StringProperty
+            + setBackgroundColor() : Color
+            + addPackage(PackageGraphic) : void
+            + setName(String) : void
+            - createController() : void
+            - edit() : void
+        }
+        
+    }
+    DialogArgs --> DialogArgsController
+PackageGraphic --> PackageGraphicController
+ObjectEntityGraphic --> ObjectEntityGraphicController
+DialogOEGEdit --> DialogOEGEditController
+DialogOEGEdit ..> Color
+DialogPackageEdit +-- DialogNoteEditMode
+DialogArgsController +-- DialogType
+@enduml

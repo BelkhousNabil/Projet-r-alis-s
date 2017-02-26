@@ -1,0 +1,70 @@
+
+Florian Inchingolo [9:57 PM] 4th November
+
+MICRO TUTO GIT
+pour cloner le git, utiliser cette commande :
+$ git clone https://LOGIN@svn-etu-info-sciences.univ-rouen.fr/git/uml/
+avec LOGIN votre login à la fac
+pour récupérer les derniers changements, aller dans le dossier du projet et utiliser :
+$ git pull
+pour enregistrer les modifications, aller dans le dossier du projet et utiliser :
+$ ./pu.sh "[DOMAINE] EXPLICATION"
+ex : ./pu.sh "[CR] Ajout du compte rendu du 04/11"
+Les changements seront mis à jour sur le slack en utilisant ce script si vous avez curl d'installé sur votre machine linux.
+PS : J'ai pas parlé des branches et des merges, mais on devrait pas en avoir besoin pour le moment.
+Si vous voulez en savoir plus, suffit que yohann nous file le lien de son tuto :p
+
+
+Anthony Godin [8:14 PM] 5th November
+
+Petite explication rapide pour ceux qui ne connaissent pas du tous. Git permet d'enregistrer un projet d'équipe en ligne. Le but principal est de pouvoir chacun travailler dessus et y apporter des modifications sans se marcher dessus. En gros Git va trouver où sont vos modifications et les ajouter au projet en ligne sans effacer les éventuelles modifications que vos collègues auraient pu faire en même temps que vous à un endroit différent.  
+Pour commencer vous allez vouloir enregistrer le projet à un endroit sur votre ordinateur. Allez y depuis le terminal. Une fois à l'endroit voulu vous pourrez cloner le projet. Ce sera le seul clone que vous aurez à faire. Le projet va etre copié à l'endroit où vous vous trouvez avec un petit fichier caché ".git" qui contiendra l'adresse de votre git entre autre. Après avoir cloné le projet vous aurez que des mises à jour à faire dessus.
+Pour télécharger les maj des autres il faut "pull".
+Pour envoyer vos modifications il faut "push".
+Pour ces deux action il faut le faire depuis votre terminal à l'endroit où se trouve le fichier .git, c'est à dire à la racine de votre projet.
+Je pense que le tuto de Yohann sera plus intéressant mais ça vous fait une petite base en attendant. :smiley:
+ps: pour ceux qui se sentent à l'aise en anglais vous avez une doc sur le site officiel de git: https://git-scm.com/doc =)
+ps2: En faite si vous avez des problèmes au moment de cloner le dépot, il se peut que cette commande vous aide:  # git config --global http.sslverify false
+
+
+Yohann Henry [6:56 AM] 6th November
+
+http://www.blogduwebdesign.com/tutoriel-git/tutoriel-git-1-manager-son-projet/696
+je chercher à remettre la main sur le méga assistant débutant du débutant noob
+
+
+Anthony Godin [7:59 PM] 13th November
+Petit conseil git:
+Il y a aura ces prochains jours/mois forcément des problèmes qui vous sauteront à la gueule lorsque que vous allez vouloir push/pull.
+J'en liste deux:
+-1- Quand vous avez voulu pull
+error: Your local changes to the following files would be overwritten by merge
+...
+Please, commit your changes or stash them before you can merge.
+
+-2- Quand vous avez voulu pull
+Fusion automatique de documents/blabla
+CONFLIT (contenu) : Conflit de fusion dans documents/blabla
+La fusion automatique a échoué ; réglez les conflits et validez le résultat.
+
+Je ne sais pas si c'est déjà arrivé à quelqu'un ou si vous savez tous gérer le truc alors je vais vous écrire la solution à ce genre de problème:
+-1-
+Ce n'est pas très compliqué à comprendre. Vous avez fais des modifications au projet et avez voulu pull les maj du projet. Le problème c'est que en quelque sorte vous n'avez pas "enregistré"/commit vos modifications dans votre git (local). Et git a besoin de le faire. C'est une norme. Je ne rentrerai pas dans les détail. Il faut donc commit comme le message vous le signale. C'est très simple ça se fait en deux commandes:
+$git add --all
+$git commit -m "[EXEMPLE] description de vos modifications"
+Vous pouvez maintenant pull sans problème.
+
+-2-
+Cela s'explique en général parce que vous avez modifié un fichier qu'un autre a déjà modifié et pushé avant vous.
+Dans ce genre de cas git ne sait pas toujours fusionner les modif et quelle modification prendre. Il vous informe qu'il y a un conflit entre deux versions. (ça arrive quand vous modifiez la même ligne d'un même fichier).
+Dans ce genre de cas git va tous simplement tous de même télécharger les mises à jour et vous informer dans les fichier concernés le contenu conflictuel.
+Pour l'exemple donné, si j'ouvre le fichier blabla je vais trouver quelque part
+<<<<<<< HEAD
+contenu conflictuel
+====== 
+contenu conflictuel
+>>>>>>> 36df56887cb46f100acf748083a0aea159fccd2a
+Suffit de vérifier que vous voulez toujours garder ce contenu (supprimez aussi ces trois lignes)
+Et commitez. Normalement y a plus de problème.
+Il peut y avoir des problèmes de conflit beaucoup plus compliqué que ça mais je suis pas un expert :confused:
+(je note ce genre de conseil dans un fichier dans le dossier util). :smiley:

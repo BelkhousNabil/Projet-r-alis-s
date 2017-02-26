@@ -1,0 +1,493 @@
+@startuml
+package Common {
+
+
+    package RelationType {
+                class Agregation
+                class Association
+                class Composition
+                class Dependance
+                class Implementation
+                class Inheritance
+                class Normal
+                class RelationType
+                
+            }
+    class DragContext {
+            - mouseX : double
+            - mouseY : double
+            - translateX : double
+            - translateY : double
+        
+            + getMouseX() : double
+            + getMouseY() : double
+            + getTranslateX() : double
+            + getTranslateY() : double
+    }
+    
+    abstract class AEntityGraphic extends BorderPane implements IEntityGraphic {
+        + {static} WIDTH_ARROW_PANEL : double
+        + {static} HEIGHT_ARROW_PANEL : double
+        - isSelected : boolean
+        - diagramEditorController : IDiagramEditorController
+        
+        + getCenterPoint() : Point2D
+        + isSelected() : boolean
+        + getPosition() : Point2D
+        + positionProperty() : ObjectProperty
+        + getBackgroundColor() : Color
+        + getRelations() : List<IRelationGraphic>
+        + addRelation(IRelationGraphic) : void
+        + removeRelation(IRelationGraphic) : void
+        + setSelected(boolean) : void
+        + setPosition(Point2D) : void
+        + setBackgroundColor(Color) : void
+    }
+    
+    abstract class AEntityGraphicController implements IEntityGraphicController {
+        - ctxMenu : ContextMenu
+        - editMI : MenuItem
+        - removeMI : MenuItem
+        # addRelationMI : MenuItem
+        - relations : List<IRelationGraphic>
+        - entity : IEntityGraphic
+        - diagramController : IDiagramEditorController
+        - position : ObjectProperty<Point2D>
+        
+        + getContextMenu() : ContextMenu
+        + getEditMI() : MenuItem
+        + getRemoveMI() : MenuItem
+        + getAddRelationMI() : MenuItem
+        + getDiagramEditorController() : IDiagramEditorController
+        + getPosition : Point2D
+        + positionProperty() : ObjectProperty
+        + getRelations() : List<IRelationGraphic>
+        + addRelation(IRelationGraphic) : void
+        + removeRelation(IRelationGraphic) : void
+        + setPosition(Point2D) : void
+    }
+    
+    class DialogAddRelation {
+        - dialog : Dialog<ButtonType>
+        - relation : IRelationGraphic
+        - src : IEntityGraphic
+        - entities : Set<IEntityGraphic>
+        - entityDst : ChoiceBox<IEntityGraphic>
+        - okButtonType : ButtonType
+        - controller : IDiagramEditorController
+        
+        + showAndWait() : void
+        + getRelationGraphic() : IRelationGraphic
+        - createDialog() : void
+    }
+    class DialogNoteEdit {
+        - text : String
+        - noteText : TextArea
+        - backgroundColor : ColorPicker
+        - textColor : ColorPicker
+        - dialog : Dialog<String>
+        - note :NoteGraphic
+        - diagramController : IDiagramEditorController
+        
+        + showAndWait() : void
+        + getNoteGraphic() : NoteGraphic
+        - createDialog() : void
+    }
+    enum DialogNoteEditoMode {
+        CREATE
+        EDIT
+    }
+    
+    class DialogRelationEditNoteG {
+        - name : TextField
+        - srcCardi : TextField
+        - dstCardi : TextField
+        - relationColor : ColorPicker
+        - textColor : ColorPicker
+        - okButtonType : ButtonType
+        - dialog : Dialog<ButtonType>
+        - relation : IRelationGraphic
+        - diagramController : IDiagramEditorController
+        
+        + showAndWait() : void
+        + getRelationGraphic() : IRelationGraphic
+        - createDialog() : void
+        
+    }
+    
+    class DialogRelationEditOEG {
+        - {static} RELATIONS : Map<RelationTypeEnum, RelationType>
+        - types : ComboxBox<RelationType
+        - name : TextField
+        - srcCardi : TextField
+        - dstCardi : TextField
+        - relationColor : ColorPicker
+        - textColor : ColorPicker
+        - okButtonType : ButtonType
+        - dialog : Dialog<ButtonType>
+        - relation : IRelationGraphic
+        - diagramController : IDiagramEditorController
+        
+        + showAndWait() : void
+        + getRelationGraphic() : IRelationGraphic
+        - createDialog() : void
+    }
+    
+    interface IEntityGraphic extends ISelectionableEntityGraphic {
+        getCenterPoint() : Point2D
+        getRectangle : Shape
+        getBackgroundColor() : Color
+        getPosition() : Point2D
+        positionProperty() : ObjectProperty
+        getWidth() : double
+        getHeight() : double
+        getController : IEntityGraphicController
+        getRelations() : List<IRelationGraphic>
+        getDefaultType() : RelationGraphic.RelationTypeEnum
+        addRelation(IRelationGraphic) : void
+        removeRelation(IRelationGraphic) : void
+        setBackgroundColor(Color) : void
+        setPosition(Point2D) : void
+        setTranslateX(double) : void
+        setTranslateY(double) : void
+    }
+    
+    interface IEntityGraphicController {
+        getContetMenu() : ContextMenu
+        getEditMI() : MenuItem
+        getRemoveMI() : MenuItem
+        getAddRelationMI() : MenuItem
+        getDiagramEditorController() : IDiagramEditorController
+        getBackgroundColor() : Color
+        getPosition() : Point2D
+        positionProperty() : ObjectProperty
+        getRelation() : List<IRelationGraphic>
+        addRelation(IRelationGraphic) : void
+        removeRelation(IRelationGraphic) : void
+        setBackgroundColor(Color) : void
+        setPosition(Point2D) : void
+        
+    }
+    
+    interface INoteGraphic extends IEntityGraphic {
+        getText() : Text
+        + getTextColor() : Color
+        setText(String) : void
+        setTextColor(Color) : void
+    }
+    interface INoteGraphicController extends IEntityGraphicController {
+        getTextColor() : Color
+        getTextSize() : int
+        setText(String) : void
+        setTextcolor(Color) : void
+        setTextSize(int) : void
+        
+    }
+    
+    interface IRelationGraphic {
+        getLines() : List<Line>
+        getType() : RelationTypeEnum
+        getName() : String
+        getCardinalityStart() : String
+        getCardinalityEnd() : String
+        getColorRelation() : Color
+        getColorText() : Color
+        getNameText() : Text
+        getCardinalityStartText() : Text
+        getCardinalityEndText() : Text
+        getshapes() : Set<Shape>
+        getPolygon() : Polygon
+        getEntitySrc() : IEntityGraphic
+        getEntityDst() : IEntityGraphic
+        getPointSrc() : Circle
+        getPointDst() : Circle
+        drawInGroup(Group) : void
+        calculPointRelation() : void
+        setType(RelationTypeEnum) : void
+        setName(String) : void
+        setCardinalityStart(String) : void
+        setCardinalityEnd(String) : void
+        setColorRelation(Color) : void
+        setColorText(Color) : void
+        setSource(double, double) : void
+        setDestination(double, double) : void
+    }
+    interface IRelationGraphicController {
+        getSrc() : IEntityGraphic
+        getDst() : IEntityGraphic
+        getType() : RelationGraphic.RelationTypeEnum
+        getName() : String
+        getCardinalityStart() : String
+        getCardinalityEnd() : String
+        getColorRelation() : Color
+        getColorText() : Color
+        setType(RelationGraphic.RelationTypeEnum) : void
+        setName(String) : void
+        setCardinalityStart(String) : void
+        setCardinalityEnd(String) : void
+        setColorRelation(Color) : void
+        setColorText(Color) : void
+    }
+    interface ISelectionableEntityGraphic {
+        isSelected() : boolean
+        setSelected(boolean) : void
+    }
+    class NoteGraphic extends AEntityGraphic implements INoteGraphic  {
+        + {static} WIDTH_MARGE_NOTE : int
+        + {static} HEIGHT_MARGE_NOTE : int
+        + {static} BACKGROUND_COLOR_DEFAULT : Color
+        + {static} TEXT_COLOR_DEFAULT : Color
+        + {static} TEXT_SIZE_DEFAULT : int
+        - rectangle : NoteShape
+        - text : Text
+        - controller : INoteGraphicController
+        diagramController : IDiagramEditorController
+        
+        + getController() : IEntityGraphicController
+        + getRectangle() : NoteShape
+        + getText() : Text
+        + getTextColor() : Color
+        + toString() : String
+        + getDefaultType() : RelationTypeEnum
+        + setText(String) : void
+        + setTextColor(Color) : void
+        
+        
+    }
+    
+    class NoteGraphicController extends AEntityGraphicController {
+        - backgroundColor : Color
+        - textColor : Color
+        - textSize : int
+        - note : NoteGraphic
+        - modelNote : INote
+        - diagramController : IDiagrameEditorController
+        
+        + getBackgroundColor() : Color
+        + getTextColor() : Color
+        + getTextSize() : int
+        + setText(String) : void
+        + setBackgroundColor(Color) : void
+        + setTextColor(Color) : void
+        + setTextSize(int) : void
+        - createController() : void
+        - edit() : void
+    }
+    
+    class NoteShape extends Path {
+        - {static} FOLD_MAX_SIZE : double
+        - {static} FOLD_PROPORTION : double
+        - foldSize : DoubleProperty
+        - width : DoubleProperty
+        - height : DoubleProperty
+        - x : DoubleProperty
+        - y : DoubleProperty
+        
+        + setHeight(double) : void
+        + setWidth(double) : void
+        + setX(double) : void
+        + setY(double) : void
+        - setFoldSize() : void
+    }
+    class RelationGraphic implements ISelectionableEntityGraphic {
+        + {static} POLY_HEIGHT : double
+        + {static} HEAD_ARROW_INDEX_1 : int
+        + {static} HEAD_ARROW_INDEX_2 : int
+        + {static} HEAD_ARROW_INDEX_3 : int
+        + {static} BODY_ARROW_INDEX_1 : int            
+        + {static} BODY_ARROW_INDEX_2 : int
+        + {static} BODY_ARROW_INDEX_3 : int
+        + {static} BODY_ARROW_INDEX_4 : int
+        + {static} HEAD_WIDTH : double
+        + {static} HEAD_HEIGHT : double
+        + {static} LINE_SIZE_MIN : double
+        + {static} LINES_COLOR_DEFAULT : String
+        + {static} TEXT_COLOR_DEFAULT : String
+        + {static} MARGE_TEXT : int
+        - isSelected : boolean
+        - diagramEditorController : IDiagramEditorController
+        - controller : IRelationGraphicController
+        - lines : List<Line>
+        - polygon : Polygon
+        - borderSrc : Border
+        - borderDst : Border
+        - circleSrc : Circle
+        - circleDst : Circle
+        - nameText : Text
+        - cardinalityStartText : Text
+        - cardinalityEndText : Text
+        - inTowLine : boolean
+        
+        + isSelected() : boolean
+        + getLines() : List<Line>
+        + getType() : RelationTypeEnum
+        + getName() : String
+        + getCardinalityStart() : String
+        + getCardinalityEnd() : String
+        + getColorRelation() : Color
+        + getColorText() : Color
+        + getNameText() : Text
+        + getCardinalityStartText() : Text
+        + getCardinalityEndText() : Text
+        + getShapes() : Set<Shape>
+        + getPolygon() : Polygon
+        + getEntitySrc() : IEntityGraphic
+        + getEntityDst() : IEntityGraphic
+        + getPointSrc() : Circle
+        + getPointDst() : Circle
+        + drawInGroup(Group) : void
+        + setSelected(boolean) : void
+        + calculPointRelation() : void
+        + setType(RelationTypeEnum) : void
+        + setName(String) : void
+        + setCardinalityStart(String) : void
+        + setCardinalityEnd(String) : void
+        + setColorRelation(Color) : void
+        + setColorText(Color) : void
+        + setSource(double, double) : void
+        + setDestination(double, double) : void
+        - setDashedLines() : void
+        - drawPolygon() : void
+        - calculTextPosition() : void
+        - calculCardiPosition() : void
+        - calculHead() : void
+        - getDirectionOOfDestination() : Direction
+        - buildRelationIn2Line() : void
+        - replaceLine(int, double, double, double, double) : void
+        - buildRelationIn3Line() : void
+        - buildRelationToSameEntity() : void
+        - initialiseCircle(Circle, Border) : void
+        
+    }
+    
+    class Border {
+        - border : BorderEnum
+        - centerProperty : ObjectProperty<Point2D>
+        
+        + getCenter() : Point2D
+        + centerProperty() : ObjectProperty<Point2D>
+        + getBorder() : BorderEnum
+        + setCenter(Point2D) : void
+        + setBorder(BorderEnum) : void
+        + setData(BorderEnum, Point2D) : void
+    }
+    enum BorderEnum {
+    TOP
+    RIGHT
+    BOTTOM
+    LEFT
+    }
+    enum Direction {
+        NORTH
+        NORTH_EST
+        EST
+        SOUTH_EST
+        SOUTH
+        SOUTH_WEST
+        WEST
+        NORTH_WEST
+        NULL
+    }
+    enum RelationTypeEnum {
+        NOTE_CONNECT
+        NORMAL
+        ASSOCIATION
+        DEPENDANCE
+        AGREGATION
+        COMPOSITION
+        INHERITANCE
+        IMPLEMENTATION
+        - toString : String
+        
+        - toString() : String
+    }
+    
+    class RelationGraphicController implements IRelationGraphicController {
+        - diagramController : IDiagramEditorController
+        - relation : IRelationGraphic
+        - ctxMenu : ContextMenu
+        - editMI : MenuItem
+        - removeMI :  MenuItem
+        - src : IEntityGraphic
+        - dst : IEntityGraphic
+        - type : RelationTypeEnum 
+        - name : String
+        - cardinalityStart : String
+        - cardinalityEnd : String
+        - colorRelation : String
+        - colorText : String
+        - typeProperty : ObjectProperty<RelationTypeEnum>
+        - nameProperty : StringProperty
+        - cardinalityStartProperty : StringProperty
+        - cardinalityEndProperty : StringProperty 
+        - colorRelationProperty : StringProperty
+        - colorTextProperty : StringProperty
+        
+        + getSrc() : IEntityGraphic
+        + getDst() : IEntityGraphic
+        + getType() : RelationTypeEnum
+        + getName() : String
+        + getCardinalityStart() : String
+        + getCardinalityEnd() : String
+        + getColorRelation() : Color
+        + getColorText() : Color
+        + setType(RelationTypeEnum) : void
+        + setName(String) : void
+        + setCardinalityStart(String) : void
+        + setCardinalityEnd(String) : void
+        + setColorRelation(Color) : void
+        + setColorText(Color) : void
+        - createController() : void
+        - edit() : void
+    }
+}
+
+DialogNoteEdit +-- DialogNoteEditMode
+RelationGraphic +-- Border
+RelationGraphic +-- BorderEnum
+RelationGraphic +-- Direction
+RelationGraphic +-- RelationTypeEnum
+AEntityGraphic --> Point2D
+AEntityGraphic --> ObjectProperty
+AEntityGraphic --> Color
+AEntityGraphic --> IRelationGraphic
+AEntityGraphic ..> IRelationGraphic
+AEntityGraphic ..> Point2D
+AEntityGraphic ..> Color
+AEntityGraphicController ..> ContextMenu
+AEntityGraphicController ..> MenuItem
+AEntityGraphicController ..> IDiagramEditorController
+AEntityGraphicController ..> Point2D
+AEntityGraphicController ..> IRelationGraphic
+AEntityGraphicController --> IRelationGraphic
+AEntityGraphicController --> Point2D
+DialogAddRelation --> IRelationGraphic
+DialogNoteEdit --> NoteGraphic
+DialogRelationEditNoteG --> IRelationGraphic
+DialogRelationEditOEG --> IRelationGraphic
+NoteGraphic --> IEntityGraphicController
+NoteGraphic --> NoteShape
+NoteGraphic --> Text
+NoteGraphic --> Color
+NoteGraphic --> RelationTypeEnum
+NoteGraphic ..> Color
+NoteGraphicController --> Color
+NoteGraphicController ..> Color
+RelationGraphic --> Line
+RelationGraphic --> RelationTypeEnum
+RelationGraphic --> Color
+RelationGraphic --> Text
+RelationGraphic --> Shape
+RelationGraphic --> Polygon
+RelationGraphic --> IEntityGraphic
+RelationGraphic --> Circle
+RelationGraphic ..> Group
+RelationGraphic ..> RelationTypeEnum
+RelationGraphic ..> Circle
+RelationGraphicController --> IEntityGraphic
+RelationGraphicController --> RelationiTypeEnum
+RelationGraphicController --> Color
+RelationGraphicController ..> RelationTypeEnum
+RelationGraphicController ..> Color
+
+@enduml

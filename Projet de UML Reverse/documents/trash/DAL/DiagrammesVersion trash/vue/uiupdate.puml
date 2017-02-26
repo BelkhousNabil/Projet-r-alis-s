@@ -1,0 +1,15 @@
+@startuml
+
+actor C
+participant IDiagram
+
+create "t: ToViewVisitor"
+C -> "t: ToViewVisitor": new
+
+C -> IDiagram: accept(t)
+
+C -> BorderPane: add(t.getDiagramMenu(), EAST)
+
+C -> BorderPane: add(t.getDiagramEditor(), CENTER)
+
+@enduml

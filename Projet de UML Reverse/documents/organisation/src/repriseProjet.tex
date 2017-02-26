@@ -1,0 +1,142 @@
+\documentclass[hidelinks, 10pt,a4paper]{article}
+
+\usepackage[english,francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[pdftex]{graphicx}
+\usepackage{adjustbox}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage[french]{varioref}
+\usepackage{comment}
+\usepackage{pgfgantt}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[L]{}
+\fancyhead[C]{\textbf{UML Reverse}}
+\fancyhead[R]{\includegraphics[width=2cm]{img/universite-rouen.jpg}}
+
+\title{\bfseries Document d'aide pour la reprise du projet\\Projet UML Reverse}
+\geometry{hmargin=2.5cm,vmargin=3cm}
+
+\begin{document}
+\maketitle
+\begin{center}
+\begin{tabular}{ll}
+  Version~: & 1.0\\[.5em]
+  Date~: & \date{\today}\\[.5em]
+  Rédigé par~: & Anthony \textsc{Godin} \\
+               & Yohann \textsc{Henry} \\
+               & Florian \textsc{Inchingolo} \\[.5em]
+  Relu par~:   & Nicolas \textsc{Meniel} \\
+\end{tabular}
+\end{center}
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Introduction}
+\section{Modèle}
+  \subsection{Projet}
+    \subsubsection{Présentation}
+   Un objet \textbf{Project} est un conteneur qui stocke les différents diagrammes ainsi que les informations 
+   pouvant être utilisées dans plusieurs diagrammes à la fois. 
+   Actuellement, les seuls liens existants se font uniquement entre les différents diagrammes de classes. 
+   Un \textbf{ObjectEntity} représente une classe et tous les éléments qu'elle contient. Il stocke aussi les relations du diagramme de classes.
+   La plupart des fonctionnalités se font par le biais de \textbf{DiagramVisitor} qui servent principalement à appeler les visiteurs spécifiques à chaque diagramme.
+   
+   \subsubsection{Les relations}
+   À terme, les relations pourraient être aussi liées entre différents diagrammes. 
+   En effet, ces informations auraient pu avoir une utilité. 
+   Par exemple, connaître les relations d'héritage et d'implémentation aurait pu permettre des fonctionnalités supplémentaires
+   comme faire apparaître une méthode d'une interface dans les classes l'implémentant.
+   Une partie du code a donc été créé au niveau du modèle pour prévoir cet enregistrement des relations liables dans le projet,
+   néanmoins la vue ne permet pas de réutiliser ces relations dans un autre diagramme ce qui rend cette disposition de projet inutile.
+   
+   \subsubsection{La sérialisation/désérialisation}
+   Actuellement, la sauvegarde du projet se fait avec une sérialisation assez sommaire mais tout du moins efficace. 
+   Cependant, cette méthode présente la difficulté que nous avons dû adapter les méthodes \textbf{equals} et \textbf{hashcode} 
+   pour les simplifier au maximum. Il serait sage de modifier cette sérialisation pour la transformer en sérialisation XML. 
+   La sérialisation XML demanderait un travail supplémentaire au développement, 
+   néanmoins dans les faits la sérialisation serait lisible et moins contraignante pour les modifications du modèle.
+   
+   \subsubsection{Liaison avec les diagrammes}
+   Pour relier les diagrammes avec les entités, nous avons utilisé une collection au sein des \textbf{ObjectEntity}. 
+   Cette méthode n'est pas particulièrement optimale mais nous l'avons réalisé tardivement.
+   Une technique beaucoup plus efficace aurait été de laisser les éléments liés écouter les éléments par le biais de \textbf{PropertyChangeListener}.
+   
+   \subsubsection{Bilan}
+   Cette partie du projet a été conçue de manière à pouvoir y ajouter aisément de nouveaux types de diagrammes sans modification si aucun élément ne devait être lié.
+   De plus, la plupart des fonctionnalités étant effectuées par le biais de visiteurs, 
+   la principale modification pour ajouter un diagramme est de compléter les implémentations de \textbf{DiagramVisitor}.
+  
+  \subsection{Diagramme de classe}
+  \subsubsection{Présentation}
+    Un \textbf{ClassDiagram} est un objet contenant la totalité des informations du diagramme de classe. 
+    Il contient principalement des vues sur les \textbf{ObjectEntity} et \textbf{Relation} contenus dans le projet. 
+    Ces deux éléments utilisent donc une référence vers un élément du projet.
+    Les packages et les notes ne sont pas liés avec le projet.
+  
+  \subsubsection{Liaison avec le projet}
+  Symétriquement avec le projet, il aurait été intéressant d'écouter les \textbf{ObjectEntity} avec des événements
+  plutôt que de forcer les modifications par le biais de l'objet \textbf{Project}. 
+  
+  \subsubsection{Initialisation}
+  À la création d'un \textbf{ViewEntity} ou d'une \textbf{ViewRelation}, les constructeurs demandent de lier le \textbf{ClassDiagram} et ce dernier au \textbf{Project}.
+  Le problème de cette solution pour garder une synchronisation avec \textbf{Project} est que si une entité venait 
+  à être supprimée du diagramme de classe, 
+  la référence vers cette entité deviendraient complètement inutilisable. 
+  
+  \subsubsection{Bilan}
+  Cette partie est particulièrement complexe pour gérer la synchronisation avec \textbf{Project}. Il existe plusieurs façons d'améliorer cette partie.
+  Le plus simple pour y intégrer les packages liés et simplifier le diagramme de classe serait de la reprendre complètement. 
+  
+  \subsection{Diagramme commun}
+    Nous avons développé toute une série de classe réutilisable dans le paquetage \newline 
+    fr.univrouen.umlreverse.model.diagram.common.
+    Ces classes n'ont pas été utilisées au maximum par le diagramme de classe. Par contre le diagramme de cas d'utilisation les utilisent
+    au maximum ce qui a réduit son développement. Ces classes peuvent être réutilisées par de nouveau diagramme.
+    
+  \subsection{Diagramme de cas d'utilisation}
+    Le diagramme de cas d'utilisation a un fonctionnement très simple. Il utilise au maximum les classes du paquetage 
+    fr.univrouen.umlreverse.model.diagram.common. On lui associe un projet qui le stock.
+  
+  
+  \subsection{Parseur}
+  \subsubsection{Grammaires}
+  Le parseur utilise Antlr 4 (dont la Javadoc est disponible à ce lien : \\
+  \hyperref[http://www.antlr.org/api/Java/]{http://www.antlr.org/api/Java/}) pour obtenir depuis les grammaires des classes Java comme des visiteurs ou des écouteurs, permettant de récupérer facilement des informations depuis un fichier parsé. Ces grammaires sont dans le dossier \textbf{src/main/antlr4}. Il y a actuellement deux grammaires utilisées : \textbf{Java8.g4} et \textbf{PlantUML.g4}. Un exemple de grammaire simple ressemblant à une grammaire JSON est disponible via le fichier \textbf{TestGrammar.g4}. Cette grammaire peut être utilisée afin de comprendre la syntaxe d'Antlr et de comprendre comment fonctionne la génération des classes liées à la grammaire. La grammaire Java 8 a été récupérée depuis la liste des grammaires Antlr disponble à l'adresse suivante : \\
+  \hyperref[https://github.com/antlr/grammars-v4]{https://github.com/antlr/grammars-v4}, et contient toutes les méthodes nécessaires pour récupérer n'importe quelle partie d'une classe Java. Ceci devrait donc permettre l'ajout d'un parseur de diagramme de séquence relativement simple. La deuxième grammaire est la grammaire PlantUML créée pour l'occasion, combinant le diagramme de cas d'utilisation et le diagramme de classes. Le point d'entrée de ces deux grammaires est \textbf{entryPoint}. L'ajout du support d'un nouveau diagramme PlantUML nécessitera la compilation de cette grammaire. Ceci peut facilement être fait avec un IDE ou par ligne de commande. Il est même possible de générer ces classes directement dans le bon paquet. Une option est nécessaire pour générer les visiteurs correspondants.
+  \subsubsection{Classes du parseur}
+  UML Reverse utilise actuellement les visiteurs générés par ces grammaires. Ils sont dans le package \textbf{fr/univrouen/umlreverse/model/io/parser/[LANGAGE]}. Pour expliquer comment fonctionnent ces classes, nous utiliserons l'exemple du parseur Java 8. La classe \textbf{Java8Parser} contient tous les contextes ainsi que de nombreuses classes internes permettant la manipulation de l'arbre sortant du parseur. Pour utiliser ces classes, il suffit d'étendre Java8BaseVisitor, contenant une méthode pour chaque règle de la grammaire. Le contexte passé en paramètre permet d'accéder aux enfants (via des méthodes), ou aux feuilles du noeud (via des attributs). Par défaut, chaque méthode appelle ses enfants sans rien faire. Il suffit d'étendre ces méthodes afin de choisir le comportement voulu.
+  \subsubsection{Classes créées pour UML Reverse}
+  Dans les dossiers contenant les parseurs, les classes \textbf{PlantUMLDiagramVisitor}, \textbf{Java8ClassVsitor} et \textbf{Java8FieldsVisitor} définissent le comportement des visiteurs afin d'ajouter au modèle de diagrammes du parseur les informations voulues. Ces classes sont utilisées par \textbf{PlantUMLLoader} ainsi que \textbf{Java8Loader} afin d'importer les diagrammes.
+  \subsubsection{Modèle du parseur}
+  Le parseur remplit un modèle différent du modèle de l'application. Ceci a été fait afin de simplifier l'import des fichiers, et permet une modification après import et avant ajout.
+  \subsection{Ajouts possibles au parseur}
+  Les ajouts possibles sont la gestion de différents langages via des grammaires différentes ou l'ajout d'imports de nouveaux types de diagrammes PlantUML (ce qui sera possible une fois le modèle conçu).
+  Le double modèle permettra de choisir les solutions en cas de conflit ou d'erreurs lors de l'ajout (comme des erreurs de syntaxe à corriger ou refuser la fusion des entités, actuellement automatique). Ceci est possible grâce au modèle du parseur, plus permissif et simple que le modèle du projet.
+  Dans l'avenir, il pourrait être intéressant d'avoir des grammaires différentes pour chaque type de diagramme PlantUML, afin d'améliorer la maintenance. Par contre, cela implique de choisir le type du diagramme avant l'import du fichier.
+  Par ailleurs, l'amélioration des performances et de la taille mémoire lors de l'import Java serait une bonne idée, quoique compliquée (la taille mémoire a l'air d'être liée au fonctionnement d'Antlr), afin de pouvoir importer des projets de grande envergure (actuellement, UML Reverse a besoin de 8 Go de RAM pour être importé).
+  
+\section{Vue}
+  La vue est codé avec JavaFX. Tous est regroupé dans le paquetage fr.univrouen.umlreverse.ui. On a découpé ce paquetage en deux autres :
+  \begin{itemize}
+   \item component : Contient tous les éléments graphiques des diagrammes (vue plus controleur). Les éléments ont été découpé en plusieurs classes qui s'héritent
+    entre elles pour être le plus réutilisable possible. Ce qui permet par exemple de coder les classes NotesGraphic en seulement 36 lignes ou les relations graphique en 80. 
+   \item view : Contient toutes les classes de la vue sauf les éléments graphique des diagrammes. De même que précédemment, les classes du paquetage common sont
+    réutilisables ce qui évite de devoir tous recoder quand on voudra rajouter un nouveau type de diagramme.
+  \end{itemize}
+
+\section{Bilan}
+  Nous avons fait en sorte de coder des classes réutilisables pour faciliter et accélérer l'ajout de nouveau diagramme. 
+  Libre à vous de les réutiliser.
+  
+\end{document}

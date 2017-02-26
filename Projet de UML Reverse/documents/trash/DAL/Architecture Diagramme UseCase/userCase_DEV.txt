@@ -1,0 +1,171 @@
+@startuml
+
+package diagram.util { 
+' -------------------------------- umlreverse.model.diagram.util
+abstract class ADiagramCommon implements IDiagramCommon 
+
+}
+' --------------------------------------------------------- fin package util
+
+package usecase { 
+' -------------------------------- umlreverse.model.diagram.usecase
+interface INote extends IEntity{
+}
+
+abstract class ANote extends AEntityRelation implements INote {
+}
+
+class NoteUsecase extends ANote implements INoteUsecase{
+	-long serialVersionUID
+	-Set<IObjectEntity> constraintClassEntities
+	-Set<ObjectEntity> classEntities
+	-Set<IRelation> constraintRelations
+	-Set<IRelation> relations
+	__
+	+NoteUsecase(String text, IDiagramCommon diagram)
+}
+
+interface INoteUsecase extends INote,IEntityRelation{
+	+String ENTITY_ADDED_PROPERTY_NAME
+	+String ENTITY_REMOVED_PROPERTY_NAME
+	+String CONSTRAINT_ENTITY_ADDED_PROPERTY_NAME
+	+String CONSTRAINT_ENTITY_REMOVED_PROPERTY_NAME   
+	+String CONSTRAINT_RELATION_ADDED_PROPERTY_NAME
+	+String CONSTRAINT_RELATION_REMOVED_PROPERTY_NAME
+
+	+getConstraintClassEntities():Set<IObjectEntity>
+	+addConstraintClassEntity(IObjectEntity entity):void
+	+removeConstraintClassEntity(IObjectEntity entity):void 
+	+getClassEntities():Set<ObjectEntity> 
+	+addClassEntity(ObjectEntity entity):void 
+	+removeClassEntity(ObjectEntity entity):void 
+	+getConstraintRelation():Set<IRelation> 
+	+addConstraintRelation(IRelation relation):void 
+	+removeConstraintRelation(IRelation relation):void 
+	+getRelation():Set<IRelation> 
+	+addRelation(IRelation relation):void 
+	+removeRelation(IRelation relation):void 
+}
+
+interface IUseCaseDiagram extends IDiagramCommon{
+	+String ACTOR_STYLE_ID
+	+String USECASE_STYLE_ID
+	+String USECASEGROUP_STYLE_ID
+	+String USECASE_ADDED_PROPERTY_NAME
+	+String ACTOR_ADDED_PROPERTY_NAME
+	+String GROUP_ADDED_PROPERTY_NAME
+	+String USECASE_REMOVED_PROPERTY_NAME
+	+String ACTOR_REMOVED_PROPERTY_NAME
+	+String GROUP_ADDED_REMOVED_NAME
+	
+	+getActor(String name):Actor 
+	+getActors():Set<Actor> 
+	+getNotes():Set<INoteUsecase> 
+	+getRootSystem():System 
+	+getSystems():Set<ISystem> 
+	+getUsecase(String name):IUsecase 
+	+getUsecases():Set<IUsecase> 
+	+addActor(Actor actor):void 
+	+addNote(INoteUsecase note):void 
+	+addUsecase(IUsecase useCase):void 
+	+addSystem(ISystem group):void 
+	+removeActor(Actor actor):void 
+	+removeNote(INoteUsecase note):void 
+	+removeSystem(ISystem group):void 
+	+removeUsecase(IUsecase useCase):void 
+}
+
+class UseCaseDiagram extends ADiagramCommon implements IUseCaseDiagram{
+	-System DefaultGroup
+	___
+	+UseCaseDiagram(IProject project, String name)
+}
+
+interface ISystem{
+	+getAbsoluteName():String 
+	+getDiagram():IUsecaseDiagram 
+	+getGroups():Set<ISystem> 
+	+getNameGroup():String 
+	+getNotes():Set<INoteUsecase> 
+	+getParentGroup():System 
+	+getUseCases():Set<Usecase> 
+	+addGroup(ISystem group):void 
+	+addNote(INoteUsecase note):void 
+	+addUsecase(Usecase useCase):void 
+	+setDiagram(IUsecaseDiagram parentDiagram):void 
+	+setParentGroup(System parentGroup):void 
+	+removeGroup(ISystem group):void 
+	+removeNote(INoteUsecase note):void 
+	+removeUsecase(Usecase useCase):void 
+	+setNameGroup(String useCaseGroupName):void 
+}
+
+class System implements ISystem{
+	-IUseCaseDiagram ParentDiagram
+	-String UsecaseGroupName
+	-System ParentGroup
+	-String id
+	___
+	
+	+System(String id,String GroupName,IUseCaseDiagram parentDiag)
+}
+
+interface IEntityUsecase{
+	+getParentGroup():System 
+	+getListNotes():Set<INoteUsecase>
+	+getName():String
+	..
+	+setParentGroup(System parentGroup):void 
+	+setName(String name):void 
+	..
+	+addNote(INote note):void 
+	+removeNote(INote note):void 
+}
+
+interface IEntityRelation extends IEntity{
+}
+
+abstract class AEntityRelation extends AEntity implements IEntityRelation{
+}
+
+
+abstract class AEntityUsecase extends AEntityRelation implements IEntityUsecase{
+	-String Name
+	-System parentGroup
+	-Set<INote> ListNotes
+	__
+	
+	AEntityUsecase(String name , System ParentGroup)
+}
+
+interface IUsecase extends IEntityUsecase{   
+}
+
+class UseCase extends AEntityUsecase implements IUsecase{
+	__
+
+	+UseCase(String name,System ParentGroup)
+}
+
+interface IActor{
+}
+
+class Actor extends AEntityUsecase implements IActor{
+	__
+
+	+Actor(String name , System ParentGroup)
+}
+	
+} 
+' --------------------------------------------------------- fin package usecase
+
+	UseCaseDiagram "1..1" o--> "0..n" IUsecase :listUseCases
+	UseCaseDiagram "1..1" o--> "0..n" IActor :listActors
+	UseCaseDiagram "1..1" o--> "0..n" ISystem:listUseCaseGroups
+	UseCaseDiagram "1..1" o--> "0..n" INote:listNotes
+	
+	System "1..1" o--> "0..n" INote:listNotes
+	System "1..1" o--> "0..n" IUsecase :listUseCases
+	System "1..1" o--> "0..n" ISystem:listSystems
+	
+@enduml

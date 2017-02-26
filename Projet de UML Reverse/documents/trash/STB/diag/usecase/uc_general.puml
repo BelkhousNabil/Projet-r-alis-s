@@ -1,0 +1,25 @@
+@startuml
+left to right direction
+title Cas d'utilisation de l'application
+
+actor user as :user:
+
+(Créer un nouveau projet) as (createProject)
+
+rectangle {
+	(Créer un nouveau diagramme) as (createDia)
+	(Générer un diagramme en reverse) as (rev)
+	(Éditer un diagramme) as (edit)
+	(Exporter un diagramme) as (export)
+	
+	:user: -- (export)
+	:user: -- (edit)
+	:user: -- (rev)
+	:user: -- (createDia)
+        :user: -- (createProject)
+
+        (createProject) <|. (rev) : <include>
+        (createProject) <|. (createDia) : <include>
+}
+
+@enduml

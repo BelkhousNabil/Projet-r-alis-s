@@ -1,0 +1,15 @@
+@startuml
+title Modifier le style d'un lien
+
+alt
+	User --> Sys : Clic sur le lien
+	Sys --> User : Surbrillance du lien et ouverture d'une barre d'outils flottante
+	User --> Sys : Clic sur le bouton "Tête de lien", "Corps de lien" ou\n"Queue de lien" selon le type de diagramme et le style voulu
+else autre comportement
+	User --> Sys : Double-clic sur la partie du lien à modifier
+end
+Sys --> User : Ouverture d'une liste flottante de styles prédéfinis
+User --> Sys : Clic sur le style voulu
+Sys --> User : Application et affichage du style du lien
+
+@enduml

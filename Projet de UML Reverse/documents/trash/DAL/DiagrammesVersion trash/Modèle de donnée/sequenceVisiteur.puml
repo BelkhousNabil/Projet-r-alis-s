@@ -1,0 +1,28 @@
+@startuml
+package sequence.visitor { 
+' -------------------------------- umlreverse.model.diagram.sequence.visitor
+	
+	interface SequenceVisitor {
+		+visit(SequenceDiagram instance) : void
+		+visit(CreateDestroyMessage instance) : void
+		+visit(SynchroneMessage instance) : void
+		+visit(AlternativeBlock instance) : void
+		+visit(LoopBlock instance) : void
+		+visit(IterativeBlock instance) : void
+		+visit(StrictBlock instance) : void
+		+visit(ParallelBlock instance) : void
+		+visit(ASynchroneMessage instance) : void
+		+visit(CreationMessage instance) : void
+		+visit(LostMessage instance) : void
+		+visit(FindMessage instance) : void:
+	}
+	class SaveStyleSequenceVisitor implements SequenceVisitor
+	class SavePlantUmlSequenceVisitor implements SequenceVisitor
+	class ToViewSequenceVisitor implements SequenceVisitor {
+		+getDiagramMenu() : ISequenceDiagramMenu
+		+getDiagramEditor() : ISequenceDiagramEditor
+	}
+}
+' --------------------------------------------------------- fin package visitor
+
+@enduml

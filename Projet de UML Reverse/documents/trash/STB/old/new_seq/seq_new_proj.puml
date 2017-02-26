@@ -1,0 +1,38 @@
+@startuml
+
+user --> sys : Clic sur nouveau diagramme
+sys --> user : Fenêtre de création d'un diagramme
+user --> sys : Entrée du type de diagramme
+sys --> user : Affichage du diagramme vide
+
+newpage
+user --> sys : Bouton ajout d'une entité
+sys --> user : Dialogue création de l'entité
+user --> sys : Entrée du nom et du type de l'entité
+sys --> user : Affichage de l'entité
+user --> sys : Glisser-déposer une entité
+sys --> user : L'entité est déplacée et en surbrillance
+
+newpage
+user --> sys : Clic sur l'entité
+sys --> user : Surbrillance de l'entité, affichage\nd'une barre de boutons flottante
+user --> sys : Bouton ajout d'un élément dans l'entité
+sys --> user : Dialogue de création d'élément
+user --> sys : Choix du type et du nom de l'élément
+sys --> user : L'élément est affiché dans l'entité
+
+newpage
+user --> sys : Clic sur le bouton flèche
+sys --> user : Changement du curseur
+user --> sys : Glisser-Déposer (ou deux clics) entre deux entités
+sys --> user : Affichage du style de flèche précédemment utilisée
+sys --> user : Surbrillance de la flèche, édition des champs possible
+sys --> user : Affichage d'une boîte de dialogue flottante \npermettant de modifier le style
+user --> sys : Clic sur le style voulu, ajout du texte dans les champs voulus
+sys --> user : Affichage des changements
+
+newpage
+user --> sys : Clic sur sauvegarder diagramme
+sys --> user : Fenêtre de sélection de fichier
+
+@enduml

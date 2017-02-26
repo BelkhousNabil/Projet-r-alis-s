@@ -1,0 +1,134 @@
+@startuml
+Package Component {
+class Relation {
+	-relations:HashMap<DraggableEntity,Arrow> 
+}
+	interface DraggableEntity {
+		+double getHeight()
+		+double getWidth()
+		+double getX()
+		+double getY()
+		+String getName()
+		--
+		+void setEntityHeight(double value)
+		+void setEntityWidth(double value)
+		+void setEntityX(double value)
+		+void setEntityY(double value)
+		+void setName()
+	}
+
+	abstract class AbstractUml implements DraggableEntity {
+		+double getHeight()
+		+double getWidth()
+		+double getX()
+		+double getY()
+		+String getName()
+		--
+		+void setHeight(double value)
+		+void setWidth(double value)
+		+void setX(double value)
+		+void setY(double value)
+		+void setName()
+	}
+
+	class UmlActor implements DraggableEntity {
+	
+	}
+
+	class UmlCase implements DraggableEntity {
+		+String getCaseName()
+		+Point2D getUpperLeftBound()
+		+double getWidthCenter()
+		+double getHeightCenter()
+		--
+		+void setCaseName(String name)
+		+void setUpperLeftBound(Point2D p)
+		+void setWidthCenter(double wc)
+		+void setHeigthCenter(double hc)
+	}
+
+
+	class UmlFrontiere implements DraggableEntity {
+		-children : List<DraggableEntity>
+		--
+		+String getSystemName()
+		--
+		+void setSystemName(String name)
+	}
+
+	class UmlObject implements DraggableEntity {
+
+	}
+
+	class UmlClass implements DraggableEntity {
+
+	}
+
+	class UmlSequenceLine implements DraggableEntity{
+	}
+
+class ArrowHead {
+	+int getWidth()
+	+int getLength()
+	+TypeRelation getType()
+	--
+	+void setWidth(int width)
+	+void setLength(int length)
+	+void setType(TypeRelation tr)
+}
+
+
+class Arrow {
+	-List<TextArea> tArea
+	--
+	+List<TextArea> getTextArea()
+	+double getWidth()
+	+double getHeigth()
+	+double getHeadWidth()
+	+double getHeadLength()
+	+double getLineWidth()
+	+double getLineLength()
+	+double getX()
+	+double getY()
+	+Point2D getPosition()
+	--
+	+void setWidth(double width)
+	+void setHeigth(double heigth)
+	+void setHeadWidth(double width)
+	+void setHeadLength(double length)
+	+void setLineWidth(double width)
+	+void setLineLength(double length)
+	+void setX(double x)
+	+void setY(double y)
+	+void addTextArea(TextArea t)
+	+void setTextForTextArea(TextArea t, String m)
+	+void setPosition(double x, double y)
+}
+}
+javafx.Node <|-- DraggableEntity
+UmlCase --> javafx.GraphicsContext
+ArrowHead --> javafx.Point2D
+Arrow "0..2" o--> ArrowHead
+Arrow "1" o--> javafx.Line
+Arrow "1" o-- javafx.CubicCurve
+Arrow "5" o--> javafx.TextField
+AbstractUml <|-- UmlCase
+AbstractUml <|-- UmlFrontiere
+AbstractUml <|-- UmlActor
+AbstractUml <|-- UmlClass
+AbstractUml <|-- UmlObject
+UmlFrontiere --> javafx.GraphicsContext
+UmlFrontiere --> javafx.TextField
+UmlActor --> javafx.Line
+UmlActor --> javafx.TextField
+UmlActor --> javafx.GraphicsContext
+UmlClass --> javafx.TextField
+UmlClass --> javafx.GraphicsContext
+UmlObject --> javafx.GraphicsContext
+UmlObject "0..n" o--> javafx.TextField
+UmlObject "0..n" o--> javafx.Line
+Relation "1..n" o--> DraggableEntity
+Relation "1..n" o--> Arrow
+AbstractUml <|-- UmlSequenceLine
+@enduml
+

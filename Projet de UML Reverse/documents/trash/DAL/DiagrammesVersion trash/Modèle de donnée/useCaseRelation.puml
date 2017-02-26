@@ -1,0 +1,24 @@
+@startuml
+
+package usecase.relation{
+	interface usecase.relation.IRelation {
+		+getComment() : String
+		+getNotes() : Set<INote>
+	..
+		+addNote(INote note) : void
+		+removeNote(INote note) : void
+		+setComment(String message) : String
+
+		+getVetoableChangeListeners() : VetoableChangeListener[]
+		+addVetoableChangeListener(VetoableChangeLister listener) : void
+		+removeVetoableChangeListener(VetoableChangeLister listener) : void
+	}
+
+	abstract usecase.relation.ARelation implements usecase.relation.IRelation
+
+	class usecase.relation.Association extends usecase.relation.ARelation
+	class Generalization extends usecase.relation.ARelation
+	class Inclusion extends usecase.relation.ARelation
+	class Extension extends usecase.relation.ARelation
+}
+@enduml

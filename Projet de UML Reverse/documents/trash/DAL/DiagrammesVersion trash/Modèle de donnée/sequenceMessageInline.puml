@@ -1,0 +1,25 @@
+@startuml
+
+
+
+
+
+
+package sequence { 
+' -------------------------------- umlreverse.model.diagram.sequence
+
+
+abstract AMessageNode
+
+class ASynchroneMessage extends AMessageNode
+class CreateMessage extends AMessageNode
+class FindMessage extends AMessageNode
+class LostMessage extends AMessageNode
+}
+' --------------------------------------------------------- fin package sequence'
+
+
+
+
+
+@enduml

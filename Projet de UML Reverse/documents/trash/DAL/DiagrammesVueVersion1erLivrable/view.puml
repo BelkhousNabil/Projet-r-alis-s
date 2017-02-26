@@ -1,0 +1,194 @@
+@startuml
+package View {
+class ADiagramEditor extends Pane implements IDiagramEditor {
+        - canvas : PannableCanvas
+
+        + {abstract} getController() : IDiagramEditorController
+        + getCanvas() : PannableCanvas
+    }
+    class ADiagramEditorController implements IDiagramEditorController {
+        - editor : ADiagramEditor
+        # nodeGestures : NodeGestures
+        - zoomInMI : MenuItem 
+        - zoomOutMI : MenuItem
+        - createNoteMI : MenuItem
+        - saveMI : MenuItem
+        - createClassMI : MenuItem
+        - notes : List<INoteGraphic>
+        # relations : List<IRelationGraphic>
+        - selectedEntity : ISelectionableEntityGraphic
+        - xCursor : double
+        - yCursor : double
+        # entities : Set<IEntityGraphic>
+        
+        + getEditor() : ADiagramEditor
+        + getNotes() : List<INoteGraphic>
+        + getCreateNoteMI() : MenuItem
+        + getZoomInMI() : MenuItem
+        + getZoomOutMI() : MenuItem
+        + getSaveMI() : MenuItem
+        + getCreateClassMI() : MenuItem
+        + getSelectedEntity() : ISelectionableEntityGraphic
+        + getxCursor() : double
+        + getyCursor() : double
+        + removeNote(INoteGraphic) : void
+        + removeRelation(IRelationGraphic) : void
+        + setSelectedEntity(ISelectionableEntityGraphic) : void
+        + deselectEntity() : void
+        + setxCursor(double) : void
+        + setyCursor(double) : void
+        - createComposant() : void
+        - createController() : void
+        - addRelation(IRelationGraphic) : void
+        - addNote(NoteGraphic) : void
+    }
+    class classDiagramEditor extends ADiagramEditor {
+        - controller : IDiagramEditorController
+        
+        + getController() : IDiagramEditorController
+    }
+    class ClassDiagramEditorController extends ADiagramEditorController {
+        - diagram : IClassDiagram
+        - editor : ADiagrameEditor
+        - createPackageMI : MenuItem
+        - createClassMI : MenuItem
+        - createInterfaceMI : MenuItem
+        - createEnumMI : MenuItem
+        - createAbstractClass : MenuItem
+        - ctxMenuDiagram : ContextMenu 
+        - miceX : double
+        - miceY : double
+        - dialog : DialogOEGEdit
+        - packages : List<PackageGraphic>
+        - objectEntityGraphics : List<ObjectEntityGraphic>
+        
+        + getDiagram() : IClassDiagram
+        + removePackage(PackageGraphic) : void
+        + removeObjectEntity(ObjectEntityGraphic) : void
+        - createController() : void
+        + placeOEGAndAddController() : boolean
+        + addOEGController() : void
+        - createComposant() : void
+        
+    }
+
+
+
+    class Gestures {
+        # runningDrag : DragContext
+        # canvas : PannableCanvas
+      
+    }
+
+
+
+    interface IDiagramEditor {
+        getController() : IDiagrameEditorController
+        getCanvas() : PannableCanvas
+    }
+    interface IDiagramEditorController {
+        getEditor() : ADiagramEditor
+        getNotes() : List<INoteGraphic>
+        getCreateNoteMI() : MenuItem
+        getZoomInMI() : MenuItem
+        getZoomOutMI() : MenuItem
+        getSaveMI() : MenuItem
+        getCreateClassMI() : MenuItem
+        getSelectedEntity() : ISelectionableEntityGraphic
+        getxCursor() : double
+        + getyCursor() : double
+        removeRelation(IRelationGraphic) : void
+        setSelectedEntity(ISelectionableEntityGraphic) : void
+        deselectEntity() : void
+        setxCursor(double) : void
+        setyCursor(double) : void
+        showCreateRelationPopup(IEntityGraphic) : void
+        + removeNote(INoteGraphic) : void
+    }
+    class MenuController {
+        - bar : MenuBar
+        - stage : Window
+        - editor : ADiagrameEditor
+        
+        + setEditor(ADiagramEditor) : void
+        + newProjet() : void
+        + newUseCase() : void
+        + newClass() : void
+        + newSequence() : void
+        + opentProjet() : void
+        + save() : void
+        + saveAs() : void
+        + exportPUML() : void
+        + exportImgPdf() : void
+        + print() : void
+        + importPuml() : void
+        + close() : void
+        + editModify : void
+        + editDelete() : void
+        + zoomIn() : void
+        + zoomBack() : void
+        + help() : void
+        - zoom(double) : void
+    }
+    class NodeGestures extends Gestures {
+        - onMousePressedEventHandler : EventHandler<MouseEvent>
+        - onMouseDraggedEventHandler : EventHandler<MouseEvent>
+        
+        + getOnMousePressedEventHandler() : EventHandler<MouseEvent>
+        + getOnMouseDraggedEventHandler() : EventHandler<MouseEvent>
+    }
+    class PannableCanvas extends Group {
+        + {static} MAX_SCALE : double
+        + {static} MIN_SCALE : double
+        - scale : DoubleProperty
+        
+        + getScale() : double
+        + setScale(double) : void
+        + setPivot(double, double) : void
+        - {static} clamp(double, double, double) : double
+    }
+    class SceneGestures extends Gestures {
+        - {static} SCALE_FACTOR : double
+        - onMousePressedEventHandler : EventHandler<MouseEvent>
+        - onMouseDraggedEventHandler : EventHandler<MouseEvent>
+        - onScrollEventHandler : EventHandler<ScrollEvent>
+        
+        + getOnMousePressedEventHandler() : EventHandler<MouseEvent>
+        + getOnMouseDraggedEventHandler() : EventHandler<MouseEvent>
+        + getOnScrollEventHandler() : EventHandler<ScrollEvent>
+        
+    }
+    class ZoomableScrollPane extends ScrollPane {
+        - contentGroup : Group
+        - scale : DoubleProperty
+        
+        + getZoomChildren() : ObservableList<Node>
+        + zoom(double) : void
+    }
+}
+
+
+
+SceneGestures --> EventHandler
+Gestures +-- DragContext
+NodeGestures ..> PannableCanvas
+ZoomableScrollPane --> Group
+ZoomableScrollPane ..> Node
+MenuController o-- MenuBar
+MenuController o-- Window
+MenuController --> ADiagramEditor
+PannableCanvas --o "1" ADiagramEditor
+ADiagramEditor --> IDiagramEditorController
+ADiagramEditor --> PannableCanvas
+ADiagramEditorController --> ADiagramEditor
+ADiagramEditorController --> INoteGraphic
+ADiagramEditorController --> MenuItem
+ADiagramEditorController --> ISelectionableEntityGraphic
+ADiagramEditorController ..> INoteGraphic
+ADiagramEditorController ..> IRelationGraphic
+ADiagramEditorController ..> ISelectionnableEntityGraphic
+ADiagramEditorController ..> NoteGraphic
+ClassDiagramEditorController --> IClassDiagram
+ClassDiagramEditorController ..> ADiagramEditor
+ClassDiagramEditorController ..> ObjectEntityGraphic
+@enduml

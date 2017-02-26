@@ -1,0 +1,26 @@
+@startuml
+title Diagramme de sequence d'un senario d'ajout d'un element à un diagramme de classe à partir de l'IHM
+	
+	user -> system : Clic_Sur_entity();
+	system ->> user : Surbrillance_Entity();
+	system ->> user : Afficher_Barre_BouttonFlottant();
+	
+	user -> system : Clic_Bouton_Ajouter_Element();
+	system ->> user : Boite_Dialogue_Creation();
+	user -> system : Create_Element(TypeElem,Nom);
+	
+	alt Type de diagramme choisie = classe
+		alt Nom de l'element n'existe pas
+			alt Type=Attribut
+				system ->> user :Affichage_Attribut();	
+			end 
+			
+			alt Type=Mathode
+				system ->> user :Affichage_Methode();	
+			end
+			else Nom de l'element existe dèja
+				system ->> user :message("Ce nom existe dèja");
+		end
+	end
+	
+@enduml

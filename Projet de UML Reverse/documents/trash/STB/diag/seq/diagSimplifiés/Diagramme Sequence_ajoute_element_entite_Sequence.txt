@@ -1,0 +1,27 @@
+@startuml
+title Diagramme de sequence d'un senario d'ajout d'un element un diagramme de séquence à partir de l'IHM
+	
+	user -> system : Clic_Sur_entity();
+	system ->> user : Surbrillance_Entity();
+	system ->> user : Afficher_Barre_BouttonFlottant();
+	
+	user -> system : Clic_Bouton_Ajouter_Element();
+	system ->> user : Boite_Dialogue_Creation();
+	user -> system : Create_Element(TypeElem,Nom);
+	
+	alt Type de diagramme choisie = Sequence
+		alt Nom de l'element n'existe pas
+			alt Type=message
+				system ->> user :Affichage_message();	
+			end 
+			
+			alt Type=Cadre d'interaction
+				system ->> user :Affichage_cadre_Interaction();	
+			end
+			else Nom de l'element existe dèja
+				system ->> user :message("Ce nom existe dèja");
+		end
+	end
+	
+
+@enduml

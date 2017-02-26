@@ -1,0 +1,329 @@
+@startuml
+
+
+
+
+
+package model { 
+' -------------------------------- umlreverse.model
+
+package diagram { 
+' -------------------------------- umlreverse.model.diagram
+
+package diagram.util { 
+' -------------------------------- umlreverse.model.diagram.util
+
+interface IStyleManager
+abstract class ADiagram implements IDiagram 
+interface IEntity 
+
+ADiagram o--> IEntity
+ADiagram o--> INote
+IEntity o--> IStyleManager
+
+}
+' --------------------------------------------------------- fin package util
+
+
+package class { 
+' -------------------------------- umlreverse.model.diagram.class
+
+enum ClassStylizableElement {
+	Class
+	Interface
+	Enum
+	Inheritance
+	Dependance
+	Aggregation
+	Composition
+	Association
+	DoubleAssocation
+	Implementation
+	Note
+	Package
+}
+
+interface IClassDiagram extends IDiagram {
+	+getName() : String
+	+getFileName() : String
+	+getStyle() : IStyleManager
+	+getStyle(ClassStylizableElement typeElement) : IStyleManager
+	+getEnum(String name) : IEnumEntity
+	+getEnums() : Set<IEnumEntity>
+	+getClass(String name) : IClass
+	+getClasses() : Set<IClass>
+	+getInterface(String name) : IInterface
+	+getInterfaces() : Set<IInterface>
+	+getPackages() : Set<IPackage>
+	+getPackage(String name) : IPackage
+	+setGlobalStyle(ClassStylizableElement element, IStyleManager style) : void
+
+	+addClass(String name)
+	+removeClass(IClassEntity class)
+	+removeClass(String name)
+
+	+addEnum(String name)
+	+removeEnum(IEnumEntity enum)
+	+removeEnum(String name)
+
+	+addInterface(String name)
+	+removeInterface(IInterfaceEntity interface)
+	+removeInterface(String name)
+
+	+addPackage(String name)
+	+removePackage(IPackage p)
+	+removePackage(String name)
+
+	+setName(String) : void
+	+setFileName(String) : void
+	+accept(ClassVisitor visitor) : void
+	+accept(DiagramVisitor visitor) : void
+}
+
+class ClassDiagram extends ADiagram implements IClassDiagram
+ClassDiagram --> ClassStylizableElement
+ClassDiagram "0..1" o-> "0..n" IPackage
+
+interface IPackage {
+	+getDiagram() : ClassDiagram
+	+getName() : String
+	+getStyle() : IStyleManager
+	+getEnum(String name) : IEnumEntity
+	+getEnums() : Set<IEnumEntity>
+	+getClass(String name) : IClass
+	+getClasses() : Set<IClass>
+	+getInterface(String name) : IInterface
+	+getInterfaces() : Set<IInterface>
+	+getPackages() : Set<IPackage>
+	+getPackage(String name) : IPackage
+	+setGlobalStyle(ClassStylizableElement element, IStyleManager style) : void
+
+	+addClass(String name)
+	+removeClass(IClassEntity classe)
+	+removeClass(String name)
+
+	+addEnum(String name)
+	+removeEnum(IEnumEntity enum)
+	+removeEnum(String name)
+
+	+addInterface(String name)
+	+removeInterface(IInterfaceEntity interface)
+	+removeInterface(String name)
+
+	+addPackage(String name)
+	+removePackage(IPackage p)
+	+removePackage(String name)
+
+	+setName(String) : void
+	+accept(DiagramVisitor visitor) : void
+} 
+class Package implements IPackage
+
+interface IClassEntity extends IEntity {
+	+getDiagram() : ClassDiagram
+	+getPackage() : String 
+	+getVisibility() : Visibility 
+	+getStyle() : StyleManager
+	+getGlobalStyle() : IStyleManager
+
+	+setGlobalStyle(StyleManager) : void
+	+setStyle(StyleManager styleBox) : void
+	+setModifier(Set<Modifier> modifs) : void
+	+setPackage(String package) : void
+	+setVisibility(Visibility visibility) : void
+}
+
+
+
+ClassDiagram "1" o--> "0..n" IClassEntity
+
+' -------------------------------- umlreverse.model.diagram.class
+
+abstract AClassEntity extends util.AEntity implements IClassEntity {
+	+getVisibility() : Visibility 
+	+getStyle() : StyleManager
+	+getGlobalStyle() : StyleManager
+	..
+	+setGlobalStyle(StyleManager) : void
+	+setStyle(StyleManager styleBox) : void
+	+setModifier(Set<Modifier> modifs) : void
+	+setPackage(String package) : void
+	+setVisibility(Visibility visibility) : void
+	
+}
+
+interface IEnum extends IClassEntity {
+	+isStatic() : boolean
+	+getItems() : List<String>
+	..
+	+setStatic(boolean isStatic) : void
+	+addItem(String enum) : void
+	+removeItem(String enum) : void
+}
+
+interface IClassOrInterface extends IClassEntity {
+	+getMethods() : List<IMethod> 
+	+getMethods(Modifier filtre) : List<IMethod>
+	+getMethods(String name, List<IType> arguments) 
+	+getAttributes() : List<IAttribute> 
+	+getAttributes(Modifier filtre) : List<IAttribute> 
+	+isGeneric() : boolean 
+	+getGenericTypes() : List<IType>
+	+getRelations() : List<IRelation>
+	+getDependance(String id) : Dependance
+	..
+	+addDependance(IClassEntity target, String id) : void
+	+removeRelation(Dependane relation)
+	+setGeneric(List<IType> types) : void
+
+	+removeMethod(String name, List<IType> arguments) : void
+	+removeMethod(IMethod method) : void
+	+addMethod(IMethod method) : void
+
+	+removeAttribute(String attr) : void
+	+removeAttribute(IAttribute attr) : void
+	+addAttribute(IAttribute attr) : void
+	
+	+accept(ClassVisitor visitor) : void
+
+}
+
+abstract AClassOrInterface extends AClassEntity implements IClassOrInterface
+
+interface IClass extends IClassOrInterface {
+	+isAbstract() : bool
+	+getAssociation(String id) : Association
+	+getDoubleAssociation(String id) : DoubleAssociation
+	+getAggregation(String id) : Aggregation
+	+getComposition(String id) : Composition
+	+getImplementation(String id) : Implementation
+	+getInheritance(String id) : Inheritance
+	..
+	+setAbstract(bool isAbstract) : void
+	+addAssociation(IClassEntity target, String id) : void
+	+addDoubleAssociation(IClass class, String id) : void
+	+addAggregation((IClassEntity target, String id) : void
+	+addComposition(IClass target, String id) : void
+	+addComposition(IInterface target, String id) : void
+	+addInheritance(IClass target, String id) : void
+	+addImplementation(IInterface target, String id) : void
+	+removeRelation(Association relation) : void
+	+removeRelation(DoubleAssocation relation) : void
+	+removeRelation(Aggregation relation) : void
+	+removeRelation(Composition relation) : void
+	+removeRelation(Inheritance relation) : void
+}
+
+interface IInterface extends IClassOrInterface {
+	+getInheritance(String id) : Implementation
+	..
+	+addInheritance(IInterface target, String id) : void
+	+removeRelation(Inheritance relation) : void
+}
+
+class EnumEntity extends AClassEntity implements IEnum
+class InterfaceEntity extends AClassOrInterface implements IInterface
+class ClassEntity extends AClassOrInterface implements IClass
+
+interface IMethod {
+	+getModifier() : Set<Modifier>
+	+getReturn() : IType 
+	+getName() : String 
+	+getArguments() : List<IVariable> 
+	+getStyle() : StyleManager
+	+getGlobalStyle() : StyleManager
+	..
+	+setModifier(Modifier) : void
+	+setGlobalStyle(StyleManager) : void
+	+setStyle(StyleManager styleBox) : void
+	+setReturn(IType type) : void
+	+setName(String name) : void
+	+setArguments(List<IVariable> arguments) : void
+	+pushArgument(IVariable argument) : void
+	+removeArgument(IVariable argument) : void
+	+removeArgument(String argument) : void
+	+accept(ClassVisitor visitor) : void
+}
+class Method implements IMethod
+
+interface IType {
+	+toString() : String 
+	+isGeneric() : boolean 
+	+isConst() : boolean 
+	+getGenericType() : List<IType>
+	..
+	+setGenericType(List<IType) : IType
+	+setConst(boolean) : void 
+	+accept(ClassVisitor visitor) : void
+}
+class Type implements IType
+
+
+interface IAttribute {
+	+getVisibility() : Visibility 
+	+getVariable() : IVariable 
+	..
+	+setVisibility(Visibility visibility) : void 
+	+accept(ClassVisitor visitor) : void
+}
+class Attribute implements IAttribute
+
+
+interface IVariable {
+	+getName() : String 
+	+getType() : IType 
+	..
+	+setType(IType type) : void 
+	+setName(String name) : void
+	+accept(ClassVisitor visitor) : void
+}
+class Variable implements IVariable 
+
+
+enum Visibility {
+	{static}-strToVisibility : HashSet<String, Visibility> 
+	--
+	+Protected
+	+Private
+	+Public
+	+Package
+	..
+	{static}+getvisibility(String visibility) : Visibility
+	+accept(ClassVisitor visitor) : void
+}
+
+enum Modifier {
+	{static}-strToModifier : HashSet<String, Modifier>
+	--
+	+Abstract
+	+Static
+	..
+	{static}+getModifier(String modifier) : Modifier
+	+accept(ClassVisitor visitor) : void
+}
+
+
+AClassOrInterface "1" o--> "0..n" IMethod
+AClassOrInterface "1" o--> "0..n" IAttribute
+Method "0..1" o--> "1" IType
+Method "0..1" o--> "0..n" IVariable
+Method --> Modifier
+Type "0..1" o--> "0..n" IType
+Variable "0..1" o--> "1" IType
+Attribute "0..n" o--> "1" Visibility
+Attribute "0..1" o--> "1" IVariable
+
+
+
+}
+' --------------------------------------------------------- fin package class
+
+} 
+' --------------------------------------------------------- fin package diagram
+
+}
+' --------------------------------------------------------- fin package model
+
+
+
+@enduml

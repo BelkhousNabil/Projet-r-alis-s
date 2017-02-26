@@ -1,0 +1,35 @@
+ @startuml
+
+
+
+
+interface IDiagramManager {
+	+getClassDiagram(String name) : IClassDiagram
+	+getSequenceDiagram(String name) : ISequenceDiagram
+	+getUseCaseDiagram(String name) : IUseCaseDiagram
+	+containsFilename(String filename) : bool
+	+containsDiagram(String name) : bool
+	+getDiagrams() : Set<IDiagram>
+	..
+	+addDiagram(String filePlantUml) : void
+	+addDiagram(String filePlantUml, String fileParameter) : void
+	+reverseJava(String directoryJava, String name) : void
+	+applyStyle(IDiagram diagram, String fileParameter) : void
+	+toPlantUml(IDiagram diagram) : void
+	+toPlantUml(IDiagram diagram, String fichier) : void
+	+toParameters(IDiagram diagram, String fichier) : void
+	+addDiagram(IClassDiagram diagram) : void
+	+addDiagram(ISequenceDiagram diagram) : void
+	+addDiagram(IUseCaseDiagram diagram) : void
+	+addClassDiagram(String name, String filename) : void
+	+addSequenceDiagram(String name, String filename) : void
+	+addUseCaseDiagram(String name, String filename) : void
+	+removeDiagram(IClassDiagram diagram) : void
+	+removeDiagram(ISequenceDiagram diagram) : void
+	+removeDiagram(IUseCaseDiagram diagram) : void
+	+removeDiagram(String name) : void
+}
+
+class DiagramManager implements IDiagramManager
+
+@enduml

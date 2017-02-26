@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="353pt" style="width:346px;height:353px;" version="1.1" viewBox="0 0 346 353" width="346pt">
+    <defs>
+        <filter height="300%" id="f1" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g>
+        <rect fill="#FEFECE" filter="url(#f1)" height="227.2656" style="stroke: #A80036; stroke-width: 1.5;" width="331" x="6" y="8.5"/>
+        <ellipse cx="111.75" cy="24.5" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M107.6719,20.2656 L107.6719,18.1094 L115.0625,18.1094 L115.0625,20.2656 L112.5938,20.2656 L112.5938,28.3438 L115.0625,28.3438 L115.0625,30.5 L107.6719,30.5 L107.6719,28.3438 L110.1406,28.3438 L110.1406,20.2656 L107.6719,20.2656 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="111" x="132.25" y="28.6543">IDiagramManager</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="336" y1="40.5" y2="40.5"/>
+        <ellipse cx="17" cy="52.4023" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="207" x="26" y="54.7104">getDiagram(String name) : IDiagram</text>
+        <ellipse cx="17" cy="65.207" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="230" x="26" y="67.5151">containsFilename(String filename) : bool</text>
+        <ellipse cx="17" cy="78.0117" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="210" x="26" y="80.3198">containsDiagram(String name) : bool</text>
+        <ellipse cx="17" cy="90.8164" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="181" x="26" y="93.1245">getDiagrams() : Set&lt;IDiagram&gt;</text>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,2.0;" x1="7" x2="336" y1="99.7188" y2="99.7188"/>
+        <ellipse cx="17" cy="111.6211" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="182" x="26" y="113.9292">addDiagram(String filePlantUml)</text>
+        <ellipse cx="17" cy="124.4258" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="305" x="26" y="126.7339">addDiagram(String filePlantUml, String fileParameter)</text>
+        <ellipse cx="17" cy="137.2305" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="264" x="26" y="139.5386">reverseJava(String directoryJava, String name)</text>
+        <ellipse cx="17" cy="150.0352" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="291" x="26" y="152.3433">applyStyle(IDiagram diagram, String fileParameter)</text>
+        <ellipse cx="17" cy="162.8398" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="171" x="26" y="165.1479">toPlantUml(IDiagram diagram)</text>
+        <ellipse cx="17" cy="175.6445" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="252" x="26" y="177.9526">toPlantUml(IDiagram diagram, String fichier)</text>
+        <ellipse cx="17" cy="188.4492" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="269" x="26" y="190.7573">toParameters(IDiagram diagram, String fichier)</text>
+        <ellipse cx="17" cy="201.2539" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="179" x="26" y="203.562">addDiagram(IDiagram diagram)</text>
+        <ellipse cx="17" cy="214.0586" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="201" x="26" y="216.3667">removeDiagram(IDiagram diagram)</text>
+        <ellipse cx="17" cy="226.8633" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="169" x="26" y="229.1714">removeDiagram(String name)</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="139" x="102" y="296"/>
+        <ellipse cx="117" cy="312" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M119.9688,317.6406 Q119.3906,317.9375 118.75,318.0859 Q118.1094,318.2344 117.4063,318.2344 Q114.9063,318.2344 113.5859,316.5859 Q112.2656,314.9375 112.2656,311.8125 Q112.2656,308.6875 113.5859,307.0313 Q114.9063,305.375 117.4063,305.375 Q118.1094,305.375 118.7578,305.5313 Q119.4063,305.6875 119.9688,305.9844 L119.9688,308.7031 Q119.3438,308.125 118.75,307.8516 Q118.1563,307.5781 117.5313,307.5781 Q116.1875,307.5781 115.5,308.6484 Q114.8125,309.7188 114.8125,311.8125 Q114.8125,313.9063 115.5,314.9766 Q116.1875,316.0469 117.5313,316.0469 Q118.1563,316.0469 118.75,315.7734 Q119.3438,315.5 119.9688,314.9219 L119.9688,317.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="107" x="131" y="316.1543">DiagramManager</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="103" x2="240" y1="328" y2="328"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="103" x2="240" y1="336" y2="336"/>
+        <path d="M171.25,255.7919 C171.25,270.9987 171.25,284.9211 171.25,295.8055 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="164.25,255.5942,171.25,235.594,178.25,255.5941,164.25,255.5942" style="stroke: #A80036; stroke-width: 1.0;"/>
+    </g>
+</svg>

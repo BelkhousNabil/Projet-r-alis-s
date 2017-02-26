@@ -1,0 +1,12 @@
+@startuml
+title Diagramme de séquence décrivant l'ouverture de l'application
+	
+	actor user
+
+	user -> application: Lancer_Aapplication();
+	application -> FileManager : getProject();
+	FileManager -> ProjectDir: getDiagram();
+	ProjectDir ->> FileManager: List<DiagramDir>
+	TreeFileManagerView -> TreeFileManagerView : TreeFileManagerView ( workspace);
+	
+@enduml

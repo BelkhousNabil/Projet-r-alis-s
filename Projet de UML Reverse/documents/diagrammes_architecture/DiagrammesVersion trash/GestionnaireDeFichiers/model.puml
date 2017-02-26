@@ -1,0 +1,37 @@
+@startuml
+class FileManager {
+	- workspace: java.io.File
+	+ addProject(String name): ProjectDir
+	+ addProject(ProjectDir prj): void
+	+ getProject(String name): ProjectDir
+	+ getProjects(): List<ProjectDir>
+	+ hasProject(String name): boolean
+	+ removeProject(String name): void
+}
+
+class ProjectDir {
+	- dir: java.io.File
+	+ addDiagram(DiagramType type, String name): DiagramDir
+	+ getDiagrams(DiagramType type): List<DiagramDir>
+	+ removeDiagram(DiagramType type, String name): void
+}
+
+enum DiagramType {
+	+ CLASS
+	+ SEQUENCE
+	+ USECASE
+}
+
+class java.util.HashMap<DiagramType, List<DiagramDir>>
+
+class DiagramDir {
+	- dir: java.io.File
+	+ getDefaultStyle(String puml): java.io.File
+	+ getPlantUML(): List<java.io.File>
+}
+
+FileManager "1" *--> "*" ProjectDir: "- projects"
+ProjectDir .> DiagramType
+ProjectDir "1" *--> "1" java.util.HashMap: "- diagrams"
+java.util.HashMap -> DiagramDir
+@enduml

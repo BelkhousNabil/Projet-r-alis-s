@@ -1,0 +1,18 @@
+@startuml
+
+rectangle k {
+actor a
+
+usecase uc
+
+(uc) -> :a:
+
+}
+actor :zef:
+(us) -> :a:
+
+usecase "coucou" as c
+
+note top of c : ALL
+
+@enduml

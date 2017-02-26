@@ -1,0 +1,23 @@
+@startuml
+package null {
+class "ParseDiagram<IClassDiagram,ParseClassPackage,ParseClassRelation>" as entity0 {
+	--
+}
+}
+class "IClassDiagram" as entity1 {
+	--
+}
+class "ParseDiagram<IClassDiagram,ParseClassPackage,ParseClassRelation>" as entity0 {
+	--
+}
+class "ParseDiagram" as entity2 {
+	--
+}
+class "Logger" as entity3 {
+	--
+}
+class "ParseClassDiagram" as entity4 {
+	--
+}
+entity4 --|> entity0
+@enduml

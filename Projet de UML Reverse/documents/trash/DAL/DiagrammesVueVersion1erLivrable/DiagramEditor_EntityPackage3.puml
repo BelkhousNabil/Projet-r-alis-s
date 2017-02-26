@@ -1,0 +1,72 @@
+@startuml
+
+package ui.component {
+    package usecase {
+        class UseCaseDiagramEditor
+
+        class ActorGraphic
+        class UseCaseGraphic
+        abstract AClassObjectGraphic
+
+        interface IUseCaseGroupGraphic
+        class UseCaseGroupGraphic
+
+        class NameGraphic
+        class NameGraphic
+
+        interface IUseCaseEntityGraphic
+    } 
+    
+    package class {
+       
+        
+        class DialogArgs
+        class DialogArgsController
+        class DialogOEGEDIT
+        class DialogOEGEditController
+        class DialogPackageEdit
+        class ObjectEntityGraphic
+        class ObjectEntityGraphicController
+        class PackageGraphic
+        class PackageGraphicController
+        
+    }
+    package common {
+        package RelationType {
+            class Agregation
+            class Association
+            class Composition
+            class Dependance
+            class Implementation
+            class Inheritance
+            class Normal
+            class RelationType
+            
+        }
+       class AEntityGraphic
+       class AEntityGraphicController
+       class DialogAddRelation
+       class DialogNoteEdit
+       class DialogRelationEditNoteG
+       class DialogRelationEditOEG
+       interface IEntityGraphic
+       interface IEntityGraphicController
+       interface INoteGraphic
+       interface INoteGraphicController
+       interface IRelationGraphic
+       interface IRelationGraphicController
+       interface ISelectionnableEntityGraphic
+       class NoteGraphic
+       class NoteGraphicController
+       class NoteShape
+       class RelationGraphic
+       class RelationGraphicController
+    }
+}
+
+
+
+
+
+
+@enduml

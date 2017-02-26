@@ -1,0 +1,30 @@
+@startuml
+
+package class.visitor { 
+' -------------------------------- umlreverse.model.diagram.class.visitor
+	interface ClassVisitor {
+		+visit(ClassDiagram) : void
+		+visit(ClassEntity) : void
+		+visit(EnumEntity) : void
+		+visit(InterfaceEntity) : void
+		+visit(Method) : void
+		+visit(Attribute) : void
+		+visit(Inheritance) : void
+		+visit(Implementation) : void
+		+visit(Dependance) : void
+		+visit(Association) : void
+		+visit(DoubleAssociation) : void
+		+visit(Composition) : void
+		+visit(Aggregation) : void
+		+visit(Note) : void
+		+visit(Package) : void
+	}
+	class SaveStyleClassVisitor implements ClassVisitor
+	class SavePlantUmlClassVisitor implements ClassVisitor
+	class ToViewClassVisitor implements ClassVisitor {
+		+getDiagramMenu() : IClassDiagramMenu
+		+getDiagramEditor() : IClassDiagramEditor
+	}
+}
+' --------------------------------------------------------- fin package visitor
+@enduml

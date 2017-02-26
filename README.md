@@ -31,14 +31,22 @@ Dans ce dossier vous trouverez tous les projets que j'ai réalisés.
 		9.4- Projet de réalisation d'une Plateforme de démarrage pour les projets JEE (base_spring_mvc_web_application)
 
 	10- Projet de fouille de données:
-		10.1- Projet de réalisation de l'algorithme CLOSE (Java, Weka)
+		10.1- Projet de réalisation de l'algorithme CLOSE (Langages et outils: Java, Weka)
 
 	11- Projet Web Services:
-		11.1- Projet de réalisation d'application Web REST pour géolocalisation (Maven,JEE,XML,TomCat)
-		11.2- Projet de réalisation d'application Web SOAP pour géolocalisation (Maven,JEE,XML,TomCat)
-		11.3- Projet de réalisation d'application Web EPI pour géolocalisation (Maven,JEE,XML,TomCat,Camel)
-		11.4- Projet de réalisation d'application Web PASS pour géolocalisation (Maven,JEE,XML,TomCat,Spring,Hibernate)
-	12- Projet de creation d'un grand corpus avec la technique du Web Scraping - Python
+		11.1- Projet de réalisation d'application Web REST pour géolocalisation (Langages et outils: Maven,JEE,XML,TomCat)
+		11.2- Projet de réalisation d'application Web SOAP pour géolocalisation (Langages et outils: Maven,JEE,XML,TomCat)
+		11.3- Projet de réalisation d'application Web EPI pour géolocalisation (Langages et outils: Maven,JEE,XML,TomCat,Camel)
+		11.4- Projet de réalisation d'application Web PASS pour géolocalisation (Langages et outils: Maven,JEE,XML,TomCat,Spring,Hibernate)
+	12- Projet de creation d'un grand corpus avec la technique du Web Crawling  (Langages et outils: Python)
+
+	13- Projet d'opinion mining (Langages et outils: Python)
+
+	14- Projet Maven-metrix : Analyse du projet open source Maven-Apache et mise en place de métriques (Langages et outils: Python)
+
+	15- Traveaux de recherches:
+		15.1- Projet d'étude et d'analyse de thèse de fouille de données
+		15.2- Projet d'étude et d'analyse de conceptes deep learning : Auto-encodeurs
 
 	
 

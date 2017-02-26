@@ -1,0 +1,62 @@
+@startuml
+
+package diagram.util { 
+' -------------------------------- umlreverse.model.diagram.util
+
+interface IStyleManager {
+	+getStyle(String key) : String
+	+getKeys() : Set<String>
+	..
+	+setStyle(String key, String value) : void
+	+removeStyle(String key) : void
+	+clear() : void
+}
+
+class StyleManager implements IStyleManager
+
+interface IDiagram {
+	+getName() : String
+	+getTitle() : String
+	+getFileName() : String
+	+getNotes() : Set<INote>
+	+getNote(String name) : INote
+	..
+	+addTitle(String title) : void
+	+addNote(String name, String description) : void
+	+removeNote(String name) : void
+	+setName(String nom) : void
+	+setFileName(String nomDeFichier) : void
+	+accept(DiagramVisitor visitor) : void
+}
+
+abstract class ADiagram implements IDiagram 
+
+interface IEntity { 
+	+getName() : String
+	+getStyle() : StyleManager
+	+getGlobalStyle() : StyleManager
+	+getNote(String name) : INote
+	..
+	+addNote(INote note) : void
+	+removeNote(INote note) : void
+	+setStyle(StyleManager styleBox) : void
+	+setName(String nom) : void
+}
+abstract class AEntity implements IEntity
+
+interface INote extends IEntity {
+	+isConstraint() : boolean
+	+getDescription() : String
+	+setDescription(String description) : void
+	+setConstraint(boolean isConstraint) : void
+}
+class Note extends AEntity implements INote 
+
+ADiagram o--> IEntity
+ADiagram o--> INote
+AEntity o--> INote
+AEntity o--> IStyleManager
+}
+' --------------------------------------------------------- fin package util
+
+@enduml

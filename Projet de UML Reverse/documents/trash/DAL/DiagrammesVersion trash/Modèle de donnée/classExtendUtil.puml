@@ -1,0 +1,166 @@
+@startuml
+
+
+
+
+
+package model { 
+' -------------------------------- umlreverse.model
+
+package diagram { 
+' -------------------------------- umlreverse.model.diagram
+
+package diagram.util { 
+' -------------------------------- umlreverse.model.diagram.util
+
+interface IStyleManager
+abstract class ADiagram implements IDiagram 
+interface IEntity 
+
+ADiagram o--> IEntity
+ADiagram o--> INote
+AEntity o--> IStyleManager
+abstract AEntity implements IEntity
+
+}
+' --------------------------------------------------------- fin package util
+
+
+package class { 
+' -------------------------------- umlreverse.model.diagram.class
+
+enum ClassStylizableElement {
+	Class
+	Interface
+	Enum
+	Note
+	Package
+}
+
+interface IClassDiagram extends IDiagram {
+	+getName() : String
+	+getFileName() : String
+	+getStyle() : IStyleManager
+	+getStyle(ClassStylizableElement typeElement) : IStyleManager
+	+getEnum(String name) : IEnumEntity
+	+getEnums() : Set<IEnumEntity>
+	+getClass(String name) : IClass
+	+getClasses() : Set<IClass>
+	+getInterface(String name) : IInterface
+	+getInterfaces() : Set<IInterface>
+	+getPackages() : Set<IPackage>
+	+getPackage(String name) : IPackage
+	+getNotes() : Set<INote>
+	+setGlobalStyle(ClassStylizableElement element, IStyleManager style) : void
+
+	+createNote(String title, String description) : void
+	+deleteNote(INote) : void
+
+	+addClass(String name)
+	+removeClass(IClassEntity class)
+	+removeClass(String name)
+
+	+addEnum(String name)
+	+removeEnum(IEnumEntity enum)
+	+removeEnum(String name)
+
+	+addInterface(String name)
+	+removeInterface(IInterfaceEntity interface)
+	+removeInterface(String name)
+
+	+addPackage(String name)
+	+removePackage(IPackage p)
+	+removePackage(String name)
+
+	+setName(String) : void
+	+setFileName(String) : void
+	+accept(ClassVisitor visitor) : void
+	+accept(DiagramVisitor visitor) : void
+}
+
+class ClassDiagram extends ADiagram implements IClassDiagram
+ClassDiagram --> ClassStylizableElement
+ClassDiagram "0..1" o-> "0..n" IPackage
+
+interface IPackage {
+	+getDiagram() : ClassDiagram
+	+getName() : String
+	+getStyle() : IStyleManager
+	+getEnum(String name) : IEnumEntity
+	+getEnums() : Set<IEnumEntity>
+	+getClass(String name) : IClass
+	+getClasses() : Set<IClass>
+	+getInterface(String name) : IInterface
+	+getInterfaces() : Set<IInterface>
+	+getPackages() : Set<IPackage>
+	+getPackage(String name) : IPackage
+	+setGlobalStyle(ClassStylizableElement element, IStyleManager style) : void
+	+getNotes() : Set<INote>
+
+	+createNote(String title, String description) : void
+	+deleteNote(INote) : void
+
+	+addClass(String name)
+	+removeClass(IClassEntity classe)
+	+removeClass(String name)
+
+	+addEnum(String name)
+	+removeEnum(IEnumEntity enum)
+	+removeEnum(String name)
+
+	+addInterface(String name)
+	+removeInterface(IInterfaceEntity interface)
+	+removeInterface(String name)
+
+	+addPackage(String name)
+	+removePackage(IPackage p)
+	+removePackage(String name)
+
+	+setName(String) : void
+	+accept(DiagramVisitor visitor) : void
+
+	+getVetoableChangeListeners() : VetoableChangeListener[]
+	+addVetoableChangeListener(VetoableChangeLister listener) : void
+	+removeVetoableChangeListener(VetoableChangeLister listener) : void
+} 
+class Package implements IPackage
+
+interface IClassEntity extends IEntity {
+	+getDiagram() : ClassDiagram
+	+getPackage() : String 
+	+getVisibility() : Visibility 
+	+getStyle() : StyleManager
+	+getGlobalStyle() : IStyleManager
+
+	+setGlobalStyle(StyleManager) : void
+	+setStyle(StyleManager styleBox) : void
+	+setModifier(Set<Modifier> modifs) : void
+	+setPackage(String package) : void
+	+setVisibility(Visibility visibility) : void
+
+	+addConstraintNote(INote note) : void
+	+addNote(INote note) : void
+	+removeConstraintNote(INote note) : void
+	+removeNote(INote note) : void
+
+	+getVetoableChangeListeners() : VetoableChangeListener[]
+	+addVetoableChangeListener(VetoableChangeLister listener) : void
+	+removeVetoableChangeListener(VetoableChangeLister listener) : void
+}
+
+
+
+ClassDiagram "1" o--> "0..n" IClassEntity
+
+}
+' --------------------------------------------------------- fin package class
+
+} 
+' --------------------------------------------------------- fin package diagram
+
+}
+' --------------------------------------------------------- fin package model
+
+
+
+@enduml

@@ -1,0 +1,318 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry} 	%pour les marges
+\usepackage{color} %pour la definition de nouvelles couleurs
+\usepackage{graphicx} %pour ajouter des images 
+\usepackage[final]{pdfpages} 
+\usepackage[francais]{babel} % ``Franciser '' le document
+\usepackage{lscape}
+\usepackage	
+  [colorlinks=false, urlcolor=red, breaklinks, pagebackref, citebordercolor={0 0 0}, 
+  filebordercolor={0 0 0}, linkbordercolor={0 0 0}, pagebordercolor={0 0 0}, 
+  runbordercolor={0 0 0}, urlbordercolor={0 0 0}, pdfborder={0 0 0}]
+	{hyperref} % Ajouter le package des lien redirigeant sans les encadrer 
+\usepackage{eurosym}
+\usepackage{dirtree}
+\usepackage{comment}
+
+%couleurs pour les morceaux de code
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codered}{rgb}{1,0.1,0.2}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+
+%modificaion des marges
+\geometry{hmargin=2.5cm,vmargin=3cm}
+
+
+%opening
+\title{Architecture Logicielle : UML Reverse}
+
+\title{\bfseries Document Architecture Logicielle \\Projet UML Reverse}
+\geometry{hmargin=2.5cm,vmargin=3cm}
+\begin{document}
+\maketitle
+\begin{center}
+\begin{tabular}{ll}
+  Version~: & 0.1\\[.5em]
+  Date~: & \date{\today}\\[.5em]
+  Rédigé par~: & Yohann \textsc{Henry}\\
+	       & Saad \textsc{Mrabet}\\
+               & Anthony \textsc{Godin}\\
+               & Stephen \textsc{Cauchois}\\
+               & Nabil \textsc{Belkhous}\\[.5em]   
+               & Florian \textsc{Inchingolo}\\
+\end{tabular}
+\end{center}
+
+\newpage
+\begin{center}
+    \section*{Mises à jour}
+    \begin{tabular}{|l|l|p{8cm}|}
+        \hline{\textbf{Version}} & {\textbf{Date}} & {\textbf{Modifications réalisées}}\\\hline
+        {0.2} & {14/01/2016} & {Première version}\\\hline
+        {0.1} & {20/12/2015} & {Début du DAL}\\\hline
+    \end{tabular}
+\end{center}
+
+%Table of contents
+\newpage
+\tableofcontents
+\newpage
+
+\section{Introduction}
+<<<<<<< HEAD
+\subsection{objectif}
+
+Ce document représente la structure générale du logiciel et les modèles de conception mis en oeuvre pour le réaliser.
+
+\subsection{portée}
+Ce document est destiné aux membres de l'équipe de développment, notamment aux concepteurs, ainsi qu'aux superviseurs du projet.
+
+\newpage
+\section{Objet du document}
+L’objectif de ce document est de décrire le fonctionnement général du projet UML Reverse.
+
+\newpage
+\section{Les Technologies Utilisées}
+=======
+\subsection{Objectif}
+Ce document représente la structure générale du logiciel et les modèles de conception mis en oeuvre pour le réaliser.
+Il est destiné aux membres de l'équipe de développment, notamment aux concepteurs, ainsi qu'aux superviseurs du projet.
+
+\section{Les technologies utilisées}
+>>>>>>> a2196f4a8684bd8d502cb9637593b69f5ff7c453
+Nous allons utiliser différentes technologies pour la construction du projet.
+\newline
+Le projet est développé en java 1.8.
+Le projet utilise :
+\begin{itemize}
+ \item \emph{Dot} : Un outil permettant de calculer la position idéal des entités et des relations d'un graphe. 
+ Cela nous évite la partie mathématique pour le placement des relations qui aurait pu s'avérer un risque majeur.
+<<<<<<< HEAD
+ \item \emph{JUnit} : Un outil pour valider chaque classe par le biais de tests unitaires.
+=======
+ \item \emph{JUnit} : Framework pour valider chaque classe par le biais de tests unitaires.
+>>>>>>> a2196f4a8684bd8d502cb9637593b69f5ff7c453
+ \item \emph{Maven} : Un outil pour la gestion des dépendances de l'application.
+ \item \emph{Antlr} : Un parser dans lequel nous pourrons définir les grammaires pour l'extraction des données d'un fichier java ou plantUml.
+ \item \emph{openJFX} : Une bibliothèque graphique parfaite pour ce projet. 
+ La bibliothèque permet d'associer à une entité du css ce qui simplifie fortement notre travail.
+\end{itemize}
+
+<<<<<<< HEAD
+\newpage
+\section{Fonctionnement général}
+
+\begin{center}
+    \includegraphics[width=\textwidth]{Diagrammes/generalDal.jpg}
+\end{center}
+
+=======
+\section{Fonctionnement général}
+\begin{center}
+    \includegraphics[width=\textwidth]{Image/generalDal.jpg}
+\end{center}
+L'architecture est construite suivant le modèle MVC. 
+Le parser est une sous entité du modèle.
+>>>>>>> a2196f4a8684bd8d502cb9637593b69f5ff7c453
+
+<<<<<<< HEAD
+  
+\newpage
+\section{Organisation des packages}
+<<<<<<< HEAD
+// FiNIR LA LISTE DS PACKAGES
+
+\begin{center}
+    \includegraphics[width=\textwidth]{Diagrammes/ModeleDeDonnee/package.png}
+\end{center}
+
+
+
+\newpage
+\section{ui : La vue et les controleurs}
+\subsection{view : Les vues de l'ihm}
+\subsection{controllers : Les controleurs de l'ihm}
+\subsection{components : Les différents composants de l'ihm}
+\newpage
+\section{model : Le modèle}
+\subsection{diagram : Les diagrammes}
+\subsubsection{classDiagram}
+\subsubsection{sequenceDiagram}
+\subsubsection{useCaseDiagram}
+\subsection{parser : Les imports}
+
+\newpage
+\section{Architecture MVC}
+\subsection{Description}
+
+
+\section{Traçabilité}
+// à faire
+=======
+\begin{center}
+    \includegraphics[width=\textwidth]{Image/Package.png}
+\end{center}
+=======
+\section{Organisation des paquetages}
+
+  \dirtree{%
+    .1 src.
+    .2 main.
+    .3 MainApp.java.
+    .2 model.
+    .2 ui.
+    .3 view.
+    .3 component.
+  }
+
+  \subsection{Paquetage main}
+  \subsection{Paquetage model}
+  \subsection{Paquetage ui}
+    L'application s'appuie sur la structure javafx avec notre classe applicative UmlReverseApp qui est composé d'un stage qui en suivant
+    la hiérarchie javafx nous ammène au BorderPane. Le BorderPane nous servira de base pour les différents éléments de notre application,
+    tel qu'une TreeView, une MenuBar, un IDiagramEditor et un IDiagramMenu.
+    \begin{center}
+	\includegraphics[width=\textwidth]{Image/Vue.png}
+    \end{center}
+  
+    Ce paquetage contient toutes les classes utilisées pour gérer la vue. Ces classes sont toujours associées à un contrôleur.
+    Les vues sont codées en fxml grâce à un logiciel de construction de fxml (SceneBuilder). Chaque contrôleur aura le même nom
+    que la vue associée avec le mot ``controleur'' ajouté à la fin.
+    ui contient 2 paquetages :
+    \begin{itemize}
+    \item view : Contient les différentes vues intégrées dans l'application. Le paquetage contient également tous les contrôleurs associés à leur vue.
+    \item component : Contient toutes les classes utilisées pour construire les vues. Ce sont leurs composants.
+    \end{itemize}
+    L'application graphique est l'association de plusieurs vues dans un BorderPane.
+    
+    \begin{center}
+	\includegraphics[width=\textwidth]{Image/maquette.png}
+    \end{center}
+
+  \subsection{La partie gauche}
+  \subsection{La partie centrale}
+    La partie centrale sert à éditer graphiquement un diagramme. La vue principale de cette partie est codée en fxml: UmlDiagramEditor.fxml. Et
+    associé à son controlleur UmlDiagramEditorController.java.
+    \subsubsection{Diagrammes de classe}
+      La partie MVC a été volontairement omis pour éviter de surcharger le diagramme de classe. Il sera 
+      par contre implémenter dans les parties prévues.\\
+      Dans les diagrammes ci contre les contrôleurs controleront les actions de IDiagramEditor.\\
+      Nous appelons les éditeur de diagrammes des IDiagramEditor. Nous en avons 3 différents, un pour chaque type de diagramme à éditer.
+      
+      \paragraph{Editeur de diagramme de classe}
+	\begin{center}
+	    \includegraphics[width=\textwidth]{Image/ClassDiagramEditor.png}
+	\end{center}
+      
+      \paragraph{Editeur de diagramme de cas d'utilisation}
+	\begin{center}
+	    %\includegraphics[width=\textwidth]{Image/UseCaseDiagramEditor.png}
+	    
+	\end{center}
+      
+      \paragraph{Editeur de diagramme de séquence}
+	\begin{center}
+	  %\includegraphics[width=\textwidth]{Image/SequenceDiagramEditor.png}
+	\end{center}
+    
+    \subsubsection{Explications}
+      \begin{center}
+	 \includegraphics[width=\textwidth]{Image/demonstration.png}
+      \end{center}
+
+  \subsection{La partie droite}
+       La partie droite sert à ajouter les éléments de chacuns des diagrammes (cas d'utilisation,diagram de classe et diagram de séquece), dans la partie centrale.
+    \subsubsection{Diagramme de classe pour une entité de cas d'utilisation}
+      Dans ce cas la partie droite du borderPanel contient un titre nommé (cas d'utilisation), avec un ensemble des éléments sous forme des bouttons qui peuvent nous aider à ajouter chaque élément dans la vue centrale.
+      On se servira d'une méthode qui s'appelle addNewElement() dont on va invoker les listeners (écouteurs) qui nous aides à gérer les cliques sur l'ensembles des éléments (bouttons). 
+          \begin{center}
+	     \includegraphics[width=\textwidth]{Image/partieDroiteUseCase.png}
+          \end{center}
+     \subsubsection{Diagramme de classe pour une entitée de classe}
+      Après avoir traité les cas d'utilisation on va faire le même travail pour entité de classe
+          \begin{center}
+	     \includegraphics[width=\textwidth]{Image/partieDroiteClass.png}
+          \end{center}
+     
+      \subsubsection{Diagramme de classe pour une entité de séquence}
+       On a vraiment refaire la même chose pour l'entité de séquence 
+           \begin{center}
+	     \includegraphics[width=\textwidth]{Image/partieDroiteSequence.png}
+          \end{center}
+       
+
+\begin{comment}
+  \subsection{model}
+  Ce package contient l'intégralité du modèle. Il contient tous les packages et classes pour le travail métier.
+  \subsubsection{util}
+  Le code commun à tous les diagrammes
+  \begin{center}
+      \includegraphics[width=\textwidth]{Image/util2.png}
+  \end{center}
+  \begin{landscape}
+      \includegraphics[height=12cm]{Image/utilDiagramme.png}
+  \end{landscape}
+  Ce package contient l'intégralité du code commun à chaque diagramme. 
+  C'est aussi ici qu'on trouve la définition des boîtes de style.
+  \subsubsection{visitor}
+  Les visiteurs permettent l'ajout d'opérations homogènes à des entités d'un modèle sans couplage.
+  \begin{center}
+      \includegraphics[width=\textwidth]{Image/visitor.png}
+  \end{center}
+  Ce package contient les visiteurs des diagrammes.
+  \subsubsection{classDiagram}
+  \begin{center}
+      \includegraphics[width=\textwidth]{Image/classDiagramUp.png}
+  \end{center}
+  \begin{center}
+      \includegraphics[width=12cm]{Image/classDiagramBottom.png}
+  \end{center}
+  Ce package contient le code pour stocker un diagramme de classe extrait à partir d'un fichier java. 
+  A fortiori, il gère tout diagramme de classe en plantUml représentant un diagramme de classe valide en UML2.
+  \subsubsection{sequenceDiagram}
+  \begin{center}
+      \includegraphics[width=\textwidth]{Image/SequenceDiag.png}
+  \end{center}
+  \begin{center}
+      \includegraphics[width=\textwidth]{Image/SeqBlocksDiag.png}
+  \end{center}
+  Ce package contient le code pour stocker un diagramme de séquence. 
+  Il gère tout diagramme de séquence en plantUml représentant un diagramme de séquence valide en UML2.
+  \subsubsection{useCaseDiagram}
+  \begin{center}
+      \includegraphics[width=\textwidth]{Image/UseCaseDiag.png}
+  \end{center}
+  Ce package contient le code pour stocker un diagramme de cas d'utilisation. 
+  Il gère tout diagramme de cas d'utilisation en plantUml représentant un diagramme de séquence valide en UML2.
+  \subsubsection{parser}
+   Les imports
+  \begin{center}
+      \includegraphics[width=\textwidth]{Image/parser.png}
+  \end{center}
+  Ce package contient les différents parsers qui seront utilisées pour extraire le style, le plantUml et le java.
+
+  \subsection{ui}
+  Ce package contient l'intégralité de la vue et des controleurs.
+  \subsubsection{view}
+  C'est dans ce package que se situe les différentes vues utilisées par l'application.
+  \subsubsection{controllers}
+  Ce package contient toutes les classes permettant la communication entre la vue et le modèle.
+  \subsubsection{components}
+  Les différents composants de l'ihm
+  \begin{center}
+      \includegraphics[width=\textwidth]{Image/Component.png}
+  \end{center}
+  Ce package contient les composants qui seront utilisées par la vue.
+<<<<<<< HEAD
+>>>>>>> a2196f4a8684bd8d502cb9637593b69f5ff7c453
+=======
+  
+\section{}
+\end{comment}
+>>>>>>> 3def6780932ebf391e47a4675496122d16dea7ef
+
+\end{document}

@@ -1,0 +1,441 @@
+@startuml
+
+package model {
+
+interface IProject {
+	+getRootPackage() : Package
+
+	+getRelations() : Set<IRelation>
+	+add(IRelation relation) : void
+	+remove(IRelation relation) : void
+
+	+getNotes() : Set<Notes>
+	+addNote(INote note) : void
+	+remove(INote note) : void
+
+	+getDiagrams() : Set<IDiagram>
+	+addDiagram(IDiagram diagram)
+	+removeDiagram(IDiagram diagram)
+
+	+saveAll()
+	+{static} newProject(String name) : IProject
+	+{static} loadProject(String filename) : IProject 
+}
+
+class Project implements IProject
+
+Project "1" o--> "0..n" IDiagram
+Project "1" o--> "0..n" IRelation
+Project "1" o--> "1" Package
+Project "1" o--> "0..n" INote
+
+
+interface IDiagram {
+	+getName() : String
+	+getTitle() : String
+	+getFileName() : String
+	..
+	+addTitle(String title) : void
+	+setName(String nom) : void
+	+setFileName(String nomDeFichier) : void
+	
+	+accept(DiagramVisitor visitor) : void
+
+}
+
+
+interface INote {
+	+getId() : long
+
+	+getText() : String
+	+setText(String text) : void
+
+	+getConstraintClassEntities() : Set<IObjectEntity>
+	+addConstraint(IObjectEntity entity)
+	+removeConstraint(IObjectEntity entity)
+
+	+getClassEntities() : Set<ObjectEntity>
+	+add(ObjectEntity entity)
+	+remove(ObjectEntity entity)
+
+	+getConstraintRelations() : Set<IRelation>
+	+addConstraint(IRelation relation)
+	+removeConstraint(IRelation relation)
+
+	+getRelations() : Set<IRelation>
+	+add(IRelation relation)
+	+remove(IRelation relation)
+}
+
+class Note implements INote
+
+Note "0..n" o--> "0..n" IObjectEntity
+Note "0..n" o--> "0..n" IRelation
+
+interface IRelation {
+	+getId() : long
+	
+	+getEntitySource() : IObjectEntity
+	+setEntitySource(IObjectEntity entity) : void
+
+	+getEntityTarget() : IObjectEntity
+	+setEntityTarget(IObjectEntity entity) : void
+	
+	+getCommentRelation() : String
+	+setCommentRelation(String comment) : void
+
+	+getHeadCardinality() : String
+	+setHeadCardinality(String cardinality) : void
+
+	+getTailCardinality() : String
+	+setTailCardinality(String cardinality) : void
+	
+	+getHeadComment() : String
+	+setHeadComment(String comment) : void
+
+	+getTailComment() : String
+	+setTailComment(String comment) : void
+
+	+getTypeLine() : TypeLineArrow
+	+setTypeLine(TypeLineArrow type) : void
+
+	+getHeadArrow() : TypeHeadArrow
+	+setHeadArrow(TypeHeadArrow head) : void
+
+	+getTailArrow() : TypeHeadArrow
+	+setTailArrow(TypeHeadArrow head) : void
+
+	+getAssociationEntity() : IObjectEntity
+	+setAssociationEntity(IObjectEntity entity) : void
+}
+
+
+class Relation implements IRelation{
+	-idRelation: long
+	-entitySource : IObjectEntity
+	-entityTarget : IObjectEntity
+	-nameRelation : IRelation
+	-headCardinality: String
+	-tailCardinality: String
+	-arrowHear : TypeHeadArrow
+	-arrowTail : TypeHeadArrow
+	-lineArrow : TypeLineArrow
+	-associationEntity : IObjectEntity
+}
+
+enum TypeLineArrow {
+	+Dashed
+	+Plain
+}
+
+enum TypeHeadArrow {
+	+Aggregation
+	+Composition
+	+None
+	+EmptyHead
+	+FullHead
+	+InternalClass
+}
+
+Relation "0..n" o--> "1" TypeLineArrow
+Relation "0..n" o--> "2" TypeHeadArrow
+Relation "0..n" --> "2..3" IObjectEntity
+
+interface IComponent {
+	+getName() : String
+	+setName(String name) : void
+}
+
+Package "0..1" o--> "0..n" Package
+Package "0..1" o--> "0..n" IObjectEntity
+
+class Package implements IComponent {
+	+getPackages() : Set<IPackage>
+	+addPackage(IPackage package) : void
+	+removePackage(IPackage package) : void 
+
+	+getEntities() : Set<IObjectEntity>
+	+getEntities(TypeEntity filtre) : Set<IObjectEntity>
+	+getEntities(String filtreByName) : Set<IObjectEntity>
+	+addEntity(IObjectEntity entity) : void
+	+removeEntity(IObjectEntity entity) : void
+
+	+getVetoableChangeListeners() : VetoableChangeListener[]
+	+addVetoableChangeListener(VetoableChangeLister listener) : void
+	+removeVetoableChangeListener(VetoableChangeLister listener) : void
+	#fireVetoableChange(String name, Object oldValue, Object newValue) : void
+} 
+
+interface IObjectEntity implements IComponent{
+	+getViews() : Set<ViewEntity>
+	+addView(ViewEntity view)
+	+removeView(ViewEntity view)
+
+	+getAbstractTexts() : List<String>
+	+addAbstractText(String) : void
+	+removeAbstractText(String) : void
+
+	+getEnumFields() : List<String>
+	+setEnumFields(List<String>)
+
+	+getType() : TypeEntity
+	+setType(TypeEntity type) : void
+
+	+getVisibility() : Visibility
+	+setVisibility(Visibility visibility) : void
+
+	+getAttribute() : Set<Attribute>
+	+add(Attribute attribute) : void
+	+remove(Attribute attribute) : void
+
+	+getMethod() : Set<Method>
+	+add(Method attribute) : void
+	+remove(Method attribute) : void
+}
+
+class ObjectEntity implements IObjectEntity{
+	-nameEntity : String
+	-type : TypeEntity
+	-visibility : Visibility
+	-listAttribute : Set<Attribute>
+	-listMethod : Set<Method>
+	-listEnumFields : Set<String>
+	-listAbstractTexts : Set<String>
+}
+
+ObjectEntity "1" o--> "0..n" IChamp
+ObjectEntity "0..n" --> "1" Visibility
+ObjectEntity "0..n" --> "1" TypeEntity
+
+
+interface IChamp {	
+	+getVetoableChangeListeners() : VetoableChangeListener[]
+	+addVetoableChangeListener(VetoableChangeLister listener) : void
+	+removeVetoableChangeListener(VetoableChangeLister listener) : void
+	#fireVetoableChange(String name, Object oldValue, Object newValue) : void
+}
+
+abstract Champ implements IChamp {
+	-support : VetoableChangeSupport
+}
+
+interface IMethod extends Champ {
+	+getReturn() : IType 
+	+getName() : String 
+	+getArguments() : List<Argument> 
+	+getProperty() : String
+	
+	+getVisibility() : Visibility
+	+setVisibility(Visibility visibility) : void 
+	+setProperty(String property) : void
+	+setReturn(IType type) : void
+	+setName(String name) : void
+	+setArguments(List<Argument> arguments) : void
+}
+class Method implements IMethod
+
+class Argument extends Variable {
+	getDirection() : Direction
+	setDirection(Direction direction) : void
+}
+
+Argument "0..n" o--> "1" Direction
+
+enum Direction {
+	In
+	Out
+	InOut
+	None
+}
+
+interface IType {
+	+getType() : String 
+	+isGeneric() : boolean 
+	+isConstant() : boolean 
+	+getGenericArguments() : List<IType>
+	..
+	+setGenericArguments(List<IType) : IType
+	+setConstant(boolean isConst) : void 
+	
+	+getVetoableChangeListeners() : VetoableChangeListener[]
+	+addVetoableChangeListener(VetoableChangeLister listener) : void
+	+removeVetoableChangeListener(VetoableChangeListener listener) : void
+	#fireVetoableChange(String name, Object oldValue, Object newValue) : void
+}
+class Type implements IType
+
+Type "1" o--> "0..n" IType
+
+interface IAttribute extends Champ {
+	+getVariable() : IVariable 
+	+getProperty() : String
+	+getVisibility() : Visibility
+	+setVisibility(Visibility visibility) : void 
+	+setVariable(IVariable variable)
+	+setProperty(String property)
+}
+class Attribute implements IAttribute
+
+
+interface IVariable {
+	+getName() : String 
+	+getType() : IType 
+	+getInitialization() : String
+	..
+	+setInitialization(String init) : void
+	+setType(IType type) : void 
+	+setName(String name) : void
+
+	+getVetoableChangeListeners() : VetoableChangeListener[]
+	+addVetoableChangeListener(VetoableChangeLister listener) : void
+	+removeVetoableChangeListener(VetoableChangeLister listener) : void
+	#fireVetoableChange(String name, Object oldValue, Object newValue) : void
+}
+class Variable implements IVariable 
+
+Attribute "1" o--> "1" IVariable
+Method "1" o--> "0..n" Argument
+Variable "1" o--> "1" IType
+Method "1" o--> "1" IType
+Champ "0..n" o--> "1" Visibility
+
+enum Visibility {
+	Protected
+	Packaged
+	Public
+	Private
+}
+
+enum TypeEntity {
+	Class
+	Interface
+	Abstract
+	Enum
+}
+
+
+
+class model.classDiagram.ClassDiagram implements IDiagram, Java.Serializable {
+	-idClassDiagram : long
+	-nameDiagram : String
+	-classes : HashMap<ViewEntity, HashMap<String, String>>
+	-relations : HashMap<IRelation, HashMap<String, String>>
+	-package : HashMap<Package, HashMap<String, String>>
+	-notes : Set<INote>
+
+	+getNotes() : Set<INote>
+	+getNotes(Package package) : Set<INote>
+	+addNote(INote note)
+	+removeNote(INote note)
+
+	+getPackages() : Set<Package>
+	+getPackage(Package package) : Set<Package>
+	+addPackage(Package package)
+	+removePackage(Package package)
+
+	+getEntities(Package package) : Set<ViewEntity>
+	+getEntities() : Set<ViewEntity> 
+	+addEntity(ViewEntity entity) : void
+	+removeEntity(viewEntity entity) : void
+
+	+getRelations() : Set<IRelation> 
+	+addRelation(IRelation relation) : void
+	+removeRelation(IRelation relation) : void
+
+	+addStylePackage(Package package, String key, String value)
+	+addStyleEntity(ViewEntity entity, String key, String value)
+	+addStyleRelation(IRelation relation, String key, String value)
+	
+	+removeStylePackage(Package package, String key)
+	+removeStyleEntity(ViewEntity entity, String key)
+	+removeStyleRelation(IRelation relation, String key)
+}
+
+
+interface model.classDiagram.IView {
+	+addStyle(String key, String value)
+	+getStyle() : Map<key, value>
+	+removeStyle(String key)
+}
+
+class model.classDiagram.AView implements model.classDiagram.IView
+
+class model.classDiagram.ViewEntity extends model.classDiagram.AView {
+	+getData() : IObjectEntity
+
+	+getAbstractTexts() : List<String>
+	+addAbstractText(String) : void
+	+removeAbstractText(String) : void
+
+	+getEnumFields() : List<String>
+	+setEnumFields(List<String>)
+
+	+getType() : TypeEntity
+	+setType(TypeEntity type) : void
+
+	+getVisibility() : Visibility
+	+setVisibility(Visibility visibility) : void
+
+	+getAttribute() : Set<Attribute>
+	+add(Attribute attribute) : void
+	+remove(Attribute attribute) : void
+
+	+getMethod() : Set<Method>
+	+add(Method attribute) : void
+	+remove(Method attribute) : void
+}
+
+class model.classDiagram.viewNote extends model.classDiagram.AView {
+	+getData() : INote
+
+	+getId() : long
+
+	+getText() : String
+	+setText(String text) : void
+
+	+getConstraintClassEntities() : Set<IObjectEntity>
+	+addConstraint(IObjectEntity entity)
+	+removeConstraint(IObjectEntity entity)
+
+	+getClassEntities() : Set<ObjectEntity>
+	+add(ObjectEntity entity)
+	+remove(ObjectEntity entity)
+
+	+getConstraintRelations() : Set<IRelation>
+	+addConstraint(IRelation relation)
+	+removeConstraint(IRelation relation)
+
+	+getRelations() : Set<IRelation>
+	+add(IRelation relation)
+	+remove(IRelation relation)
+}
+
+class model.classDiagram.viewPackage extends model.classDiagram.AView {
+	+getPackages() : Set<IPackage>
+	+addPackage(IPackage package) : void
+	+removePackage(IPackage package) : void 
+
+	+getEntities() : Set<IObjectEntity>
+	+getEntities(TypeEntity filtre) : Set<IObjectEntity>
+	+getEntities(String filtreByName) : Set<IObjectEntity>
+	+addEntity(IObjectEntity entity) : void
+	+removeEntity(IObjectEntity entity) : void
+}
+
+model.classDiagram.ClassDiagram "1" o--> "0..n" model.classDiagram.ViewEntity
+model.classDiagram.ClassDiagram "0..n" o--> "0..n" Package
+model.classDiagram.ClassDiagram "0..n" o--> "0..n" IObjectEntity
+model.classDiagram.ClassDiagram "0..n" o--> "0..n" INote
+model.classDiagram.ClassDiagram "0..n" o--> "0..n" IRelation
+
+model.classDiagram.ViewEntity "0..n" -- "0..n" IAttribute
+model.classDiagram.ViewEntity "0..n" -- "0..n" IMethod
+}
+' fin package
+
+
+package Java {
+	interface Serializable
+}
+
+@enduml

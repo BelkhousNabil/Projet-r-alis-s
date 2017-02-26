@@ -1,0 +1,5 @@
+@startuml
+User -> Systeme: supprimer();
+Systeme --> User:  Response(); 
+
+@enduml

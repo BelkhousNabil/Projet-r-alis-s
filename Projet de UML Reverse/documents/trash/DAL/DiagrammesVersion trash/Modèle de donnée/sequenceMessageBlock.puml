@@ -1,0 +1,21 @@
+@startuml
+
+
+
+package sequence { 
+' -------------------------------- umlreverse.model.diagram.sequence
+abstract ABlockMessage extends AMessageNode 
+class CreateDestroyMessage extends ABlockMessage
+class SynchroneMessage extends ABlockMessage {
+	+isVisibleResponse() : boolean
+	+setVisibleResponse(boolean isVisible) : void
+}
+
+}
+' --------------------------------------------------------- fin package sequence'
+
+
+
+
+
+@enduml

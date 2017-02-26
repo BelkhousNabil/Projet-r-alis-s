@@ -1,0 +1,7 @@
+@startuml
+class TreeFileManagerView extends javafx.scene.control.TreeView {
+	+ TreeFileManagerView(FileManager)
+}
+
+class javafx.scene.control.TreeView<String>
+@enduml

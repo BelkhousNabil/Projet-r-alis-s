@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+  <properties>
+    <title>Source Repository</title>
+    <author>Benjamin Bentmann</author>
+  </properties>
+  <body>
+    <section name="Source Repository">
+      <p>
+        Maven projects use <a href="http://git-scm.com/">Git</a> or <a href="http://subversion.apache.org/">Subversion</a> to manage their source code:
+        decisions to stay with Subversion or move to Git are tracked on <a href="https://cwiki.apache.org/confluence/display/MAVEN/Git+Migration">Maven's Wiki</a>.
+      </p>
+      <p>
+        Instructions on Subversion use can be found in the online book <a href="http://svnbook.red-bean.com/">Version Control with Subversion</a>.
+        Instructions on Git use can be found in the online book <a href="http://git-scm.com/book/">Pro Git</a>.
+        Instructions for using the Apache Software Foundation Git repositories are at <a href="https://git-wip-us.apache.org/">https://git-wip-us.apache.org</a>.
+      </p>
+      <subsection name="Maven Core">
+        <p>
+          The git repository for Maven contains a master branch which is the current development version. There is also a
+          branch for maven-2.2.X or maven-3.0.x.
+        </p>
+        <source> <a href="https://git-wip-us.apache.org/repos/asf/maven.git">https://git-wip-us.apache.org/repos/asf/maven.git</a></source>
+        <p>The <a href="/core-its/">integration tests for the Maven core</a> have their own repository:
+          <source><a href="https://git-wip-us.apache.org/repos/asf/maven-integration-testing.git">https://git-wip-us.apache.org/repos/asf/maven-integration-testing.git</a></source>
+        </p>
+      </subsection>
+      <subsection name="Other Components">
+        <p>
+          The source repositories for the various plugins are in Subversion, listed in the documentation of the respective plugin,
+          reachable via the <a href="/plugins/index.html">plugin index</a>.
+        </p>
+        <p>
+          There are also many shared components and subsystems with their own source repositories, some in Subversion, some in Git.
+        </p>
+        <p>
+          The components in git are:
+          <table>
+            <tr>
+              <td><a href="/archetype/">Apache Maven Archetype</a></td><td><source><a href="https://git-wip-us.apache.org/repos/asf/maven-archetype.git">https://git-wip-us.apache.org/repos/asf/maven-archetype.git</a></source></td>
+            </tr>
+            <tr>
+              <td><a href="/maven-indexer/">Apache Maven Indexer</a></td><td><source><a href="https://git-wip-us.apache.org/repos/asf/maven-indexer.git">https://git-wip-us.apache.org/repos/asf/maven-indexer.git</a></source></td>
+            </tr>
+            <tr>
+              <td><a href="/plugin-testing/">Apache Maven Plugin Testing</a></td><td><source><a href="https://git-wip-us.apache.org/repos/asf/maven-plugin-testing.git">https://git-wip-us.apache.org/repos/asf/maven-plugin-testing.git</a></source></td>
+            </tr>
+            <tr>
+              <td><a href="/scm/">Apache Maven SCM</a></td><td><source><a href="https://git-wip-us.apache.org/repos/asf/maven-scm.git">https://git-wip-us.apache.org/repos/asf/maven-scm.git</a></source></td>
+            </tr>
+            <tr>
+              <td><a href="/surefire/">Apache Maven Surefire</a></td><td><source><a href="https://git-wip-us.apache.org/repos/asf/maven-surefire.git">https://git-wip-us.apache.org/repos/asf/maven-surefire.git</a></source></td>
+            </tr>
+            <tr>
+              <td><a href="/wagon/">Apache Maven Wagon</a></td><td><source><a href="https://git-wip-us.apache.org/repos/asf/maven-wagon.git">https://git-wip-us.apache.org/repos/asf/maven-wagon.git</a></source></td>
+            </tr>
+          </table>
+        </p>
+        <p>
+          Everything in Subversion can be checked-out from a single entry point, referencing each part through svn:externals
+          <source><a href="http://svn.apache.org/viewvc/maven/trunks/">https://svn.apache.org/repos/asf/maven/trunks/</a></source>
+        </p>
+        <p>
+          You can also check out every component separately. The components in Subversion are:
+          <table>
+            <tr>
+              <td><a href="/plugins/">Apache Maven Plugins</a></td>
+              <td><source><a href="https://svn.apache.org/viewvc/maven/plugins/trunk/">https://svn.apache.org/repos/asf/maven/plugins/trunk/</a>                                         </source></td>
+            </tr>
+            <tr>
+              <td><a href="/shared/">Shared components</a>
+              </td>
+              <td><source><a href="https://svn.apache.org/viewvc/maven/shared/trunk/">https://svn.apache.org/repos/asf/maven/shared/trunk/</a></source>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="/maven-release/">Release</a> (Release api and plugin)</td>
+              <td><source><a href="https://svn.apache.org/viewvc/maven/release/trunk/">https://svn.apache.org/repos/asf/maven/release/trunk/</a></source></td>
+            </tr>
+            <tr>
+              <td>A variety of other subsystems (including obsolete trees replaced by git)</td><td><source><a href="https://svn.apache.org/viewvc/maven/">https://svn.apache.org/repos/asf/maven/</a></source>
+              </td>
+            </tr>
+          </table>
+        </p>
+        <p>The sources for this site are available in a separate location:</p>
+        <source><a href="https://svn.apache.org/viewvc/maven/site/trunk">https://svn.apache.org/repos/asf/maven/site/trunk</a></source>
+      </subsection>
+      <subsection name="Anonymous Access">
+        <p>
+          Both subversion and git repositories may be cloned with either http or https. Only read-only access is available
+          for http checkouts.
+        </p>
+        <source> $ svn checkout http://svn.apache.org/repos/asf/maven/site/trunk</source>
+      </subsection>
+      <subsection name="Developer Access">
+        <p>
+          Everyone can access Subversion repositories via HTTP, but committers must checkout Subversion
+          repositories via HTTPS to gain write access:
+        </p>
+	<source>$ svn checkout <a href="https://svn.apache.org/viewvc/maven/site/trunk">https://svn.apache.org/repos/asf/maven/site/trunk</a></source>
+        <p>
+          To commit changes to the repository, execute the following command to commit your changes (<code>svn</code> will
+          prompt you for your password):
+        </p>
+        <source>
+$ svn commit --username your-username -m "A message"</source>
+      </subsection>
+      <subsection name="Access from behind a Firewall">
+        <p>
+          For those users who are stuck behind a corporate firewall which is blocking HTTP access to the Subversion
+          repository, you can try to access it via the developer connection:
+        </p>
+	<source>$ svn checkout <a href="https://svn.apache.org/viewvc/maven/site/trunk">https://svn.apache.org/repos/asf/maven/site/trunk</a></source>
+      </subsection>
+      <subsection name="Access through a Proxy">
+        <p>
+          The Subversion client can go through a proxy, if you configure it to do so. First, edit your <code>servers</code>
+          configuration file to indicate which proxy to use. The file's location depends on your operating system. On
+          Linux or Unix it is located in the directory <code>~/.subversion</code>. On Windows it is in <code>%APPDATA%\Subversion</code>
+          (try <code>echo %APPDATA%</code>, note this is a hidden directory).
+        </p>
+        <p>
+          There are comments in the file explaining what to do. If you don't have that file, get the latest Subversion
+          client and run any command; this will cause the configuration directory and template files to be created.
+        </p>
+        <p>
+          Example: Edit the <code>servers</code> file and add something like:
+        </p>
+        <source>
+[global]
+http-proxy-host = your.proxy.name
+http-proxy-port = 3128</source>
+      </subsection>
+    </section>
+  </body>
+</document>

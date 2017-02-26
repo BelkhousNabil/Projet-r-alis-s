@@ -1,0 +1,25 @@
+@startuml
+
+package usecase.visitor { 
+' -------------------------------- umlreverse.model.diagram.usecase.visitor
+	
+	interface UseCaseVisitor {
+		+visit(UseCaseDiagram) : void
+		+visit(UseCase) : void
+		+visit(Actor) : void
+		+visit(UseCaseGroup) : void
+		+visit(Generalization) : void
+		+visit(Extension) : void
+		+visit(Inclusion) : void
+		+visit(usecase.relation.Association) : void
+	}
+	class SaveStyleUseCaseVisitor implements UseCaseVisitor
+	class SavePlantUmlUseCaseVisitor implements UseCaseVisitor
+	class ToViewUseCaseVisitor implements UseCaseVisitor {
+		+getDiagramMenu() : IUseCaseDiagramMenu
+		+getDiagramEditor() : IUseCaseDiagramEditor
+	}
+}
+' --------------------------------------------------------- fin package visitor
+
+@enduml

@@ -1,0 +1,56 @@
+ ----
+ Parent POMs
+ -----
+ Hervé Boutemy
+ Dennis Lundberg
+ Karl Heinz Marbaise
+ -----
+ 2015-11-01
+ -----
+
+~~ Licensed to the Apache Software Foundation (ASF) under one
+~~ or more contributor license agreements.  See the NOTICE file
+~~ distributed with this work for additional information
+~~ regarding copyright ownership.  The ASF licenses this file
+~~ to you under the Apache License, Version 2.0 (the
+~~ "License"); you may not use this file except in compliance
+~~ with the License.  You may obtain a copy of the License at
+~~
+~~   http://www.apache.org/licenses/LICENSE-2.0
+~~
+~~ Unless required by applicable law or agreed to in writing,
+~~ software distributed under the License is distributed on an
+~~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+~~ KIND, either express or implied.  See the License for the
+~~ specific language governing permissions and limitations
+~~ under the License.
+
+~~ NOTE: For help with the syntax of this file, see:
+~~ http://maven.apache.org/doxia/references/apt-format.html
+
+Parent POMs
+
+ Common configurations are provided in parent POMs
+
+#set( $version = "30" )
+#set( $date = "2016-05-26" )
+
+*----------------------------------------------+--------------+------------+------------------+------------------------+--------------------+
+|| <<POM>>                                     || <<Version>> || <<Release Date>> || <<Parent POM Description>> || <<Source Repository>> || <<Issue Tracking>>
+*----------------------------------------------+--------------+------------+------------------+------------------------+--------------------+
+| {{{./asf/} <<<ASF>>>}}                       | 18           | 2016-05-18 | ASF wide configuration.      | {{{http://svn.apache.org/repos/asf/maven/pom/trunk/asf/}SVN}} | {{{https://issues.apache.org/jira/browse/MPOM/component/12314370}JIRA}}
+*----------------------------------------------+--------------+------------+------------------+------------------------+--------------------+
+| {{{./maven/} <<<Maven>>>}}                   | $version     | $date      | Maven wide configuration.    | {{{http://svn.apache.org/repos/asf/maven/pom/trunk/maven/}SVN}} | {{{https://issues.apache.org/jira/browse/MPOM/component/12314371}JIRA}}
+*----------------------------------------------+--------------+------------+------------------+------------------------+--------------------+
+| {{{./maven-plugins/} <<<Maven Plugins>>>}}   | $version     | $date      | {{{/plugins/}Maven plugins}} configuration. | {{{http://svn.apache.org/repos/asf/maven/plugins/trunk/maven-plugins/}SVN}} | {{{https://issues.apache.org/jira/browse/MPOM/component/12314501}JIRA}}
+*----------------------------------------------+--------------+------------+------------------+------------------------+--------------------+
+| {{{./maven-shared-components/} <<<Maven Shared Components>>>}} | $version | $date | {{{/shared/}Maven shared components}} configuration. | {{{http://svn.apache.org/repos/asf/maven/shared/trunk/maven-shared-components/}SVN}} | {{{https://issues.apache.org/jira/browse/MPOM/component/12314801}JIRA}}
+*----------------------------------------------+--------------+------------+------------------+------------------------+--------------------+
+| {{{./skins/} <<<Maven Skins>>>}}             | $version     | $date      | {{{/skins/}Maven skins}} configuration.   | {{{http://svn.apache.org/repos/asf/maven/skins/trunk/maven-skins/}SVN}} | {{{https://issues.apache.org/jira/browse/MPOM/component/12317104}JIRA}}
+*----------------------------------------------+--------------+------------+------------------+------------------------+--------------------+
+| <<<Maven Archetype Bundles>>>                | $version     | $date      | {{{/archetypes/}Maven Archetypes}} configuration. | {{{http://svn.apache.org/repos/asf/maven/archetypes/trunk/maven-archetype-bundles/}SVN}} | {{{https://issues.apache.org/jira/browse/MARCHETYPES}JIRA}}
+*----------------------------------------------+--------------+------------+------------------+------------------------+--------------------+
+| {{{/apache-resource-bundles/} <<<Apache Resource Bundles>>>}} | 30 | $date | A set of resources to help you building Java resources compliant with Apache rules. | {{{http://svn.apache.org/repos/asf/maven/resources/trunk/apache-resource-bundles/}SVN}} | {{{https://issues.apache.org/jira/browse/MASFRES}JIRA}}
+*----------------------------------------------+--------------+------------+------------------+------------------------+--------------------+
+
+ Parent POMs reference documentations are {{{../pom-archives/}archived here}}.

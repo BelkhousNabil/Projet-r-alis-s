@@ -1,0 +1,34 @@
+@startuml
+
+actor user
+entity parser
+entity antlr
+entity classname
+entity objects
+entity plantuml
+
+user -> parser : parse(file.java)
+parser -> antlr : tree(file.java)
+antlr -> parser : tree
+parser -> classname : new ClassObject
+group for each child of tree
+	alt method
+		parser -> classname : addMethod(new MethodObject(methodname)
+		parser -> objects : addRelation(method.className)
+	else alt attribute
+		parser -> classname : addAttribute(new AttributeObject(attributename)
+		parser -> objects : addRelation(attribute.className)
+	end
+end group
+parser -> objects : add(classname)
+objects -> user : (return)
+
+newpage
+user -> objects : getPlantUML()
+objects -> plantuml : new String()
+group for each classname of objects
+	objects -> classname : getPlantUML()
+	objects -> plantuml : (concat)
+end group
+plantuml -> user : (return)
+@enduml

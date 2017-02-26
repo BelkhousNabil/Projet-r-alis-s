@@ -1,0 +1,301 @@
+@startuml
+package null {
+class long as "long" {
+	--
+}
+class String as "String" {
+	--
+}
+}
+class IDiagramVisitor as "IDiagramVisitor" {
+	--
+}
+class ErrorAbstraction as "ErrorAbstraction" {
+	--
+}
+interface IActor as "IActor" {
+	--
+}
+class File as "File" {
+	--
+}
+class Style as "Style" {
+	--
+}
+class USECASEGROUP_STYLE_ID as "USECASEGROUP_STYLE_ID" {
+	--
+}
+class IStyle as "IStyle" {
+	--
+}
+class Actor as "Actor" {
+	--
+	+ String getStyleId () 
+	+ void accept ( visitor:IUsecaseVisitor, ) 
+}
+class NoteUsecase as "NoteUsecase" {
+	- {static} long serialVersionUID 1L const
+	- Set<IEntityUsecase> UsecaseEntities newHashSet<>() const
+	- Set<IRelation> relations newHashSet<>() const
+	--
+	+ void addUsecaseEntity ( entity:IEntityUsecase, ) 
+	+ void accept ( visitor:IUsecaseVisitor, ) 
+	+ int hashCode () 
+	+ boolean equals ( o:Object, ) 
+	+ void removeUsecaseEntity ( entity:IEntityUsecase, ) 
+	+ Set<IEntityUsecase> getUsecaseEntities () 
+}
+class STYLE_CHANGED_PROPERTY_NAME as "STYLE_CHANGED_PROPERTY_NAME" {
+	--
+}
+class ADiagramCommon as "ADiagramCommon" {
+	--
+}
+class UsecaseDiagram as "UsecaseDiagram" {
+	- Set<Actor> listActors newHashSet<>() const
+	- Set<ISystem> listUseCaseGroups newHashSet<>() const
+	- System DefaultGroup newSystem("root","DefaultGroup",this) const
+	- Set<INoteUsecase> listNotes newHashSet<>() const
+	- Set<IUsecase> listUseCases newHashSet<>() const
+	--
+	+ void addActor ( actor:Actor, ) 
+	+ void addNote ( note:INoteUsecase, ) 
+	+ void addUsecase ( useCase:IUsecase, ) 
+	+ Set<Actor> getActors () 
+	+ Set<IUsecase> getUsecases () 
+	+ void addSystem ( group:ISystem, ) 
+	+ void removeNote ( note:INoteUsecase, ) 
+	+ Set<INoteUsecase> getNotes () 
+	+ DiagramType getType () 
+	+ void accept ( visitor:IDiagramVisitor, ) 
+	+ void removeActor ( actor:Actor, ) 
+	+ void accept ( visitor:IUsecaseVisitor, ) 
+	+ void removeUsecase ( usecase:IUsecase, ) 
+	+ Actor getActor ( name:String, ) 
+	+ IUsecase getUsecase ( name:String, ) 
+	+ void removeSystem ( group:ISystem, ) 
+	+ Set<ISystem> getSystems () 
+	+ System getRootSystem () 
+}
+class long as "long" {
+	--
+}
+interface IUsecase as "IUsecase" {
+	--
+}
+class Iterator as "Iterator" {
+	--
+}
+class Set as "Set" {
+	--
+}
+interface IDiagramCommon as "IDiagramCommon" {
+	--
+}
+class HashSet as "HashSet" {
+	--
+}
+interface IStylizable as "IStylizable" {
+	--
+}
+class System as "System" {
+	- Set<INoteUsecase> listNotes newHashSet<>() const
+	- IUsecaseDiagram ParentDiagram  
+	- Set<Usecase> listUseCases newHashSet<>() const
+	- Set<ISystem> listUseCaseGroups newHashSet<>() const
+	- String UseCaseGroupName  
+	- String id  const
+	- System ParentGroup  
+	--
+	+ IStyle getStyle () 
+	+ void removeGroup ( group:ISystem, ) 
+	+ void addUsecase ( useCase:Usecase, ) 
+	+ void addGroup ( group:ISystem, ) 
+	+ void addStyle ( key:String,  value:String, ) 
+	+ void removeNote ( note:INoteUsecase, ) 
+	+ Set<INoteUsecase> getNotes () 
+	+ void removeUsecase ( useCase:Usecase, ) 
+	+ String getAbsoluteName () 
+	+ String getNameGroup () 
+	+ void addAllStyle ( keyValue:Map<String, String>, ) 
+	+ void clearStyle () 
+	+ void accept ( visitor:IUsecaseVisitor, ) 
+	+ void addNote ( note:INoteUsecase, ) 
+	+ void setDiagram ( parentDiagram:IUsecaseDiagram, ) 
+	+ void setParentGroup ( parentGroup:System, ) 
+	+ Set<ISystem> getGroups () 
+	+ IUsecaseDiagram getDiagram () 
+	+ void removeStyle ( key:String, ) 
+	+ Set<Usecase> getUseCases () 
+	+ void setNameGroup ( useCaseGroupName:String, ) 
+	+ System getParentGroup () 
+}
+class ExportPlantUmlUsecaseVisitor as "ExportPlantUmlUsecaseVisitor" {
+	~ String error null 
+	~ File file  
+	--
+	- String relationToPlantUml ( relation:IRelation, ) 
+	- String prepareCommentToPlantUml ( comment:String, ) 
+	+ void visit ( diagram:IUsecaseDiagram, ) 
+	- void writeRootUsecase ( diagram:IUsecaseDiagram,  writer:BufferedWriter, ) 
+	- char typeLineArrowToPlantUml ( type:TypeLineArrow, ) 
+	- void writeRelations ( diagram:IUsecaseDiagram,  writer:BufferedWriter, ) 
+	- String typeHeadArrowToPlantUml ( type:TypeHeadArrow,  isTail:boolean, ) 
+	- void analyse ( diagram:IUsecaseDiagram, ) 
+	- void writeNotes ( diagram:IUsecaseDiagram,  writer:BufferedWriter, ) 
+	- void writeSystemUsecase ( diagram:IUsecaseDiagram,  writer:BufferedWriter, ) 
+	- void writeActors ( diagram:IUsecaseDiagram,  writer:BufferedWriter, ) 
+}
+class Contract as "Contract" {
+	--
+}
+interface IUsecaseDiagram as "IUsecaseDiagram" {
+	--
+}
+class RefusedAction as "RefusedAction" {
+	--
+}
+class USECASE_STYLE_ID as "USECASE_STYLE_ID" {
+	--
+}
+interface IUsecaseVisitor as "IUsecaseVisitor" {
+	--
+}
+class IRelation as "IRelation" {
+	--
+}
+class ANote as "ANote" {
+	--
+}
+interface IObservable as "IObservable" {
+	--
+}
+class FileWriter as "FileWriter" {
+	--
+}
+interface INote as "INote" {
+	--
+}
+interface IEntityRelation as "IEntityRelation" {
+	--
+}
+interface Serializable as "Serializable" {
+	--
+}
+class String as "String" {
+	--
+}
+class ALL_STYLE_ID as "ALL_STYLE_ID" {
+	--
+}
+class Usecase as "Usecase" {
+	--
+	+ String getStyleId () 
+	+ void accept ( visitor:IUsecaseVisitor, ) 
+}
+class Observable as "Observable" {
+	--
+}
+interface INoteUsecase as "INoteUsecase" {
+	--
+}
+class AUsecaseVisitor as "AUsecaseVisitor" {
+	--
+	+ void visit ( note:INoteUsecase, ) 
+	+ void visit ( actor:IActor, ) 
+	+ void visit ( system:ISystem, ) 
+	+ void visit ( diagram:IUsecaseDiagram, ) 
+	+ void visit ( usecase:IUsecase, ) 
+}
+class IProject as "IProject" {
+	--
+}
+class IOException as "IOException" {
+	--
+}
+class AEntityUsecase as "AEntityUsecase" {
+	- String Name  
+	- Set<INoteUsecase> ListNotes newHashSet<>() const
+	- System parentGroup  
+	--
+	+ void removeNote ( note:INoteUsecase, ) 
+	+ void setName ( name:String, ) 
+	+ System getParentGroup () 
+	+ void addNote ( note:INoteUsecase, ) 
+	+ void setParentGroup ( parentGroup:System, ) 
+	+ Set<INoteUsecase> getNotes () 
+	+ String getName () 
+}
+class ArrayList as "ArrayList" {
+	--
+}
+class BufferedWriter as "BufferedWriter" {
+	--
+}
+interface ISystem as "ISystem" {
+	--
+}
+interface IEntityUsecase as "IEntityUsecase" {
+	--
+}
+class ACTOR_STYLE_ID as "ACTOR_STYLE_ID" {
+	--
+}
+class Map as "Map" {
+	--
+}
+class AbstractClassVisitor as "AbstractClassVisitor" {
+	--
+}
+class AEntityRelation as "AEntityRelation" {
+	--
+}
+IUsecase --|> IEntityUsecase
+System --|> Observable
+UsecaseDiagram --> System
+AEntityUsecase ..|> IEntityUsecase
+Actor --|> AEntityUsecase
+NoteUsecase --|> ANote
+ExportPlantUmlUsecaseVisitor --> File
+AUsecaseVisitor ..|> IUsecaseVisitor
+System --> String
+IUsecaseDiagram --|> Serializable
+AEntityUsecase --|> AEntityRelation
+Actor ..|> IActor
+ExportPlantUmlUsecaseVisitor --> String
+UsecaseDiagram --> Set
+NoteUsecase --> Set
+NoteUsecase --> Set
+UsecaseDiagram --> Set
+System --> System
+UsecaseDiagram --|> ADiagramCommon
+System --> Set
+Usecase ..|> IUsecase
+AEntityUsecase --> Set
+IEntityUsecase --|> Serializable
+NoteUsecase ..|> INoteUsecase
+UsecaseDiagram --> Set
+UsecaseDiagram ..|> IUsecaseDiagram
+Usecase --|> AEntityUsecase
+System --> String
+AEntityUsecase --> String
+System ..|> ISystem
+IUsecase --|> Serializable
+ISystem --|> IStylizable
+INoteUsecase --|> Serializable
+System --> Set
+System --> IUsecaseDiagram
+IActor --|> Serializable
+NoteUsecase --> long
+ExportPlantUmlUsecaseVisitor --|> AbstractClassVisitor
+INoteUsecase --|> INote
+IEntityUsecase --|> IEntityRelation
+INoteUsecase --|> IEntityRelation
+ISystem --|> IObservable
+System --> Set
+UsecaseDiagram --> Set
+ISystem --|> Serializable
+IActor --|> IEntityUsecase
+IUsecaseDiagram --|> IDiagramCommon
+AEntityUsecase --> System
+@enduml

@@ -1,0 +1,68 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry} 	%pour les marges
+\usepackage{color} %pour la definition de nouvelles couleurs
+\usepackage{graphicx} %pour ajouter des images 
+\usepackage[final]{pdfpages} 
+\usepackage[francais]{babel} % ``Franciser '' le document
+\usepackage{lscape}
+\usepackage	
+  [colorlinks=false, urlcolor=red, breaklinks, pagebackref, citebordercolor={0 0 0}, 
+  filebordercolor={0 0 0}, linkbordercolor={0 0 0}, pagebordercolor={0 0 0}, 
+  runbordercolor={0 0 0}, urlbordercolor={0 0 0}, pdfborder={0 0 0}]
+	{hyperref} % Ajouter le package des lien redirigeant sans les encadrer 
+\usepackage{eurosym}
+\usepackage{dirtree}
+\usepackage{comment}
+
+%couleurs pour les morceaux de code
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codered}{rgb}{1,0.1,0.2}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%modificaion des marges
+\geometry{hmargin=2.5cm,vmargin=3cm}
+
+
+%opening
+\title{Architecture Logicielle : UML Reverse}
+
+\title{\bfseries Document Architecture Logicielle \\Projet UML Reverse}
+\geometry{hmargin=2.5cm,vmargin=3cm}
+\begin{document}
+\maketitle
+\begin{center}
+\begin{tabular}{ll}
+  Version~: & 0.1\\[.5em]
+  Date~: & \date{\today}\\[.5em]
+  Rédigé par~: & Yohann \textsc{Henry}\\
+	       & Saad \textsc{Mrabet}\\
+               & Anthony \textsc{Godin}\\
+               & Stephen \textsc{Cauchois}\\
+               & Nabil \textsc{Belkhous}\\[.5em]   
+               & Florian \textsc{Inchingolo}\\
+\end{tabular}
+\end{center}
+
+\newpage
+
+
+
+\subsection{La partie droite}
+Dans cette partie on va commencer par détailler le fonctionnement de la partie droite, en faisant un aperçu sur les deux autres parties. 
+En premier temps la partie gauche de l'interface contient des treeView pour l'ensembles des diagrammes envisagés(Cas d'utilisation,Class et Séquence).En Cliquant sur Diagramme1 par exemple l'action fais appelle
+au controller qui va passer par l'interface IDiagram du Model et grâce au Visitor qu'on pourra déterminer le type de diagramme qu'on va être traiter sur les deux autres parties (partie centrale et partie droite),
+dont cette dernière contient une interface IdiagramMenu qui nous permetterait de faire un ajout des différentes diagrammes sur la vue centrale on se servira des éléments de chaque diagramme sous forme des bouttons.
+ 
+ 
+       
+    \subsubsection{DiagramMenu général} 
+          \begin{center}
+	     \includegraphics[width=20cm]{Image/DiagramGenrDroite.png}
+          \end{center}
+     
+       
+           
+      \end{document} 

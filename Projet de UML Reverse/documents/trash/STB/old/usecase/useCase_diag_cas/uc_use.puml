@@ -1,0 +1,26 @@
+@startuml
+title Diagramme de cas d'utilisation\nde la modification d'un diagramme de\ncas d'utilisation
+
+Actor :user:
+
+rectangle {
+    
+    (Créer/Supprimer/Cacher/Modifier) as (manip)
+    (Cas d'utilisation) as (cas)
+    
+    :user: -- (manip)
+    (manip) <|-- (Entité)
+    (Entité) <|-- (Acteur)
+    (Entité) <|-- (Note)
+ 
+    (Entité) <|-- (cas)
+	
+    (manip) <|-- (Relation)
+
+    note bottom of (Entité)
+        Possibilité de modifier la visibilité 
+        et la position de nos entités
+    end note
+    
+}
+@enduml

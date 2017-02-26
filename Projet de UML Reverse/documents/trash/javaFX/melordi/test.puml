@@ -1,0 +1,113 @@
+@startuml
+annotation java.lang.Override
+class java.util.Arrays
+class java.util.logging.Level
+class java.util.logging.Logger
+class javafx.animation.KeyFrame
+class javafx.animation.KeyValue
+class javafx.animation.Timeline
+class javafx.application.Application
+class javafx.beans.property.IntegerProperty
+class javafx.beans.property.SimpleIntegerProperty
+class javafx.beans.value.ChangeListener
+class javafx.beans.value.ObservableValue
+class javafx.event.EventHandler
+class javafx.geometry.Orientation
+class javafx.scene.Group
+class javafx.scene.Parent
+class javafx.scene.Scene
+class javafx.scene.control.ProgressIndicator
+class javafx.scene.control.RadioButton
+class javafx.scene.control.Slider
+class javafx.scene.control.ToggleGroup
+class javafx.scene.effect.Light
+class javafx.scene.effect.Light.Distant
+class javafx.scene.effect.Lighting
+class javafx.scene.effect.Reflection
+class javafx.scene.image.Image
+class javafx.scene.image.ImageView
+class javafx.scene.input.KeyEvent
+class javafx.scene.input.MouseEvent
+class javafx.scene.layout.GridPane
+class javafx.scene.paint.Color
+class javafx.scene.paint.CycleMethod
+class javafx.scene.paint.LinearGradient
+class javafx.scene.paint.Stop
+class javafx.scene.shape.Rectangle
+class javafx.scene.text.Font
+class javafx.scene.text.Text
+class javafx.scene.transform.Rotate
+class javafx.stage.Stage
+class javafx.util.Duration
+class javax.sound.midi.MidiChannel
+class javax.sound.midi.MidiSystem
+class javax.sound.midi.MidiUnavailableException
+class javax.sound.midi.Synthesizer
+class melordi.ChangeInstru
+class melordi.Instru
+class melordi.Key
+class melordi.Keyboard
+class melordi.Melordi
+class melordi.Metronome
+class melordi.Sound
+melordi.ChangeInstru ..> java.lang.Override
+melordi.ChangeInstru ..> javafx.beans.value.ChangeListener
+melordi.ChangeInstru ..> javafx.beans.value.ObservableValue
+melordi.ChangeInstru --|> javafx.scene.Parent
+melordi.ChangeInstru ..> javafx.scene.control.RadioButton
+melordi.ChangeInstru ..> javafx.scene.control.ToggleGroup
+melordi.ChangeInstru ..> javafx.scene.image.Image
+melordi.ChangeInstru ..> javafx.scene.image.ImageView
+melordi.ChangeInstru ..> javafx.scene.layout.GridPane
+melordi.Instru ..> java.util.logging.Level
+melordi.Instru ..> java.util.logging.Logger
+melordi.Instru ..> javafx.beans.property.IntegerProperty
+melordi.Instru ..> javafx.beans.property.SimpleIntegerProperty
+melordi.Instru ..> javax.sound.midi.MidiChannel
+melordi.Instru ..> javax.sound.midi.MidiSystem
+melordi.Instru ..> javax.sound.midi.MidiUnavailableException
+melordi.Instru ..> javax.sound.midi.Synthesizer
+melordi.Key ..> java.lang.Override
+melordi.Key ..> javafx.event.EventHandler
+melordi.Key --|> javafx.scene.Parent
+melordi.Key ..> javafx.scene.effect.Light
+melordi.Key ..> javafx.scene.effect.Light.Distant
+melordi.Key ..> javafx.scene.effect.Lighting
+melordi.Key ..> javafx.scene.input.MouseEvent
+melordi.Key ..> javafx.scene.paint.Color
+melordi.Key ..> javafx.scene.shape.Rectangle
+melordi.Key ..> javafx.scene.text.Font
+melordi.Key ..> javafx.scene.text.Text
+melordi.Keyboard ..> java.lang.Override
+melordi.Keyboard ..> java.util.Arrays
+melordi.Keyboard ..> javafx.event.EventHandler
+melordi.Keyboard --|> javafx.scene.Parent
+melordi.Keyboard ..> javafx.scene.effect.Reflection
+melordi.Keyboard ..> javafx.scene.input.KeyEvent
+melordi.Keyboard ..> javafx.scene.paint.Color
+melordi.Keyboard ..> javafx.scene.paint.CycleMethod
+melordi.Keyboard ..> javafx.scene.paint.LinearGradient
+melordi.Keyboard ..> javafx.scene.paint.Stop
+melordi.Keyboard ..> javafx.scene.shape.Rectangle
+melordi.Melordi ..> java.lang.Override
+melordi.Melordi --|> javafx.application.Application
+melordi.Melordi ..> javafx.scene.Group
+melordi.Melordi ..> javafx.scene.Scene
+melordi.Melordi ..> javafx.scene.paint.Color
+melordi.Melordi ..> javafx.stage.Stage
+melordi.Metronome ..> javafx.animation.KeyFrame
+melordi.Metronome ..> javafx.animation.KeyValue
+melordi.Metronome ..> javafx.animation.Timeline
+melordi.Metronome --|> javafx.scene.Parent
+melordi.Metronome ..> javafx.scene.image.Image
+melordi.Metronome ..> javafx.scene.image.ImageView
+melordi.Metronome ..> javafx.scene.transform.Rotate
+melordi.Metronome ..> javafx.util.Duration
+melordi.Sound ..> java.lang.Override
+melordi.Sound ..> javafx.beans.value.ChangeListener
+melordi.Sound ..> javafx.beans.value.ObservableValue
+melordi.Sound ..> javafx.geometry.Orientation
+melordi.Sound --|> javafx.scene.Parent
+melordi.Sound ..> javafx.scene.control.ProgressIndicator
+melordi.Sound ..> javafx.scene.control.Slider
+@enduml

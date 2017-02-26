@@ -1,0 +1,575 @@
+\documentclass[hidelinks, a4paper,11pt,twoside,final]{article}
+
+\usepackage[english,francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[pdftex]{graphicx}
+\usepackage{adjustbox}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage[french]{varioref}
+\usepackage{comment}
+\usepackage{dirtree}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[L]{}
+\fancyhead[C]{\textbf{UML Reverse}}
+\fancyhead[R]{\includegraphics[width=2cm]{img/universite-rouen.jpg}}
+
+%Opening
+\title{\bfseries Cahier des recettes\\Projet UML Reverse}
+\geometry{hmargin=2.5cm,vmargin=3cm}
+\begin{document}
+\maketitle
+\begin{center}
+\begin{tabular}{ll}
+  Version~: & 0.1\\[.5em]
+  Date~: & \date{\today}\\[.5em]
+  Rédigé par~: & Nabil \textsc{Belkhous}\\
+               & Anthony \textsc{Godin}\\[.5em]
+  Relu par~:   & Anthony \textsc{Godin}\\
+               & Florian \textsc{Inchingolo}\\
+               & Nicolas \textsc{Meniel}\\[.5em]
+\end{tabular}
+\end{center}
+
+%Table of contents
+\newpage
+\tableofcontents
+
+%Contents
+\newpage
+\section{Introduction}
+  Ce document a le but de définir les tests nous permettant de prouver que le projet en cours d’élaboration respecte bien le contrat
+  en accord avec le client.\\
+  Chaque cas d’utilisation a un test défini, ainsi que chaque exigence fonctionnelle.
+
+\section{Cas d'utilisation et exigences fonctionnelles}
+  Voir le document STB.
+
+\section{Terminologie et sigles utilisés}
+  Se référer au document Terminologie.
+  \begin{description}
+    \item[Test de modification d’élément/entité~:]~\\ Ici on veut dire tester toutes les modifications possibles du contenu de l’élément/entité défini dans la STB.
+    Ajout, suppression, cachement, affichage du contenu.
+    \item[(Action) de toutes les manières possibles~:]~\\ Nous n’avons pas encore défini toutes les manières de réaliser une action graphiquement.
+    Actuellement des boutons sont prévus, mais le client pourra être plus précis au moment où nous aurons une version à lui présenter.
+    Il y aura un manuel d’utilisation qui listera toutes les manières possibles d’exécuter une action. Il faudra se référer à ce document pour tester toutes
+    les manières possibles d’exécuter une action.
+  \end{description}
+
+
+\section{Environnement de test}
+    Le projet est produit avec Maven. Maven nous servira de gestionnaire de test. Chaque fichier de classe a un fichier de test qui lui est associé.
+    Le code source sera dans le dossier main et les tests dans un dossier test. La compilation d’une classe relancera tous les tests qui lui sont associés.
+    Bien sûr, une fois qu’une classe est compilée, elle le sera à nouveau seulement si elle est modifiée, ce qui forcera à refaire tous les tests.
+    JUnit est intégré dans Maven. Voici l’arboresence des fichiers.
+    \dirtree{%
+      .1 src.
+      .2 main.
+      .3 java.
+      .4 com.
+      .5 monprojet.
+      .6 Class.java.
+      .2 test.
+      .3 java.
+      .4 com.
+      .5 monprojet.
+      .6 ClassTest.java.
+    }
+
+\section{Responsabilités et stratégie}
+  \begin{itemize}
+   \item \textbf{Responsable des tests}~: Nabil \textsc{Belkhous}
+  \end{itemize}
+  Le responsable des tests est la personne chargée de vérifier que tous les tests annoncés dans ce document sont validés.\\
+  Les tests seront écrits par l’ensemble de l’équipe. Chaque membre écrit les tests du code qu’il produit. Les développeurs ne coderont qu’une classe à la fois.
+  Toute classe devra être testée et approuvée avant d’être définie comme terminée. Le développeur pourra ensuite (et seulement ensuite) passer
+  au développement de la classe suivante.\\
+  Les tests seront effectués à l’aide de JUnit et Maven de la façon décrite dans la section «~Environnement de test~».
+
+\section{Tests fonctionnels}
+  On ne notera pas les contraintes de bon sens. Il est évident qu’on a besoin d’un minimum de mémoire quand on enregistre un fichier. On notera aussi qu’on ne peut pas nommer deux
+  fichiers avec le même nom s’ils sont dans le même dossier.
+
+  \subsection*{Créer un projet}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+	{Identifiant du test~:} & \multicolumn{2}{|p{10cm}|}{TEST\_1} \\\hline
+	{Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{IHM\_10} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Créer un projet} \\\hline
+        {Contraintes~:} & \multicolumn{2}{|p{10cm}|}{} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Créer un projet de toutes les manières possibles.} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{L’application demande à l’utilisateur de donner le chemin où
+                              il veut enregistrer son projet sur son ordinateur.
+                              Une fois donné, un dossier au chemin donné par l’utilisateur sera créé.
+                              } \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+
+    \subsection*{Ouvrir un projet}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+	{Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_2} \\\hline
+	{Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{IHM\_20} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Ouvrir un projet} \\\hline
+        {Contraintes~:} & \multicolumn{2}{|p{10cm}|}{Il faut que le projet existe.} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Ouvrir un projet de toutes les manières possibles.} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{L’application demande à l’utilisateur de lui donner le chemin du projet.
+                             Les dossiers dans les projets sont bien lus et affichés par l’application, ainsi que tous les diagrammes présents
+                             dans les fichiers src avec leurs fichiers de paramètres.} \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+
+     \subsection*{Supprimer un projet}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_3} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{IHM\_20} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Supprimer un projet} \\\hline
+        {Contraintes~:} & \multicolumn{2}{|p{10cm}|}{Le projet doit exister} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Supprimer un projet de toutes les manières possibles.} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{L’application demande à l’utilisateur de sélectionner le projet.
+                              Le dossier du projet selectionné est supprimé avec tous ses dossiers fils} \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+
+    \subsection*{Sauvegarder un projet}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_4} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{IHM\_20} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Sauvegarder un projet} \\\hline
+        {Contraintes~:} & \multicolumn{2}{|p{10cm}|}{Il faut que le projet existe.} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Sauvegarder un projet de toutes les manières possibles} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{L’application demande à l’utilisateur de lui spécifier quel projet il veut sauvegarder si ce n’est pas déjà fait.
+                            Les diagrammes (src et paramètres) du projet ont tous été sauvegardés.} \\\hline
+    {Test supplémentaire~:} & \multicolumn{2}{|p{10cm}|}{Si l’utilisateur charge un projet juste après l’avoir sauvegardé, il devrait
+                                pouvoir visualiser les mêmes diagrammes qu’au moment de la sauvegarde.} \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+
+    \subsection*{Créer un diagramme}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_5} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{IHM\_30 - DIA\_10 - DIA\_30 - DIA\_40 - DIA\_50} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Créer un diagramme} \\\hline
+        {Contraintes~:} & \multicolumn{2}{|p{10cm}|}{} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Créer un diagramme de toutes les manières possibles} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{L’application demande à l’utilisateur de sélectionner dans quel projet il veut enregistrer le diagramme ou
+                             en créer un.
+                             Elle lui demande également le type du diagramme (cas d’utilisation, séquence ou classe) ainsi qu’un nom.
+                                     Le nom ne pourra pas être le même qu’un autre diagramme du même type du même projet. Si c’est le cas,
+                                     l’application le signalera et proposera à l’utilisateur d’écraser le fichier correspondant.
+                             Initialise les objets internes à l’application du type de diagramme en question.
+                             Le diagramme est affiché (vide) sur l’application (partie graphique).
+                             Deux fichiers du nom du diagramme sont créés dans les dossiers src et parameters
+                             dans le dossier du type du diagramme du projet séléctionné.} \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+
+    \subsection*{Sauver un diagramme}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_6} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{IHM\_30} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Sauver un diagramme} \\\hline
+        {Contraintes~:} & \multicolumn{2}{|p{10cm}|}{Il faut que le diagramme existe} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Sauver un diagramme de toutes les manières possibles} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{Les modifications apportés sur le digramme depuis sa dernière sauvegarde ont été enregistrés
+        dans les fichiers lui correspondant} \\\hline
+    {Test supplémentaire~:} & \multicolumn{2}{|p{10cm}|}{Si l’utilisateur charge un diagramme juste après l’avoir sauvegardé, il devrait
+                                pouvoir visualiser le même diagramme qu’au moment de la sauvegarde.} \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+
+    \subsection*{Supprimer un diagramme}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_7} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{IHM\_30} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Supprimer un diagramme} \\\hline
+        {Contraintes~:} & \multicolumn{2}{|p{10cm}|}{Il faut que le diagramme existe} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Supprimer un diagramme de toutes les manières possibles} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{Les fichiers correspondants seront supprimés (dans src et parameters).} \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+
+    \subsection*{Ouvrir un diagramme}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_8} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{IHM\_30} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Ouvrir un diagramme} \\\hline
+        {Contraintes~:} & \multicolumn{2}{|p{10cm}|}{Le diagramme doit exister} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Ouvrir un diagramme de toutes les manières possibles} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{L’application demande à l’utilisateur de sélectionner un diagramme.
+                              Le diagramme est affiché sur l’application (partie graphique)} \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+    
+     \subsection*{Charger un fichier PlantUML}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_8} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{IHM\_30} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Charger un fichier PlantUML} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Charger un ficier PlantUML de toutes les façons possibles} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{Un diagramme est chargé en mémoire et affiché graphiquement tel qu’il est spécifié dans le fichier PlantUML
+        Un fichier de style lui a été affecté.} \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+    
+    
+    \subsection*{Zoomer/Dézoomer un diagramme}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_9} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{IHM\_40} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Zoomer un diagramme} \\\hline
+        {Contraintes~:} & \multicolumn{2}{|p{10cm}|}{Le diagramme doit être ouvert} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Zoomer/Dézoomer un diagramme de toutes les manières possibles} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{On voit visuellement que le zoom/dézoom est appliqué.} \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+    
+     \subsection*{Exporter un diagramme en PlantUML}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_12} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{IHM\_70 - EXF\_50} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Exporter un diagramme en PlantUML} \\\hline
+        {Contraintes~:} & \multicolumn{2}{|p{10cm}|}{Il faut que le diagramme existe et soit ouvert} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Exporter un diagramme en PlantUML de toutes les manières possibles} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{L’application demande à l’utilisateur où il veut enregistrer le fichier.
+                             Un fichier PlantUML représentant le diagramme est créé où l’utilisateur l’a demandé.} \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+
+
+    \subsection*{Exporter un diagramme en image}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_13} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{IHM\_80} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Exporter un diagramme en image} \\\hline
+        {Contraintes~:} & \multicolumn{2}{|p{10cm}|}{Il faut que le diagramme existe et soit ouvert} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Exporter un diagramme en image de toute les manières possibles} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{L’application demande à l’utilisateur où il veut enregistrer l’image.
+                              Puis un fichier image est créé où l’utilisateur l’a demandé et représentant
+                              visuellement la même chose que le diagramme affiché par l’application} \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+
+    \subsection*{Imprimer un diagramme}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_14} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{IHM\_90} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Imprimer un diagramme} \\\hline
+        {Contraintes~:} & \multicolumn{2}{|p{10cm}|}{Il faut que le diagramme existe et soit ouvert} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Imprimer un diagramme de toutes les manières possibles} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{L’impression s’exécute correctement} \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+
+
+    \subsection*{Exporter un diagramme UML en PlantUML}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_15} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Exporter un diagramme UML en PlantUML} \\\hline
+        {Contraintes~:} & \multicolumn{2}{|p{10cm}|}{Il faut que le diagramme existe et soit ouvert} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Exporter un diagramme UML en PlantUML de toutes les manières possibles} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{L’application demande à l’utilisateur où il veut enregistrer le dossier.
+                             Un dossier représentant le diagramme est créé où l’utilisateur l’a demandé.} \\\hline
+        {Test supplémentaire~:} & \multicolumn{2}{|p{10cm}|}{Importer le dossier exporté visuellement le même diagramme.
+							    Au moment de l’export d’un diagramme, sauvegarder le diagramme (celui qui est modélisé).
+							    Recharger le diagramme et comparer la première modélisation à la deuxième. } \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+    
+    \subsection*{Importer un PlantUML en diagramme UML}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_16} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{IHM\_100} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Importer un PlantUML en diagramme UML} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Importer un PlantUML en diagramme UML de toutes les manières possibles} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{L’application charge et affiche le diagramme en question} \\\hline
+        {Test supplémentaire~:} & \multicolumn{2}{|p{10cm}|}{Importer le dossier exporté visuellement le même diagramme.
+							    Au moment de l’export d’un diagramme, sauvegarder le diagramme (celui qui est modélisé).
+							    Recharger le diagramme et comparer la première modélisation à la deuxième. } \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+
+    
+    \subsection*{Reverse}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_17} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{DIA\_60 - DIA\_70 - DIA\_80 - EXF\_30} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Reverse} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Générer un diagramme en Reverse de toutes les manières possibles sur un fichier écrit en Java 1.7} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{Toutes les classes du code source sont bien représentées dans le diagramme} \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newpage
+
+    \subsection*{Modification d’un diagramme}
+    Ici on testera les fonctionnalités de la modification de diagramme visuellement.
+    Les cases correspondant aux fonctionnalités testées et approuvées doivent être remplies par \textcolor{green}{\textbf{Fait}}.\\
+    \\
+    Tests d’ajout, de suppression, d’affichage, de cachement et de modification d’éléments~:\\
+    \begin{tabular}{|c|c|c|c|c|}\hline
+    {Identifiant~:} & \multicolumn{4}{|l|}{TEST\_18} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{4}{|p{10cm}|}{MOD\_10 - MOD\_20 - MOD\_30 - MOD\_60 - MOD\_80 - MOD\_90 - MOD\_100} \\\hline
+    \multicolumn{5}{|c|}{\textbf{Diagramme de cas d’utilisation}} \\\hline
+    {\textbf{Éléments}} & {Ajouter} & {Supprimer} & {Afficher/cacher} & {Modification} \\\hline
+    {Relation de généralisation} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Relation d’extension} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Relation d’inclusion} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Relation d’association} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Note} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Frontière} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}}\\\hline
+    {Acteur} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Cas d’utilisation} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    \multicolumn{5}{|c|}{\textbf{Diagramme de classe}} \\\hline
+    {\textbf{Éléments}} & {Ajouter} & {Supprimer} & {Afficher/cacher} & {Modification}\\\hline
+    {Relation d’implémentation} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Relation d’héritage} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Relation de composition} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Relation d’agrégation} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Relation d’association} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Relation de dépendance} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Énumération} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Classe abstraite} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Interface} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Classe} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Note} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Paquetage} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}}\\\hline
+    \multicolumn{5}{|c|}{\textbf{Diagramme de séquence}}\\\hline
+    {\textbf{Éléments}} & {Ajouter} & {Supprimer} & {Afficher/cacher} & {Modification} \\\hline
+    {Message} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}}\\\hline
+    {Acteur} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}}\\\hline
+    {Objet} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}}\\\hline
+    {Note} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}}\\\hline
+    {for} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}}\\\hline
+    {alt/else} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}}\\\hline
+    {ref} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}}\\\hline
+    {loop} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}}\\\hline
+    {opt} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}}\\\hline
+    
+    \end{tabular}
+    \\
+    \newpage
+
+    Tests de déplacement et de changement de couleur d’entités~:\\
+    (Ne pas oublier que le déplacement d’une entité reliée à une relation doit faire suivre la relation)\\
+    \begin{tabular}{|c|c|c|}\hline
+    {Identifiant~:} & \multicolumn{2}{|l|}{TEST\_19} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{MOD\_40 - MOD\_50} \\\hline
+    \multicolumn{3}{|c|}{\textbf{Diagramme de cas d’utilisation}} \\\hline
+    {\textbf{Entité}} & {Déplacer} & {Modifier la couleur} \\\hline
+    {Note} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Frontière} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}}\\\hline
+    {Acteur} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Cas d’utilisation} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    \multicolumn{3}{|c|}{\textbf{Diagramme de classe}} \\\hline
+    {\textbf{Entité}} & {Déplacer} & {Modifier la couleur} \\\hline
+    {Énumération} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Classe abstraite} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Interface} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Classe} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}} \\\hline
+    {Note} & {\textcolor{green}{\textbf{Fait}}} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+    {Paquetage} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}}\\\hline
+    \multicolumn{3}{|c|}{\textbf{Diagramme de séquence}} \\\hline
+    {\textbf{Entité}} & {Déplacer} & {Modifier la couleur} \\\hline
+    {Acteur} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} \\\hline
+    {Objet} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} \\\hline
+    {Note} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} \\\hline
+    {for} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} \\\hline
+    {alt/else} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} \\\hline
+    {ref} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} \\\hline
+    {loop} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} \\\hline
+    {opt} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} \\\hline
+    \end{tabular}
+    \\
+    \newline
+
+     \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_20} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{MOD\_70} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Modifier le style d’une flèche} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Modifier le style d’une flèche de toutes les manières possibles} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{Le style de la flèche a été changé visuellement et respecte l’UML2} \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_21} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{MOD\_110} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Inverser le sens d’une flèche} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Inverser le sens d’une flèche de toutes les manières possibles} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{Le sens de la flèche a été changé et respecte UML2} \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+
+
+    \begin{center}
+    \begin{tabular}{|l|p{8cm}|r|c|}
+        \hline\multicolumn{4}{|c|}{Modification d’un diagramme de cas d’utilisation} \\\hline
+        {Identifiant~:} & \multicolumn{3}{|p{10cm}|}{TEST\_22} \\\hline
+        {\textbf{Numéro}} & {\textbf{Description}} & {\textbf{Priorité}} & {\textbf{Testé et approuvé}}\\\hline
+        {USE\_10} & {Modifier le texte d’une note} & {Indispensable} & {\textcolor{green}{\textbf{Fait}}}\\\hline
+        {USE\_20} & {Modifier le nom d’une frontière. Ce nom est une chaîne de caractères quelconque.} & {Indispensable} & {\textcolor{green}{\textbf{Fait}}} \\\hline
+        {USE\_30} & {Modifier le nom d’un acteur. Ce nom est une chaîne de caractères quelconque.} & {Indispensable} & {\textcolor{green}{\textbf{Fait}}} \\\hline
+        {USE\_40} & {Modifier le texte d’un cas d’utilisation. Ce texte est une chaîne de caractères quelconque.} & {Indispensable} & {\textcolor{green}{\textbf{Fait}}} \\\hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{|l|p{8cm}|r|c|}
+        \hline\multicolumn{4}{|c|}{Modification d’un diagramme de classes} \\\hline
+        {Identifiant~:} & \multicolumn{3}{|p{10cm}|}{TEST\_23} \\\hline
+        {\textbf{Identification}} & {\textbf{Description}} & {\textbf{Priorité}} & {\textbf{Testé et approuvé}}\\\hline
+        {CLA\_10} & {Modifier le nom d’un objet} & {Indispensable} & {\textcolor{green}{\textbf{Fait}}} \\\hline
+        {CLA\_20} & {Changer le type d’un objet} & {Indispensable} & {\textcolor{green}{\textbf{Fait}}} \\\hline
+        {CLA\_30} & {Modifier un attribut} & {Indispensable} & {\textcolor{green}{\textbf{Fait}}} \\\hline
+        {CLA\_40} & {Modifier une méthode} & {Indispensable} & {\textcolor{green}{\textbf{Fait}}} \\\hline
+        {CLA\_50} & {Modifier la visibilité d’un attribut ou d’une méthode} & {Indispensable} & {\textcolor{green}{\textbf{Fait}}} \\\hline
+        {CLA\_60} & {Modifier le texte d’une note} & {Indispensable} & {\textcolor{green}{\textbf{Fait}}} \\\hline
+        {CLA\_70} & {Modifier le nom d’un paquetage} & {Indispensable} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}} \\\hline
+        {CLA\_80} & {Modifier un objet (son nom, ses attributs et ses méthodes) contenu par un paquetage} & {Indispensable} & {\textcolor{green}{\textbf{Fait}}} \\\hline
+        {CLA\_90} & {Redimensionner un paquetage et un objet} & {Indispensable} & {\textcolor{green}{\textbf{Fait}}} \\\hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{|l|p{8cm}|r|c|}
+        \hline\multicolumn{4}{|c|}{Modification d’un diagramme de séquence} \\\hline
+        {Identifiant~:} & \multicolumn{3}{|p{10cm}|}{TEST\_24} \\\hline
+        {\textbf{Numéro}} & {\textbf{Description}} & {\textbf{Priorité}} & {\textbf{Testé et approuvé}}\\\hline
+        {SEQ\_10} & {Modifier le nom d’un acteur. Ce nom est une chaîne de caractères quelconque} & {Indispensable} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}}\\\hline
+        {SEQ\_20} & {Modifier le nom d’un objet} & {Indispensable} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}}\\\hline
+        {SEQ\_30} & {Modifier le texte d’une note} & {Indispensable} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}}\\\hline
+        {SEQ\_40} & {Modifier le type d’un cadre d’itération~: for, alt, ref, etc.} & {Indispensable} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}}\\\hline
+        {SEQ\_50} & {Modifier le texte contenu dans un cadre d’itération} & {Indispensable} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}}\\\hline
+        {SEQ\_60} & {Modifier les messages contenus dans un cadre d’itération} & {Indispensable} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}}\\\hline
+        {SEQ\_70} & {Modifier la ligne de temps d’un objet} & {Indispensable} & {\textcolor{yellow}{\textbf{Annulé (Optionnel)}}}\\\hline
+    \end{tabular}
+\end{center}
+
+
+\section{Test des exigences fontionnelles}
+\subsection*{Exigences fonctionnelles}
+  L’exigence EXF\_10 n’a pas de test associé. L’exigence est triviale.\\ 
+  TEST\_16 vérifie EXF\_30.\\
+  TEST\_11 vérifie EXF\_50.
+  
+\subsection*{Test}
+  \subsection*{L’ergonomie}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_25} \\\hline
+      {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{EXF\_20} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{L’ergonomie} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Réalisation d'un sondage pour tester la facilité et l'efficacité de l'application} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{Toutes les actions doivent être faciles d’utilisation.
+                              On doit pouvoir faire n’importe quelle action en au plus 4 clics.
+                              Manipuler un diagramme doit être facile.} \\\hline
+    {Test supplémentaire~:} & \multicolumn{2}{|p{10cm}|}{On pourra faire tester les versions graphiques au client, mais aussi aux étudiants
+                                sans leur expliquer comment fonctionne l’application. S’ils arrivent facilement et rapidement
+                                à maîtriser le logiciel alors le test sera réussi. On prendra également leurs avis et leurs conseils.} \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+
+    \subsection*{UML2}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_26} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{EXF\_40} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{UML2} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Manipuler les diagrammes} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{Toutes les actions possibles en UML2 doivent pouvoir être faites avec l’application} \\\hline
+        {Test supplémentaire~:} & \multicolumn{2}{|p{10cm}|}{Lister toutes les actions possibles en UML2 avec le client et les effectuer sur le produit.} \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+
+     \subsection*{Entités de même nom}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_27} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{EXF\_60} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Entités de même nom} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Nommer deux entités dans un même diagramme avec le même nom} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{L’application prévient que ce n’est pas possible} \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+
+    \subsection*{Modulaire}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_28} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{EXF\_70} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Modulaire} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Une fois la structure logicielle terminée, on doit pouvoir rajouter des fonctionnalités facilement en étendant le code} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{L’extension du code doit être possible. Imaginer à la fin de la rédaction du DAL la façon dont nous
+        pouvons étendre l’application pour implémenter des fonctionnalités telles que l’édition de nouveaux diagrammes.} \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline
+
+    \subsection*{Fonctionnel sur les ordinateurs de l’université}
+    \begin{tabular}{|r|p{5cm}|p{5cm}|}\hline
+    {Identifiant~:} & \multicolumn{2}{|p{10cm}|}{TEST\_28} \\\hline
+    {Identifiant de l’exigence~:} & \multicolumn{2}{|p{10cm}|}{EXF\_80} \\\hline
+        {Objet~:} & \multicolumn{2}{|p{10cm}|}{Fonctionnel sur les ordinateur de l'université} \\\hline
+        {Action~:} & \multicolumn{2}{|p{10cm}|}{Tester l’application à l’université} \\\hline
+        {Résultat attendu~:} & \multicolumn{2}{|p{10cm}|}{L’application doit parfaitement marcher} \\\hline
+        {État~:} & {\textcolor{green}{\textbf{Fait}}} & {Le~: 03/05/2016 } \\\hline
+    \end{tabular}
+    \\
+    \newline         
+
+\section{Qualité}
+Toutes les fonctionnalités doivent être faites rapidement sur l’application (moins d’une seconde pour chaque action).
+Le reverse devra s’exécuter en moins de 30 secondes.
+
+\section{Satisfaction du client}
+Le but final de l’application est de satisfaire le client. Pour ce faire, les tests ici présents vérifient que l’application finale respecte bien tous les points de la STB.
+Chaque cas d’utilisation doit être implanté.
+Les tests ici présents doivent également tous être respectés. On veillera à ce qu’il ne reste plus de «~\textcolor{green}{\textbf{Fait}}~».
+De plus, on effectuera des livraisons régulières au client (tous les mois) en s’assurant qu’il est parfaitement satisfait de ce qu’on a fait.
+On mettra l’accent sur l’ergonomie de l’application et sur la qualité.
+
+\end{document}

@@ -1,0 +1,47 @@
+@startuml
+
+package ui.component {
+    package usecase {
+        class UseCaseDiagramEditor
+
+        class ActorGraphic
+        class UseCaseGraphic
+        abstract AClassObjectGraphic
+
+        interface IUseCaseGroupGraphic
+        class UseCaseGroupGraphic
+
+        class NameGraphic
+        class NameGraphic
+
+        interface IUseCaseEntityGraphic
+    } 
+    
+    package class {
+        class ClassDiagramEditor
+        interface IEntityGraphic
+        class ClassGraphic
+        class InterfaceGraphic
+        class EnumGraphic
+        abstract AClassObjectGraphic
+
+        interface IPackageGraphic
+        class PackageGraphic
+
+
+        class AttributeGraphic
+        class MethodeGraphic
+    }
+    package common {
+        interface IClassEntityGraphic
+        abstract AEntityGraphic
+        interface IElementGraphic
+        abstract AElementGraphic
+    }
+}
+
+'-----------------------------
+'---------DEFINITIONS
+'----------------------------- 
+
+@enduml

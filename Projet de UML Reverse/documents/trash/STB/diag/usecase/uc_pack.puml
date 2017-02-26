@@ -1,0 +1,27 @@
+@startuml
+left to right direction
+title Cas d'utilisation de la modification\nd'un diagramme de paquetage
+
+Actor :user:
+
+rectangle {
+    (Créer/Supprimer/Cacher/Modifier) as (manip)
+
+    :user: -- (manip)
+    :user: -- (Déplacer)
+
+    (Déplacer) <|-- (Entité)
+    (Entité) <|-- (Note)
+    (Entité) <|-- (Package)
+
+    (Package) <|.. "Extend"(Classe) 
+
+    (manip) <|-- (Entité)
+    (Relation) as (rel)
+    (manip) <|-- (rel)
+
+    (rel) <|-- (Dépendance accède)
+    (rel) <|-- (Dépendance importe)
+    (rel) <|-- (Généralisation)
+}
+@enduml

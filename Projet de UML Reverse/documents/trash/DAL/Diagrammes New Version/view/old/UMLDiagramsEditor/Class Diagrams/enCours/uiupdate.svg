@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="229pt" style="width:462px;height:229px;" version="1.1" viewBox="0 0 462 229" width="462pt">
+    <defs>
+        <filter height="300%" id="f1" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g>
+        <rect fill="#FEFECE" filter="url(#f1)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="120" x="223" y="48.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="106" x="230" y="68.292">t: ToViewVisitor</text>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="66" x2="66" y1="38.2969" y2="190.9922"/>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="174" x2="174" y1="38.2969" y2="190.9922"/>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="285" x2="285" y1="80.9453" y2="190.9922"/>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="407" x2="407" y1="38.2969" y2="190.9922"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="113" x="8" y="3"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="99" x="15" y="22.9951">MainController</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="113" x="8" y="189.9922"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="99" x="15" y="209.9873">MainController</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="74" x="135" y="3"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="60" x="142" y="22.9951">IDiagram</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="74" x="135" y="189.9922"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="60" x="142" y="209.9873">IDiagram</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="120" x="223" y="189.9922"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="106" x="230" y="209.9873">t: ToViewVisitor</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="96" x="357" y="3"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="82" x="364" y="22.9951">BorderPane</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="96" x="357" y="189.9922"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="82" x="364" y="209.9873">BorderPane</text>
+        <polygon fill="#A80036" points="211,65.2969,221,69.2969,211,73.2969,215,69.2969" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="66.5" x2="217" y1="69.2969" y2="69.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="25" x="73.5" y="64.3638">new</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="120" x="223" y="48.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="106" x="230" y="68.292">t: ToViewVisitor</text>
+        <polygon fill="#A80036" points="162,110.5938,172,114.5938,162,118.5938,166,114.5938" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="66.5" x2="168" y1="114.5938" y2="114.5938"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="58" x="73.5" y="109.6606">accept(t)</text>
+        <polygon fill="#A80036" points="395,139.7266,405,143.7266,395,147.7266,399,143.7266" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="66.5" x2="401" y1="143.7266" y2="143.7266"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="205" x="73.5" y="138.7935">add(t.getDiagramMenu(), EAST)</text>
+        <polygon fill="#A80036" points="395,168.8594,405,172.8594,395,176.8594,399,172.8594" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="66.5" x2="401" y1="172.8594" y2="172.8594"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="224" x="73.5" y="167.9263">add(t.getDiagramEditor(), CENTER)</text>
+    </g>
+</svg>

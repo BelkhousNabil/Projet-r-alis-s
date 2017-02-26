@@ -1,0 +1,18 @@
+@startuml
+
+class b extends a {
+  +test() : void
+  -count : int
+  -{static}id : int
+  ENUM
+}
+
+interface a
+
+class c {
+  test
+}
+
+c --|> b
+
+@enduml

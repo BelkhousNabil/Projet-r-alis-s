@@ -1,0 +1,211 @@
+ ------
+ Guide to Developing Maven
+ ------
+ Emmanuel Venisse
+ Trygve Laugstol
+ Brett Porter
+ ------
+ 2015-01-04
+ ------
+
+~~ Licensed to the Apache Software Foundation (ASF) under one
+~~ or more contributor license agreements.  See the NOTICE file
+~~ distributed with this work for additional information
+~~ regarding copyright ownership.  The ASF licenses this file
+~~ to you under the Apache License, Version 2.0 (the
+~~ "License"); you may not use this file except in compliance
+~~ with the License.  You may obtain a copy of the License at
+~~
+~~   http://www.apache.org/licenses/LICENSE-2.0
+~~
+~~ Unless required by applicable law or agreed to in writing,
+~~ software distributed under the License is distributed on an
+~~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+~~ KIND, either express or implied.  See the License for the
+~~ specific language governing permissions and limitations
+~~ under the License.
+
+~~ NOTE: For help with the syntax of this file, see:
+~~ http://maven.apache.org/doxia/references/apt-format.html
+
+Developing Maven
+
+ This document describes how to get started into developing Maven itself. There is a separate page describing how
+ to {{{./guide-building-maven.html}build Maven}}.
+
+* Finding some work to do
+
+ First of all you need something to work on! Issues can be found in
+ {{{/issue-tracking.html}several JIRA projects}}.
+
+ * <<{{{https://issues.apache.org/jira/secure/IssueNavigator.jspa?reset=true&mode=hide&jqlQuery=project%20%3D%20MNG%20AND%20issuetype%20in%20%28Improvement%2C%20%22New%20Feature%22%2C%20%22Planned%20Work%22%2C%20Request%2C%20Wish%29}JIRA Issues}}>>
+
+ []
+
+ When you find a issue you would like to work on add a comment in the issue log so the core developers and other
+ people looking for work know that someone is already working on it.
+
+* Where's the source?
+
+   See {{{/source-repository.html}https://maven.apache.org/source-repository.html}} for information.
+   The Maven project uses a Git for some things, and Subversion for others, and this 
+   page tracks the situation.
+ 
+  []
+
+* Don't forget tests!
+~~ TODO move details to guide-building-maven.apt, keep only principles here
+
+  You will find many unit tests in the maven-3 tree. If at all possible, create or modify a unit test to demonstrate
+  the problem, and then validate your fix.
+
+  If the problem case can't be set up in the unit tests, add an integration test. Before submitting a patch, in any
+  case, you should run all of the integration tests. The tests require an empty local repository.
+  See {{{/core-its/core-it-suite/}Core IT Suite documentation}} for more details.
+
+* {Creating and submitting a patch}
+
+ When you have either completed an issue or just want some feedback on the work you have done, create a patch
+ and attach the patch to the issue in question. We have a couple of guidelines when creating patches:
+
+ * Patch the trunk, not a tag. Otherwise, your patch is outdated the moment you create it and might not be applicable
+   to the development head.
+
+ * Always create the patch from the root of the Maven project, i.e. where the <<<pom.xml>>> file is.
+
+ * If this was a new piece of work without a JIRA issue, create a JIRA issue for it now.
+
+ * Name the file <<<MNG-<issue number>-<artifact id>.patch>>>.
+
+ * Attach the patch to the JIRA issue you were working on (do not paste its content in as a comment though).
+   When adding the patch add a comment to the issue explaining what it does. Shortly after, someone will apply the patch
+   and close the issue.
+
+ []
+
+ An example on how to create a patch from the command line:
+
+---
+$ svn diff > MNG-123-maven-core.patch
+---
+
+ If you are picking up an issue with a existing patch attached to the issue you can apply the patch to your working
+ directory directly from JIRA like this. The <<<wget>>> and <<<patch>>> commands will only be available if you are
+ on a UNIX platform or using Cygwin on windows.
+
+---
+$ wget -O - -q <URL to the patch from JIRA> | patch -p0
+---
+
+ If the patch is in a local file <<<MNG-123.patch>>> and you want to apply that use this command:
+
+---
+$ patch -p0 < MNG-123.patch
+---
+
+ A couple of notes:
+
+ * If you are using another tool for creating patches, make sure that the patch doesn't include absolute paths.
+ Including absolute paths in the patch will make the useless for us as we most likely don't have the same directory
+ structure as you.
+
+ * Make sure that you follow our code style, see {{{Further_Links}Further Links}}.
+
+ []
+
+* Patch acceptance criteria
+
+There are a number of criteria that a patch will be judged on:
+
+  * Whether it works and does what is intended. This one is probably obvious!
+
+  * Whether it fits the spirit of the project. Some patches may be rejected as they take the project in a different
+    direction to that which the current development community has chosen. This is usually discussed on an issue well
+    before a patch is contributed, so if you are unsure, discuss it there or on the mailing lists first. Feel free to
+    continue discussing it (with new justification) if you disagree, or appeal to a wider audience on the mailing lists.
+
+  * Whether it contains tests. It is expected that any patches relating to functionality will be accompanied by unit tests
+    and/or integration tests. It is strongly desired (and will be requested) for bug fixes too, but will not be the basis
+    for not applying it. At a bare minimum, the change should not decrease the amount of automated test coverage.
+    As a community, we are focusing on increasing the current coverage, as there are several areas that do not receive automated testing.
+
+  * Whether it contains documentation. All new functionality needs to be documented for users, even if it is very rough
+    for someone to expand on later. While rough is acceptable, incomplete is not. As with automated testing, as a community
+    we are striving to increase the current coverage of documentation.
+
+  []
+
+Above all, don't be discouraged. These are the same requirements the current committers should hold each other to as well.
+And remember, your contributions are always welcome!
+
+* Related Projects
+
+ Maven has a few dependencies on other projects.
+
+ * <<Plexus>>
+
+ Plexus is a full-fledged container supporting different kinds of component lifecycles. It's native lifecycle
+ is like any other modern IoC container, using field injection of both requirements and configuration. All
+ core Maven functionality are Plexus components.
+
+ You can {{{https://codehaus-plexus.github.io/}read more about Plexus}}.
+
+ * <<Modello>>
+
+ Modello is a simple tool for representing an object model and generate code and resources from the model. Maven is
+ using Modello to generate all Java objects, XML readers and writers, XML Schema and HTML documentation.
+
+ You can {{{https://codehaus-plexus.github.io/modello/}read more about Modello}}.
+
+ * <<Mojo>>
+
+ "Mojo" is really two things when it comes to Maven: it is both {{{/ref/current/maven-plugin-api/}Maven's plug-in API}}
+ but also {{{http://www.mojohaus.org}a separate Mojohaus project}} hosting a lot of plugins.
+
+ {{{http://www.mojohaus.org}The MojoHaus Project}} is a plugin forge for non-core Maven plugins.
+ There is also a lower bar for becoming a part of the project.
+
+  []
+
+* Sub Projects
+
+ ** Maven Surefire
+
+ Surefire is a testing framework. It can run regular JUnit tests so you won't have to change anything in your code to
+ use it. It support scripting tests in BeanShell and Jython and has special "batteries" for writing acceptance and
+ functional tests for the web and for testing XML-RPC code.
+
+ You can {{{/surefire/}read more about Surefire}}.
+
+ ** Maven Doxia
+
+ Doxia is Maven's documentation engine. It has a sink and parser API that can be used to plug in support for input
+ and output documents.
+
+ You can read more about {{{/doxia/}Doxia}} and the currently supported
+ {{{/doxia/references/index.html}document formats}}.
+
+
+ ** Maven SCM
+
+ Maven SCM (Source Control Management) is an reusable API which is independent of Maven itself and it is used by the
+ SCM related Maven Plugins. The core part of Maven itself doesn't depend on Maven SCM.
+
+ You can {{{http://maven.apache.org/scm/}read more about Scm}}.
+
+ ** Maven Wagon
+
+ Maven Wagon is also a standalone API that deals with transporting files and directories. Maven Core uses the Wagon
+ API to download and upload artifacts and artifact metadata and the site plug-in uses it to publish the site.
+
+ You can {{{http://maven.apache.org/wagon/}read more about Wagon}}.
+
+* {Further Links}
+
+  * {{{../../developers/conventions/code.html}Maven Code Style And Code Convention}}
+
+  * {{{../../developers/conventions/jira.html}Maven JIRA Convention}}
+
+  * {{{../../developers/conventions/svn.html}Maven SVN Convention}}
+
+  []

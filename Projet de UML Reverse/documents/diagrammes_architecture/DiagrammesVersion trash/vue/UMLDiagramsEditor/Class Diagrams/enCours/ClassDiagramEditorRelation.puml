@@ -1,0 +1,116 @@
+@startuml
+
+class ClassDiagramEditor
+
+package javafx {
+    class Text
+    class Line
+}
+
+package model {
+    class Association
+    class Composition
+    class Agregation
+    class DoubleAssociation
+    class Dependance
+    class Inheritance
+    class Implementation
+}
+
+abstract ARelationGraphic
+
+class AssociationGraphic
+class CompositionGraphic
+class AgregationGraphic
+class DoubleAssociationGraphic
+class DependanceGraphic
+class InheritanceGraphic
+class ImplementationGraphic
+
+'-----------------------------
+'---------DEFINITIONS
+'----------------------------- 
+
+abstract ARelationGraphic {
+    + getCardinality : List<int>
+    + getColor() : Color
+    + setCardinality(int, int, int, int)
+    + setColor(String)
+    + remove()
+}
+
+class AssociationGraphic {
+    getSource() : IClassOrInterface
+    getTarget() : IClassOrInterface
+    setSource(IClassOrInterface)
+    setTarget(IClassOrInterface)
+}
+class CompositionGraphic {
+    getSource() : IClass
+    getTarget() : IClassOrInterface
+    setSource(IClass)
+    setTarget(IClassOrInterface)
+}
+class AgregationGraphic {
+    getSource() : IClass
+    getTarget() : IClassOrInterface
+    setSource(IClass) 
+    setTarget(IClassOrInterface)
+}
+class DoubleAssociationGraphic {
+    getSource() : IClassOrInterface
+    getTarget() : IClassOrInterface
+    setSource(IClassOrInterface)
+    setTarget(IClassOrInterface)
+}
+class DependanceGraphic {
+    getSource() : IClassOrInterface
+    getTarget() : IClassOrInterface
+    setSource(IClassOrInterface)
+    setTarget(IClassOrInterface)
+}
+class InheritanceGraphic {
+    getSource() : IClassOrInterface
+    getTarget() : IClassOrInterface
+    setSource(IClassOrInterface)
+    setTarget(IClassOrInterface)
+}
+class ImplementationGraphic {
+    getSource() : IClass
+    getTarget() : IInterface
+    setSource(IClass)
+    setTarget(IInterface)
+}
+
+'-----------------------------
+'---------RELATIONS
+'-----------------------------
+
+ClassDiagramEditor "0..*" o---> "0..*" AssociationGraphic : -associations
+ClassDiagramEditor "0..*" o---> "0..*" CompositionGraphic : -compositions
+ClassDiagramEditor "0..*" o---> "0..*" AgregationGraphic : -agregations
+ClassDiagramEditor "0..*" o---> "0..*" DoubleAssociationGraphic : -doubleAssociations
+ClassDiagramEditor "0..*" o---> "0..*" DependanceGraphic : -dependances
+ClassDiagramEditor "0..*" o---> "0..*" InheritanceGraphic : -inheritances
+ClassDiagramEditor "0..*" o---> "0..*" ImplementationGraphic : -implementations
+
+Line "1..*" <--o "0..*" ARelationGraphic : lines
+Text "1..*" <--o "0..*" ARelationGraphic : textes
+
+ARelationGraphic <|-- AssociationGraphic
+ARelationGraphic <|-- CompositionGraphic
+ARelationGraphic <|-- AgregationGraphic
+ARelationGraphic <|-- DoubleAssociationGraphic
+ARelationGraphic <|-- DependanceGraphic
+ARelationGraphic <|-- InheritanceGraphic
+ARelationGraphic <|-- ImplementationGraphic
+
+AssociationGraphic "0..*" o--> "1..1" Association
+CompositionGraphic "0..*" o--> "1..1" Composition
+AgregationGraphic "0..*" o--> "1..1" Agregation
+DoubleAssociationGraphic "0..*" o--> "1..1" DoubleAssociation
+DependanceGraphic "0..*" o--> "1..1" Dependance
+InheritanceGraphic "0..*" o--> "1..1" Inheritance
+ImplementationGraphic "0..*" o--> "1..1" Implementation
+
+@enduml

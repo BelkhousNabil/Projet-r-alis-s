@@ -1,0 +1,13 @@
+@startuml
+title Diagramme de séquence décrivant le chargement du fichier java
+	
+	actor user
+	user -> Application: Clic_bouton_reverse();
+	
+	
+
+	Application -> DiagramManager: reverseJava( directory , nameFileJava );
+	DiagramManager ->> Application : getDiagram();
+	Application -> Application : Affichage_Diagramme();
+		
+@enduml

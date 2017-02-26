@@ -1,0 +1,158 @@
+@startuml
+package Common {
+
+
+    package RelationType {
+               
+                
+            }
+    class DragContext {
+            
+    }
+    
+    abstract class AEntityGraphic extends BorderPane implements IEntityGraphic {
+       
+    }
+    
+    abstract class AEntityGraphicController implements IEntityGraphicController {
+        
+    }
+    
+    class DialogAddRelation {
+       
+    }
+    class DialogNoteEdit {
+        
+    }
+    enum DialogNoteEditoMode {
+        
+    }
+    
+    class DialogRelationEditNoteG {
+        
+        
+    }
+    
+    class DialogRelationEditOEG {
+       
+    }
+    
+    interface IEntityGraphic extends ISelectionableEntityGraphic {
+
+    }
+    
+    interface IEntityGraphicController {
+        
+        
+    }
+    
+    interface INoteGraphic extends IEntityGraphic {
+        
+    }
+    interface INoteGraphicController extends IEntityGraphicController {
+        
+        
+    }
+    
+    interface IRelationGraphic {
+        
+        
+        
+    }
+    interface IRelationGraphicController {
+        
+    }
+    interface ISelectionableEntityGraphic {
+        
+    }
+    class NoteGraphic extends AEntityGraphic implements INoteGraphic  {
+        
+        
+        
+    }
+    
+    class NoteGraphicController extends AEntityGraphicController {
+        
+        
+        
+    }
+    
+    class NoteShape extends Path {
+        
+    }
+    class RelationGraphic implements ISelectionableEntityGraphic {
+       
+       
+        
+        
+        
+    }
+    
+    class Border {
+        
+    }
+    enum BorderEnum {
+   
+    }
+    enum Direction {
+        
+    }
+    enum RelationTypeEnum {
+        
+    }
+    
+    class RelationGraphicController implements IRelationGraphicController {
+        
+        
+    }
+}
+
+DialogNoteEdit +-- DialogNoteEditMode
+RelationGraphic +-- Border
+RelationGraphic +-- BorderEnum
+RelationGraphic +-- Direction
+RelationGraphic +-- RelationTypeEnum
+AEntityGraphic --> Point2D
+AEntityGraphic --> ObjectProperty
+AEntityGraphic --> Color
+AEntityGraphic --> IRelationGraphic
+AEntityGraphic ..> IRelationGraphic
+AEntityGraphic ..> Point2D
+AEntityGraphic ..> Color
+AEntityGraphicController ..> ContextMenu
+AEntityGraphicController ..> MenuItem
+AEntityGraphicController ..> IDiagramEditorController
+AEntityGraphicController ..> Point2D
+AEntityGraphicController ..> IRelationGraphic
+AEntityGraphicController --> IRelationGraphic
+AEntityGraphicController --> Point2D
+DialogAddRelation --> IRelationGraphic
+DialogNoteEdit --> NoteGraphic
+DialogRelationEditNoteG --> IRelationGraphic
+DialogRelationEditOEG --> IRelationGraphic
+NoteGraphic --> IEntityGraphicController
+NoteGraphic --> NoteShape
+NoteGraphic --> Text
+NoteGraphic --> Color
+NoteGraphic --> RelationTypeEnum
+NoteGraphic ..> Color
+NoteGraphicController --> Color
+NoteGraphicController ..> Color
+RelationGraphic --> Line
+RelationGraphic --> RelationTypeEnum
+RelationGraphic --> Color
+RelationGraphic --> Text
+RelationGraphic --> Shape
+RelationGraphic --> Polygon
+RelationGraphic --> IEntityGraphic
+RelationGraphic --> Circle
+RelationGraphic ..> Group
+RelationGraphic ..> RelationTypeEnum
+RelationGraphic ..> Circle
+RelationGraphicController --> IEntityGraphic
+RelationGraphicController --> RelationiTypeEnum
+RelationGraphicController --> Color
+RelationGraphicController ..> RelationTypeEnum
+RelationGraphicController ..> Color
+
+@enduml

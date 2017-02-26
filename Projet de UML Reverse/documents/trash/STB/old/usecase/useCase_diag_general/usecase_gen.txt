@@ -1,0 +1,83 @@
+@startuml
+left to right direction
+title Utilisation de UML Reverse
+
+actor :Client:
+
+rectangle {
+
+rectangle IHM {
+	(Créer...) as (cr)
+	(Editer...) as (md)
+	(Supprimer...) as (rem)
+	:Client: --> (cr)
+	:Client: --> (md)
+	:Client: --> (rem)
+	
+	(Un diagramme UML) as (duml)
+	(cr) --|> (duml)
+	
+	(Des entités) as (ent)
+	(cr) --|> (ent)
+	(md) --|> (ent)
+	(rem) --|> (ent)
+	(ent) --|> (Position)
+	(ent) --|> (Couleur)
+	(ent) --|> (Visibilité)
+	(ent) --|> (Nom)
+	(ent) --|> (Contenu)
+	
+	
+	(Des liens) as (link)
+	(cr) --|> (link)
+	(md) --|> (link)
+	(rem) --|> (link)
+	(Style) as (lst)
+	(Label) as (llb)
+	(link) --|> (lst)
+	(link) --|> (llb)
+}
+
+rectangle "Entrée / Sortie" {	
+	(Charger) as (load)
+	(Enregistrer) as (save)
+
+	(Projet...) as (proj)
+	(proj) --|> (load)
+	(proj) --|> (save)
+	(proj) --|> (Nouveau)
+
+	(Importer...) as (gen)
+	(PlantUML) as (puml)
+	(gen) --|> (Java)
+	(gen) --|> (puml)
+	(gen) --|> (Style)
+	
+	(Exporter...) as (exp)
+	(exp) --|> (Image)
+	(exp) --|> (PDF)
+	(exp) --|> (puml)
+	(exp) --|> (Style)
+	(exp) --|> (Imprimer)
+	
+	:Client: --> (gen)	
+	:Client: --> (proj)
+	:Client: --> (exp)
+}
+
+
+rectangle "Types de diagrammes\nsupportés" {
+	(Cas d'utilisation) as (uu)
+	(Etat) as (ue)
+	(Classes) as (uc)
+	(Paquet) as (up)
+	(Séquence) as (us)
+	
+	(Java) --|> (uc)
+	(Java) --|> (up)
+	(Java) --|> (us)
+}
+
+}
+
+@enduml

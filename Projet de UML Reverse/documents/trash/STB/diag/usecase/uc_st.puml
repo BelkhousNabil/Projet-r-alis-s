@@ -1,0 +1,25 @@
+@startuml
+title Diagramme de cas d'utilisation\nde la modification d'un diagramme d'état
+actor :user:
+
+rectangle {
+	(Créer/Supprimer/Modifier/Cacher) as (CrEt)
+	(Pseudo Etat) as (CrPsEt)
+
+	(État Parallèle) as (CrEtPr)
+	(Point d'entrée/sortie) as (CrPtE)
+
+	:user: - (CrEt)
+        :user: - (Déplacer)
+
+        (Déplacer) <|-- (Entité)
+        (CrEt) <|-- (Entité)
+        (CrEt) <|-- (Relation)  
+        (Entité) <|-- (CrPtE)
+
+	(Entité) <|-- (CrEtPr)
+	(Entité) <|-- (CrPsEt)
+       
+	
+}
+@enduml

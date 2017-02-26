@@ -1,0 +1,993 @@
+@startuml
+class "Point2D" as entity0 {
+	--
+}
+class "Node" as entity1 {
+	--
+}
+class "IEntityGraphic" as entity2 {
+	--
+}
+class "IActor" as entity3 {
+	--
+}
+class "DialogOEGNew" as entity4 {
+	--
+}
+class "ScrollEvent" as entity5 {
+	--
+}
+class "IEntityRelationGraphic" as entity6 {
+	--
+}
+class "SceneGestures" as entity7 {
+	- EventHandler<ScrollEvent> onScrollEventHandler newEventHandler<ScrollEvent>(){@Overridepublicvoidhandle(ScrollEventevent){if(event.isControlDown()){doubleoldScale=canvas.getScale();if(event.getDeltaY()<0){canvas.setScale(oldScale/SCALE_FACTOR);}else{canvas.setScale(oldScale*SCALE_FACTOR);}Boundsbip=canvas.getBoundsInParent();doubledx=event.getX()-bip.getWidth()/2-bip.getMinX();doubledy=event.getY()-bip.getHeight()/2-bip.getMinY();doublef=(canvas.getScale()/oldScale)-1;canvas.setPivot(f*dx,f*dy);}else{doublemainAxis=event.isShiftDown()?event.getDeltaX():event.getDeltaY();doublesecondAxis=event.isShiftDown()?event.getDeltaY():event.getDeltaX();canvas.setTranslateX(canvas.getTranslateX()+secondAxis);canvas.setTranslateY(canvas.getTranslateY()+mainAxis);}event.consume();}} 
+	- EventHandler<MouseEvent> onMousePressedEventHandler newEventHandler<MouseEvent>(){publicvoidhandle(MouseEventevent){if(!event.isPrimaryButtonDown())return;runningDrag=newDragContext(event.getSceneX(),event.getSceneY(),canvas.getTranslateX(),canvas.getTranslateY());}} 
+	- EventHandler<MouseEvent> onMouseDraggedEventHandler newEventHandler<MouseEvent>(){publicvoidhandle(MouseEventevent){if(!event.isPrimaryButtonDown())return;canvas.setTranslateX(runningDrag.getTranslateX()+event.getSceneX()-runningDrag.getMouseX());canvas.setTranslateY(runningDrag.getTranslateY()+event.getSceneY()-runningDrag.getMouseY());event.consume();}} 
+	- {static} double SCALE_FACTOR 1.25d const
+	--
+	+ EventHandler<MouseEvent> getOnMouseDraggedEventHandler () 
+	+ EventHandler<MouseEvent> getOnMousePressedEventHandler () 
+	+ EventHandler<ScrollEvent> getOnScrollEventHandler () 
+}
+class "Rectangle" as entity8 {
+	--
+}
+class "BorderPane" as entity9 {
+	--
+}
+class "IOException" as entity10 {
+	--
+}
+class "Text" as entity11 {
+	--
+}
+class "PannableCanvas" as entity12 {
+	- DoubleProperty scale  
+	+ {static} double MAX_SCALE 4.d const
+	+ {static} double MIN_SCALE .1d const
+	--
+	+ void setPivot ( x:double,  y:double) 
+	+ double getScale () 
+	+ void changed ( observable:ObservableValue<?extendsBounds>,  oldValue:Bounds,  newValue:Bounds) 
+	+ void setScale ( s:double) 
+	- {static} double clamp ( value:double,  min:double,  max:double) 
+}
+class "ToolBarSwapper" as entity13 {
+	- UmlReverseBeans beans  
+	--
+	- void updateToolBar ( diagram:IDiagram) 
+	+ void changed ( observable:ObservableValue<?extendsIDiagram>,  oldValue:IDiagram,  newValue:IDiagram) 
+}
+class "IViewEntity" as entity14 {
+	--
+}
+class "MenuItem" as entity15 {
+	--
+}
+class "IDiagram" as entity16 {
+	--
+}
+class "List" as entity17 {
+	--
+}
+class "DiagramType" as entity18 {
+	--
+}
+class "GridPane" as entity19 {
+	--
+}
+class "Insets" as entity20 {
+	--
+}
+class "RELATION_ADDED_PROPERTY_NAME" as entity21 {
+	--
+}
+interface "ITreeData<T>" as entity22 {
+	--
+}
+class "Dialog" as entity23 {
+	--
+}
+enum "ImportType" as entity24 {
+	--
+	--
+	PUMLFILE
+	PACKAGE
+	CLASSES
+}
+class "TreeFileManagerView" as entity25 {
+	- UmlReverseBeans beans  
+	- ChangeListener<IProject> projectListener  
+	- Map<DiagramType, TreeItem<ITreeData<?>>> typeItems  
+	- PropertyChangeListener rebuildListener  
+	- PropertyChangeListener removeListener  
+	- Map<IDiagram, TreeItem<ITreeData<?>>> diagramItems  
+	--
+	- void unsetProjectListeners ( p:IProject) 
+	- void openDiagram ( diagram:IDiagram) 
+	- void setProjectListeners ( p:IProject) 
+	- void buildTree () 
+	+ UmlReverseBeans getUmlReverseBeans () 
+	- void createListeners () 
+	+ void setUmlReverseBeans ( b:UmlReverseBeans) 
+}
+class "SortedDiagramVisitor" as entity26 {
+	--
+}
+class "TextField" as entity27 {
+	--
+}
+class "IRelation" as entity28 {
+	--
+}
+class "TreeFileManagerView.StringTreeData" as entity29 {
+	- String data  
+	--
+	+ String toString () 
+	+ void trigger () 
+	+ void addUpdateListener ( listener:PropertyChangeListener) 
+	+ void removeUpdateListener ( listener:PropertyChangeListener) 
+	+ String getData () 
+}
+class "ADiagramEditor" as entity30 {
+	- PannableCanvas canvas  const
+	--
+	+ void createNote ( x:double,  y:double) 
+	+ PannableCanvas getCanvas () 
+	+ {abstract} IDiagramEditorController getController () 
+	+ void changed ( observable:ObservableValue<?extendsBounds>,  oldValue:Bounds,  newValue:Bounds) 
+}
+class "NOTE_REMOVED_PROPERTY_NAME" as entity31 {
+	--
+}
+class "AlertType" as entity32 {
+	--
+}
+class "ClassDiagram" as entity33 {
+	--
+}
+class "TreeItem" as entity34 {
+	--
+}
+class "DialogExportPuml" as entity35 {
+	- Dialog<Boolean> dialog  const
+	- TextField fileTF  const
+	- Window window  const
+	- ComboBox<IDiagram> diagramsBox  const
+	- Button choiceFile  const
+	- File file  
+	--
+	+ void showAndWait () 
+	- void createDialog () 
+	- void createController () 
+}
+class "IUsecase" as entity36 {
+	--
+}
+class "NOTE_ADDED_PROPERTY_NAME" as entity37 {
+	--
+}
+class "File" as entity38 {
+	--
+}
+class "UsecaseGraphic" as entity39 {
+	--
+}
+interface "TreeFileManagerView.ITreeData" as entity40 {
+	--
+}
+class "RelationGraphic" as entity41 {
+	--
+}
+class "StringWriter" as entity42 {
+	--
+}
+class "CheckMenuItem" as entity43 {
+	--
+}
+class "IUsecaseDiagram" as entity44 {
+	--
+}
+class "EventHandler" as entity45 {
+	--
+}
+class "IRelationGraphic" as entity46 {
+	--
+}
+class "DirectAccessToAllEntityPane" as entity47 {
+	- UmlReverseBeans beans  
+	- Map<String, IObjectEntity> entityMap  
+	- IProject project  
+	- ContextMenu ctxMenuDiagram  
+	--
+	- void addAllEntityToMap () 
+	- void setProject ( p:IProject) 
+	- void gridPaneEvent ( event:MouseEvent) 
+	- void addListenerToBeans () 
+	- void addPropertyChangeListenerToEntity ( entity:ObjectEntity) 
+	- void addEventToGridPane ( gp:GridPane) 
+	- void addPropertyChangeListenerToProject () 
+	+ IProject getProject () 
+	+ Map<String, IObjectEntity> getEntityMap () 
+	- void draw () 
+}
+class "Gestures.DragContext" as entity48 {
+	- double translateX  
+	- double translateY  
+	- double mouseX  
+	- double mouseY  
+	--
+	+ double getMouseX () 
+	+ double getTranslateX () 
+	+ double getTranslateY () 
+	+ double getMouseY () 
+}
+class "DirectoryChooser" as entity49 {
+	--
+}
+class "Event" as entity50 {
+	--
+}
+class "Platform" as entity51 {
+	--
+}
+class "PrintWriter" as entity52 {
+	--
+}
+class "ObjectEntityGraphic" as entity53 {
+	--
+}
+class "ToolBarUseCaseController" as entity54 {
+	- UsecaseDiagramEditor diagram  
+	--
+	+ void createNote () 
+	+ void createActor () 
+	+ void createUseCase () 
+	+ void setDiagram ( uc:UsecaseDiagramEditor) 
+}
+class "TreeFileManagerView.ATreeData" as entity55 {
+	# ContextMenu menu  
+	--
+	+ void handle ( event:ActionEvent) 
+	+ ContextMenu getContextMenu () 
+}
+class "ComboBox" as entity56 {
+	--
+}
+class "FXML" as entity57 {
+	--
+}
+class "TabClosingPolicy" as entity58 {
+	--
+}
+class "Bounds" as entity59 {
+	--
+}
+class "Collection" as entity60 {
+	--
+}
+class "TreeCell" as entity61 {
+	--
+}
+class "ATreeData" as entity62 {
+	--
+}
+class "RefusedAction" as entity63 {
+	--
+}
+class "DialogUsecaseEdit" as entity64 {
+	--
+}
+class "ClassDiagramEditor" as entity65 {
+	- ClassController controller  const
+	--
+	+ void createEntity ( x:double,  y:double,  t:TypeEntity) 
+	+ IDiagramEditorController getController () 
+}
+class "Contract" as entity66 {
+	--
+}
+class "MouseButton" as entity67 {
+	--
+}
+class "TextArea" as entity68 {
+	--
+}
+class "Optional" as entity69 {
+	--
+}
+class "ViewEntity" as entity70 {
+	--
+}
+class "TypeHeadArrow" as entity71 {
+	--
+}
+class "ErrorDialog" as entity72 {
+	--
+}
+class "PropertyChangeListener" as entity73 {
+	--
+}
+class "SimpleObjectProperty" as entity74 {
+	--
+}
+class "ExportPlantUmlUsecaseVisitor" as entity75 {
+	--
+}
+class "SnapshotParameters" as entity76 {
+	--
+}
+class "Map" as entity77 {
+	--
+}
+class "UsecaseController" as entity78 {
+	- ObjectProperty<IEntityRelation> createRelation  const
+	- Map<IRelation, IRelationGraphic> relations  const
+	- double miceY  
+	- MenuItem createUsecaseMI  
+	- IUsecaseDiagram diagram  const
+	- Map<INoteUsecase, NoteGraphic> notes  const
+	- MenuItem createActorMI  
+	- EventHandler<MouseEvent> addRelationEvt  
+	- Map<IActor, ActorGraphic> actors  const
+	- ContextMenu ctxMenuDiagram  
+	- Map<IUsecase, UsecaseGraphic> usecases  const
+	- double miceX  
+	--
+	+ Map<IActor, ActorGraphic> getActors () 
+	- void createModelListeners () 
+	- void createRelationGraphic ( vr:IRelation) 
+	- void createButtonController () 
+	- void addMouseEvent ( event:EventHandler<MouseEvent>) 
+	- void createActorGraphic ( a:Actor) 
+	- Map<IEntityRelation, IEntityRelationGraphic> getEntitiesRelation () 
+	- void createPropertyListeners () 
+	+ void createActor ( x:double,  y:double) 
+	- void removeMouseEvent ( event:EventHandler<MouseEvent>) 
+	+ void removeUsecase ( usecase:IUsecase) 
+	+ Collection<NoteGraphic> getNotes () 
+	- void createComposant () 
+	+ void removeActor ( act:IActor) 
+	- void createContextMenu () 
+	+ void createUsecase ( x:double,  y:double) 
+	+ void createNote ( x:double,  y:double) 
+	- void createController () 
+	- void createUseCaseGraphic ( usecase:IUsecase) 
+	+ void removeNote ( note:INoteUsecase) 
+	+ void createRelation ( entity:IEntityRelation) 
+	- void drawDiagram () 
+	- void createNoteGraphic ( note:INoteUsecase) 
+	+ void removeRelation ( relation:IRelation) 
+	+ IUsecaseDiagram getDiagram () 
+}
+class "TextInputDialog" as entity79 {
+	--
+}
+class "PropertyChangeEvent" as entity80 {
+	--
+}
+class "Set" as entity81 {
+	--
+}
+class "ColumnConstraints" as entity82 {
+	--
+}
+class "Iterator" as entity83 {
+	--
+}
+class "ObservableValue" as entity84 {
+	--
+}
+class "DialogActorEdit" as entity85 {
+	--
+}
+class "DialogNoteEdit" as entity86 {
+	--
+}
+class "MenuController" as entity87 {
+	- MenuItem importJava  
+	- MenuItem print  
+	- MenuItem zoomOut  
+	- BorderPane borderpane  
+	- MenuItem importJavaPackage  
+	- MenuItem exportToPuml  
+	- MenuBar bar  
+	- MenuItem saveAsProject  
+	- MenuItem exportToPicture  
+	- double toolbarSize  
+	- double explorerSize  
+	- UmlReverseBeans beans  
+	- Scene scene  
+	- MenuItem zoomIn  
+	- CheckMenuItem toolbar  
+	- MenuItem importPuml  
+	- MenuItem newUseCase  
+	- Window stage  
+	- MenuItem newClass  
+	- MenuItem saveProject  
+	- CheckMenuItem explorer  
+	--
+	+ void showToolbar () 
+	- boolean saveControlAndSave () 
+	+ void newUseCase () 
+	+ void newProjet () 
+	- void zoom ( factor:double) 
+	+ void openProjet () 
+	+ void importPuml () 
+	+ void importJavaPackage () 
+	+ void showHide () 
+	+ void exportPUML () 
+	+ void showExplorer () 
+	+ void save () 
+	+ void setUmlReverseBeans ( beans:UmlReverseBeans) 
+	+ void setScene ( scene:Scene) 
+	+ void exportImgPdf () 
+	+ void importJava () 
+	+ void saveAs () 
+	- void createController ( beans:UmlReverseBeans) 
+	+ void newClass () 
+	+ void zoomIn () 
+	+ void print () 
+	+ void zoomOut () 
+	+ void close () 
+}
+class "IObjectEntity" as entity88 {
+	--
+}
+class "Circle" as entity89 {
+	--
+}
+class "ContextMenuEvent" as entity90 {
+	--
+}
+class "Alert" as entity91 {
+	--
+}
+class "Tab" as entity92 {
+	--
+}
+class "EnumMap" as entity93 {
+	--
+}
+class "UsecaseDiagramEditor" as entity94 {
+	- UsecaseController controller  const
+	--
+	+ void createActor ( x:double,  y:double) 
+	+ IDiagramEditorController getController () 
+	+ void createUsecase ( x:double,  y:double) 
+}
+class "FileChooser" as entity95 {
+	--
+}
+class "AEntityGraphic" as entity96 {
+	--
+}
+class "Window" as entity97 {
+	--
+}
+class "Entry" as entity98 {
+	--
+}
+class "DoubleProperty" as entity99 {
+	--
+}
+class "ContextMenu" as entity100 {
+	--
+}
+interface "IDiagramEditorController" as entity101 {
+	--
+}
+class "ISelectionableEntityGraphic" as entity102 {
+	--
+}
+interface "IUsecaseController" as entity103 {
+	--
+}
+class "IClassDiagram" as entity104 {
+	--
+}
+class "Label" as entity105 {
+	--
+}
+class "TypeLineArrow" as entity106 {
+	--
+}
+class "ADiagramEditorController" as entity107 {
+	- MenuItem zoomOutMI  
+	- ISelectionableEntityGraphic selectedEntity  
+	- double yCursor  
+	- MenuItem zoomInMI  
+	# NodeGestures nodeGestures  
+	- double xCursor  
+	# ADiagramEditor editor  const
+	- MenuItem createNoteMI  
+	--
+	+ MenuItem getZoomInMI () 
+	+ double getxCursor () 
+	+ void deselectEntity () 
+	+ void setSelectedEntity ( selectedEntity:ISelectionableEntityGraphic) 
+	+ void setyCursor ( yCursor:double) 
+	+ ADiagramEditor getEditor () 
+	+ MenuItem getCreateNoteMI () 
+	+ MenuItem getZoomOutMI () 
+	- void createComposant () 
+	+ ISelectionableEntityGraphic getSelectedEntity () 
+	- void createController () 
+	+ void setxCursor ( xCursor:double) 
+	+ double getyCursor () 
+}
+interface "IClassController" as entity108 {
+	--
+}
+class "StackPane" as entity109 {
+	--
+}
+class "ButtonType" as entity110 {
+	--
+}
+class "DiagramTabPane" as entity111 {
+	- {static} String TAB_TITLE_PADDING "   " const
+	- Map<IDiagram, Tab> diagrams  const
+	- UmlReverseBeans beans  const
+	- TabPane tabPane  const
+	- PropertyChangeListener diagramRemovedListener  
+	--
+	- void createControllerForTabPane () 
+	+ TabPane getTabPane () 
+	- Tab createTab ( diagram:IDiagram) 
+	- void createControllerBeans () 
+}
+class "RELATION_STYLE_ID" as entity112 {
+	--
+}
+class "ObjectEntity" as entity113 {
+	--
+}
+class "FXMLLoader" as entity114 {
+	--
+}
+class "MenuBar" as entity115 {
+	--
+}
+class "TreeFileManagerView.TreeFileManagerCell" as entity116 {
+	- PropertyChangeListener updateListener  
+	--
+	# void updateItem ( item:ITreeData<?>,  empty:boolean) 
+}
+class "ToolShortcutsController" as entity117 {
+	--
+}
+class "INoteUsecase" as entity118 {
+	--
+}
+class "ImageIO" as entity119 {
+	--
+}
+class "HashMap" as entity120 {
+	--
+}
+class "BackgroundFill" as entity121 {
+	--
+}
+class "ActionEvent" as entity122 {
+	--
+}
+class "ImageWriter" as entity123 {
+	--
+}
+class "ExtensionFilter" as entity124 {
+	--
+}
+class "INoteGraphic" as entity125 {
+	--
+}
+class "NodeGestures" as entity126 {
+	- EventHandler<MouseEvent> onMousePressedEventHandler newEventHandler<MouseEvent>(){@Overridepublicvoidhandle(MouseEventevent){if(!event.isPrimaryButtonDown()){return;}Nodenode=(Node)event.getSource();runningDrag=newDragContext(event.getSceneX(),event.getSceneY(),node.getTranslateX(),node.getTranslateY());}} const
+	- EventHandler<MouseEvent> onMouseDraggedEventHandler newEventHandler<MouseEvent>(){@Overridepublicvoidhandle(MouseEventevent){if(!event.isPrimaryButtonDown()){return;}doublescale=canvas.getScale();AEntityGraphicentity=((AEntityGraphic)event.getSource());doublex=runningDrag.getTranslateX()+(event.getSceneX()-runningDrag.getMouseX())/scale;doubley=runningDrag.getTranslateY()+(event.getSceneY()-runningDrag.getMouseY())/scale;entity.setTranslatePosition(newPoint2D(x,y));event.consume();}} const
+	--
+	+ EventHandler<MouseEvent> getOnMouseDraggedEventHandler () 
+	+ EventHandler<MouseEvent> getOnMousePressedEventHandler () 
+}
+class "NoteGraphic" as entity127 {
+	--
+}
+class "Pane" as entity128 {
+	--
+}
+class "Background" as entity129 {
+	--
+}
+class "Cursor" as entity130 {
+	--
+}
+class "Level" as entity131 {
+	--
+}
+class "Region" as entity132 {
+	--
+}
+class "ChangeListener" as entity133 {
+	--
+}
+class "SimpleDoubleProperty" as entity134 {
+	--
+}
+class "Scene" as entity135 {
+	--
+}
+class "Gestures" as entity136 {
+	# PannableCanvas canvas  
+	# DragContext runningDrag  
+	--
+}
+class "ToolBarClassController" as entity137 {
+	- ClassDiagramEditor diagram  
+	--
+	+ void createInterface () 
+	+ void createEnum () 
+	+ void setDiagram ( d:ClassDiagramEditor) 
+	+ void createNote () 
+	+ void createClass () 
+	+ void createAbstract () 
+}
+class "ErrorAbstraction" as entity138 {
+	--
+}
+class "RELATION_REMOVED_PROPERTY_NAME" as entity139 {
+	--
+}
+class "TreeFileManagerView.DiagramTreeData" as entity140 {
+	- IDiagram data  
+	--
+	+ void addUpdateListener ( listener:PropertyChangeListener) 
+	+ IDiagram getData () 
+	+ void trigger () 
+	+ String toString () 
+	+ void removeUpdateListener ( listener:PropertyChangeListener) 
+}
+class "Project" as entity141 {
+	--
+}
+class "IViewRelation" as entity142 {
+	--
+}
+class "TreeView" as entity143 {
+	--
+}
+class "Menu" as entity144 {
+	--
+}
+class "NOTE_STYLE_ID" as entity145 {
+	--
+}
+class "ClassController" as entity146 {
+	- MenuItem createEnumMI  
+	- ObjectProperty<INoteClass> createNoteRelation  const
+	- ContextMenu ctxMenuDiagram  
+	- IClassDiagram diagram  const
+	- double miceX  
+	- MenuItem createInterfaceMI  
+	- double miceY  
+	- Map<IViewEntity, ObjectEntityGraphic> viewEntities  const
+	- MenuItem createAbstractClass  
+	- ObjectProperty<IViewEntity> createEntityRelation  const
+	- MenuItem createClassMI  
+	- EventHandler<MouseEvent> addEntityRelationEvt  
+	- EventHandler<MouseEvent> addNoteRelationEvt  
+	- Map<INoteClass, NoteGraphic> notes  const
+	- Map<IObjectEntity, IViewEntity> objectEntities  const
+	- Map<IViewRelation, IRelationGraphic> viewRelations  const
+	--
+	- void createRelationGraphic ( vr:IViewRelation) 
+	+ void createEntity ( x:double,  y:double,  t:TypeEntity) 
+	+ Collection<NoteGraphic> getNotes () 
+	- void createModelListeners () 
+	- void createNoteGraphic ( note:INoteClass) 
+	+ void removeNote ( note:INoteClass) 
+	- void createEntityGraphic ( entity:IViewEntity) 
+	+ void createEntityRelation ( entity:IViewEntity) 
+	- void createButtonController () 
+	- void createContextMenu () 
+	- void createPropertyListeners () 
+	+ void removeObjectEntity ( oEG:ObjectEntityGraphic) 
+	- void createController () 
+	+ ObjectEntityGraphic getOEG ( entity:IViewEntity) 
+	+ IClassDiagram getDiagram () 
+	- void createComposant () 
+	+ void removeRelationGraphic ( r:IRelationGraphic) 
+	- void removeMouseEvent ( event:EventHandler<MouseEvent>) 
+	+ void addToEntityMap ( entityGraphic:ObjectEntityGraphic) 
+	+ void createNote ( x:double,  y:double) 
+	+ void removeRelation ( relation:IViewRelation) 
+	- void drawDiagram () 
+	- void addMouseEvent ( event:EventHandler<MouseEvent>) 
+	+ Collection<ObjectEntityGraphic> getObjectEntityGraphics () 
+	- INoteClass getNote ( noteG:INoteGraphic) 
+	+ void createNoteRelation ( note:INoteClass) 
+	+ void hideObjectEntity ( oEG:ObjectEntityGraphic) 
+}
+class "MouseEvent" as entity147 {
+	--
+}
+class "ObservableList" as entity148 {
+	--
+}
+class "TabPane" as entity149 {
+	--
+}
+class "ObjectProperty" as entity150 {
+	--
+}
+class "Priority" as entity151 {
+	--
+}
+class "SwingFXUtils" as entity152 {
+	--
+}
+class "BufferedImage" as entity153 {
+	--
+}
+class "UsecaseDiagram" as entity154 {
+	--
+}
+class "ALL_STYLE_ID" as entity155 {
+	--
+}
+class "TypeEntity" as entity156 {
+	--
+}
+class "Color" as entity157 {
+	--
+}
+class "Button" as entity158 {
+	--
+}
+interface "IDiagramEditor" as entity159 {
+	--
+}
+class "INoteClass" as entity160 {
+	--
+}
+class "String" as entity161 {
+	--
+}
+class "UmlReverseBeans" as entity162 {
+	--
+}
+class "PlantUMLLoader" as entity163 {
+	--
+}
+class "ActorGraphic" as entity164 {
+	--
+}
+class "Relation" as entity165 {
+	--
+}
+class "TreeFileManagerView.ProjectTreeData" as entity166 {
+	- IProject data  
+	--
+	+ void addUpdateListener ( listener:PropertyChangeListener) 
+	+ void trigger () 
+	+ String toString () 
+	+ IProject getData () 
+	+ void removeUpdateListener ( listener:PropertyChangeListener) 
+}
+class "Logger" as entity167 {
+	--
+}
+class "DialogImport" as entity168 {
+	- File file  
+	- TextField name  const
+	- Button choiceFile  const
+	- ImportType type  const
+	- IProject project  const
+	- Window window  const
+	- TextField fileTF  const
+	- List<File> files  
+	- Dialog<Boolean> dialog  const
+	- Scene scene  const
+	--
+	- void createController () 
+	- void createDialog () 
+	+ void showAndWait () 
+}
+class "PrinterJob" as entity169 {
+	--
+}
+class "IProject" as entity170 {
+	--
+}
+class "Java8Loader" as entity171 {
+	--
+}
+class "Group" as entity172 {
+	--
+}
+class "double" as entity173 {
+	--
+}
+class "IEntityRelation" as entity174 {
+	--
+}
+class "ExportPlantUmlClassVisitor" as entity175 {
+	--
+}
+class "FXCollections" as entity176 {
+	--
+}
+entity107 --> entity173
+entity30 --|> entity128
+entity146 ..|> entity108
+entity30 ..|> entity159
+entity25 --> entity77
+entity7 --> entity173
+entity107 --> entity173
+entity126 --|> entity136
+entity107 ..|> entity101
+entity103 --|> entity101
+entity146 --> entity15
+entity111 --> entity77
+entity13 --> entity162
+entity87 --> entity43
+entity107 --> entity173
+entity168 --> entity170
+entity87 --> entity162
+entity78 --> entity77
+entity146 --> entity77
+entity146 --> entity150
+entity146 --> entity150
+entity146 --> entity77
+entity87 --> entity15
+entity107 --> entity15
+entity168 --> entity27
+entity146 --> entity150
+entity29 --> entity161
+entity55 --> entity100
+entity107 --> entity15
+entity107 --> entity173
+entity146 --> entity45
+entity78 --|> entity107
+entity146 --> entity77
+entity78 --> entity44
+entity146 --> entity15
+entity87 --> entity15
+entity111 --> entity162
+entity7 --> entity45
+entity87 --> entity15
+entity25 --> entity73
+entity25 --> entity133
+entity146 --|> entity107
+entity47 --> entity77
+entity107 --> entity102
+entity87 --> entity135
+entity87 --> entity43
+entity146 --> entity77
+entity48 --> entity173
+entity146 --> entity15
+entity146 --|> entity107
+entity146 --> entity77
+entity54 --> entity94
+entity12 --|> entity172
+entity146 --> entity173
+entity146 --> entity15
+entity87 --> entity15
+entity146 --> entity173
+entity78 --> entity45
+entity35 --> entity56
+entity168 --> entity97
+entity65 --> entity146
+entity87 --> entity9
+entity107 --> entity15
+entity168 --> entity23
+entity87 --> entity15
+entity146 --> entity15
+entity35 --> entity23
+entity35 --> entity27
+entity107 --> entity15
+entity140 --|> entity62
+entity87 --> entity97
+entity30 ..|> entity159
+entity65 --|> entity30
+entity146 --> entity104
+entity146 --> entity45
+entity168 --> entity38
+entity48 --> entity173
+entity30 --> entity12
+entity94 --> entity78
+entity107 --> entity102
+entity168 --> entity158
+entity25 --|> entity143
+entity146 ..|> entity108
+entity168 --> entity24
+entity126 --> entity45
+entity87 --> entity173
+entity12 --> entity173
+entity78 --> entity77
+entity30 --> entity12
+entity55 ..|> entity22
+entity35 --> entity97
+entity47 --|> entity109
+entity107 --> entity15
+entity136 --> entity12
+entity47 --> entity162
+entity146 --> entity77
+entity87 --> entity15
+entity146 --> entity100
+entity7 --> entity45
+entity78 --> entity77
+entity35 --> entity158
+entity87 --> entity15
+entity116 --|> entity61
+entity48 --> entity173
+entity12 --> entity173
+entity25 --> entity73
+entity35 --> entity38
+entity108 --|> entity101
+entity111 --> entity149
+entity78 --> entity100
+entity146 --> entity104
+entity7 --> entity45
+entity25 --> entity77
+entity137 --> entity65
+entity30 --|> entity128
+entity166 --> entity170
+entity146 --> entity45
+entity48 --> entity173
+entity166 --|> entity62
+entity168 --> entity17
+entity78 --> entity150
+entity136 <-- entity48
+entity107 ..|> entity101
+entity146 --> entity15
+entity107 --> entity126
+entity29 --|> entity62
+entity140 --> entity16
+entity146 --> entity173
+entity78 --> entity173
+entity146 --> entity45
+entity25 <-- entity116
+entity111 --> entity73
+entity78 --> entity173
+entity146 --> entity173
+entity168 --> entity27
+entity146 --> entity15
+entity65 --|> entity30
+entity87 --> entity15
+entity87 --> entity15
+entity136 --> entity48
+entity146 --> entity100
+entity7 --|> entity136
+entity25 <-- entity166
+entity25 <-- entity55
+entity25 <-- entity29
+entity78 ..|> entity103
+entity87 --> entity15
+entity65 --> entity146
+entity78 --> entity15
+entity126 --> entity45
+entity13 --|> entity132
+entity87 --> entity115
+entity78 --> entity77
+entity168 --> entity135
+entity47 --> entity100
+entity107 --> entity126
+entity107 --> entity30
+entity107 --> entity15
+entity111 --> entity161
+entity107 --> entity30
+entity25 --> entity162
+entity87 --> entity173
+entity146 --> entity77
+entity116 --> entity73
+entity87 --> entity15
+entity146 --> entity77
+entity47 --> entity170
+entity94 --|> entity30
+entity78 --> entity15
+entity146 --> entity150
+entity25 <-- entity140
+entity12 --> entity99
+entity146 --> entity15
+entity87 --> entity15
+@enduml

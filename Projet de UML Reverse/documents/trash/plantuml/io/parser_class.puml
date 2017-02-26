@@ -1,0 +1,79 @@
+@startuml
+
+title Diagramme de classes du paquet umlreverse.model.io
+
+package umlreverse.model.io {
+	interface IDiagramLoader {
+		+IDiagram loadDiagramFromJava(File javaInput)
+		+IDiagram loadDiagramFromPlantUML(File input)
+		+IDiagram loadDiagramFromPlantUML(File input, File style)
+		+void applyStyle(IDiagram diagram, File style)
+	}
+	
+	interface IDiagramSaver {
+		+void saveDiagram(File output)
+		+void saveDiagram(File output, File style)
+		+void saveStyle(File style)
+	}
+	
+	class PlantUMLClassFactory {
+		-IStyleParser styleParser
+		-IPlantUMLClassParser diagParser
+		-IJavaClassParser javaParser
+		-IDiagram diagram
+	}
+	IDiagramLoader <|.. PlantUMLClassFactory
+	
+	interface IParser<D extends IDiagram> {
+		+File getFile()
+		+D getDiagram()
+		+void setFile(File file)
+		+void setDiagram(D diagram)
+	}
+	abstract AbstractParser<D extends IDiagram> {
+		-File file
+		-D diagram
+	}
+	IParser <|--- AbstractParser
+	
+	interface IStyleParser {
+		+IDiagram getDiagram()
+		+void applyStyle()
+	}
+	PlantUMLClassFactory "0..1" <--* "1..1" IStyleParser
+	IParser <|-- IStyleParser
+	
+	class StyleParser {
+		-IDiagram diagram
+	}
+	IStyleParser <|... StyleParser
+	AbstractParser <|-- StyleParser
+	
+	interface IPlantUMLClassParser {
+		+IClassDiagram getDiagram()
+		+void setDiagram(IPlantUMLClass diagram)
+		+void loadDiagram()
+	}
+	PlantUMLClassFactory "0..1" <--* "1..1" IPlantUMLClassParser
+	IParser <|-- IPlantUMLClassParser
+	class PlantUMLClassParser {
+		-IClassDiagram diagram
+	}
+	IPlantUMLClassParser <|... PlantUMLClassParser
+	AbstractParser <|-- PlantUMLClassParser
+	
+	interface IJavaClassParser {
+		+IClassDiagram getDiagram()
+		+void setDiagram(IPlantUMLClass diagram)
+		+void parseJava()
+	}
+	PlantUMLClassFactory "0..1" <--* "1..1" IJavaClassParser
+	IParser <|-- IJavaClassParser
+	class JavaClassParser {
+		-IClassDiagram diagram
+	}
+	IJavaClassParser <|... JavaClassParser
+	AbstractParser <|-- JavaClassParser
+}
+
+@enduml

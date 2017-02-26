@@ -1,0 +1,23 @@
+ @startuml
+
+ package diagram.visitor {
+'--------------------------------- umlreverse.model.diagram.visitor
+
+interface IDiagramVisitor {
+	+visit(ClassDiagram visitor) : void
+	+visit(SequenceDiagram visitor) : void
+	+visit(UseCaseDiagram visitor) : void
+	+visit(DiagramManager visitor) : void
+}
+
+
+class SaveStyleVisitor implements IDiagramVisitor
+class SavePlantUmlVisitor implements IDiagramVisitor
+class ToViewVisitor implements IDiagramVisitor {
+	+getDiagramMenu() : IDiagramMenu
+	+getDiagramEditor() : IDiagramEditor
+}
+'------------------------------fin umlreverse.model.diagram.visitor
+ }
+
+ @enduml

@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+title Cas d'utilisation généraux\nde l'application UML Reverse
+
+actor user as :user:
+
+rectangle {
+	(Créer un nouveau diagramme) as (create)
+	(Générer un diagramme en reverse) as (rev)
+	(Ouvrir un diagramme pour le modifier) as (edit)
+	(Importer et modifier un diagramme PlantUML) as (puml)
+	
+	:user: -- (puml)
+	:user: -- (rev)
+	:user: -- (edit)
+	:user: -- (create)
+}
+
+@enduml

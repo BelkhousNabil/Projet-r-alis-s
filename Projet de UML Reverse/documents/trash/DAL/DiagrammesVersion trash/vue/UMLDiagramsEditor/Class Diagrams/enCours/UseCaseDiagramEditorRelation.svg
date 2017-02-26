@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="591pt" style="width:774px;height:591px;" version="1.1" viewBox="0 0 774 591" width="774pt">
+    <defs>
+        <filter height="300%" id="f1" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g>
+        <polygon fill="#FFFFFF" filter="url(#f1)" points="125.25,24,177.25,24,184.25,46.2969,308.25,46.2969,308.25,124,125.25,124,125.25,24" style="stroke: #000000; stroke-width: 2.0;"/>
+        <line style="stroke: #000000; stroke-width: 2.0;" x1="125.25" x2="184.25" y1="46.2969" y2="46.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="46" x="128.25" y="39.9951">javafx</text>
+        <polygon fill="#FFFFFF" filter="url(#f1)" points="116.25,484,170.25,484,177.25,506.2969,658.25,506.2969,658.25,584,116.25,584,116.25,484" style="stroke: #000000; stroke-width: 2.0;"/>
+        <line style="stroke: #000000; stroke-width: 2.0;" x1="116.25" x2="177.25" y1="506.2969" y2="506.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="48" x="119.25" y="499.9951">model</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="58" x="141.75" y="60"/>
+        <ellipse cx="156.75" cy="76" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M159.7188,81.6406 Q159.1406,81.9375 158.5,82.0859 Q157.8594,82.2344 157.1563,82.2344 Q154.6563,82.2344 153.3359,80.5859 Q152.0156,78.9375 152.0156,75.8125 Q152.0156,72.6875 153.3359,71.0313 Q154.6563,69.375 157.1563,69.375 Q157.8594,69.375 158.5078,69.5313 Q159.1563,69.6875 159.7188,69.9844 L159.7188,72.7031 Q159.0938,72.125 158.5,71.8516 Q157.9063,71.5781 157.2813,71.5781 Q155.9375,71.5781 155.25,72.6484 Q154.5625,73.7188 154.5625,75.8125 Q154.5625,77.9063 155.25,78.9766 Q155.9375,80.0469 157.2813,80.0469 Q157.9063,80.0469 158.5,79.7734 Q159.0938,79.5 159.7188,78.9219 L159.7188,81.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="26" x="170.75" y="80.1543">Text</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="142.75" x2="198.75" y1="92" y2="92"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="142.75" x2="198.75" y1="100" y2="100"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="57" x="235" y="60"/>
+        <ellipse cx="250" cy="76" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M252.9688,81.6406 Q252.3906,81.9375 251.75,82.0859 Q251.1094,82.2344 250.4063,82.2344 Q247.9063,82.2344 246.5859,80.5859 Q245.2656,78.9375 245.2656,75.8125 Q245.2656,72.6875 246.5859,71.0313 Q247.9063,69.375 250.4063,69.375 Q251.1094,69.375 251.7578,69.5313 Q252.4063,69.6875 252.9688,69.9844 L252.9688,72.7031 Q252.3438,72.125 251.75,71.8516 Q251.1563,71.5781 250.5313,71.5781 Q249.1875,71.5781 248.5,72.6484 Q247.8125,73.7188 247.8125,75.8125 Q247.8125,77.9063 248.5,78.9766 Q249.1875,80.0469 250.5313,80.0469 Q251.1563,80.0469 251.75,79.7734 Q252.3438,79.5 252.9688,78.9219 L252.9688,81.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="25" x="264" y="80.1543">Line</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="236" x2="291" y1="92" y2="92"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="236" x2="291" y1="100" y2="100"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="104" x="411.25" y="520"/>
+        <ellipse cx="426.25" cy="536" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M429.2188,541.6406 Q428.6406,541.9375 428,542.0859 Q427.3594,542.2344 426.6563,542.2344 Q424.1563,542.2344 422.8359,540.5859 Q421.5156,538.9375 421.5156,535.8125 Q421.5156,532.6875 422.8359,531.0313 Q424.1563,529.375 426.6563,529.375 Q427.3594,529.375 428.0078,529.5313 Q428.6563,529.6875 429.2188,529.9844 L429.2188,532.7031 Q428.5938,532.125 428,531.8516 Q427.4063,531.5781 426.7813,531.5781 Q425.4375,531.5781 424.75,532.6484 Q424.0625,533.7188 424.0625,535.8125 Q424.0625,537.9063 424.75,538.9766 Q425.4375,540.0469 426.7813,540.0469 Q427.4063,540.0469 428,539.7734 Q428.5938,539.5 429.2188,538.9219 L429.2188,541.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="72" x="440.25" y="540.1543">Association</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="412.25" x2="514.25" y1="552" y2="552"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="412.25" x2="514.25" y1="560" y2="560"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="91" x="551" y="520"/>
+        <ellipse cx="566" cy="536" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M568.9688,541.6406 Q568.3906,541.9375 567.75,542.0859 Q567.1094,542.2344 566.4063,542.2344 Q563.9063,542.2344 562.5859,540.5859 Q561.2656,538.9375 561.2656,535.8125 Q561.2656,532.6875 562.5859,531.0313 Q563.9063,529.375 566.4063,529.375 Q567.1094,529.375 567.7578,529.5313 Q568.4063,529.6875 568.9688,529.9844 L568.9688,532.7031 Q568.3438,532.125 567.75,531.8516 Q567.1563,531.5781 566.5313,531.5781 Q565.1875,531.5781 564.5,532.6484 Q563.8125,533.7188 563.8125,535.8125 Q563.8125,537.9063 564.5,538.9766 Q565.1875,540.0469 566.5313,540.0469 Q567.1563,540.0469 567.75,539.7734 Q568.3438,539.5 568.9688,538.9219 L568.9688,541.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="59" x="580" y="540.1543">Extention</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="552" x2="641" y1="552" y2="552"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="552" x2="641" y1="560" y2="560"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="87" x="289" y="520"/>
+        <ellipse cx="304" cy="536" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M306.9688,541.6406 Q306.3906,541.9375 305.75,542.0859 Q305.1094,542.2344 304.4063,542.2344 Q301.9063,542.2344 300.5859,540.5859 Q299.2656,538.9375 299.2656,535.8125 Q299.2656,532.6875 300.5859,531.0313 Q301.9063,529.375 304.4063,529.375 Q305.1094,529.375 305.7578,529.5313 Q306.4063,529.6875 306.9688,529.9844 L306.9688,532.7031 Q306.3438,532.125 305.75,531.8516 Q305.1563,531.5781 304.5313,531.5781 Q303.1875,531.5781 302.5,532.6484 Q301.8125,533.7188 301.8125,535.8125 Q301.8125,537.9063 302.5,538.9766 Q303.1875,540.0469 304.5313,540.0469 Q305.1563,540.0469 305.75,539.7734 Q306.3438,539.5 306.9688,538.9219 L306.9688,541.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="55" x="318" y="540.1543">Inclusion</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="290" x2="375" y1="552" y2="552"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="290" x2="375" y1="560" y2="560"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="121" x="133" y="520"/>
+        <ellipse cx="148" cy="536" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M150.9688,541.6406 Q150.3906,541.9375 149.75,542.0859 Q149.1094,542.2344 148.4063,542.2344 Q145.9063,542.2344 144.5859,540.5859 Q143.2656,538.9375 143.2656,535.8125 Q143.2656,532.6875 144.5859,531.0313 Q145.9063,529.375 148.4063,529.375 Q149.1094,529.375 149.7578,529.5313 Q150.4063,529.6875 150.9688,529.9844 L150.9688,532.7031 Q150.3438,532.125 149.75,531.8516 Q149.1563,531.5781 148.5313,531.5781 Q147.1875,531.5781 146.5,532.6484 Q145.8125,533.7188 145.8125,535.8125 Q145.8125,537.9063 146.5,538.9766 Q147.1875,540.0469 148.5313,540.0469 Q149.1563,540.0469 149.75,539.7734 Q150.3438,539.5 150.9688,538.9219 L150.9688,541.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="89" x="162" y="540.1543">Generalization</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="134" x2="253" y1="552" y2="552"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="134" x2="253" y1="560" y2="560"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="176" x="387.75" y="60"/>
+        <ellipse cx="402.75" cy="76" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M405.7188,81.6406 Q405.1406,81.9375 404.5,82.0859 Q403.8594,82.2344 403.1563,82.2344 Q400.6563,82.2344 399.3359,80.5859 Q398.0156,78.9375 398.0156,75.8125 Q398.0156,72.6875 399.3359,71.0313 Q400.6563,69.375 403.1563,69.375 Q403.8594,69.375 404.5078,69.5313 Q405.1563,69.6875 405.7188,69.9844 L405.7188,72.7031 Q405.0938,72.125 404.5,71.8516 Q403.9063,71.5781 403.2813,71.5781 Q401.9375,71.5781 401.25,72.6484 Q400.5625,73.7188 400.5625,75.8125 Q400.5625,77.9063 401.25,78.9766 Q401.9375,80.0469 403.2813,80.0469 Q403.9063,80.0469 404.5,79.7734 Q405.0938,79.5 405.7188,78.9219 L405.7188,81.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="144" x="416.75" y="80.1543">UseCaseDiagramEditor</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="388.75" x2="562.75" y1="92" y2="92"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="388.75" x2="562.75" y1="100" y2="100"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="86.4141" style="stroke: #A80036; stroke-width: 1.5;" width="139" x="185" y="188"/>
+        <ellipse cx="200" cy="204" fill="#A9DCDF" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M200.1094,199.3438 L198.9531,204.4219 L201.2813,204.4219 L200.1094,199.3438 Z M198.625,197.1094 L201.6094,197.1094 L204.9688,209.5 L202.5156,209.5 L201.75,206.4375 L198.4688,206.4375 L197.7188,209.5 L195.2813,209.5 L198.625,197.1094 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="107" x="214" y="208.1543">ARelationGraphic</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="186" x2="323" y1="220" y2="220"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="186" x2="323" y1="228" y2="228"/>
+        <ellipse cx="196" cy="239.9023" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="98" x="205" y="242.2104">getColor() : Color</text>
+        <ellipse cx="196" cy="252.707" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="90" x="205" y="255.0151">setColor(String)</text>
+        <ellipse cx="196" cy="265.5117" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="51" x="205" y="267.8198">remove()</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="99.2188" style="stroke: #A80036; stroke-width: 1.5;" width="155" x="420" y="336.5"/>
+        <ellipse cx="436.35" cy="352.5" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M439.3188,358.1406 Q438.7406,358.4375 438.1,358.5859 Q437.4594,358.7344 436.7563,358.7344 Q434.2563,358.7344 432.9359,357.0859 Q431.6156,355.4375 431.6156,352.3125 Q431.6156,349.1875 432.9359,347.5313 Q434.2563,345.875 436.7563,345.875 Q437.4594,345.875 438.1078,346.0313 Q438.7563,346.1875 439.3188,346.4844 L439.3188,349.2031 Q438.6938,348.625 438.1,348.3516 Q437.5063,348.0781 436.8813,348.0781 Q435.5375,348.0781 434.85,349.1484 Q434.1625,350.2188 434.1625,352.3125 Q434.1625,354.4063 434.85,355.4766 Q435.5375,356.5469 436.8813,356.5469 Q437.5063,356.5469 438.1,356.2734 Q438.6938,356 439.3188,355.4219 L439.3188,358.1406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="120" x="450.65" y="356.6543">AssociationGraphic</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="421" x2="574" y1="368.5" y2="368.5"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="421" x2="574" y1="376.5" y2="376.5"/>
+        <ellipse cx="431" cy="388.4023" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="110" x="440" y="390.7104">getSource() : IActor</text>
+        <ellipse cx="431" cy="401.207" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="129" x="440" y="403.5151">getTarget() : IUseCase</text>
+        <ellipse cx="431" cy="414.0117" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="98" x="440" y="416.3198">setSource(IActor)</text>
+        <ellipse cx="431" cy="426.8164" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="117" x="440" y="429.1245">setTarget(IUseCase)</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="99.2188" style="stroke: #A80036; stroke-width: 1.5;" width="155" x="610" y="336.5"/>
+        <ellipse cx="632.2" cy="352.5" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M635.1688,358.1406 Q634.5906,358.4375 633.95,358.5859 Q633.3094,358.7344 632.6063,358.7344 Q630.1063,358.7344 628.7859,357.0859 Q627.4656,355.4375 627.4656,352.3125 Q627.4656,349.1875 628.7859,347.5313 Q630.1063,345.875 632.6063,345.875 Q633.3094,345.875 633.9578,346.0313 Q634.6063,346.1875 635.1688,346.4844 L635.1688,349.2031 Q634.5438,348.625 633.95,348.3516 Q633.3563,348.0781 632.7313,348.0781 Q631.3875,348.0781 630.7,349.1484 Q630.0125,350.2188 630.0125,352.3125 Q630.0125,354.4063 630.7,355.4766 Q631.3875,356.5469 632.7313,356.5469 Q633.3563,356.5469 633.95,356.2734 Q634.5438,356 635.1688,355.4219 L635.1688,358.1406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="107" x="647.8" y="356.6543">ExtentionGraphic</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="611" x2="764" y1="368.5" y2="368.5"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="611" x2="764" y1="376.5" y2="376.5"/>
+        <ellipse cx="621" cy="388.4023" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="110" x="630" y="390.7104">getSource() : IActor</text>
+        <ellipse cx="621" cy="401.207" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="129" x="630" y="403.5151">getTarget() : IUseCase</text>
+        <ellipse cx="621" cy="414.0117" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="98" x="630" y="416.3198">setSource(IActor)</text>
+        <ellipse cx="621" cy="426.8164" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="117" x="630" y="429.1245">setTarget(IUseCase)</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="99.2188" style="stroke: #A80036; stroke-width: 1.5;" width="155" x="230" y="336.5"/>
+        <ellipse cx="254" cy="352.5" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M256.9688,358.1406 Q256.3906,358.4375 255.75,358.5859 Q255.1094,358.7344 254.4063,358.7344 Q251.9063,358.7344 250.5859,357.0859 Q249.2656,355.4375 249.2656,352.3125 Q249.2656,349.1875 250.5859,347.5313 Q251.9063,345.875 254.4063,345.875 Q255.1094,345.875 255.7578,346.0313 Q256.4063,346.1875 256.9688,346.4844 L256.9688,349.2031 Q256.3438,348.625 255.75,348.3516 Q255.1563,348.0781 254.5313,348.0781 Q253.1875,348.0781 252.5,349.1484 Q251.8125,350.2188 251.8125,352.3125 Q251.8125,354.4063 252.5,355.4766 Q253.1875,356.5469 254.5313,356.5469 Q255.1563,356.5469 255.75,356.2734 Q256.3438,356 256.9688,355.4219 L256.9688,358.1406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="103" x="270" y="356.6543">InclusionGraphic</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="231" x2="384" y1="368.5" y2="368.5"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="231" x2="384" y1="376.5" y2="376.5"/>
+        <ellipse cx="241" cy="388.4023" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="110" x="250" y="390.7104">getSource() : IActor</text>
+        <ellipse cx="241" cy="401.207" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="129" x="250" y="403.5151">getTarget() : IUseCase</text>
+        <ellipse cx="241" cy="414.0117" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="98" x="250" y="416.3198">setSource(IActor)</text>
+        <ellipse cx="241" cy="426.8164" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="117" x="250" y="429.1245">setTarget(IUseCase)</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="99.2188" style="stroke: #A80036; stroke-width: 1.5;" width="189" x="6" y="336.5"/>
+        <ellipse cx="30" cy="352.5" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M32.9688,358.1406 Q32.3906,358.4375 31.75,358.5859 Q31.1094,358.7344 30.4063,358.7344 Q27.9063,358.7344 26.5859,357.0859 Q25.2656,355.4375 25.2656,352.3125 Q25.2656,349.1875 26.5859,347.5313 Q27.9063,345.875 30.4063,345.875 Q31.1094,345.875 31.7578,346.0313 Q32.4063,346.1875 32.9688,346.4844 L32.9688,349.2031 Q32.3438,348.625 31.75,348.3516 Q31.1563,348.0781 30.5313,348.0781 Q29.1875,348.0781 28.5,349.1484 Q27.8125,350.2188 27.8125,352.3125 Q27.8125,354.4063 28.5,355.4766 Q29.1875,356.5469 30.5313,356.5469 Q31.1563,356.5469 31.75,356.2734 Q32.3438,356 32.9688,355.4219 L32.9688,358.1406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="137" x="46" y="356.6543">GeneralizationGraphic</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="194" y1="368.5" y2="368.5"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="194" y1="376.5" y2="376.5"/>
+        <ellipse cx="17" cy="388.4023" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="163" x="26" y="390.7104">getSource() : IUseCaseEntity</text>
+        <ellipse cx="17" cy="401.207" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="160" x="26" y="403.5151">getTarget() : IUseCaseEntity</text>
+        <ellipse cx="17" cy="414.0117" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="151" x="26" y="416.3198">setSource(IUseCaseEntity)</text>
+        <ellipse cx="17" cy="426.8164" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="148" x="26" y="429.1245">setTarget(IUseCaseEntity)</text>
+        <path d="M477.91,121.27 C481.578,171.285 488.24,262.141 492.706,323.036 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="493.679,336.308,497.0106,327.0397,493.3136,331.3214,489.032,327.6244,493.679,336.308" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="493.3136" x2="492.7285" y1="331.3214" y2="323.3425"/>
+        <polygon fill="none" points="476.94,108.042,473.3892,114.3183,477.817,120.0099,481.3678,113.7336,476.94,108.042" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="84" x="489.25" y="235.0669">-associations</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="480.1918" y="128.2085">0..*</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="467.6899" y="325.2775">0..*</text>
+        <path d="M514.369,116.765 C536.346,135.891 563.284,161.595 583.25,188 C615.239,230.306 642.8,283.819 661.497,324.391 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="666.891,336.272,666.8135,326.4234,664.8244,331.7191,659.5288,329.73,666.891,336.272" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="664.8244" x2="661.517" y1="331.7191" y2="324.4345"/>
+        <polygon fill="none" points="504.348,108.196,506.3091,115.1353,513.4688,115.9941,511.5078,109.0548,504.348,108.196" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="72" x="635.25" y="235.0669">-extentions</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="514.1219" y="128.005">0..*</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="639.0628" y="325.6013">0..*</text>
+        <path d="M450.185,118.675 C435.971,138.41 418.279,164.086 404.25,188 C378.203,232.401 352.646,284.772 334.31,324.351 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="328.858,336.2,336.2532,329.6953,330.9476,331.6576,328.9854,326.352,328.858,336.2" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="330.9476" x2="334.2915" y1="331.6576" y2="324.3905"/>
+        <polygon fill="none" points="457.888,108.087,451.1238,110.5861,450.8291,117.7912,457.5933,115.2921,457.888,108.087" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="67" x="405.25" y="235.0669">-inclusions</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="426.4873" y="127.8694">0..*</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="305.8822" y="325.521">0..*</text>
+        <path d="M393.229,111.715 C366.411,119.469 336.305,127.146 308.25,132 C197.761,151.115 126.236,95.919 62.25,188 C34.5711,227.832 48.2486,282.621 66.48,324.309 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="71.9767,336.244,71.8458,326.396,69.8854,331.7023,64.5791,329.742,71.9767,336.244" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="69.8854" x2="66.5386" y1="331.7023" y2="324.436"/>
+        <polygon fill="none" points="405.702,108.036,398.8154,105.8971,394.1923,111.4313,401.0789,113.5702,405.702,108.036" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="102" x="63.25" y="235.0669">-generalizations</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="360.5491" y="128.201">0..*</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="43.2334" y="325.5701">0..*</text>
+        <path d="M260.994,121.347 C259.991,137.499 258.789,156.869 257.679,174.752 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="none" points="256.872,187.751,261.2362,182.0105,257.6158,175.7741,253.2516,181.5146,256.872,187.751" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="261.804,108.297,257.2539,117.0318,261.4941,113.2874,265.2385,117.5276,261.804,108.297" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="261.4941" x2="260.9985" y1="113.2874" y2="121.272"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="29" x="261.25" y="153.0669">lines</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="234.3437" y="128.1306">1..*</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="231.5111" y="176.8452">0..*</text>
+        <path d="M187.804,120.256 C194.034,132.348 201.243,145.882 208.25,158 C211.777,164.1 215.579,170.415 219.432,176.655 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="none" points="226.375,187.744,226.5814,180.5359,220.0071,177.573,219.8007,184.7811,226.375,187.744" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="181.715,108.298,182.2342,118.1332,183.9838,112.7536,189.3633,114.5032,181.715,108.298" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="183.9838" x2="187.6135" y1="112.7536" y2="119.8825"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="40" x="209.25" y="153.0669">textes</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="157.3408" y="128.1318">1..*</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="196.916" y="176.8373">0..*</text>
+        <path d="M337.991,284.726 C364.569,301.46 393.824,319.88 419.929,336.316 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="none" points="334.167,290.59,320.972,274.01,341.627,278.743,334.167,290.59" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M342.705,270.97 C345.575,272.02 348.429,273.033 351.25,274 C455.874,309.861 488.898,296.625 592.25,336 C598.06,338.213 603.975,340.686 609.87,343.313 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="none" points="339.802,277.353,323.673,263.611,344.851,264.295,339.802,277.353" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M275.437,293.162 C280.421,307.549 285.666,322.691 290.428,336.437 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="none" points="268.805,295.402,268.873,274.213,282.034,290.82,268.805,295.402" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M197.105,288.774 C181.34,304.437 164.382,321.285 149.13,336.437 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="none" points="192.639,283.343,211.761,274.213,202.507,293.275,192.639,283.343" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M483.879,448.348 C479.543,468.245 474.876,489.659 471.079,507.0779 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="468.305,519.8058,474.1299,511.8641,469.3698,514.9205,466.3134,510.1604,468.305,519.8058" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="469.3698" x2="471.0735" y1="514.9205" y2="507.104"/>
+        <polygon fill="none" points="486.679,435.504,481.4929,440.5145,484.1233,447.2287,489.3094,442.2182,486.679,435.504" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="459.2537" y="455.937">0..*</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="441.567" y="508.7354">1..1</text>
+        <path d="M652.268,446.969 C640.144,467.754 626.965,490.346 616.438,508.3926 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="609.78,519.8058,617.7698,514.0471,612.2992,515.4868,610.8595,510.0163,609.78,519.8058" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="612.2992" x2="616.3305" y1="515.4868" y2="508.5767"/>
+        <polygon fill="none" points="658.956,435.504,652.4778,438.6715,652.9101,445.8697,659.3883,442.7021,658.956,435.504" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="628.9277" y="455.937">0..*</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="584.8413" y="508.7354">1..1</text>
+        <path d="M317.081,448.348 C320.254,468.147 323.668,489.448 326.452,506.8201 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="328.533,519.8058,331.0584,510.2862,327.7418,514.8688,323.1592,511.5522,328.533,519.8058" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="327.7418" x2="326.4755" y1="514.8688" y2="506.9696"/>
+        <polygon fill="none" points="315.023,435.504,312.0229,442.0614,316.922,447.3528,319.9221,440.7954,315.023,435.504" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="290.292" y="455.937">0..*</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="299.8215" y="508.7354">1..1</text>
+        <path d="M136.001,446.969 C148.392,467.754 161.86,490.346 172.619,508.3926 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="179.423,519.8058,178.25,510.027,176.8626,515.5111,171.3785,514.1237,179.423,519.8058" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="176.8626" x2="172.766" y1="515.5111" y2="508.6395"/>
+        <polygon fill="none" points="129.166,435.504,128.8022,442.7059,135.3103,445.8117,135.674,438.6098,129.166,435.504" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="23" x="107.5404" y="455.937">0..*</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="148.4999" y="508.7354">1..1</text>
+    </g>
+</svg>

@@ -1,0 +1,33 @@
+@startuml
+left to right direction
+title Schéma d'utilisation de la modification\n d'un diagramme de séquence
+
+actor user
+
+rectangle {
+
+        (Créer/Supprimer/Afficher/Cacher/Modifier) as (edit)
+        (Cadre d'interaction) as (AjtInter)
+				(Message) as (mess)
+				
+        :user: -- (edit)
+        :user: -- (Déplacer)
+
+        (Déplacer) <|-- (Entité)
+
+        (edit) <|-- (Entité)
+        (edit) <|-- (mess)
+        (Entité) <|-- (Note)
+        (Entité) <|--(Objet)
+        (Entité) <|-- (Acteur)
+        (Entité) <|-- (AjtInter)
+		
+	(AjtInter) <|-- (opt)
+	(AjtInter) <|-- (loop)
+	(AjtInter) <|-- (ref)
+	(AjtInter) <|-- (alt/else)
+	(AjtInter) <|-- (for)
+		
+}
+
+@enduml

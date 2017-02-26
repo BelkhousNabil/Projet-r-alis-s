@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.66" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane prefHeight="394.0" prefWidth="600.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="Fichier">
+                  <items>
+                        <MenuItem mnemonicParsing="false" text="Créer un projet" />
+                    <MenuItem mnemonicParsing="false" text="Ouvrir un projet" />
+                        <MenuItem mnemonicParsing="false" text="Sauver le projet" />
+                        <MenuItem mnemonicParsing="false" text="Créer un diagramme" />
+                        <MenuItem mnemonicParsing="false" text="Charger un diagramme" />
+                        <MenuItem mnemonicParsing="false" text="Sauver le diagramme" />
+                        <MenuItem mnemonicParsing="false" text="Exporter le diagramme en..." />
+                        <MenuItem mnemonicParsing="false" text="Importer un style sur le diagramme" />
+                        <MenuItem mnemonicParsing="false" text="Exporter le style du diagramme" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                        <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <left>
+            <ScrollPane prefHeight="365.0" prefWidth="109.0" BorderPane.alignment="CENTER" />
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

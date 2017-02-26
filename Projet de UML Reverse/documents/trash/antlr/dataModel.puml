@@ -1,0 +1,319 @@
+@startuml
+
+' ---------------------------- '
+' Boites de style              '
+' ---------------------------- '
+interface IStyleManager {
+	+getStyle(String key) : String
+	+getKeys() : Set<String>
+	..
+	+setStyle(String key, String value) : void
+	+removeStyle(String key) : void
+	+clear() : void
+}
+
+class StyleManager implements IStyleManager {
+	+getStyle(String key) : String
+	+getKeys() : Set<String>
+	..
+	+setStyle(String key, String value) : void
+	+removeStyle(String key) : void
+	+clear() : void
+}
+
+' ---------------------------- '
+' Les Visiteurs                '
+' ---------------------------- '
+
+interface Visitor {
+	+visit(Association instance) : void
+}
+
+class plantUmlVisitor implements Visitor
+
+class saveVisitor implements Visitor
+
+' ---------------------------- '
+' relations                    '
+' ---------------------------- '
+
+interface IRelation <E implements IEntity> {
+	+getStyle() : StyleManager
+	+getEntitySource() : E
+	+getEntityTarget() : E
+	+getGlobalComment() : String
+	+getId() : String
+	..
+	+setStyle(StyleManager styleBox) : void
+	+setEntitySource(E comment) : void
+	+setEntityTarget(E comment) : void		
+	+setGlobalComment() : void
+	+accept(Visitor v) : void
+}
+
+abstract AbstractRelation <E implements IEntity> implements IRelation {
+	+getStyle() : StyleManager
+	+getEntitySource() : E
+	+getEntityTarget() : E
+	+getGlobalComment() : String
+	+getId() : String
+	..
+	+setStyle(StyleManager styleBox) : void
+	+setEntitySource(E source) : void
+	+setEntityTarget(E target) : void		
+	+setGlobalComment(String comment) : void
+	+accept(Visitor v) : void
+}
+
+interface IPonderateRelation<E implements IEntity> extends IRelation {
+	+getStyle() : StyleManager
+	+getEntitySource() : E
+	+getEntityTarget() : E
+	+getGlobalComment() : String
+	+getComment(E entity) : String
+	+getId() : int
+	..
+	+setStyle(StyleManager styleBox) : void
+	+setComment(E entity, String comment) : void
+	+setEntitySource(E entity) : void
+	+setEntityTarget(E entity) : void		
+	+setGlobalComment(String comment) : void
+	+accept(Visitor v) : void
+}
+
+abstract AbstractPonderateRelation<E implements IEntity> extends AbstractRelation implements IPonderateRelation  {
+	+getStyle() : StyleManager
+	+getEntitySource() : E
+	+getEntityTarget() : E
+	+getGlobalComment() : String
+	+getId() : String
+	..
+	+setStyle(StyleManager styleBox) : void
+	+setEntitySource(E source) : void
+	+setEntityTarget(E target) : void		
+	+setGlobalComment(String comment) : void
+	+accept(Visitor v) : void
+}
+
+class Association <E implements IUseCaseEntity> extends AbstractPonderateRelation implements IPonderateRelation {
+	+getStyle() : StyleManager
+	+getEntitySource() : E
+	+getEntityTarget() : E
+	+getGlobalComment() : String
+	+getComment(E entity) : String
+	..
+	+setStyle(StyleManager styleBox) : void
+	+setComment(E entity, String comment) : void
+	+setEntitySource(E entity) : void
+	+setEntityTarget(E entity) : void		
+	+setGlobalComment(String comment) : void
+	+accept(Visitor v) : void
+}
+
+class Generalization <E implements IUseCaseEntity> extends AbstractRelation implements IRelation {
+	+getStyle() : StyleManager
+	+getEntitySource() : E
+	+getEntityTarget() : E
+	+getGlobalComment() : String
+	+getId() : String
+	..
+	+setStyle(StyleManager styleBox) : void
+	+setEntitySource(E source) : void
+	+setEntityTarget(E target) : void		
+	+setGlobalComment(String comment) : void
+	+accept(Visitor v) : void
+}
+
+class Include <E implements IUseCaseEntity> extends AbstractRelation implements IRelation {
+	+getStyle() : StyleManager
+	+getEntitySource() : E
+	+getEntityTarget() : E
+	+getGlobalComment() : String
+	+getId() : String
+	..
+	+setStyle(StyleManager styleBox) : void
+	+setEntitySource(E source) : void
+	+setEntityTarget(E target) : void		
+	+setGlobalComment(String comment) : void
+	+accept(Visitor v) : void
+}
+
+class Inheritance <E implements IClass, IUseCaseEntity> extends AbstractRelation implements IRelation {
+	+getStyle() : StyleManager
+	+getEntitySource() : E
+	+getEntityTarget() : E
+	+getGlobalComment() : String
+	+getId() : String
+	..
+	+setStyle(StyleManager styleBox) : void
+	+setEntitySource(E source) : void
+	+setEntityTarget(E target) : void		
+	+setGlobalComment(String comment) : void
+	+accept(Visitor v) : void
+}
+
+class Implementation <E implements IClass> extends AbstractRelation implements IRelation {
+	+getStyle() : StyleManager
+	+getEntitySource() : E
+	+getEntityTarget() : E
+	+getGlobalComment() : String
+	+getId() : String
+	..
+	+setStyle(StyleManager styleBox) : void
+	+setEntitySource(E source) : void
+	+setEntityTarget(E target) : void		
+	+setGlobalComment(String comment) : void
+	+accept(Visitor v) : void
+}
+
+class Dependancy <E implements IClass> extends AbstractPonderateRelation implements IPonderateRelation {
+	+getStyle() : StyleManager
+	+getEntitySource() : E
+	+getEntityTarget() : E
+	+getGlobalComment() : String
+	+getComment(E entity) : String
+	+getId() : String
+	..
+	+setStyle(StyleManager styleBox) : void
+	+setComment(E entity, String comment) : void
+	+setEntitySource(E entity) : void
+	+setEntityTarget(E entity) : void		
+	+setGlobalComment(String comment) : void
+	+accept(Visitor v) : void
+}
+
+class Aggregation <E implements IClass> extends AbstractPonderateRelation implements IPonderateRelation {
+	+getStyle() : StyleManager
+	+getEntitySource() : E
+	+getEntityTarget() : E
+	+getGlobalComment() : String
+	+getComment(E entity) : String
+	+getId() : String
+	..
+	+setStyle(StyleManager styleBox) : void
+	+setComment(E entity, String comment) : void
+	+setEntitySource(E entity) : void
+	+setEntityTarget(E entity) : void		
+	+setGlobalComment(String comment) : void
+	+accept(Visitor v) : void
+}
+
+class Composition <E implements IClass> extends AbstractPonderateRelation implements IPonderateRelation {
+	+getStyle() : StyleManager
+	+getEntitySource() : E
+	+getEntityTarget() : E
+	+getGlobalComment() : String
+	+getComment(E entity) : String
+	+getId() : String
+	..
+	+setStyle(StyleManager styleBox) : void
+	+setComment(E entity, String comment) : void
+	+setEntitySource(E entity) : void
+	+setEntityTarget(E entity) : void		
+	+setGlobalComment(String comment) : void
+	+accept(Visitor v) : void
+}
+
+class Creation <E implements ISequenceEntity> extends AbstractRelation implements IRelation {
+	+getStyle() : StyleManager
+	+getEntitySource() : E
+	+getEntityTarget() : E
+	+getGlobalComment() : String
+	+getId() : String
+	..
+	+setStyle(StyleManager styleBox) : void
+	+setEntitySource(E source) : void
+	+setEntityTarget(E target) : void		
+	+setGlobalComment(String comment) : void
+	+accept(Visitor v) : void
+}
+
+class Destruction <E implements ISequenceEntity> extends AbstractRelation implements IRelation {
+	+getStyle() : StyleManager
+	+getEntitySource() : E
+	+getEntityTarget() : E
+	+getGlobalComment() : String
+	+getId() : String
+	..
+	+setStyle(StyleManager styleBox) : void
+	+setEntitySource(E source) : void
+	+setEntityTarget(E target) : void		
+	+setGlobalComment(String comment) : void
+	+accept(Visitor v) : void
+} 
+
+class Message <E implements ISequenceEntity> extends AbstractRelation implements IRelation {
+	+getStyle() : StyleManager
+	+getEntitySource() : E
+	+getEntityTarget() : E
+	+getGlobalComment() : String
+	+getId() : String
+	..
+	+setStyle(StyleManager styleBox) : void
+	+setEntitySource(E source) : void
+	+setEntityTarget(E target) : void		
+	+setGlobalComment(String comment) : void
+	+accept(Visitor v) : void
+}
+ 
+enum TypeRelation {
+	MESSAGE
+	COMPOSITION
+	ASSOCIRATION
+	DEPENDANCY
+	AGGREGATION
+	GENERALIZATION
+	INCLUDE
+	INHERITANCE
+	IMPLEMENTATION
+	CREATION
+	DESTRUCTION
+}
+
+
+' ---------------------------- '
+' Commun à tous les diagrammes '
+' ---------------------------- '
+
+interface IDiagram {
+	+getName() : String
+	+getFileName() : String
+	+getStyle() : StyleManager
+	..
+	+setStyle(StyleManager styleBox) : void
+	+setName(String nom) : void
+	+setFileName(String nomDeFichier) : void
+	+accept(Visitor visitor) : void
+}
+
+
+abstract class AbstractDiagram implements IDiagram {
+	+getName() : String
+	+getFileName() : String
+	+getStyle() : StyleManager
+	..
+	+setStyle(StyleManager styleBox) : void
+	+setName(String nom) : void
+	+setFileName(String nomDeFichier) : void
+	+accept(Visitor visitor) : void
+}
+
+interface IEntity { 
+	+getName() : String
+	+getStyle() : StyleManager
+	..
+	+setStyle(StyleManager styleBox) : void
+	+setName(String nom) : void
+	+accept(Visitor v) : void
+}
+
+abstract class AbstractEntity implements IEntity {
+	+getName() : String
+	+getStyle() : StyleManager
+	..
+	+setStyle(StyleManager styleBox) : void
+	+setName(String nom) : void
+	+accept(Visitor v) : void
+}
+
+@enduml

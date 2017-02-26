@@ -1,0 +1,32 @@
+@startuml
+left to right direction
+title Schéma d'utilisation de la modification\nd'un diagramme de classe
+
+Actor :user:
+
+rectangle {
+       
+       (Relation) as (lien)
+       (Créer/Supprimer/Afficher/Cacher/Modifier) as crrmed
+ 
+	:user: -> (crrmed)
+  :user: -> (Déplacer)
+  (Déplacer) <|-- (Entité)
+	(crrmed) <|-- (lien)    
+	(crrmed) <|-- (Entité)
+  (Entité) <|-- (Paquetage)
+  (Entité) <|-- (Note) 
+  (Entité) <|-- (Objet)
+  (Objet) <|-- (Classe)      
+	(Objet) <|-- (Interface) 
+  (Objet) <|-- (Classe Abstraite)
+  (Objet) <|-- (Énumeration)
+  (lien) <|-- (Dépendance)
+  (lien) <|-- (Association)
+  (lien) <|-- (Aggrégation)
+  (lien) <|-- (Composition)
+  (lien) <|-- (Héritage)
+  (lien) <|-- (Implémentation)
+}
+
+@enduml

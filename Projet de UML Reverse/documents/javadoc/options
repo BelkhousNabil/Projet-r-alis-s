@@ -1,0 +1,24 @@
+-classpath
+'/home/anto/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar:/home/anto/.m2/repository/org/antlr/antlr4-runtime/4.5.1-1/antlr4-runtime-4.5.1-1.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/home/anto/developpement/uml/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2016 Your Organisation. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/anto/developpement/uml/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'umlreverse 1.0-SNAPSHOT API'
+-linkoffline
+'http://docs.oracle.com/javase/8/docs/api' '/home/anto/developpement/uml/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'umlreverse 1.0-SNAPSHOT API'

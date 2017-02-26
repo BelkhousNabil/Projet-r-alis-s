@@ -1,0 +1,99 @@
+@startuml
+package class.relation {
+' -------------------------------- umlreverse.model.diagram.class.relation
+
+interface IRelationBuilder {
+    +getDiagram() : IClassDiagram
+    +setDiagram(IClassDiagram diagram)
+
+    //valide()
+    +createImplementation(IClass source, IInterface target) : Implementation
+    +createInheritance(IInterface inherite, IInterface inherited) : Inheritance
+    +createInheritance(IClass inherite, IClass inherited) : Inheritance
+    +createComposition(IClass compose, IClass composed) : Composition
+    +createComposition(IClass compose, IInterface composed) : Composition
+    +createAggregation(IClass aggregate, IClassEntity aggregated) : Aggregation
+    +createDoubleAssociation(IClass a, IClass b) : DoubleAssociation
+    +createAssociation(IClass associate, IClassEntity associated) : Association
+    +createDependance(IClassOrInterface a, IClassOrInterface b) : Dependance
+    +createInternalClass(IClass superclass, IClass internalClass) : InternalClass
+    +createInternalClass(IClass superclass, IEnum internalEnum) : InternalClass
+
+    //invalide() : renvoit une exception
+    +createInternalClass(IClassEntity a, IClassEntity b) : InternalClass
+    +createImplementation(IClassEntity a, IClassEntity b) : Implementation
+    +createInheritance(IClassEntity a, IClassEntity b) : Inheritance
+    +createComposition(IClassEntity a, IClassEntity b) : Composition
+    +createAggregation(IClassEntity a, IClassEntity b) : Aggregation
+    +createDoubleAssociation(IClassEntity a, IClassEntity b) : DoubleAssociation
+    +createAssociation(IClassEntity a, IClassEntity b) : Association
+}
+
+class RelationBuilder implements IRelationBuilder
+
+
+
+interface IRelation {
+    +visit(ClassVisitor visitor) : void
+    +getDiagramme() : IClassDiagram
+    +getId() : String
+    +getNotes() : Set<INote>
+    +getConstraintNotes() : Set<INote>
+    +getNote(String name) : INote
+    +getConstraintNote(String name) : INote
+    +addNote(INote note) : void
+    +addConstraintNote(INote note) : void
+    +removeNote(INote note) : void
+    +removeConstraintNote(INote note) : void
+}
+
+interface IStructuralRelation extends IRelation {
+    +getEntitySource() : IEntity
+    +getEntityTarget() : IEntity	
+}
+
+interface INoStructuralRelation extends IRelation {
+    +getCentralComment() : String
+    +setCentralComment(String) : void
+}
+interface IAssociation extends INoStructuralRelation {
+    +getClassAssociation() : IClassOrInterface
+    +setClassAssociation(IClassOrInterface classAssociation) : void
+    +removeClassAssociation() : void
+}
+interface IDirectionnalAssociation extends IAssociation {
+    +getSourceComment() : String
+    +getSource() : IClassEntity
+    +getSourceCardinality() : String
+    +getTargetComment() : String
+    +getTarget() : IClassEntity
+    +getTargetCardinality() : String
+
+    +setTargetCardinality(String cardinality) : void
+    +setTargetComment(String comment) : void 
+    +setSourceCardinality(String cardinality) : void
+    +setSourceComment(String comment) : void 
+}
+
+interface INoDirectionnalAssociation extends IAssociation{
+    +getComment(IEntity entity) : String
+    +getCardinality(IEntity entity) : String
+    +getComments() : String[]
+    +getCardinality(IEntity entity) : String[]
+    ..
+    +setCommentSource(IEntity entity) : String
+    +setCardinality(IEntity entity) : String
+}
+
+class Association extends IDirectionnalAssociation
+class DoubleAssociation extends INoDirectionnalAssociation 
+class Inheritance extends IStructuralRelation 
+class InternalClass extends IStructuralRelation
+class Implementation extends IStructuralRelation 
+class Dependance extends INoStructuralRelation
+class Aggregation extends IDirectionnalAssociation 
+class Composition extends IDirectionnalAssociation 
+
+}
+' -------------------------------- fin package umlreverse.model.diagram.class.relation
+@enduml

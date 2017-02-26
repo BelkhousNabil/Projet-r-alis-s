@@ -1,0 +1,51 @@
+@startuml
+title Cas d'utilisation d'un diagramme de classe
+actor :user:
+rectangle {
+	(Dessiner\nDiagramme) as (desdiag)
+	(Modifier\nDiagramme) as (moddiag)
+	(Supprimer\nDiagramme) as (Supdiag)
+	(Sauvegarder\nProjet) as (sauv)	
+	(Exporter\nFichier) as (expo)
+
+	(Deplacer\nDiagramme) as (depdiag)
+	(Changer\nRendu\nVisuel) as (style)
+	(Charger\nFichier) as (chargerf)
+	(Charger\nProjet) as (chargerp)	
+	(Generer\nDiagramme) as (genDiag)
+
+	(desdiag)<-- :user:
+	(moddiag)<-- :user:
+	(Supdiag)<-- :user:
+	(sauv)	<-- :user:
+	(expo)<-- :user:
+	(depdiag)<-- :user:
+	(style)<-- :user:
+	(chargerf)<-- :user:
+	(chargerp)	<-- :user:
+	(genDiag)<-- :user:
+
+	(Use Case)
+	(Etats)
+	(Sequence)
+	(Package)
+	(Classe)
+
+	(Fichier\nJava) as (FJ)
+	(Fichier\nPlantUML) as (FP) 
+
+	
+	(desdiag)<|-- (Use Case)
+	(desdiag)<|-- (Etats)
+	(desdiag)<|-- (Sequence)
+	(desdiag)<|-- (Package)
+	(desdiag)<|-- (Classe)
+	
+	(chargerf)<|-- (FJ)
+	(chargerf)<|-- (FP)
+	
+	(genDiag) ..|> "<include>" (chargerf)
+	(genDiag) ..|> "<include>" (chargerp)
+
+}
+@enduml

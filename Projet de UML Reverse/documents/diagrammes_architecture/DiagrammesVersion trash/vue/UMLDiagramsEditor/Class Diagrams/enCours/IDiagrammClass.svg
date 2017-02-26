@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="3389pt" style="width:1488px;height:3389px;" version="1.1" viewBox="0 0 1488 3389" width="1488pt">
+    <defs>
+        <filter height="300%" id="f1" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g>
+        <polygon fill="#FFFFFF" filter="url(#f1)" points="152,24,206,24,213,46.2969,1481,46.2969,1481,3382,152,3382,152,24" style="stroke: #000000; stroke-width: 2.0;"/>
+        <line style="stroke: #000000; stroke-width: 2.0;" x1="152" x2="213" y1="46.2969" y2="46.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="48" x="155" y="39.9951">model</text>
+        <polygon fill="#FFFFFF" filter="url(#f1)" points="176,68,245,68,252,90.2969,1457,90.2969,1457,3358,176,3358,176,68" style="stroke: #000000; stroke-width: 2.0;"/>
+        <line style="stroke: #000000; stroke-width: 2.0;" x1="176" x2="252" y1="90.2969" y2="90.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="63" x="179" y="83.9951">diagram</text>
+        <polygon fill="#FFFFFF" filter="url(#f1)" points="200,112,298,112,305,134.2969,405,134.2969,405,1447,200,1447,200,112" style="stroke: #000000; stroke-width: 2.0;"/>
+        <line style="stroke: #000000; stroke-width: 2.0;" x1="200" x2="305" y1="134.2969" y2="134.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="92" x="203" y="127.9951">diagram.util</text>
+        <polygon fill="#FFFFFF" filter="url(#f1)" points="429,220,475,220,482,242.2969,1433,242.2969,1433,3334,429,3334,429,220" style="stroke: #000000; stroke-width: 2.0;"/>
+        <line style="stroke: #000000; stroke-width: 2.0;" x1="429" x2="482" y1="242.2969" y2="242.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="40" x="432" y="235.9951">class</text>
+        <polygon fill="#FFFFFF" filter="url(#f1)" points="22,1347,52,1347,59,1369.2969,128,1369.2969,128,1447,22,1447,22,1347" style="stroke: #000000; stroke-width: 2.0;"/>
+        <line style="stroke: #000000; stroke-width: 2.0;" x1="22" x2="59" y1="1369.2969" y2="1369.2969"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="24" x="25" y="1362.9951">util</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="122" x="216" y="1383"/>
+        <ellipse cx="231" cy="1399" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M226.9219,1394.7656 L226.9219,1392.6094 L234.3125,1392.6094 L234.3125,1394.7656 L231.8438,1394.7656 L231.8438,1402.8438 L234.3125,1402.8438 L234.3125,1405 L226.9219,1405 L226.9219,1402.8438 L229.3906,1402.8438 L229.3906,1394.7656 L226.9219,1394.7656 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="90" x="245" y="1403.1543">IStyleManager</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="217" x2="337" y1="1415" y2="1415"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="217" x2="337" y1="1423" y2="1423"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="92" x="297" y="474"/>
+        <ellipse cx="312" cy="490" fill="#A9DCDF" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M312.1094,485.3438 L310.9531,490.4219 L313.2813,490.4219 L312.1094,485.3438 Z M310.625,483.1094 L313.6094,483.1094 L316.9688,495.5 L314.5156,495.5 L313.75,492.4375 L310.4688,492.4375 L309.7188,495.5 L307.2813,495.5 L310.625,483.1094 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="60" x="326" y="494.1543">ADiagram</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="298" x2="388" y1="506" y2="506"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="298" x2="388" y1="514" y2="514"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="88" x="300.5" y="148"/>
+        <ellipse cx="315.5" cy="164" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M311.4219,159.7656 L311.4219,157.6094 L318.8125,157.6094 L318.8125,159.7656 L316.3438,159.7656 L316.3438,167.8438 L318.8125,167.8438 L318.8125,170 L311.4219,170 L311.4219,167.8438 L313.8906,167.8438 L313.8906,159.7656 L311.4219,159.7656 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="56" x="329.5" y="168.1543">IDiagram</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="301.5" x2="387.5" y1="180" y2="180"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="301.5" x2="387.5" y1="188" y2="188"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="72" x="216" y="999"/>
+        <ellipse cx="231" cy="1015" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M226.9219,1010.7656 L226.9219,1008.6094 L234.3125,1008.6094 L234.3125,1010.7656 L231.8438,1010.7656 L231.8438,1018.8438 L234.3125,1018.8438 L234.3125,1021 L226.9219,1021 L226.9219,1018.8438 L229.3906,1018.8438 L229.3906,1010.7656 L226.9219,1010.7656 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="40" x="245" y="1019.1543">IEntity</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="217" x2="287" y1="1031" y2="1031"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="217" x2="287" y1="1039" y2="1039"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="65" x="323.75" y="999"/>
+        <ellipse cx="338.75" cy="1015" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M341.7188,1020.6406 Q341.1406,1020.9375 340.5,1021.0859 Q339.8594,1021.2344 339.1563,1021.2344 Q336.6563,1021.2344 335.3359,1019.5859 Q334.0156,1017.9375 334.0156,1014.8125 Q334.0156,1011.6875 335.3359,1010.0313 Q336.6563,1008.375 339.1563,1008.375 Q339.8594,1008.375 340.5078,1008.5313 Q341.1563,1008.6875 341.7188,1008.9844 L341.7188,1011.7031 Q341.0938,1011.125 340.5,1010.8516 Q339.9063,1010.5781 339.2813,1010.5781 Q337.9375,1010.5781 337.25,1011.6484 Q336.5625,1012.7188 336.5625,1014.8125 Q336.5625,1016.9063 337.25,1017.9766 Q337.9375,1019.0469 339.2813,1019.0469 Q339.9063,1019.0469 340.5,1018.7734 Q341.0938,1018.5 341.7188,1017.9219 L341.7188,1020.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="33" x="352.75" y="1019.1543">INote</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="324.75" x2="387.75" y1="1031" y2="1031"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="324.75" x2="387.75" y1="1039" y2="1039"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="201.6563" style="stroke: #A80036; stroke-width: 1.5;" width="173" x="806.75" y="1306"/>
+        <ellipse cx="821.75" cy="1322" fill="#EB937F" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M825.8594,1328 L818.1406,1328 L818.1406,1315.6094 L825.8594,1315.6094 L825.8594,1317.7656 L820.5938,1317.7656 L820.5938,1320.4375 L825.3594,1320.4375 L825.3594,1322.5938 L820.5938,1322.5938 L820.5938,1325.8438 L825.8594,1325.8438 L825.8594,1328 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="141" x="835.75" y="1326.1543">ClassStylizableElement</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="807.75" x2="978.75" y1="1338" y2="1338"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="32" x="812.75" y="1352.2104">Class</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="50" x="812.75" y="1365.0151">Interface</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="32" x="812.75" y="1377.8198">Enum</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="63" x="812.75" y="1390.6245">Inheritance</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="70" x="812.75" y="1403.4292">Dependance</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="68" x="812.75" y="1416.2339">Aggregation</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="71" x="812.75" y="1429.0386">Composition</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="65" x="812.75" y="1441.8433">Association</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="812.75" y="1454.6479">DoubleAssocation</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="88" x="812.75" y="1467.4526">Implementation</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="26" x="812.75" y="1480.2573">Note</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="47" x="812.75" y="1493.062">Package</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="807.75" x2="978.75" y1="1499.6563" y2="1499.6563"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="483.3594" style="stroke: #A80036; stroke-width: 1.5;" width="451" x="444.75" y="256.5"/>
+        <ellipse cx="622.5" cy="272.5" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M618.4219,268.2656 L618.4219,266.1094 L625.8125,266.1094 L625.8125,268.2656 L623.3438,268.2656 L623.3438,276.3438 L625.8125,276.3438 L625.8125,278.5 L618.4219,278.5 L618.4219,276.3438 L620.8906,276.3438 L620.8906,268.2656 L618.4219,268.2656 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="87" x="643" y="276.6543">IClassDiagram</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="445.75" x2="894.75" y1="288.5" y2="288.5"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="445.75" x2="894.75" y1="296.5" y2="296.5"/>
+        <ellipse cx="455.75" cy="308.4023" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="105" x="464.75" y="310.7104">getName() : String</text>
+        <ellipse cx="455.75" cy="321.207" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="124" x="464.75" y="323.5151">getFileName() : String</text>
+        <ellipse cx="455.75" cy="334.0117" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="146" x="464.75" y="336.3198">getStyle() : IStyleManager</text>
+        <ellipse cx="455.75" cy="346.8164" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="351" x="464.75" y="349.1245">getStyle(ClassStylizableElement typeElement) : IStyleManager</text>
+        <ellipse cx="455.75" cy="359.6211" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="206" x="464.75" y="361.9292">getEnum(String name) : IEnumEntity</text>
+        <ellipse cx="455.75" cy="372.4258" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="180" x="464.75" y="374.7339">getEnums() : Set&lt;IEnumEntity&gt;</text>
+        <ellipse cx="455.75" cy="385.2305" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="175" x="464.75" y="387.5386">getClass(String name) : IClass</text>
+        <ellipse cx="455.75" cy="398.0352" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="156" x="464.75" y="400.3433">getClasses() : Set&lt;IClass&gt;</text>
+        <ellipse cx="455.75" cy="410.8398" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="211" x="464.75" y="413.1479">getInterface(String name) : IInterface</text>
+        <ellipse cx="455.75" cy="423.6445" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="185" x="464.75" y="425.9526">getInterfaces() : Set&lt;IInterface&gt;</text>
+        <ellipse cx="455.75" cy="436.4492" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="179" x="464.75" y="438.7573">getPackages() : Set&lt;IPackage&gt;</text>
+        <ellipse cx="455.75" cy="449.2539" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="205" x="464.75" y="451.562">getPackage(String name) : IPackage</text>
+        <ellipse cx="455.75" cy="462.0586" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="425" x="464.75" y="464.3667">setGlobalStyle(ClassStylizableElement element, IStyleManager style) : void</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="468.75" y="477.1714"/>
+        <ellipse cx="455.75" cy="487.668" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="131" x="464.75" y="489.9761">addClass(String name)</text>
+        <ellipse cx="455.75" cy="500.4727" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="183" x="464.75" y="502.7808">removeClass(IClassEntity class)</text>
+        <ellipse cx="455.75" cy="513.2773" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="153" x="464.75" y="515.5854">removeClass(String name)</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="468.75" y="528.3901"/>
+        <ellipse cx="455.75" cy="538.8867" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="131" x="464.75" y="541.1948">addEnum(String name)</text>
+        <ellipse cx="455.75" cy="551.6914" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="185" x="464.75" y="553.9995">removeEnum(IEnumEntity enum)</text>
+        <ellipse cx="455.75" cy="564.4961" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="153" x="464.75" y="566.8042">removeEnum(String name)</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="468.75" y="579.6089"/>
+        <ellipse cx="455.75" cy="590.1055" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="149" x="464.75" y="592.4136">addInterface(String name)</text>
+        <ellipse cx="455.75" cy="602.9102" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="239" x="464.75" y="605.2183">removeInterface(IInterfaceEntity interface)</text>
+        <ellipse cx="455.75" cy="615.7148" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="171" x="464.75" y="618.0229">removeInterface(String name)</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="468.75" y="630.8276"/>
+        <ellipse cx="455.75" cy="641.3242" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="146" x="464.75" y="643.6323">addPackage(String name)</text>
+        <ellipse cx="455.75" cy="654.1289" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="159" x="464.75" y="656.437">removePackage(IPackage p)</text>
+        <ellipse cx="455.75" cy="666.9336" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="168" x="464.75" y="669.2417">removePackage(String name)</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="468.75" y="682.0464"/>
+        <ellipse cx="455.75" cy="692.543" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="128" x="464.75" y="694.8511">setName(String) : void</text>
+        <ellipse cx="455.75" cy="705.3477" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="147" x="464.75" y="707.6558">setFileName(String) : void</text>
+        <ellipse cx="455.75" cy="718.1523" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="187" x="464.75" y="720.4604">accept(ClassVisitor visitor) : void</text>
+        <ellipse cx="455.75" cy="730.957" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="203" x="464.75" y="733.2651">accept(DiagramVisitor visitor) : void</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="117" x="605.75" y="999"/>
+        <ellipse cx="620.75" cy="1015" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M623.7188,1020.6406 Q623.1406,1020.9375 622.5,1021.0859 Q621.8594,1021.2344 621.1563,1021.2344 Q618.6563,1021.2344 617.3359,1019.5859 Q616.0156,1017.9375 616.0156,1014.8125 Q616.0156,1011.6875 617.3359,1010.0313 Q618.6563,1008.375 621.1563,1008.375 Q621.8594,1008.375 622.5078,1008.5313 Q623.1563,1008.6875 623.7188,1008.9844 L623.7188,1011.7031 Q623.0938,1011.125 622.5,1010.8516 Q621.9063,1010.5781 621.2813,1010.5781 Q619.9375,1010.5781 619.25,1011.6484 Q618.5625,1012.7188 618.5625,1014.8125 Q618.5625,1016.9063 619.25,1017.9766 Q619.9375,1019.0469 621.2813,1019.0469 Q621.9063,1019.0469 622.5,1018.7734 Q623.0938,1018.5 623.7188,1017.9219 L623.7188,1020.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="85" x="634.75" y="1019.1543">ClassDiagram</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="606.75" x2="721.75" y1="1031" y2="1031"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="606.75" x2="721.75" y1="1039" y2="1039"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="444.9453" style="stroke: #A80036; stroke-width: 1.5;" width="451" x="907.75" y="800.5"/>
+        <ellipse cx="1100.5" cy="816.5" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M1096.4219,812.2656 L1096.4219,810.1094 L1103.8125,810.1094 L1103.8125,812.2656 L1101.3438,812.2656 L1101.3438,820.3438 L1103.8125,820.3438 L1103.8125,822.5 L1096.4219,822.5 L1096.4219,820.3438 L1098.8906,820.3438 L1098.8906,812.2656 L1096.4219,812.2656 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="57" x="1121" y="820.6543">IPackage</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="908.75" x2="1357.75" y1="832.5" y2="832.5"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="908.75" x2="1357.75" y1="840.5" y2="840.5"/>
+        <ellipse cx="918.75" cy="852.4023" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="166" x="927.75" y="854.7104">getDiagram() : ClassDiagram</text>
+        <ellipse cx="918.75" cy="865.207" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="105" x="927.75" y="867.5151">getName() : String</text>
+        <ellipse cx="918.75" cy="878.0117" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="146" x="927.75" y="880.3198">getStyle() : IStyleManager</text>
+        <ellipse cx="918.75" cy="890.8164" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="206" x="927.75" y="893.1245">getEnum(String name) : IEnumEntity</text>
+        <ellipse cx="918.75" cy="903.6211" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="180" x="927.75" y="905.9292">getEnums() : Set&lt;IEnumEntity&gt;</text>
+        <ellipse cx="918.75" cy="916.4258" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="175" x="927.75" y="918.7339">getClass(String name) : IClass</text>
+        <ellipse cx="918.75" cy="929.2305" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="156" x="927.75" y="931.5386">getClasses() : Set&lt;IClass&gt;</text>
+        <ellipse cx="918.75" cy="942.0352" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="211" x="927.75" y="944.3433">getInterface(String name) : IInterface</text>
+        <ellipse cx="918.75" cy="954.8398" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="185" x="927.75" y="957.1479">getInterfaces() : Set&lt;IInterface&gt;</text>
+        <ellipse cx="918.75" cy="967.6445" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="179" x="927.75" y="969.9526">getPackages() : Set&lt;IPackage&gt;</text>
+        <ellipse cx="918.75" cy="980.4492" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="205" x="927.75" y="982.7573">getPackage(String name) : IPackage</text>
+        <ellipse cx="918.75" cy="993.2539" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="425" x="927.75" y="995.562">setGlobalStyle(ClassStylizableElement element, IStyleManager style) : void</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="931.75" y="1008.3667"/>
+        <ellipse cx="918.75" cy="1018.8633" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="131" x="927.75" y="1021.1714">addClass(String name)</text>
+        <ellipse cx="918.75" cy="1031.668" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="190" x="927.75" y="1033.9761">removeClass(IClassEntity classe)</text>
+        <ellipse cx="918.75" cy="1044.4727" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="153" x="927.75" y="1046.7808">removeClass(String name)</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="931.75" y="1059.5854"/>
+        <ellipse cx="918.75" cy="1070.082" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="131" x="927.75" y="1072.3901">addEnum(String name)</text>
+        <ellipse cx="918.75" cy="1082.8867" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="185" x="927.75" y="1085.1948">removeEnum(IEnumEntity enum)</text>
+        <ellipse cx="918.75" cy="1095.6914" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="153" x="927.75" y="1097.9995">removeEnum(String name)</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="931.75" y="1110.8042"/>
+        <ellipse cx="918.75" cy="1121.3008" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="149" x="927.75" y="1123.6089">addInterface(String name)</text>
+        <ellipse cx="918.75" cy="1134.1055" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="239" x="927.75" y="1136.4136">removeInterface(IInterfaceEntity interface)</text>
+        <ellipse cx="918.75" cy="1146.9102" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="171" x="927.75" y="1149.2183">removeInterface(String name)</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="931.75" y="1162.0229"/>
+        <ellipse cx="918.75" cy="1172.5195" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="146" x="927.75" y="1174.8276">addPackage(String name)</text>
+        <ellipse cx="918.75" cy="1185.3242" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="159" x="927.75" y="1187.6323">removePackage(IPackage p)</text>
+        <ellipse cx="918.75" cy="1198.1289" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="168" x="927.75" y="1200.437">removePackage(String name)</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="931.75" y="1213.2417"/>
+        <ellipse cx="918.75" cy="1223.7383" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="128" x="927.75" y="1226.0464">setName(String) : void</text>
+        <ellipse cx="918.75" cy="1236.543" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="203" x="927.75" y="1238.8511">accept(DiagramVisitor visitor) : void</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="86" x="1090" y="1383"/>
+        <ellipse cx="1105" cy="1399" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M1107.9688,1404.6406 Q1107.3906,1404.9375 1106.75,1405.0859 Q1106.1094,1405.2344 1105.4063,1405.2344 Q1102.9063,1405.2344 1101.5859,1403.5859 Q1100.2656,1401.9375 1100.2656,1398.8125 Q1100.2656,1395.6875 1101.5859,1394.0313 Q1102.9063,1392.375 1105.4063,1392.375 Q1106.1094,1392.375 1106.7578,1392.5313 Q1107.4063,1392.6875 1107.9688,1392.9844 L1107.9688,1395.7031 Q1107.3438,1395.125 1106.75,1394.8516 Q1106.1563,1394.5781 1105.5313,1394.5781 Q1104.1875,1394.5781 1103.5,1395.6484 Q1102.8125,1396.7188 1102.8125,1398.8125 Q1102.8125,1400.9063 1103.5,1401.9766 Q1104.1875,1403.0469 1105.5313,1403.0469 Q1106.1563,1403.0469 1106.75,1402.7734 Q1107.3438,1402.5 1107.9688,1401.9219 L1107.9688,1404.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="54" x="1119" y="1403.1543">Package</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1091" x2="1175" y1="1415" y2="1415"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1091" x2="1175" y1="1423" y2="1423"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="188.8516" style="stroke: #A80036; stroke-width: 1.5;" width="257" x="514.75" y="1312.5"/>
+        <ellipse cx="603.5" cy="1328.5" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M599.4219,1324.2656 L599.4219,1322.1094 L606.8125,1322.1094 L606.8125,1324.2656 L604.3438,1324.2656 L604.3438,1332.3438 L606.8125,1332.3438 L606.8125,1334.5 L599.4219,1334.5 L599.4219,1332.3438 L601.8906,1332.3438 L601.8906,1324.2656 L599.4219,1324.2656 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="71" x="624" y="1332.6543">IClassEntity</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="515.75" x2="770.75" y1="1344.5" y2="1344.5"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="515.75" x2="770.75" y1="1352.5" y2="1352.5"/>
+        <ellipse cx="525.75" cy="1364.4023" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="166" x="534.75" y="1366.7104">getDiagram() : ClassDiagram</text>
+        <ellipse cx="525.75" cy="1377.207" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="119" x="534.75" y="1379.5151">getPackage() : String</text>
+        <ellipse cx="525.75" cy="1390.0117" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="130" x="534.75" y="1392.3198">getVisibility() : Visibility</text>
+        <ellipse cx="525.75" cy="1402.8164" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="143" x="534.75" y="1405.1245">getStyle() : StyleManager</text>
+        <ellipse cx="525.75" cy="1415.6211" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="182" x="534.75" y="1417.9292">getGlobalStyle() : IStyleManager</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="538.75" y="1430.7339"/>
+        <ellipse cx="525.75" cy="1441.2305" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="202" x="534.75" y="1443.5386">setGlobalStyle(StyleManager) : void</text>
+        <ellipse cx="525.75" cy="1454.0352" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="218" x="534.75" y="1456.3433">setStyle(StyleManager styleBox) : void</text>
+        <ellipse cx="525.75" cy="1466.8398" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="231" x="534.75" y="1469.1479">setModifier(Set&lt;Modifier&gt; modifs) : void</text>
+        <ellipse cx="525.75" cy="1479.6445" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="193" x="534.75" y="1481.9526">setPackage(String package) : void</text>
+        <ellipse cx="525.75" cy="1492.4492" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="202" x="534.75" y="1494.7573">setVisibility(Visibility visibility) : void</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="163.2422" style="stroke: #A80036; stroke-width: 1.5;" width="257" x="849.75" y="1658.5"/>
+        <ellipse cx="936.5" cy="1674.5" fill="#A9DCDF" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M936.6094,1669.8438 L935.4531,1674.9219 L937.7813,1674.9219 L936.6094,1669.8438 Z M935.125,1667.6094 L938.1094,1667.6094 L941.4688,1680 L939.0156,1680 L938.25,1676.9375 L934.9688,1676.9375 L934.2188,1680 L931.7813,1680 L935.125,1667.6094 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="75" x="957" y="1678.6543">AClassEntity</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="850.75" x2="1105.75" y1="1690.5" y2="1690.5"/>
+        <ellipse cx="860.75" cy="1702.4023" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="130" x="869.75" y="1704.7104">getVisibility() : Visibility</text>
+        <ellipse cx="860.75" cy="1715.207" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="143" x="869.75" y="1717.5151">getStyle() : StyleManager</text>
+        <ellipse cx="860.75" cy="1728.0117" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="179" x="869.75" y="1730.3198">getGlobalStyle() : StyleManager</text>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,2.0;" x1="850.75" x2="1105.75" y1="1736.9141" y2="1736.9141"/>
+        <ellipse cx="860.75" cy="1748.8164" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="202" x="869.75" y="1751.1245">setGlobalStyle(StyleManager) : void</text>
+        <ellipse cx="860.75" cy="1761.6211" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="218" x="869.75" y="1763.9292">setStyle(StyleManager styleBox) : void</text>
+        <ellipse cx="860.75" cy="1774.4258" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="231" x="869.75" y="1776.7339">setModifier(Set&lt;Modifier&gt; modifs) : void</text>
+        <ellipse cx="860.75" cy="1787.2305" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="193" x="869.75" y="1789.5386">setPackage(String package) : void</text>
+        <ellipse cx="860.75" cy="1800.0352" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="202" x="869.75" y="1802.3433">setVisibility(Visibility visibility) : void</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="873.75" y="1815.1479"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="112.0234" style="stroke: #A80036; stroke-width: 1.5;" width="210" x="1174" y="1684"/>
+        <ellipse cx="1255.25" cy="1700" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M1251.1719,1695.7656 L1251.1719,1693.6094 L1258.5625,1693.6094 L1258.5625,1695.7656 L1256.0938,1695.7656 L1256.0938,1703.8438 L1258.5625,1703.8438 L1258.5625,1706 L1251.1719,1706 L1251.1719,1703.8438 L1253.6406,1703.8438 L1253.6406,1695.7656 L1251.1719,1695.7656 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="39" x="1275.75" y="1704.1543">IEnum</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1175" x2="1383" y1="1716" y2="1716"/>
+        <ellipse cx="1185" cy="1727.9023" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="107" x="1194" y="1730.2104">isStatic() : boolean</text>
+        <ellipse cx="1185" cy="1740.707" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="142" x="1194" y="1743.0151">getItems() : List&lt;String&gt;</text>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,2.0;" x1="1175" x2="1383" y1="1749.6094" y2="1749.6094"/>
+        <ellipse cx="1185" cy="1761.5117" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="184" x="1194" y="1763.8198">setStatic(boolean isStatic) : void</text>
+        <ellipse cx="1185" cy="1774.3164" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="159" x="1194" y="1776.6245">addItem(String enum) : void</text>
+        <ellipse cx="1185" cy="1787.1211" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="181" x="1194" y="1789.4292">removeItem(String enum) : void</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="342.5078" style="stroke: #A80036; stroke-width: 1.5;" width="365" x="449.75" y="1568.5"/>
+        <ellipse cx="575.5" cy="1584.5" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M571.4219,1580.2656 L571.4219,1578.1094 L578.8125,1578.1094 L578.8125,1580.2656 L576.3438,1580.2656 L576.3438,1588.3438 L578.8125,1588.3438 L578.8125,1590.5 L571.4219,1590.5 L571.4219,1588.3438 L573.8906,1588.3438 L573.8906,1580.2656 L571.4219,1580.2656 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="105" x="596" y="1588.6543">IClassOrInterface</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="450.75" x2="813.75" y1="1600.5" y2="1600.5"/>
+        <ellipse cx="460.75" cy="1612.4023" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="168" x="469.75" y="1614.7104">getMethods() : List&lt;IMethod&gt;</text>
+        <ellipse cx="460.75" cy="1625.207" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="243" x="469.75" y="1627.5151">getMethods(Modifier filtre) : List&lt;IMethod&gt;</text>
+        <ellipse cx="460.75" cy="1638.0117" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="286" x="469.75" y="1640.3198">getMethods(String name, List&lt;IType&gt; arguments)</text>
+        <ellipse cx="460.75" cy="1650.8164" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="182" x="469.75" y="1653.1245">getAttributes() : List&lt;IAttribute&gt;</text>
+        <ellipse cx="460.75" cy="1663.6211" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="257" x="469.75" y="1665.9292">getAttributes(Modifier filtre) : List&lt;IAttribute&gt;</text>
+        <ellipse cx="460.75" cy="1676.4258" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="119" x="469.75" y="1678.7339">isGeneric() : boolean</text>
+        <ellipse cx="460.75" cy="1689.2305" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="184" x="469.75" y="1691.5386">getGenericTypes() : List&lt;IType&gt;</text>
+        <ellipse cx="460.75" cy="1702.0352" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="176" x="469.75" y="1704.3433">getRelations() : List&lt;IRelation&gt;</text>
+        <ellipse cx="460.75" cy="1714.8398" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="226" x="469.75" y="1717.1479">getDependance(String id) : Dependance</text>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,2.0;" x1="450.75" x2="813.75" y1="1723.7422" y2="1723.7422"/>
+        <ellipse cx="460.75" cy="1735.6445" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="294" x="469.75" y="1737.9526">addDependance(IClassEntity target, String id) : void</text>
+        <ellipse cx="460.75" cy="1748.4492" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="207" x="469.75" y="1750.7573">removeRelation(Dependane relation)</text>
+        <ellipse cx="460.75" cy="1761.2539" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="208" x="469.75" y="1763.562">setGeneric(List&lt;IType&gt; types) : void</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="473.75" y="1776.3667"/>
+        <ellipse cx="460.75" cy="1786.8633" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="339" x="469.75" y="1789.1714">removeMethod(String name, List&lt;IType&gt; arguments) : void</text>
+        <ellipse cx="460.75" cy="1799.668" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="218" x="469.75" y="1801.9761">removeMethod(IMethod method) : void</text>
+        <ellipse cx="460.75" cy="1812.4727" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="196" x="469.75" y="1814.7808">addMethod(IMethod method) : void</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="473.75" y="1827.5854"/>
+        <ellipse cx="460.75" cy="1838.082" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="192" x="469.75" y="1840.3901">removeAttribute(String attr) : void</text>
+        <ellipse cx="460.75" cy="1850.8867" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="209" x="469.75" y="1853.1948">removeAttribute(IAttribute attr) : void</text>
+        <ellipse cx="460.75" cy="1863.6914" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="187" x="469.75" y="1865.9995">addAttribute(IAttribute attr) : void</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="473.75" y="1878.8042"/>
+        <ellipse cx="460.75" cy="1889.3008" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="187" x="469.75" y="1891.6089">accept(ClassVisitor visitor) : void</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="0" x="473.75" y="1904.4136"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="141" x="804.75" y="2100"/>
+        <ellipse cx="819.75" cy="2116" fill="#A9DCDF" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M819.8594,2111.3438 L818.7031,2116.4219 L821.0313,2116.4219 L819.8594,2111.3438 Z M818.375,2109.1094 L821.3594,2109.1094 L824.7188,2121.5 L822.2656,2121.5 L821.5,2118.4375 L818.2188,2118.4375 L817.4688,2121.5 L815.0313,2121.5 L818.375,2109.1094 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="109" x="833.75" y="2120.1543">AClassOrInterface</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="805.75" x2="944.75" y1="2132" y2="2132"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="805.75" x2="944.75" y1="2140" y2="2140"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="304.0938" style="stroke: #A80036; stroke-width: 1.5;" width="325" x="444.75" y="1972"/>
+        <ellipse cx="585.5" cy="1988" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M581.4219,1983.7656 L581.4219,1981.6094 L588.8125,1981.6094 L588.8125,1983.7656 L586.3438,1983.7656 L586.3438,1991.8438 L588.8125,1991.8438 L588.8125,1994 L581.4219,1994 L581.4219,1991.8438 L583.8906,1991.8438 L583.8906,1983.7656 L581.4219,1983.7656 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="35" x="606" y="1992.1543">IClass</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="445.75" x2="768.75" y1="2004" y2="2004"/>
+        <ellipse cx="455.75" cy="2015.9023" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="464.75" y="2018.2104">isAbstract() : bool</text>
+        <ellipse cx="455.75" cy="2028.707" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="216" x="464.75" y="2031.0151">getAssociation(String id) : Association</text>
+        <ellipse cx="455.75" cy="2041.5117" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="294" x="464.75" y="2043.8198">getDoubleAssociation(String id) : DoubleAssociation</text>
+        <ellipse cx="455.75" cy="2054.3164" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="222" x="464.75" y="2056.6245">getAggregation(String id) : Aggregation</text>
+        <ellipse cx="455.75" cy="2067.1211" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="228" x="464.75" y="2069.4292">getComposition(String id) : Composition</text>
+        <ellipse cx="455.75" cy="2079.9258" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="262" x="464.75" y="2082.2339">getImplementation(String id) : Implementation</text>
+        <ellipse cx="455.75" cy="2092.7305" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="212" x="464.75" y="2095.0386">getInheritance(String id) : Inheritance</text>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,2.0;" x1="445.75" x2="768.75" y1="2101.6328" y2="2101.6328"/>
+        <ellipse cx="455.75" cy="2113.5352" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="193" x="464.75" y="2115.8433">setAbstract(bool isAbstract) : void</text>
+        <ellipse cx="455.75" cy="2126.3398" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="289" x="464.75" y="2128.6479">addAssociation(IClassEntity target, String id) : void</text>
+        <ellipse cx="455.75" cy="2139.1445" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="293" x="464.75" y="2141.4526">addDoubleAssociation(IClass class, String id) : void</text>
+        <ellipse cx="455.75" cy="2151.9492" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="296" x="464.75" y="2154.2573">addAggregation((IClassEntity target, String id) : void</text>
+        <ellipse cx="455.75" cy="2164.7539" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="264" x="464.75" y="2167.062">addComposition(IClass target, String id) : void</text>
+        <ellipse cx="455.75" cy="2177.5586" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="282" x="464.75" y="2179.8667">addComposition(IInterface target, String id) : void</text>
+        <ellipse cx="455.75" cy="2190.3633" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="256" x="464.75" y="2192.6714">addInheritance(IClass target, String id) : void</text>
+        <ellipse cx="455.75" cy="2203.168" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="299" x="464.75" y="2205.4761">addImplementation(IInterface target, String id) : void</text>
+        <ellipse cx="455.75" cy="2215.9727" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="243" x="464.75" y="2218.2808">removeRelation(Association relation) : void</text>
+        <ellipse cx="455.75" cy="2228.7773" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="279" x="464.75" y="2231.0854">removeRelation(DoubleAssocation relation) : void</text>
+        <ellipse cx="455.75" cy="2241.582" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="246" x="464.75" y="2243.8901">removeRelation(Aggregation relation) : void</text>
+        <ellipse cx="455.75" cy="2254.3867" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="249" x="464.75" y="2256.6948">removeRelation(Composition relation) : void</text>
+        <ellipse cx="455.75" cy="2267.1914" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="241" x="464.75" y="2269.4995">removeRelation(Inheritance relation) : void</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="86.4141" style="stroke: #A80036; stroke-width: 1.5;" width="300" x="980.5" y="2081"/>
+        <ellipse cx="1095.75" cy="2097" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M1091.6719,2092.7656 L1091.6719,2090.6094 L1099.0625,2090.6094 L1099.0625,2092.7656 L1096.5938,2092.7656 L1096.5938,2100.8438 L1099.0625,2100.8438 L1099.0625,2103 L1091.6719,2103 L1091.6719,2100.8438 L1094.1406,2100.8438 L1094.1406,2092.7656 L1091.6719,2092.7656 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="61" x="1116.25" y="2101.1543">IInterface</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="981.5" x2="1279.5" y1="2113" y2="2113"/>
+        <ellipse cx="991.5" cy="2124.9023" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="237" x="1000.5" y="2127.2104">getInheritance(String id) : Implementation</text>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,2.0;" x1="981.5" x2="1279.5" y1="2133.8047" y2="2133.8047"/>
+        <ellipse cx="991.5" cy="2145.707" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="274" x="1000.5" y="2148.0151">addInheritance(IInterface target, String id) : void</text>
+        <ellipse cx="991.5" cy="2158.5117" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="241" x="1000.5" y="2160.8198">removeRelation(Inheritance relation) : void</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="102" x="1315.5" y="2100"/>
+        <ellipse cx="1330.5" cy="2116" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M1333.4688,2121.6406 Q1332.8906,2121.9375 1332.25,2122.0859 Q1331.6094,2122.2344 1330.9063,2122.2344 Q1328.4063,2122.2344 1327.0859,2120.5859 Q1325.7656,2118.9375 1325.7656,2115.8125 Q1325.7656,2112.6875 1327.0859,2111.0313 Q1328.4063,2109.375 1330.9063,2109.375 Q1331.6094,2109.375 1332.2578,2109.5313 Q1332.9063,2109.6875 1333.4688,2109.9844 L1333.4688,2112.7031 Q1332.8438,2112.125 1332.25,2111.8516 Q1331.6563,2111.5781 1331.0313,2111.5781 Q1329.6875,2111.5781 1329,2112.6484 Q1328.3125,2113.7188 1328.3125,2115.8125 Q1328.3125,2117.9063 1329,2118.9766 Q1329.6875,2120.0469 1331.0313,2120.0469 Q1331.6563,2120.0469 1332.25,2119.7734 Q1332.8438,2119.5 1333.4688,2118.9219 L1333.4688,2121.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="70" x="1344.5" y="2120.1543">EnumEntity</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1316.5" x2="1416.5" y1="2132" y2="2132"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1316.5" x2="1416.5" y1="2140" y2="2140"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="123" x="1237.75" y="2439"/>
+        <ellipse cx="1252.75" cy="2455" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M1255.7188,2460.6406 Q1255.1406,2460.9375 1254.5,2461.0859 Q1253.8594,2461.2344 1253.1563,2461.2344 Q1250.6563,2461.2344 1249.3359,2459.5859 Q1248.0156,2457.9375 1248.0156,2454.8125 Q1248.0156,2451.6875 1249.3359,2450.0313 Q1250.6563,2448.375 1253.1563,2448.375 Q1253.8594,2448.375 1254.5078,2448.5313 Q1255.1563,2448.6875 1255.7188,2448.9844 L1255.7188,2451.7031 Q1255.0938,2451.125 1254.5,2450.8516 Q1253.9063,2450.5781 1253.2813,2450.5781 Q1251.9375,2450.5781 1251.25,2451.6484 Q1250.5625,2452.7188 1250.5625,2454.8125 Q1250.5625,2456.9063 1251.25,2457.9766 Q1251.9375,2459.0469 1253.2813,2459.0469 Q1253.9063,2459.0469 1254.5,2458.7734 Q1255.0938,2458.5 1255.7188,2457.9219 L1255.7188,2460.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="91" x="1266.75" y="2459.1543">InterfaceEntity</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1238.75" x2="1359.75" y1="2471" y2="2471"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1238.75" x2="1359.75" y1="2479" y2="2479"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="100" x="502" y="2439"/>
+        <ellipse cx="517" cy="2455" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M519.9688,2460.6406 Q519.3906,2460.9375 518.75,2461.0859 Q518.1094,2461.2344 517.4063,2461.2344 Q514.9063,2461.2344 513.5859,2459.5859 Q512.2656,2457.9375 512.2656,2454.8125 Q512.2656,2451.6875 513.5859,2450.0313 Q514.9063,2448.375 517.4063,2448.375 Q518.1094,2448.375 518.7578,2448.5313 Q519.4063,2448.6875 519.9688,2448.9844 L519.9688,2451.7031 Q519.3438,2451.125 518.75,2450.8516 Q518.1563,2450.5781 517.5313,2450.5781 Q516.1875,2450.5781 515.5,2451.6484 Q514.8125,2452.7188 514.8125,2454.8125 Q514.8125,2456.9063 515.5,2457.9766 Q516.1875,2459.0469 517.5313,2459.0469 Q518.1563,2459.0469 518.75,2458.7734 Q519.3438,2458.5 519.9688,2457.9219 L519.9688,2460.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="68" x="531" y="2459.1543">ClassEntity</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="503" x2="601" y1="2471" y2="2471"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="503" x2="601" y1="2479" y2="2479"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="252.875" style="stroke: #A80036; stroke-width: 1.5;" width="302" x="637" y="2336.5"/>
+        <ellipse cx="758.25" cy="2352.5" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M754.1719,2348.2656 L754.1719,2346.1094 L761.5625,2346.1094 L761.5625,2348.2656 L759.0938,2348.2656 L759.0938,2356.3438 L761.5625,2356.3438 L761.5625,2358.5 L754.1719,2358.5 L754.1719,2356.3438 L756.6406,2356.3438 L756.6406,2348.2656 L754.1719,2348.2656 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="51" x="778.75" y="2356.6543">IMethod</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="638" x2="938" y1="2368.5" y2="2368.5"/>
+        <ellipse cx="648" cy="2380.4023" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="165" x="657" y="2382.7104">getModifier() : Set&lt;Modifier&gt;</text>
+        <ellipse cx="648" cy="2393.207" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="105" x="657" y="2395.5151">getReturn() : IType</text>
+        <ellipse cx="648" cy="2406.0117" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="105" x="657" y="2408.3198">getName() : String</text>
+        <ellipse cx="648" cy="2418.8164" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="187" x="657" y="2421.1245">getArguments() : List&lt;IVariable&gt;</text>
+        <ellipse cx="648" cy="2431.6211" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="143" x="657" y="2433.9292">getStyle() : StyleManager</text>
+        <ellipse cx="648" cy="2444.4258" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="179" x="657" y="2446.7339">getGlobalStyle() : StyleManager</text>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,2.0;" x1="638" x2="938" y1="2453.3281" y2="2453.3281"/>
+        <ellipse cx="648" cy="2465.2305" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="151" x="657" y="2467.5386">setModifier(Modifier) : void</text>
+        <ellipse cx="648" cy="2478.0352" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="202" x="657" y="2480.3433">setGlobalStyle(StyleManager) : void</text>
+        <ellipse cx="648" cy="2490.8398" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="218" x="657" y="2493.1479">setStyle(StyleManager styleBox) : void</text>
+        <ellipse cx="648" cy="2503.6445" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="156" x="657" y="2505.9526">setReturn(IType type) : void</text>
+        <ellipse cx="648" cy="2516.4492" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="164" x="657" y="2518.7573">setName(String name) : void</text>
+        <ellipse cx="648" cy="2529.2539" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="276" x="657" y="2531.562">setArguments(List&lt;IVariable&gt; arguments) : void</text>
+        <ellipse cx="648" cy="2542.0586" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="234" x="657" y="2544.3667">pushArgument(IVariable argument) : void</text>
+        <ellipse cx="648" cy="2554.8633" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="249" x="657" y="2557.1714">removeArgument(IVariable argument) : void</text>
+        <ellipse cx="648" cy="2567.668" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="234" x="657" y="2569.9761">removeArgument(String argument) : void</text>
+        <ellipse cx="648" cy="2580.4727" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="187" x="657" y="2582.7808">accept(ClassVisitor visitor) : void</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="79" x="748.75" y="2650"/>
+        <ellipse cx="763.75" cy="2666" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M766.7188,2671.6406 Q766.1406,2671.9375 765.5,2672.0859 Q764.8594,2672.2344 764.1563,2672.2344 Q761.6563,2672.2344 760.3359,2670.5859 Q759.0156,2668.9375 759.0156,2665.8125 Q759.0156,2662.6875 760.3359,2661.0313 Q761.6563,2659.375 764.1563,2659.375 Q764.8594,2659.375 765.5078,2659.5313 Q766.1563,2659.6875 766.7188,2659.9844 L766.7188,2662.7031 Q766.0938,2662.125 765.5,2661.8516 Q764.9063,2661.5781 764.2813,2661.5781 Q762.9375,2661.5781 762.25,2662.6484 Q761.5625,2663.7188 761.5625,2665.8125 Q761.5625,2667.9063 762.25,2668.9766 Q762.9375,2670.0469 764.2813,2670.0469 Q764.9063,2670.0469 765.5,2669.7734 Q766.0938,2669.5 766.7188,2668.9219 L766.7188,2671.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="47" x="777.75" y="2670.1543">Method</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="749.75" x2="826.75" y1="2682" y2="2682"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="749.75" x2="826.75" y1="2690" y2="2690"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="137.6328" style="stroke: #A80036; stroke-width: 1.5;" width="224" x="731.5" y="3072"/>
+        <ellipse cx="822.25" cy="3088" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M818.1719,3083.7656 L818.1719,3081.6094 L825.5625,3081.6094 L825.5625,3083.7656 L823.0938,3083.7656 L823.0938,3091.8438 L825.5625,3091.8438 L825.5625,3094 L818.1719,3094 L818.1719,3091.8438 L820.6406,3091.8438 L820.6406,3083.7656 L818.1719,3083.7656 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="34" x="842.75" y="3092.1543">IType</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="732.5" x2="954.5" y1="3104" y2="3104"/>
+        <ellipse cx="742.5" cy="3115.9023" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="99" x="751.5" y="3118.2104">toString() : String</text>
+        <ellipse cx="742.5" cy="3128.707" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="119" x="751.5" y="3131.0151">isGeneric() : boolean</text>
+        <ellipse cx="742.5" cy="3141.5117" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="108" x="751.5" y="3143.8198">isConst() : boolean</text>
+        <ellipse cx="742.5" cy="3154.3164" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="177" x="751.5" y="3156.6245">getGenericType() : List&lt;IType&gt;</text>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,2.0;" x1="732.5" x2="954.5" y1="3163.2188" y2="3163.2188"/>
+        <ellipse cx="742.5" cy="3175.1211" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="198" x="751.5" y="3177.4292">setGenericType(List&lt;IType) : IType</text>
+        <ellipse cx="742.5" cy="3187.9258" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="139" x="751.5" y="3190.2339">setConst(boolean) : void</text>
+        <ellipse cx="742.5" cy="3200.7305" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="187" x="751.5" y="3203.0386">accept(ClassVisitor visitor) : void</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="61" x="812.75" y="3270"/>
+        <ellipse cx="827.75" cy="3286" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M830.7188,3291.6406 Q830.1406,3291.9375 829.5,3292.0859 Q828.8594,3292.2344 828.1563,3292.2344 Q825.6563,3292.2344 824.3359,3290.5859 Q823.0156,3288.9375 823.0156,3285.8125 Q823.0156,3282.6875 824.3359,3281.0313 Q825.6563,3279.375 828.1563,3279.375 Q828.8594,3279.375 829.5078,3279.5313 Q830.1563,3279.6875 830.7188,3279.9844 L830.7188,3282.7031 Q830.0938,3282.125 829.5,3281.8516 Q828.9063,3281.5781 828.2813,3281.5781 Q826.9375,3281.5781 826.25,3282.6484 Q825.5625,3283.7188 825.5625,3285.8125 Q825.5625,3287.9063 826.25,3288.9766 Q826.9375,3290.0469 828.2813,3290.0469 Q828.9063,3290.0469 829.5,3289.7734 Q830.0938,3289.5 830.7188,3288.9219 L830.7188,3291.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="29" x="841.75" y="3290.1543">Type</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="813.75" x2="872.75" y1="3302" y2="3302"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="813.75" x2="872.75" y1="3310" y2="3310"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="99.2188" style="stroke: #A80036; stroke-width: 1.5;" width="228" x="974" y="2413.5"/>
+        <ellipse cx="1054.25" cy="2429.5" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M1050.1719,2425.2656 L1050.1719,2423.1094 L1057.5625,2423.1094 L1057.5625,2425.2656 L1055.0938,2425.2656 L1055.0938,2433.3438 L1057.5625,2433.3438 L1057.5625,2435.5 L1050.1719,2435.5 L1050.1719,2433.3438 L1052.6406,2433.3438 L1052.6406,2425.2656 L1050.1719,2425.2656 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="59" x="1074.75" y="2433.6543">IAttribute</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="975" x2="1201" y1="2445.5" y2="2445.5"/>
+        <ellipse cx="985" cy="2457.4023" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="130" x="994" y="2459.7104">getVisibility() : Visibility</text>
+        <ellipse cx="985" cy="2470.207" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="133" x="994" y="2472.5151">getVariable() : IVariable</text>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,2.0;" x1="975" x2="1201" y1="2479.1094" y2="2479.1094"/>
+        <ellipse cx="985" cy="2491.0117" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="202" x="994" y="2493.3198">setVisibility(Visibility visibility) : void</text>
+        <ellipse cx="985" cy="2503.8164" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="187" x="994" y="2506.1245">accept(ClassVisitor visitor) : void</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="87" x="1044.75" y="2650"/>
+        <ellipse cx="1059.75" cy="2666" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M1062.7188,2671.6406 Q1062.1406,2671.9375 1061.5,2672.0859 Q1060.8594,2672.2344 1060.1563,2672.2344 Q1057.6563,2672.2344 1056.3359,2670.5859 Q1055.0156,2668.9375 1055.0156,2665.8125 Q1055.0156,2662.6875 1056.3359,2661.0313 Q1057.6563,2659.375 1060.1563,2659.375 Q1060.8594,2659.375 1061.5078,2659.5313 Q1062.1563,2659.6875 1062.7188,2659.9844 L1062.7188,2662.7031 Q1062.0938,2662.125 1061.5,2661.8516 Q1060.9063,2661.5781 1060.2813,2661.5781 Q1058.9375,2661.5781 1058.25,2662.6484 Q1057.5625,2663.7188 1057.5625,2665.8125 Q1057.5625,2667.9063 1058.25,2668.9766 Q1058.9375,2670.0469 1060.2813,2670.0469 Q1060.9063,2670.0469 1061.5,2669.7734 Q1062.0938,2669.5 1062.7188,2668.9219 L1062.7188,2671.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="55" x="1073.75" y="2670.1543">Attribute</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1045.75" x2="1130.75" y1="2682" y2="2682"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1045.75" x2="1130.75" y1="2690" y2="2690"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="112.0234" style="stroke: #A80036; stroke-width: 1.5;" width="213" x="824.75" y="2775"/>
+        <ellipse cx="899.5" cy="2791" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M895.4219,2786.7656 L895.4219,2784.6094 L902.8125,2784.6094 L902.8125,2786.7656 L900.3438,2786.7656 L900.3438,2794.8438 L902.8125,2794.8438 L902.8125,2797 L895.4219,2797 L895.4219,2794.8438 L897.8906,2794.8438 L897.8906,2786.7656 L895.4219,2786.7656 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="55" x="920" y="2795.1543">IVariable</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="825.75" x2="1036.75" y1="2807" y2="2807"/>
+        <ellipse cx="835.75" cy="2818.9023" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="105" x="844.75" y="2821.2104">getName() : String</text>
+        <ellipse cx="835.75" cy="2831.707" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="95" x="844.75" y="2834.0151">getType() : IType</text>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,2.0;" x1="825.75" x2="1036.75" y1="2840.6094" y2="2840.6094"/>
+        <ellipse cx="835.75" cy="2852.5117" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="146" x="844.75" y="2854.8198">setType(IType type) : void</text>
+        <ellipse cx="835.75" cy="2865.3164" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="164" x="844.75" y="2867.6245">setName(String name) : void</text>
+        <ellipse cx="835.75" cy="2878.1211" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="187" x="844.75" y="2880.4292">accept(ClassVisitor visitor) : void</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="83" x="856.75" y="2964"/>
+        <ellipse cx="871.75" cy="2980" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M874.7188,2985.6406 Q874.1406,2985.9375 873.5,2986.0859 Q872.8594,2986.2344 872.1563,2986.2344 Q869.6563,2986.2344 868.3359,2984.5859 Q867.0156,2982.9375 867.0156,2979.8125 Q867.0156,2976.6875 868.3359,2975.0313 Q869.6563,2973.375 872.1563,2973.375 Q872.8594,2973.375 873.5078,2973.5313 Q874.1563,2973.6875 874.7188,2973.9844 L874.7188,2976.7031 Q874.0938,2976.125 873.5,2975.8516 Q872.9063,2975.5781 872.2813,2975.5781 Q870.9375,2975.5781 870.25,2976.6484 Q869.5625,2977.7188 869.5625,2979.8125 Q869.5625,2981.9063 870.25,2982.9766 Q870.9375,2984.0469 872.2813,2984.0469 Q872.9063,2984.0469 873.5,2983.7734 Q874.0938,2983.5 874.7188,2982.9219 L874.7188,2985.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="51" x="885.75" y="2984.1543">Variable</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="857.75" x2="938.75" y1="2996" y2="2996"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="857.75" x2="938.75" y1="3004" y2="3004"/>
+        <rect fill="#FEFECE" filter="url(#f1)" height="145.6328" style="stroke: #A80036; stroke-width: 1.5;" width="254" x="1073" y="2758"/>
+        <ellipse cx="1171.25" cy="2774" fill="#EB937F" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M1175.3594,2780 L1167.6406,2780 L1167.6406,2767.6094 L1175.3594,2767.6094 L1175.3594,2769.7656 L1170.0938,2769.7656 L1170.0938,2772.4375 L1174.8594,2772.4375 L1174.8594,2774.5938 L1170.0938,2774.5938 L1170.0938,2777.8438 L1175.3594,2777.8438 L1175.3594,2780 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="49" x="1191.75" y="2778.1543">Visibility</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1074" x2="1326" y1="2790" y2="2790"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="242" x="1079" y="2804.2104">strToVisibility : HashSet&lt;String, Visibility&gt;</text>
+        <line style="stroke: #000000; stroke-width: 1.0;" x1="1079" x2="1321" y1="2806.2104" y2="2806.2104"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="1074" x2="1326" y1="2810.8047" y2="2810.8047"/>
+        <ellipse cx="1084" cy="2822.707" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="54" x="1093" y="2825.0151">Protected</text>
+        <ellipse cx="1084" cy="2835.5117" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="39" x="1093" y="2837.8198">Private</text>
+        <ellipse cx="1084" cy="2848.3164" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="33" x="1093" y="2850.6245">Public</text>
+        <ellipse cx="1084" cy="2861.1211" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="47" x="1093" y="2863.4292">Package</text>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,2.0;" x1="1074" x2="1326" y1="2870.0234" y2="2870.0234"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="212" x="1093" y="2884.2339">getvisibility(String visibility) : Visibility</text>
+        <line style="stroke: #000000; stroke-width: 1.0;" x1="1093" x2="1305" y1="2886.2339" y2="2886.2339"/>
+        <ellipse cx="1084" cy="2894.7305" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="187" x="1093" y="2897.0386">accept(ClassVisitor visitor) : void</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="120.0234" style="stroke: #A80036; stroke-width: 1.5;" width="252" x="500" y="2771"/>
+        <ellipse cx="597.25" cy="2787" fill="#EB937F" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M601.3594,2793 L593.6406,2793 L593.6406,2780.6094 L601.3594,2780.6094 L601.3594,2782.7656 L596.0938,2782.7656 L596.0938,2785.4375 L600.8594,2785.4375 L600.8594,2787.5938 L596.0938,2787.5938 L596.0938,2790.8438 L601.3594,2790.8438 L601.3594,2793 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="49" x="617.75" y="2791.1543">Modifier</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="501" x2="751" y1="2803" y2="2803"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="240" x="506" y="2817.2104">strToModifier : HashSet&lt;String, Modifier&gt;</text>
+        <line style="stroke: #000000; stroke-width: 1.0;" x1="506" x2="746" y1="2819.2104" y2="2819.2104"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="501" x2="751" y1="2823.8047" y2="2823.8047"/>
+        <ellipse cx="511" cy="2835.707" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="47" x="520" y="2838.0151">Abstract</text>
+        <ellipse cx="511" cy="2848.5117" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="32" x="520" y="2850.8198">Static</text>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,2.0;" x1="501" x2="751" y1="2857.4141" y2="2857.4141"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="213" x="520" y="2871.6245">getModifier(String modifier) : Modifier</text>
+        <line style="stroke: #000000; stroke-width: 1.0;" x1="520" x2="733" y1="2873.6245" y2="2873.6245"/>
+        <ellipse cx="511" cy="2882.1211" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="187" x="520" y="2884.4292">accept(ClassVisitor visitor) : void</text>
+        <rect fill="#FEFECE" filter="url(#f1)" height="48" style="stroke: #A80036; stroke-width: 1.5;" width="75" x="37.75" y="1383"/>
+        <ellipse cx="52.75" cy="1399" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M55.7188,1404.6406 Q55.1406,1404.9375 54.5,1405.0859 Q53.8594,1405.2344 53.1563,1405.2344 Q50.6563,1405.2344 49.3359,1403.5859 Q48.0156,1401.9375 48.0156,1398.8125 Q48.0156,1395.6875 49.3359,1394.0313 Q50.6563,1392.375 53.1563,1392.375 Q53.8594,1392.375 54.5078,1392.5313 Q55.1563,1392.6875 55.7188,1392.9844 L55.7188,1395.7031 Q55.0938,1395.125 54.5,1394.8516 Q53.9063,1394.5781 53.2813,1394.5781 Q51.9375,1394.5781 51.25,1395.6484 Q50.5625,1396.7188 50.5625,1398.8125 Q50.5625,1400.9063 51.25,1401.9766 Q51.9375,1403.0469 53.2813,1403.0469 Q53.9063,1403.0469 54.5,1402.7734 Q55.0938,1402.5 55.7188,1401.9219 L55.7188,1404.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="43" x="66.75" y="1403.1543">AEntity</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="38.75" x2="111.75" y1="1415" y2="1415"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="38.75" x2="111.75" y1="1423" y2="1423"/>
+        <path d="M343.867,216.14 C343.652,285.63 343.238,420.01 343.071,473.86 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="336.867,216.02,343.929,196.04,350.867,216.06,336.867,216.02" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M336.722,535.08 C320.072,630.77 274.923,890.26 258.275,985.93 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="256.033,998.82,261.5165,990.6389,256.8901,993.894,253.6349,989.2675,256.033,998.82" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="256.8901" x2="258.261" y1="993.894" y2="986.02"/>
+        <polygon fill="none" points="338.972,522.15,334.0027,527.3755,336.915,533.9724,341.8843,528.7469,338.972,522.15" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M343.904,535.39 C346.287,631.24 352.715,889.85 355.097,985.66 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="355.424,998.82,359.1952,989.7218,355.2976,993.8216,351.1978,989.924,355.424,998.82" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="355.2976" x2="355.1005" y1="993.8216" y2="985.825"/>
+        <polygon fill="none" points="343.575,522.15,339.7279,528.2492,343.8783,534.1462,347.7254,528.047,343.575,522.15" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M254.376,1060.3 C259.147,1133.2 269.842,1296.62 274.618,1369.6 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="275.49,1382.93,278.8981,1373.6896,275.1658,1377.9405,270.9149,1374.2083,275.49,1382.93" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="275.1658" x2="274.6415" y1="1377.9405" y2="1369.965"/>
+        <polygon fill="none" points="253.508,1047.04,249.9054,1053.2867,254.286,1059.0148,257.8886,1052.768,253.508,1047.04" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M399.862,207.87 C401.618,209.23 403.335,210.61 405,212 C421.731,225.96 438.452,240.92 454.901,256.42 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="none" points="395.64,213.45,383.434,196.13,403.777,202.06,395.64,213.45" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M353.354,541.77 C366.487,591.53 391.971,675.14 429,740 C490.14,847.09 593.114,953.4 639.751,998.93 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="none" points="346.491,543.18,348.338,522.07,360.058,539.73,346.491,543.18" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M667.006,759.98 C665.886,857.57 664.766,955.25 664.268,998.67 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="660.008,759.75,667.237,739.83,674.007,759.91,660.008,759.75" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M677.809,1047.04 C707.288,1096.21 777.952,1214.09 830.306,1301.42 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="832.942,1305.82,831.7444,1296.0442,830.3708,1301.5318,824.8832,1300.1582,832.942,1305.82" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M735.976,1023 C788.757,1023 841.537,1023 894.318,1023 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="907.374,1023,898.374,1019,902.374,1023,898.374,1027,907.374,1023" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="902.374" x2="894.374" y1="1023" y2="1023"/>
+        <polygon fill="none" points="722.625,1023,728.625,1027,734.625,1023,728.625,1019,722.625,1023" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="730.7621" y="1018.0918">0..1</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="876.0289" y="1018.8436">0..n</text>
+        <path d="M1133,1265.79 C1133,1313.94 1133,1357.45 1133,1382.82 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="1126,1265.66,1133,1245.66,1140,1265.66,1126,1265.66" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M251.884,1067.27 C253.957,1115.87 264.207,1194.64 306,1246 C320.716,1264.08 425.506,1312.45 514.38,1351.31 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="none" points="244.886,1067.43,251.423,1047.27,258.883,1067.1,244.886,1067.43" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M662.002,1060.35 C659.017,1114.64 653.275,1219.09 648.881,1299.01 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="648.161,1312.12,652.6494,1303.3534,648.4357,1307.1276,644.6615,1302.9138,648.161,1312.12" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="648.4357" x2="648.8745" y1="1307.1276" y2="1299.14"/>
+        <polygon fill="none" points="662.734,1047.04,658.4104,1052.8111,662.0746,1059.0219,666.3983,1053.2507,662.734,1047.04" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="652.0643" y="1067.206">1</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="622.6428" y="1301.5731">0..n</text>
+        <path d="M110.074,1445.43 C133.303,1467.65 165.721,1494.12 200,1508 C461.112,1613.74 580.835,1438.47 831,1568 C870.633,1588.52 904.118,1624.68 929.072,1658.47 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="none" points="105.0989,1450.35,95.8803,1431.27,114.985,1440.44,105.0989,1450.35" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M774.121,1515.02 C793.64,1532.25 813.173,1550.26 831,1568 C859.306,1596.17 888.393,1629.03 913.144,1658.39 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="769.33,1520.13,758.866,1501.7,778.537,1509.58,769.33,1520.13" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M790.399,1507.46 C933.782,1559.71 996.384,1498.09 1123,1568 C1172.95,1595.58 1215.49,1645.18 1243.46,1683.88 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="none" points="787.639,1513.9,771.547,1500.11,792.724,1500.85,787.639,1513.9" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M639.223,1521.65 C638.721,1536.75 638.199,1552.48 637.674,1568.27 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="none" points="632.231,1521.28,639.892,1501.52,646.224,1521.75,632.231,1521.28" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M951.011,1841.09 C927.377,1928.75 894.76,2049.72 881.249,2099.82 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="none" points="944.317,1839.03,956.282,1821.55,957.834,1842.68,944.317,1839.03" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M758.369,1928.68 C767.814,1943.28 777.117,1957.84 786,1972 C814.058,2016.72 844.964,2070.18 861.97,2100 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="752.266,1932.14,747.232,1911.55,764.003,1924.51,752.266,1932.14" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M619.506,1931.92 C618.628,1945.32 617.751,1958.72 616.891,1971.86 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="none" points="612.543,1931.11,620.834,1911.61,626.513,1932.02,612.543,1931.11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M831.175,1911.47 C831.45,1911.65 831.725,1911.82 832,1912 C885.578,1946.33 908.852,1937.01 962,1972 C1009.82,2003.49 1057.74,2048.17 1090.09,2080.76 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="none" points="827.148,1917.2,814.392,1900.28,834.916,1905.55,827.148,1917.2" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M1064.24,1836.02 C1091.78,1862.87 1123.57,1890.58 1156,1912 C1212.82,1949.54 1248.21,1924.48 1297,1972 C1333.85,2007.9 1352.86,2067.15 1360.99,2099.73 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="none" points="1059.06,1840.74,1049.83,1821.67,1068.94,1830.82,1059.06,1840.74" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M1296,1815.65 C1316.02,1903.55 1348.14,2044.57 1360.71,2099.77 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="1289.17,1817.19,1291.56,1796.14,1302.82,1814.08,1289.17,1817.19" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M888.607,2167.19 C901.9,2201.64 925.52,2248.91 962,2276 C1056.17,2345.93 1123.35,2268.11 1219,2336 C1255.34,2361.79 1278.96,2409.806 1290.55,2438.537 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="none" points="881.946,2169.35,881.797,2148.16,895.127,2164.63,881.946,2169.35" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M1160.31,2185.44 C1198.31,2261.22 1261.6,2387.42 1287.46,2438.983 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="1153.94,2188.36,1151.23,2167.34,1166.46,2182.08,1153.94,2188.36" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M859.757,2166.69 C845.458,2200.46 821.006,2247.02 786,2276 C725.252,2326.3 678.63,2284.38 619,2336 C586.968,2363.73 567.835,2410.632 558.66,2438.722 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="none" points="853.275,2164.05,867.178,2148.06,866.281,2169.23,853.275,2164.05" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M579.061,2296.19 C569.848,2352.64 560.701,2408.687 555.757,2438.98 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="572.185,2294.86,582.315,2276.25,586.002,2297.12,572.185,2294.86" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M788,2610.029 C788,2625.206 788,2638.987 788,2649.761 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="781,2609.797,788,2589.797,795,2609.797,781,2609.797" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M830.419,3230.487 C830.802,3245.049 831.834,3258.945 833.516,3269.923 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="823.419,3230.472,830.3,3210.431,837.419,3230.389,823.419,3230.472" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M854.706,3256.952 C855.728,3246.755 856.313,3235.223 856.462,3223.496 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="856.447,3210.431,852.4569,3219.4354,856.4525,3215.431,860.4569,3219.4266,856.447,3210.431" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="856.4525" x2="856.462" y1="3215.431" y2="3223.431"/>
+        <polygon fill="none" points="853.042,3269.923,857.773,3264.4808,854.569,3258.0206,849.838,3263.4628,853.042,3269.923" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="827.3403" y="3258.8782">0..1</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="831.4421" y="3229.613">0..n</text>
+        <path d="M1088,2533.003 C1088,2573.45 1088,2621.948 1088,2649.945 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="1081,2532.737,1088,2512.737,1095,2532.737,1081,2532.737" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M915.108,2906.646 C910.702,2927.337 906.239,2948.3 902.977,2963.624 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="908.261,2905.188,919.273,2887.084,921.954,2908.103,908.261,2905.188" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M865.737,2160.88 C855.681,2199.83 838.998,2264.46 823.66,2323.87 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="820.411,2336.46,826.5381,2328.7491,821.6636,2331.6194,818.7932,2326.7449,820.411,2336.46" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="821.6636" x2="823.6605" y1="2331.6194" y2="2323.87"/>
+        <polygon fill="none" points="869.02,2148.16,863.6445,2152.9666,866.0138,2159.7773,871.3894,2154.9707,869.02,2148.16" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="857.2827" y="2167.9602">1</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="796.4119" y="2325.5705">0..n</text>
+        <path d="M893.938,2159.5 C911.11,2190.38 937.421,2236.71 962,2276 C988.903,2319 1020.99,2366.31 1046.05,2402.458 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="1053.59,2413.3,1051.7354,2403.6273,1050.7352,2409.1951,1045.1675,2408.195,1053.59,2413.3" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="1050.7352" x2="1046.165" y1="2409.1951" y2="2402.6265"/>
+        <polygon fill="none" points="887.608,2148.07,887.0164,2155.2568,893.4228,2158.567,894.0144,2151.3802,887.608,2148.07" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="880.4935" y="2168.2437">1</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="1022.8119" y="2402.2685">0..n</text>
+        <path d="M790.239,2711.277 C793.206,2756.495 799.014,2836.105 807,2904 C813.07,2955.607 821.829,3013.27 829.187,3058.679 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="831.321,3071.75,833.8178,3062.2229,830.515,3066.8154,825.9224,3063.5125,831.321,3071.75" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="830.515" x2="829.2265" y1="3066.8154" y2="3058.9205"/>
+        <polygon fill="none" points="789.393,2698.131,785.787,2704.3757,790.1644,2710.1062,793.7704,2703.8614,789.393,2698.131" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="761.5029" y="2717.9241">0..1</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="820.791" y="3060.9146">1</text>
+        <path d="M818.262,2707.802 C833.666,2724.498 852.95,2745.401 871.191,2765.172 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="880.04,2774.764,876.8774,2765.4367,876.6496,2771.089,870.9974,2770.8613,880.04,2774.764" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="876.6496" x2="871.225" y1="2771.089" y2="2765.209"/>
+        <polygon fill="none" points="809.409,2698.205,810.5369,2705.3273,817.5452,2707.0256,816.4173,2699.9032,809.409,2698.205" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="817.4915" y="2718.0162">0..1</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="848.017" y="2763.7564">0..n</text>
+        <path d="M763.747,2698.205 C744.65,2716.477 717.095,2742.841 691.641,2767.196 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="687.902,2770.773,697.1707,2767.4426,691.5152,2767.3169,691.641,2761.6615,687.902,2770.773" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M884.92,3024.911 C881.103,3035.39 876.769,3047.288 872.371,3059.362 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="867.784,3071.956,874.6222,3064.868,869.4949,3067.2578,867.1051,3062.1306,867.784,3071.956" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="869.4949" x2="872.2335" y1="3067.2578" y2="3059.741"/>
+        <polygon fill="none" points="889.527,3012.263,883.7154,3016.5321,885.4208,3023.5386,891.2324,3019.2695,889.527,3012.263" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="859.232" y="3032.0883">0..1</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="860.5617" y="3060.8974">1</text>
+        <path d="M1112.62,2709.067 C1120.83,2720.44 1130.38,2733.657 1140.09,2747.091 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="1147.89,2757.881,1145.858,2748.2441,1144.9603,2753.8292,1139.3751,2752.9316,1147.89,2757.881" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="1144.9603" x2="1140.275" y1="2753.8292" y2="2747.3435"/>
+        <polygon fill="none" points="1104.77,2698.205,1105.0402,2705.411,1111.7959,2707.9332,1111.5257,2700.7271,1104.77,2698.205" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="1080.628" y="2718.0162">0..n</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="1133.9821" y="2746.9552">1</text>
+        <path d="M1055.05,2707.534 C1038.02,2724.339 1016.64,2745.455 996.435,2765.398 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#A80036" points="986.949,2774.764,996.164,2771.2878,990.5073,2771.2513,990.5437,2765.5946,986.949,2774.764" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="990.5073" x2="996.2005" y1="2771.2513" y2="2765.63"/>
+        <polygon fill="none" points="1064.5,2698.205,1057.4196,2699.5719,1055.9582,2706.6334,1063.0386,2705.2665,1064.5,2698.205" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="1030.5422" y="2718.0162">0..1</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="983.4942" y="2763.7564">1</text>
+    </g>
+</svg>

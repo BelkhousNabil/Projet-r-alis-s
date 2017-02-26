@@ -1,0 +1,18 @@
+IDiagramEditor
+Cet objet contient un IDiagram et est composé d'entité et d'éléments graphique relié directement au modèle.
+
+IEntityGraphique
+Il contient toujours une entité du modèle. Des écouteur d'évenement sont placé sur lui et permette de changer
+directement l'entité du modèle qu'il contient.
+Une modification du modèle aura forcément un impact sur la vue qui se rafraichira à la modification du modèle.
+Cet objet contient des IElementGraphic qui correspondent à la représentation graphique de son contenu
+
+IElementGraphic
+Cet objet contient un élement d'une entité (une methode par exemple).
+Il possède des écouteur qui modifieront directement le modèle à la demande
+de l'utilisateur
+
+IRelationGraphique
+Cet élément contient une relation du modèle.
+Cette relation contient elle même deux entités: la source et la destination de la relation.
+Cet objet contient des écouteurs qui modifieront le modèle à la demande de l'utilisateur

@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+
+<!--
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<document>
+
+  <properties>
+    <title>Repository Centre</title>
+    <author email="brett_AT_apache_DOT_org">Brett Porter</author>
+    <author email="hboutemy_AT_apache_DOT_org">Hervé Boutemy</author>
+  </properties>
+
+  <body>
+
+    <section name="Maven Repository Centre">
+
+      <p>This documentation centre is for those that need to use or contribute to the Maven repository. This includes those
+    that need dependencies for their own build or projects that wish to have
+    their releases added to the Maven repository.</p>
+
+      <ul>
+        <li><a href="../project-faq.html">Maintaining your Metadata</a> - Information for third-party projects</li>
+        <li><a href="../guides/mini/guide-central-repository-upload.html">Guide to uploading artifacts</a> - How to
+        get things uploaded to the repository</li>
+      </ul>
+
+<!-- TODO: more documents to link to here. Use the navigation cues (how to upload, how to mirror, etc). -->
+
+      <p>
+        <img src="maven-repositories.png" width="668" height="555" border="0" usemap="#map" />
+
+        <map name="map">
+          <area shape="rect" coords="191,63,271,94"   alt="Apache"   href="https://repository.apache.org/content/groups/public/" />
+          <area shape="rect" coords="276,63,374,94"   alt="Codehaus" href="http://repository.codehaus.org/" />
+          <area shape="rect" coords="378,63,459,94"   alt="OSSRH"    href="https://central.sonatype.org/pages/ossrh-guide.html" />
+          <area shape="rect" coords="485,276,558,307" alt="java.net" href="http://download.java.net/maven/2/" />
+          <area shape="rect" coords="564,276,626,307" alt="JBoss"    href="http://repository.jboss.org/maven2/" />
+          <area shape="rect" coords="283,234,331,264" alt="index"    href="/maven-indexer/" />
+          <area shape="rect" coords="69,234,182,265"  alt="archetype" href="/archetype/archetype-models/archetype-catalog/archetype-catalog.html" />
+          <area shape="rect" coords="55,292,180,326"  alt="repo"     href="https://repo.maven.apache.org/maven2/" />
+          <area shape="rect" coords="211,293,357,339" alt="ibiblio"  href="http://mirrors.ibiblio.org/pub/mirrors/maven2/" />
+          <area shape="rect" coords="162,501,243,534" alt="Maven"    href="/what-is-maven.html" />
+          <area shape="rect" coords="244,531,353,552" alt="local repository"              href="/guides/mini/guide-configuring-maven.html" />
+          <area shape="rect" coords="318,421,499,453" alt="Repository Manager"            href="/repository-management.html" />
+          <area shape="rect" coords="231,462,371,498" alt="settings.xml &lt;mirrorOf&gt;" href="/guides/mini/guide-mirror-settings.html" />
+          <area shape="rect" coords="0,155,375,356"   alt="central (default)"             href="/guides/introduction/introduction-to-the-pom.html" />
+          <area shape="rect" coords="0,0,165,108"     alt="standalone public artifact repositories" href="/guides/introduction/introduction-to-repositories.html" />
+          <area shape="rect" coords="353,500,558,553" alt="pom.xml &lt;repository&gt;"    href="/guides/mini/guide-multiple-repositories.html" />
+        </map>
+      </p>
+    </section>
+  </body>
+</document>

@@ -1,0 +1,86 @@
+@startuml
+
+title Diagramme General Partie Droite
+
+interface IDiagramMenu {
+	
+}
+
+abstract class AbstractDiagramMenu implements IDiagramMenu {
+
+    
+}
+
+interface IUseCaseDiagramMenu {
+
+
++addActor(Actor)
++addUseCase()
++addUseCaseGroup(IUseCaseGroup)
++addRelation(TypeRelation type, IUseCaseEntity source, IUseCaseEntity target)
++addGenralization()
++addInclusion()
++addAssociation()
++addExtention()
+
+}
+interface IClassDiagramMenu {
+
++addDependance(IClassEntity target, String id)
++addEntity()
++addMethod(IMethod method) 
++addAttribute(IAttribute attr) 
++addAssociation(IClassEntity target, String id)
++addDoubleAssociation(IClass class, String id)
++addAggregation((IClassEntity target, String id)
++addComposition(IClass target, String id)
++addComposition(IInterface target, String id)
++addInheritance(IClass target, String id) 
++addImplementation(IInterface target, String id)
+
+}
+interface ISequenceDiagramMenu {
+
++addBlock(ASequenceNode block)
++addNode(ISequenceNode node)
++addNote(INote note)
++addCondition(String condition)
++addEntity(String name)
+
+
+
+
+}
+
+class ClassDiagramMenu extends AbstractDiagramMenu implements IClassDiagramMenu { 
+        
+        
+        
+}
+
+class UseCaseDiagramMenu extends AbstractDiagramMenu implements IUseCaseDiagramMenu { 
+        
+        
+        
+}
+
+class SequenceDiagramMenu extends AbstractDiagramMenu implements ISequenceDiagramMenu { 
+        
+        
+	
+        
+}
+
+
+
+class ClassDiagramMenuController {
+       
+      
+}
+
+   ClassDiagramMenu  o-->  ClassDiagramMenuController 
+   SequenceDiagramMenu o--> SequenceDiagramMenuController 
+   UseCaseDiagramMenu o--> UseCaseDiagramMenuController 
+   
+  
+@enduml

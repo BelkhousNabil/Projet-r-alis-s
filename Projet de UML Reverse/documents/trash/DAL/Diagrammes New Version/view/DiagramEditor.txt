@@ -1,0 +1,85 @@
+@startuml
+
+package fr.univrouen.umlreverse.ui.view {
+	interface IDiagramEditor
+    abstract class ADiagramEditor
+    class ClassDiagramEditor
+    class UseCaseDiagramEditor
+    interface IDiagramEditorController
+	abstract class ADiagramEditorController
+    class ClassDiagramEditorController
+    class UseCaseDiagramEditorController
+
+    abstract class ADiagramEditor {
+    	+ {abstract} getController() : DiagramEditorController 
+	}
+
+    interface IDiagramEditorController {
+		+ getEditor() : ADiagramEditor
+		+ getNotes() : List<NoteGraphic>
+		--
+		+ remove(NoteGraphic)
+	}
+
+	abstract class ADiagramEditorController {
+		+ getEditor() : ADiagramEditor
+		+ getNotes() : List<NoteGraphic>
+		# getCreateNoteMI() : MenuItem
+		# getZoomInMI() : MenuItem
+		# getZoomOutMI() : MenuItem
+		# getSaveMI() : MenuItem
+		--
+		+ remove(NoteGraphic)
+	}
+
+	IDiagramEditor <|-- ADiagramEditor
+	ADiagramEditor <|-- ClassDiagramEditor
+	ADiagramEditor <|-- UseCaseDiagramEditor
+    IDiagramEditorController <|.. ADiagramEditorController
+	ADiagramEditorController <|-- ClassDiagramEditorController
+	ADiagramEditorController <|-- UseCaseDiagramEditorController
+	ClassDiagramEditor "1" o--> "1" ClassDiagramEditorController : controller
+	UseCaseDiagramEditor "1" o--> "1" UseCaseDiagramEditorController : controller
+	ADiagramEditor "1" o--o "1" ADiagramEditorController : controller
+
+}
+
+package fr.univrouen.umlreverse.ui.component {
+	package common {
+		class NoteGraphic
+		abstract class AEntityGraphicController
+		
+	}
+
+	package clazz {
+		class PackageGraphic
+		class ObjectEntityGraphic
+	}
+
+	package usecase {
+		class UsecaseGraphic
+		class ActorGraphic
+		class BorderGraphic
+	}
+}
+
+
+' -----------------------
+' Relation
+' -----------------------
+
+ADiagramEditorController "*" o-> "*" NoteGraphic : notes
+ClassDiagramEditorController "*" o-> "*" PackageGraphic : packages
+ClassDiagramEditorController "*" o-> "*" ObjectEntityGraphic : objectEntities
+
+UseCaseDiagramEditorController "*" o-> "*" UsecaseGraphic : usecase
+UseCaseDiagramEditorController "*" o-> "*" ActorGraphic : actors
+UseCaseDiagramEditorController "*" o-> "*" BorderGraphic : borders
+
+
+
+AEntityGraphicController "1" o-> "1" ADiagramEditorController : diagramController
+
+
+
+@enduml

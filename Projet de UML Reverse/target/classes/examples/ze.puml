@@ -1,0 +1,188 @@
+@startuml
+package null {
+class boolean as "boolean" {
+	--
+}
+class int as "int" {
+	--
+}
+}
+class Window as "Window" {
+	--
+}
+class SplitPane as "SplitPane" {
+	--
+}
+class boolean as "boolean" {
+	--
+}
+class int as "int" {
+	--
+}
+class IProject as "IProject" {
+	--
+}
+class SimpleObjectProperty as "SimpleObjectProperty" {
+	--
+}
+class Alert as "Alert" {
+	--
+}
+class Scene as "Scene" {
+	--
+}
+class TabPane as "TabPane" {
+	--
+}
+class File as "File" {
+	--
+}
+class MainApp as "MainApp" {
+	- {static} int HEIGHT_DEFAULT 500 const
+	- {static} int WIDTH_DEFAULT 600 const
+	- UmlReverseBeans beans  
+	- {static} int LEFT_PANEL_WIDTH_DEFAULT 180 const
+	--
+	- void setActionToQuitApplication ( stage:Stage) 
+	+ {static} void main ( args:String[]) 
+	+ void start ( stage:Stage) 
+}
+class IDiagram as "IDiagram" {
+	--
+}
+class WindowEvent as "WindowEvent" {
+	--
+}
+class ToolBarSwapper as "ToolBarSwapper" {
+	--
+}
+class ExtensionFilter as "ExtensionFilter" {
+	--
+}
+class Orientation as "Orientation" {
+	--
+}
+class ADiagramEditor as "ADiagramEditor" {
+	--
+}
+class Application as "Application" {
+	--
+}
+class Node as "Node" {
+	--
+}
+class DirectAccessToAllEntityPane as "DirectAccessToAllEntityPane" {
+	--
+}
+class PropertyChangeListener as "PropertyChangeListener" {
+	--
+}
+class UmlReverseBeans as "UmlReverseBeans" {
+	- SplitPane leftPane  
+	- Window stage  
+	- ObjectProperty<ADiagramEditor> editorProperty  const
+	- ObjectProperty<File> fileProperty  const
+	- ObjectProperty<IProject> projectProperty  const
+	- ObjectProperty<IDiagram> diagramProperty  const
+	- {static} UmlReverseBeans INSTANCE  
+	- TabPane centerPane  
+	- MenuController menuController  
+	- ToolBarSwapper rightPane  
+	- boolean isSaved  
+	- SplitPane splitPane  
+	- TreeFileManagerView treeView  
+	--
+	+ MenuController getMenuController () 
+	+ void setFile ( f:File) 
+	+ ToolBarSwapper getRightPane () 
+	+ IDiagram getDiagram () 
+	+ void save () 
+	+ void setEditor ( editor:ADiagramEditor) 
+	+ void setTreeView ( treeView:TreeFileManagerView) 
+	+ ObjectProperty<IDiagram> diagramProperty () 
+	+ IProject getProject () 
+	+ void setWindow ( stage:Window) 
+	+ ObjectProperty<ADiagramEditor> getEditorProperty () 
+	+ {static} UmlReverseBeans getInstance () 
+	+ File getFile () 
+	+ void setDiagram ( diagram:IDiagram) 
+	+ void setSaved ( b:boolean) 
+	+ ADiagramEditor getEditor () 
+	+ void setRightPane ( right:ToolBarSwapper) 
+	+ boolean isSaved () 
+	+ void setSplitPane ( split:SplitPane) 
+	+ void setLeftPane ( left:SplitPane) 
+	+ void setProject ( project:IProject) 
+	+ SplitPane getSplitPane () 
+	+ void setMenuController ( mc:MenuController) 
+	+ SplitPane getLeftPane () 
+	+ TabPane getCenterPane () 
+	+ void saveAs () 
+	+ TreeFileManagerView getTreeView () 
+	+ Window getStage () 
+	+ ObjectProperty<IProject> getProjectProperty () 
+	- void createObsForSave () 
+	+ ObjectProperty<File> getFileProperty () 
+	+ void setCenterPane ( center:TabPane) 
+}
+class EventHandler as "EventHandler" {
+	--
+}
+class TreeFileManagerView as "TreeFileManagerView" {
+	--
+}
+class IObservable as "IObservable" {
+	--
+}
+class FXMLLoader as "FXMLLoader" {
+	--
+}
+class IOException as "IOException" {
+	--
+}
+class ObjectProperty as "ObjectProperty" {
+	--
+}
+class FileChooser as "FileChooser" {
+	--
+}
+class ButtonType as "ButtonType" {
+	--
+}
+class Files as "Files" {
+	--
+}
+class Stage as "Stage" {
+	--
+}
+class BorderPane as "BorderPane" {
+	--
+}
+class MenuController as "MenuController" {
+	--
+}
+class DiagramTabPane as "DiagramTabPane" {
+	--
+}
+class AlertType as "AlertType" {
+	--
+}
+UmlReverseBeans --> ObjectProperty
+UmlReverseBeans --> TreeFileManagerView
+MainApp --> int
+UmlReverseBeans --> SplitPane
+MainApp --> int
+UmlReverseBeans --> UmlReverseBeans
+UmlReverseBeans --> boolean
+MainApp --|> Application
+MainApp --> UmlReverseBeans
+UmlReverseBeans --> ObjectProperty
+UmlReverseBeans --> TabPane
+UmlReverseBeans --> ToolBarSwapper
+UmlReverseBeans --> ObjectProperty
+UmlReverseBeans --> Window
+MainApp --> int
+UmlReverseBeans --> SplitPane
+UmlReverseBeans --> ObjectProperty
+UmlReverseBeans --> MenuController
+@enduml

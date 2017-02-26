@@ -1,0 +1,14 @@
+@startuml
+title Importer un fichier PlantUML au projet
+
+User --> Sys: Clique sur le bouton "Importer PlantUML"
+Sys --> User: Dialogue de sélection de fichier
+User --> Sys: Choix du fichier
+alt ouverture faite
+	Sys --> User: Notification indiquant que le fichier a bien été importé
+	Sys --> User: Ouverture et passage sur l'onglet du diagramme importé
+else erreur d'ouverture
+	Sys --> User: Notification indiquant que le logiciel ne reconnait pas le fichier
+	Sys --> User: Retour dialogue séléction du fichier
+end
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+title Diagramme de sequence d'un senario de déplacement d'une classe
+	
+	user -> system : Deplacer une classe
+		
+	alt Class Deplacement dans cadre 
+	system ->> user :Deplacement de classe	
+	
+	else Deplacement hors cadre
+	system --> user : Message d'erreur
+	end
+	system --> user : Resultat Deplacement
+
+@enduml

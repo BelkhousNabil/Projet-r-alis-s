@@ -1,0 +1,17 @@
+@startuml
+title Diagramme de sequence d'ajout d'entité
+	
+    user -> system : Ajouter une entité d'un certain type en la nommant
+    alt Le type de l'entité n'est pas ne note
+        alt Nom de l'entité n'existe pas
+            system -> system : Création de l'entité
+            system ->> user : Affichage l'entité	
+        else Nom de l'entité existe dèja 
+            system ->> user :message("Ce nom existe dèjà");
+        end
+    else Le type de l'entité est une note
+        system -> system : Création de l'entité
+        system ->> user : Affichage l'entité
+    end
+
+@enduml
